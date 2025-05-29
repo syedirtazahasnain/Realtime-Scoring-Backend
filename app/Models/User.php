@@ -50,7 +50,18 @@ class User extends Authenticatable
 
     public function roles()
     {
-        return $this->belongsToMany(Role::class);
+        return $this->belongsToMany(Role::class)->withTimestamps()->withTrashed();
+    }
+
+    public function contact(){
+        return $this->hasOne(Contacts::class);
+    }
+
+    public function scopeRole($query, $roleName)
+    {
+        return $query->whereHas('roles', function ($q) use ($roleName) {
+            $q->where('name', $roleName);
+        });
     }
 
     public function playerProfile()

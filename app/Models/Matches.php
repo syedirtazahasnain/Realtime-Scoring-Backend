@@ -8,13 +8,27 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Matches extends Model
 {
-     use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'tournament_id', 'team1_id', 'team2_id', 'match_date', 'venue', 'status',
-        'toss_winner_id', 'toss_decision', 'winner_id', 'team1_score', 'team1_wickets',
-        'team1_overs', 'team2_score', 'team2_wickets', 'team2_overs', 'result',
-        'man_of_the_match_id', 'summary'
+        'tournament_id',
+        'team1_id',
+        'team2_id',
+        'match_date',
+        'venue',
+        'status',
+        'toss_winner_id',
+        'toss_decision',
+        'winner_id',
+        'team1_score',
+        'team1_wickets',
+        'team1_overs',
+        'team2_score',
+        'team2_wickets',
+        'team2_overs',
+        'result',
+        'man_of_the_match_id',
+        'summary'
     ];
 
     public function tournament()
@@ -49,7 +63,7 @@ class Matches extends Model
 
     public function players()
     {
-        return $this->hasMany(MatchPlayer::class);
+        return $this->hasMany(MatchPlayer::class, 'match_id');
     }
 
     public function innings()

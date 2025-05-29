@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('permissions', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->unique();
-            $table->string('description')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
+        Schema::table('contacts', function (Blueprint $table) {
+            $table->integer('age')->nullable()->change();
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('permissions');
+        Schema::table('contacts', function (Blueprint $table) {
+            $table->date('age')->nullable()->change();
+        });
     }
 };
