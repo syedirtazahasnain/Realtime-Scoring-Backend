@@ -55,26 +55,32 @@
             <div>
                 @if ($users->hasPages())
                     <div class="px-4 py-3 flex items-center justify-between border-t border-gray-200">
-                        <!-- Simple page info -->
                         <div class="text-sm text-gray-700">
-                            Page {{ $users->currentPage() }} of {{ $users->lastPage() }}
+                            Showing {{ $users->firstItem() }} to {{ $users->lastItem() }} of {{ $users->total() }}
+                            results
                         </div>
-
-                        <!-- Page navigation -->
                         <div class="flex space-x-2">
                             @if ($users->onFirstPage())
-                                <span class="px-3 py-1 rounded border text-gray-400 cursor-not-allowed">←
-                                    Previous</span>
+                                <span class="px-3 py-1 rounded border text-gray-400 cursor-not-allowed">Previous</span>
                             @else
                                 <a href="{{ $users->previousPageUrl() }}"
-                                    class="px-3 py-1 rounded border text-gray-700 hover:bg-gray-100">← Previous</a>
+                                    class="px-3 py-1 rounded border text-gray-700 hover:bg-gray-100">Previous</a>
                             @endif
+                            @foreach ($users->getUrlRange(1, $users->lastPage()) as $page => $url)
+                                @if ($page == $users->currentPage())
+                                    <span
+                                        class="px-3 py-1 rounded border bg-blue-500 text-white">{{ $page }}</span>
+                                @else
+                                    <a href="{{ $url }}"
+                                        class="px-3 py-1 rounded border text-gray-700 hover:bg-gray-100">{{ $page }}</a>
+                                @endif
+                            @endforeach
 
                             @if ($users->hasMorePages())
                                 <a href="{{ $users->nextPageUrl() }}"
-                                    class="px-3 py-1 rounded border text-gray-700 hover:bg-gray-100">Next →</a>
+                                    class="px-3 py-1 rounded border text-gray-700 hover:bg-gray-100">Next</a>
                             @else
-                                <span class="px-3 py-1 rounded border text-gray-400 cursor-not-allowed">Next →</span>
+                                <span class="px-3 py-1 rounded border text-gray-400 cursor-not-allowed">Next</span>
                             @endif
                         </div>
                     </div>

@@ -31,6 +31,10 @@ class Matches extends Model
         'summary'
     ];
 
+    protected $casts = [
+        'match_date' => 'datetime',
+    ];
+
     public function tournament()
     {
         return $this->belongsTo(Tournament::class);
@@ -68,7 +72,7 @@ class Matches extends Model
 
     public function innings()
     {
-        return $this->hasMany(Inning::class);
+        return $this->hasMany(Inning::class, 'match_id');
     }
 
     public function firstInning()

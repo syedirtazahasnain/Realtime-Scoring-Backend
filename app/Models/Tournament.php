@@ -14,6 +14,11 @@ class Tournament extends Model
         'name', 'description', 'start_date', 'end_date', 'location', 'format'
     ];
 
+    protected $casts = [
+        'start_date' => 'datetime',
+        'end_date' => 'datetime',
+    ];
+
     public function matches()
     {
         return $this->hasMany(Matches::class);

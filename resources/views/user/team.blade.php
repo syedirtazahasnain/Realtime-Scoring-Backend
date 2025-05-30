@@ -23,6 +23,8 @@
                         </th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name
                         </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Members</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Short
                             Name</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Group
@@ -47,6 +49,62 @@
                                 @endif
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $team->name }}</td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-wrap gap-2 mb-2">
+                                    @foreach ($team->players as $player)
+                                        <div class="flex items-center bg-gray-100 rounded-full px-3 py-1">
+                                            <span class="mr-2">{{ $player->name }}</span>
+                                            <span
+                                                class="text-xs bg-blue-500 text-white rounded-full px-2 py-0.5">#{{ $player->pivot->jersey_number }}</span>
+                                            @if ($player->pivot->is_captain)
+                                                <span
+                                                    class="text-xs bg-yellow-500 text-white rounded-full px-2 py-0.5 ml-1">C</span>
+                                            @elseif($player->pivot->is_vice_captain)
+                                                <span
+                                                    class="text-xs bg-gray-500 text-white rounded-full px-2 py-0.5 ml-1">VC</span>
+                                            @endif
+                                            <button onclick="removeMember({{ $team->id }}, {{ $player->id }})"
+                                                class="ml-2 text-red-500 hover:text-red-700">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    @endforeach
+                                </div>
+
+                                <div class="flex gap-2 mt-2">
+                                    <select id="member_select_{{ $team->id }}" class="member-select w-full"
+                                        style="width: 200px;">
+                                        <option></option>
+                                        @foreach ($users as $user)
+                                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                        @endforeach
+                                    </select>
+                                    <input type="number" id="jersey_number_{{ $team->id }}" placeholder="Jersey #"
+                                        class="border rounded px-2 py-1 w-20">
+
+                                    <div class="flex items-center space-x-2">
+                                        <label class="inline-flex items-center">
+                                            <input type="checkbox" id="is_captain_{{ $team->id }}"
+                                                class="form-checkbox">
+                                            <span class="ml-2">Captain</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="checkbox" id="is_vice_captain_{{ $team->id }}"
+                                                class="form-checkbox">
+                                            <span class="ml-2">Vice</span>
+                                        </label>
+                                    </div>
+
+                                    <button onclick="addMember({{ $team->id }})"
+                                        class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded">
+                                        Add
+                                    </button>
+                                </div>
+                            </td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $team->short_name }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $team->group->name ?? '-' }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $team->owner->name ?? '-' }}</td>
@@ -63,7 +121,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="6" class="px-6 py-4 text-center text-gray-500">No teams found</td>
+                            <td colspan="7" class="px-6 py-4 text-center text-gray-500">No teams found</td>
                         </tr>
                     @endforelse
                 </tbody>
@@ -72,20 +130,32 @@
             @if ($teams->hasPages())
                 <div class="px-4 py-3 flex items-center justify-between border-t border-gray-200">
                     <div class="text-sm text-gray-700">
-                        Page {{ $teams->currentPage() }} of {{ $teams->lastPage() }}
+                        Showing {{ $teams->firstItem() }} to {{ $teams->lastItem() }} of {{ $teams->total() }}
+                        results
                     </div>
                     <div class="flex space-x-2">
                         @if ($teams->onFirstPage())
-                            <span class="px-3 py-1 rounded border text-gray-400 cursor-not-allowed">← Previous</span>
+                            <span class="px-3 py-1 rounded border text-gray-400 cursor-not-allowed">Previous</span>
                         @else
                             <a href="{{ $teams->previousPageUrl() }}"
-                                class="px-3 py-1 rounded border text-gray-700 hover:bg-gray-100">← Previous</a>
+                                class="px-3 py-1 rounded border text-gray-700 hover:bg-gray-100">Previous</a>
                         @endif
+
+                        @foreach ($teams->getUrlRange(1, $teams->lastPage()) as $page => $url)
+                            @if ($page == $teams->currentPage())
+                                <span
+                                    class="px-3 py-1 rounded border bg-blue-500 text-white">{{ $page }}</span>
+                            @else
+                                <a href="{{ $url }}"
+                                    class="px-3 py-1 rounded border text-gray-700 hover:bg-gray-100">{{ $page }}</a>
+                            @endif
+                        @endforeach
+
                         @if ($teams->hasMorePages())
                             <a href="{{ $teams->nextPageUrl() }}"
-                                class="px-3 py-1 rounded border text-gray-700 hover:bg-gray-100">Next →</a>
+                                class="px-3 py-1 rounded border text-gray-700 hover:bg-gray-100">Next</a>
                         @else
-                            <span class="px-3 py-1 rounded border text-gray-400 cursor-not-allowed">Next →</span>
+                            <span class="px-3 py-1 rounded border text-gray-400 cursor-not-allowed">Next</span>
                         @endif
                     </div>
                 </div>
@@ -179,63 +249,137 @@
         </div>
     </div>
 
-  <script>
-    function openModal(action, teamId = null) {
-        const modal = document.getElementById('teamModal');
-        const form = document.getElementById('teamForm');
-        const modalTitle = document.getElementById('modalTitle');
-        const logoPreview = document.getElementById('logoPreview');
-        const logoPreviewImage = document.getElementById('logoPreviewImage');
 
-        if (action === 'create') {
-            modalTitle.textContent = 'Add New Team';
-            form.action = "{{ route('teams.store') }}";
-            document.getElementById('formMethod').value = "POST";
-            form.reset();
-            document.getElementById('logo').value = '';
-            logoPreview.classList.add('hidden');
-            modal.classList.remove('hidden');
-        } else if (action === 'edit') {
-            modalTitle.textContent = 'Edit Team';
-            fetch(`/teams/${teamId}/edit`)
+    <script>
+        // Initialize Select2 for all member selects
+        document.addEventListener('DOMContentLoaded', function() {
+            $('.member-select').select2({
+                placeholder: "Select a member",
+                allowClear: true
+            });
+        });
+
+        function openModal(action, teamId = null) {
+            const modal = document.getElementById('teamModal');
+            const form = document.getElementById('teamForm');
+            const modalTitle = document.getElementById('modalTitle');
+            const logoPreview = document.getElementById('logoPreview');
+            const logoPreviewImage = document.getElementById('logoPreviewImage');
+
+            if (action === 'create') {
+                modalTitle.textContent = 'Add New Team';
+                form.action = "{{ route('teams.store') }}";
+                document.getElementById('formMethod').value = "POST";
+                form.reset();
+                document.getElementById('logo').value = '';
+                logoPreview.classList.add('hidden');
+                modal.classList.remove('hidden');
+            } else if (action === 'edit') {
+                modalTitle.textContent = 'Edit Team';
+                fetch(`/teams/${teamId}/edit`)
+                    .then(response => response.json())
+                    .then(team => {
+                        document.getElementById('teamId').value = team.id;
+                        document.getElementById('name').value = team.name;
+                        document.getElementById('short_name').value = team.short_name;
+                        document.getElementById('description').value = team.description || '';
+                        document.getElementById('group_id').value = team.group_id;
+                        document.getElementById('owner_id').value = team.owner_id;
+                        document.getElementById('logo').value = '';
+
+                        form.action = `/teams/${team.id}`;
+                        document.getElementById('formMethod').value = "PUT";
+
+                        if (team.logo) {
+                            logoPreviewImage.src = "{{ asset('storage') }}/" + team.logo;
+                            logoPreview.classList.remove('hidden');
+                        } else {
+                            logoPreview.classList.add('hidden');
+                        }
+                        modal.classList.remove('hidden');
+                    });
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('teamModal').classList.add('hidden');
+        }
+
+        document.getElementById('logo').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    document.getElementById('logoPreviewImage').src = event.target.result;
+                    document.getElementById('logoPreview').classList.remove('hidden');
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function addMember(teamId) {
+            const selectElement = document.getElementById(`member_select_${teamId}`);
+            const jerseyNumber = document.getElementById(`jersey_number_${teamId}`).value;
+            const isCaptain = document.getElementById(`is_captain_${teamId}`).checked;
+            const isViceCaptain = document.getElementById(`is_vice_captain_${teamId}`).checked;
+            const memberId = selectElement.value;
+
+            if (!memberId || !jerseyNumber) {
+                alert('Please select a member and enter a jersey number');
+                return;
+            }
+
+            fetch(`/teams/${teamId}/members`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                    },
+                    body: JSON.stringify({
+                        user_id: memberId,
+                        jersey_number: jerseyNumber,
+                        is_captain: isCaptain,
+                        is_vice_captain: isViceCaptain
+                    })
+                })
                 .then(response => response.json())
-                .then(team => {
-                    document.getElementById('teamId').value = team.id;
-                    document.getElementById('name').value = team.name;
-                    document.getElementById('short_name').value = team.short_name;
-                    document.getElementById('description').value = team.description || '';
-                    document.getElementById('group_id').value = team.group_id;
-                    document.getElementById('owner_id').value = team.owner_id;
-                    document.getElementById('logo').value = '';
-
-                    form.action = `/teams/${team.id}`;
-                    document.getElementById('formMethod').value = "PUT";
-
-                    if (team.logo) {
-                        logoPreviewImage.src = "{{ asset('storage') }}/" + team.logo;
-                        logoPreview.classList.remove('hidden');
+                .then(data => {
+                    if (data.success) {
+                        location.reload();
                     } else {
-                        logoPreview.classList.add('hidden');
+                        alert(data.message || 'Error adding member');
                     }
-                    modal.classList.remove('hidden');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error adding member');
                 });
         }
-    }
 
-    function closeModal() {
-        document.getElementById('teamModal').classList.add('hidden');
-    }
-
-    document.getElementById('logo').addEventListener('change', function (e) {
-        const file = e.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (event) {
-                document.getElementById('logoPreviewImage').src = event.target.result;
-                document.getElementById('logoPreview').classList.remove('hidden');
+        function removeMember(teamId, userId) {
+            if (!confirm('Are you sure you want to remove this member?')) {
+                return;
             }
-            reader.readAsDataURL(file);
+
+            fetch(`/teams/${teamId}/members/${userId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        location.reload();
+                    } else {
+                        alert(data.message || 'Error removing member');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error removing member');
+                });
         }
-    });
-</script>
+    </script>
 </x-app-layout>

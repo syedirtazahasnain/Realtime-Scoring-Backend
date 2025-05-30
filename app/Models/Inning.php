@@ -17,7 +17,7 @@ class Inning extends Model
 
     public function match()
     {
-        return $this->belongsTo(Matches::class);
+        return $this->belongsTo(Matches::class, 'match_id');
     }
 
     public function battingTeam()
