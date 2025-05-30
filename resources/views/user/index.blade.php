@@ -164,8 +164,8 @@
                             <label for="status" class="block text-sm font-medium text-gray-700">Status</label>
                             <select id="status" name="status"
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                                <option value="active">Active</option>
-                                <option value="inactive">Inactive</option>
+                                <option value="1">Active</option>
+                                <option value="9">Inactive</option>
                             </select>
                         </div>
                     </div>
