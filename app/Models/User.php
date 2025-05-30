@@ -53,7 +53,8 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class)->withTimestamps()->withTrashed();
     }
 
-    public function contact(){
+    public function contact()
+    {
         return $this->hasOne(Contacts::class);
     }
 
@@ -85,6 +86,12 @@ class User extends Authenticatable
             ->using(TeamUser::class)
             ->withPivot('jersey_number', 'is_captain', 'is_vice_captain');
     }
+
+    public function scopeNotInAnyTeam($query)
+    {
+        return $query->whereDoesntHave('teams');
+    }
+
 
     public function ownedTeams()
     {

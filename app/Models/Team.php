@@ -16,7 +16,7 @@ class Team extends Model
         'logo',
         'description',
         'owner_id',
-        'group'
+        'group_id'
     ];
 
     public function owner()
@@ -24,10 +24,10 @@ class Team extends Model
         return $this->belongsTo(User::class, 'owner_id');
     }
 
-    // public function players()
-    // {
-    //     return $this->belongsToMany(User::class)->withPivot('jersey_number', 'is_captain', 'is_vice_captain');
-    // }
+    public function group()
+    {
+        return $this->belongsTo(Group::class, 'group_id');
+    }
 
     public function players()
     {

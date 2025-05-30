@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Team;
-use App\Models\Group;
 use App\Models\User;
+use App\Models\Group;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -13,9 +14,9 @@ class TeamController extends Controller
 {
     public function index()
     {
-        $teams = Team::with(['group', 'owner','players'])->orderBy('id','desc')->paginate(10);
-        $groups = Group::select('id','name')->get();
-        $users = User::all();
+        $teams = Team::with(['group', 'owner', 'players'])->orderBy('id', 'desc')->paginate(10);
+        $groups = Group::select('id', 'name')->get();
+        $users = User::whereDoesntHave('teams')->get();
         // dd('teams',$teams);
         return view('user.team', compact('teams', 'groups', 'users'));
     }
@@ -45,7 +46,7 @@ class TeamController extends Controller
 
     public function edit(string $id)
     {
-        $team = Team::with(['group', 'owner','players'])->findOrFail($id);
+        $team = Team::with(['group', 'owner', 'players'])->findOrFail($id);
         return response()->json($team);
     }
 
@@ -82,5 +83,78 @@ class TeamController extends Controller
         $team->delete();
 
         return redirect()->route('teams.index')->with('success', 'Team deleted successfully.');
+    }
+
+    public function addMember(Team $team, Request $request)
+    {
+        $request->validate([
+            'user_id' => 'required|exists:users,id',
+            'jersey_number' => 'required|string',
+            'is_captain' => 'sometimes|boolean',
+            'is_vice_captain' => 'sometimes|boolean'
+        ]);
+
+        // Check if user is already in this team
+        if ($team->players()->where('user_id', $request->user_id)->exists()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'This member already exists in the team'
+            ]);
+        }
+
+        // Check if user is in any other team
+        $userTeams = DB::table('team_user')
+            ->where('user_id', $request->user_id)
+            ->exists();
+
+        if ($userTeams) {
+            return response()->json([
+                'success' => false,
+                'message' => 'This user already belongs to another team'
+            ]);
+        }
+
+        // Validate captain/vice-captain roles
+        $isCaptain = $request->input('is_captain', false);
+        $isViceCaptain = $request->input('is_vice_captain', false);
+
+        // Can't be both captain and vice-captain
+        if ($isCaptain && $isViceCaptain) {
+            return response()->json([
+                'success' => false,
+                'message' => 'A member cannot be both captain and vice-captain'
+            ]);
+        }
+
+        // Check if team already has a captain (if assigning new captain)
+        if ($isCaptain && $team->players()->where('is_captain', true)->exists()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Team already has a captain'
+            ]);
+        }
+
+        // Check if team already has a vice-captain (if assigning new vice-captain)
+        if ($isViceCaptain && $team->players()->where('is_vice_captain', true)->exists()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Team already has a vice-captain'
+            ]);
+        }
+
+        // Add the member
+        $team->players()->attach($request->user_id, [
+            'jersey_number' => $request->jersey_number,
+            'is_captain' => $isCaptain,
+            'is_vice_captain' => $isViceCaptain
+        ]);
+
+        return response()->json(['success' => true]);
+    }
+
+    public function removeMember(Team $team, User $user)
+    {
+        $team->players()->detach($user->id);
+        return response()->json(['success' => true]);
     }
 }
