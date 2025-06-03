@@ -17,17 +17,8 @@ class MatchController extends Controller
             ->orderBy('match_date', 'desc')
             ->paginate(10);
         $tournaments = Tournament::all();
-        return view('matches.index', compact('matches', 'tournaments'));
+            return view('matches.index', compact('matches', 'tournaments'));
     }
-
-    // public function create()
-    // {
-    //     $tournaments = Tournament::all();
-    //     $teams = Team::all();
-    //     $players = User::role('player')->get();
-
-    //     return view('matches.create', compact('tournaments', 'teams', 'players'));
-    // }
 
     public function create(Request $request)
     {
