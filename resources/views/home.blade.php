@@ -200,29 +200,32 @@
             </div>
             <div class="lg:w-[36.36%] flex flex-col">
                 <div class="grid lg:grid-cols-1 md:grid-cols-2 gap-[15px] md:px-[0px] md:w-full max-w-[1122px]">
-                    <div class="grid grid-cols-3 bg-[#FFF4ED]">
-                        <div
-                            class="col-span-2 flex flex-col justify-center font-montserrat pl-[44px] lg:pl-10 2xl:pl-[44px]">
-                            <p
-                                class="text-[14px] 2xl:text-[20px] xl:text-[17px] font-bold  text-[#094AB7] font-montserrat md:leading-[22px]">
-                                TFSC Premier League <br class=""> Fxtures & Results</p>
-                            <p
-                                class="text-[12px] 2xl:text-[16px] xl:text-[14px] font-dm-sans font-normal pt-[10px] md:pt-[16px] pb-[30px] leading-[20px]">
-                                Twenty Four
-                                Seven Premier
-                                League</p>
-                            <div class="bg-[#094AB7] w-fit">
-                                <button
-                                    class="text-center text-white text-[10px] 2xl:text-[14px] xl:text-[12px] lg:text-[10px] font-dm-sans px-[35px] 2xl:px-[79px] xl:px-[50px] lg:px-[40px] py-[5px] md:py-[10px]">View
-                                    Details</button>
-                            </div>
+                    @forelse ($blogs as $blog)
+                         <div class="grid grid-cols-3 bg-[#FFF4ED]">
+                        <div class="col-span-2 flex flex-col justify-center font-montserrat pl-[44px] lg:pl-10 2xl:pl-[44px]">
+                        <!-- Blog Title -->
+                        <h3 class="text-[14px] 2xl:text-[20px] xl:text-[17px] font-bold text-[#094AB7] font-montserrat md:leading-[22px]">
+                            {{ $blog->title }}
+                        </h3>
+                        <p class="text-[12px] 2xl:text-[16px] xl:text-[14px] font-dm-sans font-normal pt-[10px] md:pt-[16px] pb-[20px] leading-[20px] line-clamp-2 pr-10">
+                            {{ $blog->content }}
+                        </p>
+                        <div class="bg-[#094AB7] w-fit hover:bg-[#083a8f] transition-colors duration-200 mt-10">
+                            <a href=""
+                            class="block text-center text-white text-[10px] 2xl:text-[14px] xl:text-[12px] lg:text-[10px] font-dm-sans px-[35px] 2xl:px-[79px] xl:px-[50px] lg:px-[40px] py-[5px] md:py-[10px]">
+                                View Details
+                            </a>
                         </div>
+                    </div>
                         <div class="flex justify-end w-full h-[337px]">
-                            <img src="{{ asset('storage/new/poster1.png') }}" alt=""
+                            <img src="{{ asset('storage/'.$blog->thumbnail) }}" alt=""
                                 class="object-cover w-full h-full">
                         </div>
                     </div>
-                    <div class="grid grid-cols-3 bg-[#FFF4ED]">
+                    @empty
+                        <p>No Blogs To Show</p>
+                    @endforelse
+                    {{-- <div class="grid grid-cols-3 bg-[#FFF4ED]">
                         <div
                             class="col-span-2 flex flex-col justify-center font-montserrat pl-[44px] lg:pl-10 2xl:pl-[44px]">
                             <p
@@ -244,13 +247,14 @@
                             <img src="{{ asset('storage/new/poster2.png') }}" alt=""
                                 class="object-cover w-full h-full">
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Upcoming matches section -->
+    {{-- @dd($matches) --}}
     <div class="xl:px-[80px] lg:px-[40px] px-[20px] md:pt-[55px] pt-[30px]">
         <div class="lg:mb-[50px] mb-[30px] px-[5px]">
             <h2
@@ -259,252 +263,50 @@
             </h2>
         </div>
         <div class="multiple-items">
-            <div class="overflow-hidden border-2 border-[#DDDDDD] md:mr-[20px] mx-[5px]">
-                <div class="flex items-center justify-between 2xl:px-[40px] px-[10px]  py-[20px]">
-                    <p class="my-0  text-[16px] font-dm-sans font-bold text-[#00000] max-[1199px]:text-[11px]">
-                        03 Nov 2024 - 10:00 am
-                    </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="40" viewBox="0 0 45 40" fill="none"
-                        class="w-[15px] h-[15px] max-[1199px]:w-[12px] max-[1199px]:h-[12px]">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M23.2323 0.732225C24.2085 -0.244075 25.7915 -0.244075 26.7677 0.732225L44.2677 18.2323C45.244 19.2085 45.244 20.7915 44.2677 21.7677L26.7677 39.2677C25.7915 40.244 24.2085 40.244 23.2323 39.2677C22.256 38.2915 22.256 36.7085 23.2323 35.7323L36.4645 22.5H2.5C1.1193 22.5 0 21.3807 0 20C0 18.6193 1.1193 17.5 2.5 17.5H36.4645L23.2323 4.26777C22.256 3.29145 22.256 1.70855 23.2323 0.732225Z"
-                            fill="black" />
-                    </svg>
-                </div>
-                <div class="grid grid-cols-5 items-center border-y-2 border-[#DDDDDD]">
-                    <div
-                        class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
-                        <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                            class="w-[86px] max-[1199px]:w-[60px]">
-                        <p
-                            class="my-0 text-[14px] max-[1199px]:text-[12px] font-dm-sans font-semibold w-[86px] max-[1199px]:w-[60px] text-[#000]">
-                            Raging Bulls
+            @forelse ($matches as $match)
+                <div class="overflow-hidden border-2 border-[#DDDDDD] md:mr-[20px] mx-[5px]">
+                    <div class="flex items-center justify-between 2xl:px-[40px] px-[10px] py-[20px]">
+                        <p class="my-0 text-[16px] font-dm-sans font-bold text-[#00000] max-[1199px]:text-[11px]">
+                            {{ \Carbon\Carbon::parse($match->match_date)->format('d M Y - h:i a') }}
                         </p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="40" viewBox="0 0 45 40" fill="none"
+                            class="w-[15px] h-[15px] max-[1199px]:w-[12px] max-[1199px]:h-[12px]">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M23.2323 0.732225C24.2085 -0.244075 25.7915 -0.244075 26.7677 0.732225L44.2677 18.2323C45.244 19.2085 45.244 20.7915 44.2677 21.7677L26.7677 39.2677C25.7915 40.244 24.2085 40.244 23.2323 39.2677C22.256 38.2915 22.256 36.7085 23.2323 35.7323L36.4645 22.5H2.5C1.1193 22.5 0 21.3807 0 20C0 18.6193 1.1193 17.5 2.5 17.5H36.4645L23.2323 4.26777C22.256 3.29145 22.256 1.70855 23.2323 0.732225Z"
+                                fill="black" />
+                        </svg>
                     </div>
-                    <div class="2xl:px-[30px] 2xl:py-[30px]  text-center">
-                        <p class="my-0 text-[25px] max-[1199px]:text-[12px] font-medium text-[#000] font-moul">vs</p>
+                    <div class="grid grid-cols-5 items-center border-y-2 border-[#DDDDDD]">
+                        <div class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
+                            {{-- <img src="{{ asset('storage/' . $match->team1->logo) }}" alt="{{ $match->team1->name }}" --}}
+                            <img src="{{ asset('storage/standings/1.png') }}" alt="{{ $match->team1->name }}"
+                                class="w-[86px] max-[1199px]:w-[60px]">
+                            <p class="my-0 text-[14px] max-[1199px]:text-[12px] font-dm-sans font-semibold w-[86px] max-[1199px]:w-[60px] text-[#000]">
+                                {{ $match->team1->short_name }}
+                            </p>
+                        </div>
+                        <div class="2xl:px-[30px] 2xl:py-[30px] text-center">
+                            <p class="my-0 text-[25px] max-[1199px]:text-[12px] font-medium text-[#000] font-moul">vs</p>
+                        </div>
+                        <div class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
+                            {{-- <img src="{{ asset('storage/' . $match->team2->logo) }}" alt="{{ $match->team2->name }}" --}}
+                            <img src="{{ asset('storage/standings/2.png') }}" alt="{{ $match->team2->name }}"
+                                class="w-[86px] max-[1199px]:w-[60px]">
+                            <p class="text-[15px] max-[1199px]:text-[12px] font-dm-sans font-semibold text-[#000] w-[86px] max-[1199px]:w-[60px]">
+                                {{ $match->team2->short_name }}
+                            </p>
+                        </div>
                     </div>
-                    <div
-                        class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
-                        <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers"
-                            class="w-[86px] max-[1199px]:w-[60px]">
-                        <p
-                            class="text-[15px] max-[1199px]:text-[12px] font-dm-sans font-semibold text-[#000] w-[86px] max-[1199px]:w-[60px]">
-                            Strikers
-                        </p>
-                    </div>
-                </div>
-                <div class="px-[38px] py-[17px] max-[1199px]:px-[20px] max-[1199px]:py-[10px] text-center">
-                    <p class="my-0 text-[12px] max-[1199px]:text-[10px] font-dm-sans font-bold text-[#000]">
-                        Match 12 - Pindi Cricket Stadium
-                    </p>
-                </div>
-            </div>
-            <div class="overflow-hidden border-2 border-[#DDDDDD] md:mr-[20px] mx-[5px]">
-                <div class="flex items-center justify-between 2xl:px-[40px] px-[10px]  py-[20px]">
-                    <p class="my-0  text-[16px] font-dm-sans font-bold text-[#00000] max-[1199px]:text-[11px]">
-                        03 Nov 2024 - 10:00 am
-                    </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="40" viewBox="0 0 45 40"
-                        fill="none" class="w-[15px] h-[15px] max-[1199px]:w-[12px] max-[1199px]:h-[12px]">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M23.2323 0.732225C24.2085 -0.244075 25.7915 -0.244075 26.7677 0.732225L44.2677 18.2323C45.244 19.2085 45.244 20.7915 44.2677 21.7677L26.7677 39.2677C25.7915 40.244 24.2085 40.244 23.2323 39.2677C22.256 38.2915 22.256 36.7085 23.2323 35.7323L36.4645 22.5H2.5C1.1193 22.5 0 21.3807 0 20C0 18.6193 1.1193 17.5 2.5 17.5H36.4645L23.2323 4.26777C22.256 3.29145 22.256 1.70855 23.2323 0.732225Z"
-                            fill="black" />
-                    </svg>
-                </div>
-                <div class="grid grid-cols-5 items-center border-y-2 border-[#DDDDDD]">
-                    <div
-                        class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
-                        <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                            class="w-[86px] max-[1199px]:w-[60px]">
-                        <p
-                            class="my-0 text-[14px] max-[1199px]:text-[12px] font-dm-sans font-semibold w-[86px] max-[1199px]:w-[60px] text-[#000]">
-                            Raging Bulls
-                        </p>
-                    </div>
-                    <div class="2xl:px-[30px] 2xl:py-[30px]  text-center">
-                        <p class="my-0 text-[25px] max-[1199px]:text-[12px] font-medium text-[#000] font-moul">vs</p>
-                    </div>
-                    <div
-                        class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
-                        <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers"
-                            class="w-[86px] max-[1199px]:w-[60px]">
-                        <p
-                            class="text-[15px] max-[1199px]:text-[12px] font-dm-sans font-semibold text-[#000] w-[86px] max-[1199px]:w-[60px]">
-                            Strikers
+                    <div class="px-[38px] py-[17px] max-[1199px]:px-[20px] max-[1199px]:py-[10px] text-center">
+                        <p class="my-0 text-[12px] max-[1199px]:text-[10px] font-dm-sans font-bold text-[#000]">
+                            {{ $match->tournament->name }} - {{ $match->venue }}
                         </p>
                     </div>
                 </div>
-                <div class="px-[38px] py-[17px] max-[1199px]:px-[20px] max-[1199px]:py-[10px] text-center">
-                    <p class="my-0 text-[12px] max-[1199px]:text-[10px] font-dm-sans font-bold text-[#000]">
-                        Match 12 - Pindi Cricket Stadium
-                    </p>
-                </div>
-            </div>
-            <div class="overflow-hidden border-2 border-[#DDDDDD] md:mr-[20px] mx-[5px]">
-                <div class="flex items-center justify-between 2xl:px-[40px] px-[10px]  py-[20px]">
-                    <p class="my-0  text-[16px] font-dm-sans font-bold text-[#00000] max-[1199px]:text-[11px]">
-                        03 Nov 2024 - 10:00 am
-                    </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="40" viewBox="0 0 45 40"
-                        fill="none" class="w-[15px] h-[15px] max-[1199px]:w-[12px] max-[1199px]:h-[12px]">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M23.2323 0.732225C24.2085 -0.244075 25.7915 -0.244075 26.7677 0.732225L44.2677 18.2323C45.244 19.2085 45.244 20.7915 44.2677 21.7677L26.7677 39.2677C25.7915 40.244 24.2085 40.244 23.2323 39.2677C22.256 38.2915 22.256 36.7085 23.2323 35.7323L36.4645 22.5H2.5C1.1193 22.5 0 21.3807 0 20C0 18.6193 1.1193 17.5 2.5 17.5H36.4645L23.2323 4.26777C22.256 3.29145 22.256 1.70855 23.2323 0.732225Z"
-                            fill="black" />
-                    </svg>
-                </div>
-                <div class="grid grid-cols-5 items-center border-y-2 border-[#DDDDDD]">
-                    <div
-                        class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
-                        <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                            class="w-[86px] max-[1199px]:w-[60px]">
-                        <p
-                            class="my-0 text-[14px] max-[1199px]:text-[12px] font-dm-sans font-semibold w-[86px] max-[1199px]:w-[60px] text-[#000]">
-                            Raging Bulls
-                        </p>
-                    </div>
-                    <div class="2xl:px-[30px] 2xl:py-[30px]  text-center">
-                        <p class="my-0 text-[25px] max-[1199px]:text-[12px] font-medium text-[#000] font-moul">vs</p>
-                    </div>
-                    <div
-                        class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
-                        <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers"
-                            class="w-[86px] max-[1199px]:w-[60px]">
-                        <p
-                            class="text-[15px] max-[1199px]:text-[12px] font-dm-sans font-semibold text-[#000] w-[86px] max-[1199px]:w-[60px]">
-                            Strikers
-                        </p>
-                    </div>
-                </div>
-                <div class="px-[38px] py-[17px] max-[1199px]:px-[20px] max-[1199px]:py-[10px] text-center">
-                    <p class="my-0 text-[12px] max-[1199px]:text-[10px] font-dm-sans font-bold text-[#000]">
-                        Match 12 - Pindi Cricket Stadium
-                    </p>
-                </div>
-            </div>
-            <div class="overflow-hidden border-2 border-[#DDDDDD] md:mr-[20px] mx-[5px]">
-                <div class="flex items-center justify-between 2xl:px-[40px] px-[10px]  py-[20px]">
-                    <p class="my-0  text-[16px] font-dm-sans font-bold text-[#00000] max-[1199px]:text-[11px]">
-                        03 Nov 2024 - 10:00 am
-                    </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="40" viewBox="0 0 45 40"
-                        fill="none" class="w-[15px] h-[15px] max-[1199px]:w-[12px] max-[1199px]:h-[12px]">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M23.2323 0.732225C24.2085 -0.244075 25.7915 -0.244075 26.7677 0.732225L44.2677 18.2323C45.244 19.2085 45.244 20.7915 44.2677 21.7677L26.7677 39.2677C25.7915 40.244 24.2085 40.244 23.2323 39.2677C22.256 38.2915 22.256 36.7085 23.2323 35.7323L36.4645 22.5H2.5C1.1193 22.5 0 21.3807 0 20C0 18.6193 1.1193 17.5 2.5 17.5H36.4645L23.2323 4.26777C22.256 3.29145 22.256 1.70855 23.2323 0.732225Z"
-                            fill="black" />
-                    </svg>
-                </div>
-                <div class="grid grid-cols-5 items-center border-y-2 border-[#DDDDDD]">
-                    <div
-                        class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
-                        <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                            class="w-[86px] max-[1199px]:w-[60px]">
-                        <p
-                            class="my-0 text-[14px] max-[1199px]:text-[12px] font-dm-sans font-semibold w-[86px] max-[1199px]:w-[60px] text-[#000]">
-                            Raging Bulls
-                        </p>
-                    </div>
-                    <div class="2xl:px-[30px] 2xl:py-[30px]  text-center">
-                        <p class="my-0 text-[25px] max-[1199px]:text-[12px] font-medium text-[#000] font-moul">vs</p>
-                    </div>
-                    <div
-                        class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
-                        <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers"
-                            class="w-[86px] max-[1199px]:w-[60px]">
-                        <p
-                            class="text-[15px] max-[1199px]:text-[12px] font-dm-sans font-semibold text-[#000] w-[86px] max-[1199px]:w-[60px]">
-                            Strikers
-                        </p>
-                    </div>
-                </div>
-                <div class="px-[38px] py-[17px] max-[1199px]:px-[20px] max-[1199px]:py-[10px] text-center">
-                    <p class="my-0 text-[12px] max-[1199px]:text-[10px] font-dm-sans font-bold text-[#000]">
-                        Match 12 - Pindi Cricket Stadium
-                    </p>
-                </div>
-            </div>
-            <div class="overflow-hidden border-2 border-[#DDDDDD] md:mr-[20px] mx-[5px]">
-                <div class="flex items-center justify-between 2xl:px-[40px] px-[10px]  py-[20px]">
-                    <p class="my-0  text-[16px] font-dm-sans font-bold text-[#00000] max-[1199px]:text-[11px]">
-                        03 Nov 2024 - 10:00 am
-                    </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="40" viewBox="0 0 45 40"
-                        fill="none" class="w-[15px] h-[15px] max-[1199px]:w-[12px] max-[1199px]:h-[12px]">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M23.2323 0.732225C24.2085 -0.244075 25.7915 -0.244075 26.7677 0.732225L44.2677 18.2323C45.244 19.2085 45.244 20.7915 44.2677 21.7677L26.7677 39.2677C25.7915 40.244 24.2085 40.244 23.2323 39.2677C22.256 38.2915 22.256 36.7085 23.2323 35.7323L36.4645 22.5H2.5C1.1193 22.5 0 21.3807 0 20C0 18.6193 1.1193 17.5 2.5 17.5H36.4645L23.2323 4.26777C22.256 3.29145 22.256 1.70855 23.2323 0.732225Z"
-                            fill="black" />
-                    </svg>
-                </div>
-                <div class="grid grid-cols-5 items-center border-y-2 border-[#DDDDDD]">
-                    <div
-                        class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
-                        <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                            class="w-[86px] max-[1199px]:w-[60px]">
-                        <p
-                            class="my-0 text-[14px] max-[1199px]:text-[12px] font-dm-sans font-semibold w-[86px] max-[1199px]:w-[60px] text-[#000]">
-                            Raging Bulls
-                        </p>
-                    </div>
-                    <div class="2xl:px-[30px] 2xl:py-[30px]  text-center">
-                        <p class="my-0 text-[25px] max-[1199px]:text-[12px] font-medium text-[#000] font-moul">vs</p>
-                    </div>
-                    <div
-                        class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
-                        <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers"
-                            class="w-[86px] max-[1199px]:w-[60px]">
-                        <p
-                            class="text-[15px] max-[1199px]:text-[12px] font-dm-sans font-semibold text-[#000] w-[86px] max-[1199px]:w-[60px]">
-                            Strikers
-                        </p>
-                    </div>
-                </div>
-                <div class="px-[38px] py-[17px] max-[1199px]:px-[20px] max-[1199px]:py-[10px] text-center">
-                    <p class="my-0 text-[12px] max-[1199px]:text-[10px] font-dm-sans font-bold text-[#000]">
-                        Match 12 - Pindi Cricket Stadium
-                    </p>
-                </div>
-            </div>
-            <div class="overflow-hidden border-2 border-[#DDDDDD] md:mr-[20px] mx-[5px]">
-                <div class="flex items-center justify-between 2xl:px-[40px] px-[10px]  py-[20px]">
-                    <p class="my-0  text-[16px] font-dm-sans font-bold text-[#00000] max-[1199px]:text-[11px]">
-                        03 Nov 2024 - 10:00 am
-                    </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="40" viewBox="0 0 45 40"
-                        fill="none" class="w-[15px] h-[15px] max-[1199px]:w-[12px] max-[1199px]:h-[12px]">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M23.2323 0.732225C24.2085 -0.244075 25.7915 -0.244075 26.7677 0.732225L44.2677 18.2323C45.244 19.2085 45.244 20.7915 44.2677 21.7677L26.7677 39.2677C25.7915 40.244 24.2085 40.244 23.2323 39.2677C22.256 38.2915 22.256 36.7085 23.2323 35.7323L36.4645 22.5H2.5C1.1193 22.5 0 21.3807 0 20C0 18.6193 1.1193 17.5 2.5 17.5H36.4645L23.2323 4.26777C22.256 3.29145 22.256 1.70855 23.2323 0.732225Z"
-                            fill="black" />
-                    </svg>
-                </div>
-                <div class="grid grid-cols-5 items-center border-y-2 border-[#DDDDDD]">
-                    <div
-                        class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
-                        <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                            class="w-[86px] max-[1199px]:w-[60px]">
-                        <p
-                            class="my-0 text-[14px] max-[1199px]:text-[12px] font-dm-sans font-semibold w-[86px] max-[1199px]:w-[60px] text-[#000]">
-                            Raging Bulls
-                        </p>
-                    </div>
-                    <div class="2xl:px-[30px] 2xl:py-[30px]  text-center">
-                        <p class="my-0 text-[25px] max-[1199px]:text-[12px] font-medium text-[#000] font-moul">vs</p>
-                    </div>
-                    <div
-                        class="col-span-2 py-[13px] px-[33px] max-[1199px]:px-[20px] text-center flex flex-col items-center">
-                        <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers"
-                            class="w-[86px] max-[1199px]:w-[60px]">
-                        <p
-                            class="text-[15px] max-[1199px]:text-[12px] font-dm-sans font-semibold text-[#000] w-[86px] max-[1199px]:w-[60px]">
-                            Strikers
-                        </p>
-                    </div>
-                </div>
-                <div class="px-[38px] py-[17px] max-[1199px]:px-[20px] max-[1199px]:py-[10px] text-center">
-                    <p class="my-0 text-[12px] max-[1199px]:text-[10px] font-dm-sans font-bold text-[#000]">
-                        Match 12 - Pindi Cricket Stadium
-                    </p>
-                </div>
-            </div>
+            @empty
+                <p>no macthes found</p>
+            @endforelse
+
         </div>
 
 

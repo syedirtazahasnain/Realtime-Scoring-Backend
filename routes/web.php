@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GroupController;
@@ -9,10 +10,7 @@ use App\Http\Controllers\MatchController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TournamentController;
 
-Route::get('/', function () {
-    return view('home');
-});
-
+Route::get('/', [GeneralController::class,'home']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -50,6 +48,38 @@ Route::middleware('auth')->group(function () {
         })->name('admin.dashboard');
     });
 });
+
+Route::get('about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/matches-view', function () {
+    return view('matches');
+})->name('t1.matches');
+Route::get('/ranking', function () {
+    return view('ranking');
+})->name('ranking');
+Route::get('/news', function () {
+    return view('news');
+})->name('news');
+Route::get('/teams-view', function () {
+    return view('teams');
+})->name('t1.teams');
+Route::get('newpage', function () {
+    return view('newpage');
+})->name('newpage');
+Route::get('/players', function () {
+    return view('players');
+})->name('players');
+Route::get('/drafting', function () {
+    return view('drafting');
+})->name('drafting');
+Route::get('/videos', function () {
+    return view('videos');
+})->name('videos');
+
+
+
 
 
 require __DIR__ . '/auth.php';
