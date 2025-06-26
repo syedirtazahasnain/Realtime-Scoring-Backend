@@ -40,7 +40,7 @@
             class="absolute top-0 left-0 w-full h-full object-contain ">
 
         <div class="absolute 2xl:bottom-20 lg:left-20 xl:bottom-15 lg:bottom-10 md:left-15 bottom-5 left-4">
-            <p class="text-white font-dm-sans font-semibold 2xl:text-[18px] xl:text-[14px] text-[10px]">Chief Executive
+            <p class="text-white font-sans font-semibold 2xl:text-[18px] xl:text-[14px] text-[10px]">Chief Executive
                 Officer</p>
             <p
                 class="font-montserrat font-bold  2xl:text-[40px] xl:text-[30px] lg:text-[20px]
@@ -60,13 +60,13 @@
             <div class="grid grid-cols-1 lg:grid-cols-9 xl:mt-[90px] md:mt-[60px] mt-[40px] lg:py-[90px] py-[30px]">
                 <div class="lg:col-span-3 mt-[10px]">
                     <p
-                        class="font-montagu-slab 2xl:text-[30px] xl:text-[25px] md:text-[20px] text-[18px] lg:text-left text-center font-bold text-white">
+                        class="font-montu 2xl:text-[30px] xl:text-[25px] md:text-[20px] text-[18px] lg:text-left text-center font-bold text-white">
                         TFSC
                         Premier League
                         Management
                     </p>
                     <p
-                        class="font-dm-sans font-normal xl:text-[18px] md:text-[14px] text-[11px] lg:text-left text-center 2xl:leading-[24px] mt-[20px] max-w-[547px] mx-auto lg:mx-0 text-white">
+                        class="font-sans font-normal xl:text-[18px] md:text-[14px] text-[11px] lg:text-left text-center 2xl:leading-[24px] mt-[20px] max-w-[547px] mx-auto lg:mx-0 text-white">
                         Twenty Four Seven Consultancy Premier League Twenty Four Seven Consultancy Premier League Twenty
                         Four Seven Consultancy Premier League Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Quisquam magni nam nisi laboriosam
@@ -130,7 +130,7 @@
     {{-- tfsc community --}}
     <div class="bg-[#FFF4ED] mt-[40px] lg:mt-[100px] lg:py-[60px] py-[30px]">
         <div class="2xl:px-[80px] xl:px-[60px] md:px-[40px] px-[16px]">
-            <h2 class="text-[#094AB7] font-montagu-slab font-bold lg:text-[30px] text-[18px]">
+            <h2 class="text-[#094AB7] font-montu font-bold lg:text-[30px] text-[18px]">
                 TFSC Community
             </h2>
             <div class="lg:mt-[30px] mt-[10px] relative">
@@ -142,7 +142,7 @@
                         <div class="lg:col-span-1">
                             <div class="lg:bg-[#094AB7] ">
                                 <div class="pt-[30px] px-[40px]">
-                                    <p class="font-dm-sans lg:text-[24px] text-[16px] font-bold text-white text-center">Do
+                                    <p class="font-sans lg:text-[24px] text-[16px] font-bold text-white text-center">Do
                                         You Want Feel
                                         Part Of
                                         TFS Premier League
@@ -155,12 +155,12 @@
                                     {{-- for mobile view --}}
                                     <div class="  mt-5 lg:hidden">
                                         <div class=" bg-white py-[30px] flex flex-col items-center">
-                                            <p class=" font-dm-sans text-[14px] text-[#094AB7] font-bold ">Join
+                                            <p class=" font-sans text-[14px] text-[#094AB7] font-bold ">Join
                                                 the TFSC
                                                 Community
                                             </p>
                                             <button
-                                                class="lg:px-[42px] px-[19px] lg:py-[9px] py-[2px] bg-yellow-400 font-dm-sans font-bold lg:text-[14px] text-[12px] mt-[15px] text-[#094AB7]">Become
+                                                class="lg:px-[42px] px-[19px] lg:py-[9px] py-[2px] bg-yellow-400 font-sans font-bold lg:text-[14px] text-[12px] mt-[15px] text-[#094AB7]">Become
                                                 Premium
                                             </button>
                                         </div>
@@ -169,11 +169,11 @@
                             </div>
                         </div>
                         <div class="absolute lg:bottom-8 lg:right-0 bg-white px-[50px] py-[30px] hidden lg:block">
-                            <p class=" font-dm-sans lg:text-[24px] text-[18px] text-[#094AB7] font-bold ">Join the TFSC
+                            <p class=" font-sans lg:text-[24px] text-[18px] text-[#094AB7] font-bold ">Join the TFSC
                                 Community
                             </p>
                             <button
-                                class="px-[42px] py-[9px] bg-yellow-400 font-dm-sans font-bold text-[14px] mt-[15px] text-[#094AB7]">Become
+                                class="px-[42px] py-[9px] bg-yellow-400 font-sans font-bold text-[14px] mt-[15px] text-[#094AB7]">Become
                                 Premium
                             </button>
                         </div>
@@ -186,8 +186,8 @@
     {{-- our Story --}}
     <div class="bg-[#FFF4ED] 2xl:mt-[100px] mt-[40px]">
         <div class="xl:py-[60px] py-[30px] 2xl:px-[80px] xl:px-[60px] md:px-[40px] px-[16px]">
-            <h2 class="font-montagu-slab text-[#094AB7] font-bold text-center lg:text-[30px] text-[18px]">Our Stories</h2>
-            <p class="font-dm-sans lg:text-[18px] text-[12px] text-center mt-[20px]">Twenty Four Seven Consultancy Premier
+            <h2 class="font-montu text-[#094AB7] font-bold text-center lg:text-[30px] text-[18px]">Our Stories</h2>
+            <p class="font-sans lg:text-[18px] text-[12px] text-center mt-[20px]">Twenty Four Seven Consultancy Premier
                 League Twenty
                 Four Seven
                 <br class="hidden lg:block">
@@ -202,16 +202,16 @@
                             class="w-full h-full object-cover">
                     </div>
                     <p
-                        class="absolute bottom-14  text-[#F6C200] text-lg font-semibold px-[20px] 2xl:text-[18px] lg:text-[13px] sm:text-[12px] text-[14px] font-montagu-slab">
+                        class="absolute bottom-14  text-[#F6C200] text-lg font-semibold px-[20px] 2xl:text-[18px] lg:text-[13px] sm:text-[12px] text-[14px] font-montu">
                         Chief Operating Officer: Danish Ather
                     </p>
                     <div class="flex px-[20px] gap-[52px] bottom-7 absolute">
                         <div class="flex gap-2 items-center">
                             <span class="w-[8px] h-[8px] bg-[#F6C200] inline-block"></span>
-                            <span class="font-bold text-[#F6C200] text-[16px] font-montagu-slab">Feature</span>
+                            <span class="font-bold text-[#F6C200] text-[16px] font-montu">Feature</span>
                         </div>
                         <div>
-                            <p class="text-[16px] font-montagu-slab font-bold text-white">12 Jan 2025</p>
+                            <p class="text-[16px] font-montu font-bold text-white">12 Jan 2025</p>
                         </div>
                     </div>
                 </div>
@@ -222,16 +222,16 @@
                             class="w-full h-full object-cover">
                     </div>
                     <p
-                        class="absolute bottom-14  text-[#F6C200] text-lg font-semibold px-[20px] 2xl:text-[18px] lg:text-[13px] sm:text-[12px] text-[14px] font-montagu-slab">
+                        class="absolute bottom-14  text-[#F6C200] text-lg font-semibold px-[20px] 2xl:text-[18px] lg:text-[13px] sm:text-[12px] text-[14px] font-montu">
                         Chief Operating Officer: Danish Ather
                     </p>
                     <div class="flex px-[20px] gap-[52px] bottom-7 absolute">
                         <div class="flex gap-2 items-center">
                             <span class="w-[8px] h-[8px] bg-[#F6C200] inline-block"></span>
-                            <span class="font-bold text-[#F6C200] text-[16px] font-montagu-slab">Feature</span>
+                            <span class="font-bold text-[#F6C200] text-[16px] font-montu">Feature</span>
                         </div>
                         <div>
-                            <p class="text-[16px] font-montagu-slab font-bold text-white">12 Jan 2025</p>
+                            <p class="text-[16px] font-montu font-bold text-white">12 Jan 2025</p>
                         </div>
                     </div>
                 </div>
@@ -241,16 +241,16 @@
                             class="w-full h-full object-cover">
                     </div>
                     <p
-                        class="absolute bottom-14  text-[#F6C200] text-lg font-semibold px-[20px] 2xl:text-[18px] lg:text-[13px] sm:text-[12px] text-[14px] font-montagu-slab">
+                        class="absolute bottom-14  text-[#F6C200] text-lg font-semibold px-[20px] 2xl:text-[18px] lg:text-[13px] sm:text-[12px] text-[14px] font-montu">
                         Chief Operating Officer: Danish Ather
                     </p>
                     <div class="flex px-[20px] gap-[52px] bottom-7 absolute">
                         <div class="flex gap-2 items-center">
                             <span class="w-[8px] h-[8px] bg-[#F6C200] inline-block"></span>
-                            <span class="font-bold text-[#F6C200] text-[16px] font-montagu-slab">Feature</span>
+                            <span class="font-bold text-[#F6C200] text-[16px] font-montu">Feature</span>
                         </div>
                         <div>
-                            <p class="text-[16px] font-montagu-slab font-bold text-white">12 Jan 2025</p>
+                            <p class="text-[16px] font-montu font-bold text-white">12 Jan 2025</p>
                         </div>
                     </div>
                 </div>
@@ -260,16 +260,16 @@
                             class="w-full h-full object-cover">
                     </div>
                     <p
-                        class="absolute bottom-14  text-[#F6C200] text-lg font-semibold px-[20px] 2xl:text-[18px] lg:text-[13px] sm:text-[12px] text-[14px] font-montagu-slab">
+                        class="absolute bottom-14  text-[#F6C200] text-lg font-semibold px-[20px] 2xl:text-[18px] lg:text-[13px] sm:text-[12px] text-[14px] font-montu">
                         Chief Operating Officer: Danish Ather
                     </p>
                     <div class="flex px-[20px] gap-[52px] bottom-7 absolute">
                         <div class="flex gap-2 items-center">
                             <span class="w-[8px] h-[8px] bg-[#F6C200] inline-block"></span>
-                            <span class="font-bold text-[#F6C200] text-[16px] font-montagu-slab">Feature</span>
+                            <span class="font-bold text-[#F6C200] text-[16px] font-montu">Feature</span>
                         </div>
                         <div>
-                            <p class="text-[16px] font-montagu-slab font-bold text-white">12 Jan 2025</p>
+                            <p class="text-[16px] font-montu font-bold text-white">12 Jan 2025</p>
                         </div>
                     </div>
                 </div>
@@ -280,7 +280,7 @@
     {{-- tfsc owners --}}
     <div class="bg-[#094AB7]">
         <div class="2xl:px-[80px] xl:px-[60px] md:px-[40px] px-[16px] lg:mt-[100px] mt-[30px] pt-[30px] lg:pt-[60px]">
-            <h2 class="font-montagu-slab lg:text-[30px] text-[18px] font-bold text-white text-center lg:text-left">Teams
+            <h2 class="font-montu lg:text-[30px] text-[18px] font-bold text-white text-center lg:text-left">Teams
                 Owners
             </h2>
 
@@ -295,8 +295,8 @@
                             </div>
                             <div
                                 class="absolute top-4/5 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                                <h2 class="font-montagu-slab text-[22px] font-bold">Jamshed Arbab Khan</h2>
-                                <p class="text-[14px] font-bold font-dm-sans">Timber Wolves</p>
+                                <h2 class="font-montu text-[22px] font-bold">Jamshed Arbab Khan</h2>
+                                <p class="text-[14px] font-bold font-sans">Timber Wolves</p>
                             </div>
                         </div>
                         <div class="bg-gradient-to-t from-[#221D1D] to-[#003FA9] relative owner_section_box">
@@ -305,8 +305,8 @@
                             </div>
                             <div
                                 class="absolute top-4/5 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                                <h2 class="font-montagu-slab text-[22px] font-bold">Jamshed Arbab Khan</h2>
-                                <p class="text-[14px] font-bold font-dm-sans">Timber Wolves</p>
+                                <h2 class="font-montu text-[22px] font-bold">Jamshed Arbab Khan</h2>
+                                <p class="text-[14px] font-bold font-sans">Timber Wolves</p>
                             </div>
                         </div>
                         <div class="bg-gradient-to-t from-[#221D1D] to-[#003FA9] relative owner_section_box">
@@ -315,8 +315,8 @@
                             </div>
                             <div
                                 class="absolute top-4/5 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                                <h2 class="font-montagu-slab text-[22px] font-bold">Jamshed Arbab Khan</h2>
-                                <p class="text-[14px] font-bold font-dm-sans">Timber Wolves</p>
+                                <h2 class="font-montu text-[22px] font-bold">Jamshed Arbab Khan</h2>
+                                <p class="text-[14px] font-bold font-sans">Timber Wolves</p>
                             </div>
                         </div>
                         <div class="bg-gradient-to-t from-[#221D1D] to-[#003FA9] relative owner_section_box">
@@ -325,8 +325,8 @@
                             </div>
                             <div
                                 class="absolute top-4/5 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                                <h2 class="font-montagu-slab text-[22px] font-bold">Jamshed Arbab Khan</h2>
-                                <p class="text-[14px] font-bold font-dm-sans">Timber Wolves</p>
+                                <h2 class="font-montu text-[22px] font-bold">Jamshed Arbab Khan</h2>
+                                <p class="text-[14px] font-bold font-sans">Timber Wolves</p>
                             </div>
                         </div>
                         <div class="bg-gradient-to-t from-[#221D1D] to-[#003FA9] relative owner_section_box">
@@ -335,8 +335,8 @@
                             </div>
                             <div
                                 class="absolute top-4/5 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                                <h2 class="font-montagu-slab text-[22px] font-bold">Jamshed Arbab Khan</h2>
-                                <p class="text-[14px] font-bold font-dm-sans">Timber Wolves</p>
+                                <h2 class="font-montu text-[22px] font-bold">Jamshed Arbab Khan</h2>
+                                <p class="text-[14px] font-bold font-sans">Timber Wolves</p>
                             </div>
                         </div>
                     </div>
@@ -355,12 +355,12 @@
         <div class="grid grid-cols-1 xl:grid-cols-3 lg:py-[60px] py-[30px] absolute inset-0">
             <div class="hidden xl:block"></div>
             <div>
-                <h2 class="font-montagu-slab text-[#094AB7] font-semibold text-center lg:text-[30px] text-[18px]">TFSC
+                <h2 class="font-montu text-[#094AB7] font-semibold text-center lg:text-[30px] text-[18px]">TFSC
                     Premier League
                     Sponsers
                 </h2>
                 <p
-                    class="font-dm-sans lg:text-[18px] text-[12px] text-center mt-[20px] leading-[24px] text-wrap xl:px-0 px-5">
+                    class="font-sans lg:text-[18px] text-[12px] text-center mt-[20px] leading-[24px] text-wrap xl:px-0 px-5">
                     Twenty
                     Four Seven
                     Consultancy

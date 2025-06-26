@@ -7,7 +7,7 @@
         <img src="{{ asset('storage/matches/bg1.png') }}" alt=""
             class="h-[300px] absolute left-0 right-0 bottom-0 w-full object-cover overflow-hidden">
         <h2
-            class="text-white 2xl:text-[50px] xl:text-[40px] lg:text-[30px] sm:text-[20px] text-[18px] font-montagu-slab font-bold relative">
+            class="text-white 2xl:text-[50px] xl:text-[40px] lg:text-[30px] sm:text-[20px] text-[18px] font-montu font-bold relative">
             Rankings
         </h2>
     </div>
@@ -55,7 +55,7 @@
         <div class="relative bg-[#094AB7]">
             {{-- IST table --}}
             <div class="relative">
-                <table class="w-full text-white font-dm-sans font-bold border-collapse ">
+                <table class="w-full text-white font-sans font-bold border-collapse ">
                     <thead class="border-b-[1px] border-[#0EA825] font-bold">
                         <tr class="text-white text-left xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[12px]">
                             <th class="text-center py-4 w-[96.52px]">Pos</th>
@@ -69,13 +69,13 @@
                     </thead>
                     <tbody>
                         <tr
-                            class="text-left border-b-[1px] border-[#32457E] font-semibold font-dm-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px] ">
+                            class="text-left border-b-[1px] border-[#32457E] font-semibold font-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px] ">
                             <td class="text-center">1.</td>
                             <td class="">
                                 <img src="{{ asset('storage/ranking/l.png') }}" alt="" class="mx-2">
                             </td>
                             <td
-                                class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-dm-sans font-medium gap-3 py-3">
+                                class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-sans font-medium gap-3 py-3">
                                 <img src="{{ asset('storage/ranking/s.png') }}" alt="">Strikers
                             </td>
                             <td class="pl-10">9</td>
@@ -86,13 +86,13 @@
                             <td class="text-center">9</td>
                         </tr>
                         <tr
-                            class="text-left border-b-[1px] border-[#32457E] font-semibold font-dm-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px]">
+                            class="text-left border-b-[1px] border-[#32457E] font-semibold font-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px]">
                             <td class="text-center">2.</td>
                             <td class="">
                                 <img src="{{ asset('storage/ranking/l.png') }}" alt="" class="mx-2">
                             </td>
                             <td
-                                class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-dm-sans font-medium gap-3 py-3">
+                                class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-sans font-medium gap-3 py-3">
                                 <img src="{{ asset('storage/ranking/s.png') }}" alt="">Strikers
                             </td>
                             <td class="pl-10">9</td>
@@ -103,13 +103,13 @@
                             <td class="text-center">9</td>
                         </tr>
                         <tr
-                            class="text-left border-b-[1px] border-[#32457E] font-semibold font-dm-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px]">
+                            class="text-left border-b-[1px] border-[#32457E] font-semibold font-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px]">
                             <td class="text-center">3.</td>
                             <td class="">
                                 <img src="{{ asset('storage/ranking/l.png') }}" alt="" class="mx-2">
                             </td>
                             <td
-                                class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-dm-sans font-medium gap-3 py-3">
+                                class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-sans font-medium gap-3 py-3">
                                 <img src="{{ asset('storage/ranking/s.png') }}" alt="">Strikers
                             </td>
                             <td class="pl-10">9</td>
@@ -120,13 +120,13 @@
                             <td class="text-center">9</td>
                         </tr>
                         <tr
-                            class="text-left border-b-[1px] border-[#32457E] font-semibold font-dm-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px]">
+                            class="text-left border-b-[1px] border-[#32457E] font-semibold font-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px]">
                             <td class="text-center">4.</td>
                             <td class="">
                                 <img src="{{ asset('storage/ranking/l.png') }}" alt="" class="mx-2">
                             </td>
                             <td
-                                class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-dm-sans font-medium gap-3 py-3">
+                                class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-sans font-medium gap-3 py-3">
                                 <img src="{{ asset('storage/ranking/s.png') }}" alt="">Strikers
                             </td>
                             <td class="pl-10">9</td>
@@ -191,7 +191,7 @@
         <div class="relative bg-[#094AB7]"></div>
         {{-- 2nd table --}}
         <div class="relative">
-            <table class="w-full text-white font-dm-sans font-bold border-collapse ">
+            <table class="w-full text-white font-sans font-bold border-collapse ">
                 <thead class="border-b-[1px] border-[#0EA825] font-bold">
                     <tr class="text-white text-left xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[12px]">
                         <th class="text-center py-4 w-[96.52px]">Pos</th>
@@ -205,13 +205,13 @@
                 </thead>
                 <tbody>
                     <tr
-                        class="text-left border-b-[1px] border-[#32457E] font-semibold font-dm-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px] ">
+                        class="text-left border-b-[1px] border-[#32457E] font-semibold font-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px] ">
                         <td class="text-center">1.</td>
                         <td class="">
                             <img src="{{ asset('storage/ranking/l.png') }}" alt="" class="mx-2">
                         </td>
                         <td
-                            class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-dm-sans font-medium gap-3 py-3">
+                            class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-sans font-medium gap-3 py-3">
                             <img src="{{ asset('storage/ranking/s.png') }}" alt="">Strikers
                         </td>
                         <td class="xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[8px] pl-10">M.MASOOD</td>
@@ -222,13 +222,13 @@
                         <td class="text-center">9</td>
                     </tr>
                     <tr
-                        class="text-left border-b-[1px] border-[#32457E] font-semibold font-dm-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px] ">
+                        class="text-left border-b-[1px] border-[#32457E] font-semibold font-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px] ">
                         <td class="text-center">2.</td>
                         <td class="">
                             <img src="{{ asset('storage/ranking/l.png') }}" alt="" class="mx-2">
                         </td>
                         <td
-                            class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-dm-sans font-medium gap-3 py-3">
+                            class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-sans font-medium gap-3 py-3">
                             <img src="{{ asset('storage/ranking/s.png') }}" alt="">Strikers
                         </td>
                         <td class="xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[8px] pl-10">M.MASOOD</td>
@@ -239,13 +239,13 @@
                         <td class="text-center">9</td>
                     </tr>
                     <tr
-                        class="text-left border-b-[1px] border-[#32457E] font-semibold font-dm-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px] ">
+                        class="text-left border-b-[1px] border-[#32457E] font-semibold font-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px] ">
                         <td class="text-center">3.</td>
                         <td class="">
                             <img src="{{ asset('storage/ranking/l.png') }}" alt="" class="mx-2">
                         </td>
                         <td
-                            class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-dm-sans font-medium gap-3 py-3">
+                            class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-sans font-medium gap-3 py-3">
                             <img src="{{ asset('storage/ranking/s.png') }}" alt="">Strikers
                         </td>
                         <td class="xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[8px] pl-10">M.MASOOD</td>
@@ -256,13 +256,13 @@
                         <td class="text-center">9</td>
                     </tr>
                     <tr
-                        class="text-left border-b-[1px] border-[#32457E] font-semibold font-dm-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px] ">
+                        class="text-left border-b-[1px] border-[#32457E] font-semibold font-sans xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[11px] ">
                         <td class="text-center">4.</td>
                         <td class="">
                             <img src="{{ asset('storage/ranking/l.png') }}" alt="" class="mx-2">
                         </td>
                         <td
-                            class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-dm-sans font-medium gap-3 py-3">
+                            class="flex items-center xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[10px] font-sans font-medium gap-3 py-3">
                             <img src="{{ asset('storage/ranking/s.png') }}" alt="">Strikers
                         </td>
                         <td class="xl:text-[16px] lg:text-[14px] sm:text-[13px] text-[8px] pl-10">M.MASOOD</td>

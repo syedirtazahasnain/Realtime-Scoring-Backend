@@ -8,7 +8,7 @@
         <img src="{{ asset('storage/matches/bg1.png') }}" alt=""
             class="h-[300px]  absolute left-0 right-0 bottom-0 w-full object-cover overflow-hidden">
         <h2
-            class="text-white 2xl:text-[50px] xl:text-[40px] lg:text-[30px] sm:text-[20px] text-[18px] font-montagu-slab font-bold relative">
+            class="text-white 2xl:text-[50px] xl:text-[40px] lg:text-[30px] sm:text-[20px] text-[18px] font-montu font-bold relative">
             News
         </h2>
     </div>

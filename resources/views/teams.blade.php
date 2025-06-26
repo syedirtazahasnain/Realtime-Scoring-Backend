@@ -7,7 +7,7 @@
         <img src="{{ asset('storage/matches/bg1.png') }}" alt=""
             class="h-[300px]  absolute left-0 right-0 bottom-0 w-full object-cover overflow-hidden">
         <h2
-            class="text-white 2xl:text-[50px] xl:text-[40px] lg:text-[30px] sm:text-[20px] text-[18px] font-montagu-slab font-bold relative">
+            class="text-white 2xl:text-[50px] xl:text-[40px] lg:text-[30px] sm:text-[20px] text-[18px] font-montu font-bold relative">
             Teams
         </h2>
     </div>
@@ -63,18 +63,18 @@
                 <div class="bg-white 2xl:mx-[102px] xl:mx-[80px] lg:mx-[60px] md:mx-[40px] mx-[40px] relative z-10">
                     <div class="  border border-[#094AB7] mb-[20px]">
                         <div
-                            class="bg-[#094AB7] text-white h-[45px] px-6 flex items-center text-[15px] 2xl:text-[18px] font-bold font-dm-sans 2xl:leading-60">
+                            class="bg-[#094AB7] text-white h-[45px] px-6 flex items-center text-[15px] 2xl:text-[18px] font-bold font-sans 2xl:leading-60">
                             Upcoming
                             <hr class="flex-grow border-t-2 border-[#ffffff] ml-4">
                         </div>
                         <div class="px-5 grid grid-cols-1 md:grid-cols-3 items-center">
                             <div class="md:text-left text-center">
                                 <p
-                                    class="2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[14px] font-bold font-dm-sans 2xl:leading-[27px]">
+                                    class="2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[14px] font-bold font-sans 2xl:leading-[27px]">
                                     19 Dec 2024 – 15th Match
                                 </p>
                                 <p
-                                    class="text-black 2xl:text-[14px]  xl:text-[12px] lg:text-[10px] md:text-[9px] text-[11px] font-bold font-dm-sans 2xl:leading-[27px] opacity-65 mt-0">
+                                    class="text-black 2xl:text-[14px]  xl:text-[12px] lg:text-[10px] md:text-[9px] text-[11px] font-bold font-sans 2xl:leading-[27px] opacity-65 mt-0">
                                     Islamabad
                                     Cricket
                                     Stadium</p>
@@ -83,20 +83,20 @@
                                 <div class="flex flex-col items-center">
                                     <img src="{{ asset('storage/Zalmiico.png') }}" alt="Zalmi" class="h-10">
                                     <p
-                                        class="2xl:text-[15px] lg:text-[13px] md:text-[12px] text-[12px] font-semibold font-dm-sans text-[#2F3F50]">
+                                        class="2xl:text-[15px] lg:text-[13px] md:text-[12px] text-[12px] font-semibold font-sans text-[#2F3F50]">
                                         Zalmi</p>
                                 </div>
                                 <p class="text-[14px] font-medium font-montserrat">vs</p>
                                 <div class="flex flex-col items-center">
                                     <img src="{{ asset('storage/Warrior.png') }}" alt="Warriors" class="h-10">
                                     <p
-                                        class="2xl:text-[15px] lg:text-[13px] md:text-[12px] text-[12px] font-semibold font-dm-sans text-[#2F3F50]">
+                                        class="2xl:text-[15px] lg:text-[13px] md:text-[12px] text-[12px] font-semibold font-sans text-[#2F3F50]">
                                         Warriors</p>
                                 </div>
                             </div>
                             <div class="md:text-right text-center md:pr-[22px] md:mb-[33px] md:mt-[20px] mb-[10px]">
                                 <button
-                                    class="border-[1px] border-[#094AB7] text-[#094AB7] px-5 py-2 2xl:text-[14px] xl:text-[12px] md:text-[11px] text-[11px] font-dm-sans font-bold">
+                                    class="border-[1px] border-[#094AB7] text-[#094AB7] px-5 py-2 2xl:text-[14px] xl:text-[12px] md:text-[11px] text-[11px] font-sans font-bold">
                                     Match Centre
                                 </button>
                             </div>
@@ -109,18 +109,18 @@
                 <div class="bg-white 2xl:mx-[102px] xl:mx-[80px] lg:mx-[60px] md:mx-[40px] mx-[40px] relative z-10">
                     <div class="border border-[#094AB7] mb-[20px]">
                         <div
-                            class="bg-[#094AB7] text-white h-[45px] px-6 flex items-center text-[15px] 2xl:text-[18px] font-bold font-dm-sans 2xl:leading-60">
+                            class="bg-[#094AB7] text-white h-[45px] px-6 flex items-center text-[15px] 2xl:text-[18px] font-bold font-sans 2xl:leading-60">
                             Upcoming
                             <hr class="flex-grow border-t-2 border-[#ffffff] ml-4">
                         </div>
                         <div class="px-5 grid grid-cols-1 md:grid-cols-3 items-center">
                             <div class="md:text-left text-center">
                                 <p
-                                    class="2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[14px] font-bold font-dm-sans 2xl:leading-[27px]">
+                                    class="2xl:text-[18px] xl:text-[16px] lg:text-[14px] md:text-[12px] text-[14px] font-bold font-sans 2xl:leading-[27px]">
                                     19 Dec 2024 – 15th Match
                                 </p>
                                 <p
-                                    class="text-black 2xl:text-[14px] xl:text-[12px] lg:text-[10px] md:text-[9px] text-[11px] font-bold font-dm-sans 2xl:leading-[27px] opacity-65 mt-0">
+                                    class="text-black 2xl:text-[14px] xl:text-[12px] lg:text-[10px] md:text-[9px] text-[11px] font-bold font-sans 2xl:leading-[27px] opacity-65 mt-0">
                                     Islamabad
                                     Cricket
                                     Stadium</p>
@@ -129,20 +129,20 @@
                                 <div class="flex flex-col items-center">
                                     <img src="{{ asset('storage/Zalmiico.png') }}" alt="Zalmi" class="h-10">
                                     <p
-                                        class="2xl:text-[15px] lg:text-[13px] md:text-[12px] text-[12px] font-semibold font-dm-sans text-[#2F3F50]">
+                                        class="2xl:text-[15px] lg:text-[13px] md:text-[12px] text-[12px] font-semibold font-sans text-[#2F3F50]">
                                         Zalmi</p>
                                 </div>
                                 <p class="text-[14px] font-medium font-montserrat">vs</p>
                                 <div class="flex flex-col items-center">
                                     <img src="{{ asset('storage/Warrior.png') }}" alt="Warriors" class="h-10">
                                     <p
-                                        class="2xl:text-[15px] lg:text-[13px] md:text-[12px] text-[12px] font-semibold font-dm-sans text-[#2F3F50]">
+                                        class="2xl:text-[15px] lg:text-[13px] md:text-[12px] text-[12px] font-semibold font-sans text-[#2F3F50]">
                                         Warriors</p>
                                 </div>
                             </div>
                             <div class="md:text-right text-center md:pr-[22px] md:mb-[33px] md:mt-[20px] mb-[10px]">
                                 <button
-                                    class="border-[1px] border-[#094AB7] text-[#094AB7] px-5 py-2 2xl:text-[14px] xl:text-[12px] md:text-[11px] text-[11px] font-dm-sans font-bold">
+                                    class="border-[1px] border-[#094AB7] text-[#094AB7] px-5 py-2 2xl:text-[14px] xl:text-[12px] md:text-[11px] text-[11px] font-sans font-bold">
                                     Match Centre
                                 </button>
                             </div>
