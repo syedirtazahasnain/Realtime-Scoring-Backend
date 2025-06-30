@@ -65,6 +65,13 @@ return [
             'replace_placeholders' => true,
         ],
 
+        'custom_log' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/custom.log'),
+            'level' => 'debug', // or 'error', 'info', etc.
+            'replace_placeholders' => true,
+        ],
+
         'daily' => [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),
