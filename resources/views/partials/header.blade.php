@@ -58,13 +58,39 @@
             <!-- Right: Desktop Button + Logo -->
             <div class="flex items-center justify-end w-full gap-[20px] xl:gap-[30px]">
                 <!-- Desktop CTA -->
-                <div class="hidden xl:flex lg:flex md:flex items-center border-x-[1px] border-[#fff]">
+                <div class="hidden xl:flex lg:flex md:flex items-center border-x-[1px] border-[#fff] relative group">
                     <button
                         class="px-[15px] 2xl:px-[20px] py-[5px] text-white hover:cursor-pointer text-[14px] xl:text-[16px] font-montu text-nowrap">
                         Join TFSC PL
                     </button>
-                </div>
+                    <!-- Dropdown menu -->
+                    <div
+                        class="absolute hidden group-hover:block top-full right-0 mt-0 w-48 bg-white rounded-md shadow-lg z-50">
+                        <div class="py-1">
+                            <!-- Profile link -->
+                            @if(auth()->check())
+                            <x-dropdown-link :href="route('profile.edit')">
+                                {{ __('Profile') }}
+                            </x-dropdown-link>
 
+                            <!-- Authentication -->
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                     this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                                </x-dropdown-link>
+                            </form>
+                            @else
+                            <!-- Login link -->
+                            <x-dropdown-link :href="route('login')">
+                                {{ __('Login') }}
+                            </x-dropdown-link>
+                            @endif
+                        </div>
+                    </div>
+                </div>
                 <!-- Right Logo -->
                 <div class="">
                     <img src="{{ asset('images/logo/tfsc-logo-white.png') }}" alt="Logo" class="">
