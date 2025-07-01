@@ -464,7 +464,7 @@
     <div class="relative bg-[#fff]">
         <div class="px-[20px] lg:px-[0px] my-[25px] xl:my-[50px]">
             <div class="px-[20px] lg:px-[40px] xl:px-[80px] md:bg-[#FFF4ED] relative">
-                <div class="flex items-center justify-between py-[20px] md:py-[40px]">
+                <div class="flex items-center justify-between py-[20px] md:py-[40px] flex-wrap">
                     <h2
                         class="lg:pl-[24px] rounded-xl text-[#094AB7] text-[18px] 2xl:text-[24px] font-bold font-montu">
                         GupShup/Reels/Interviews
@@ -571,7 +571,7 @@
 
 
     <!-- Gup shup section -->
-    <div
+    <!-- <div
         class="xl:px-[80px] lg:px-[40px] px-[20px] md:bg-[#FFF4ED] mt-[30px] md:mt-[100px] h-full overflow-hidden relative">
         <div class="rounded-[5px] flex items-center justify-between md:py-[50px]">
             <h2 class="lg:pl-[24px] rounded-xl text-[#094AB7] text-[18px] 2xl:text-[24px] font-bold font-Montserrat ">
@@ -665,927 +665,812 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <!-- Standings section -->
-    <div class="relative w-full h-auto md:mt-[50px] mt-[30px]">
-        <div class="absolute w-full h-[241px] object-cover object-center">
-            <img src="{{ asset('storage/new/Standings-bg.png') }}" alt="Background"
-                class="w-full h-full object-cover">
-        </div>
-        <div class="relative md:h-[241px] sm:h-[150px]">
-            <div class="pt-[50px] xl:px-[80px] lg:px-[40px] px-[20px] flex flex-wrap justify-between items-center">
-                <span
-                    class="text-[18px] xl:text-[30px] lg:text-[26px] md:text-[22px] font-bold font-montserrat text-white">Standings</span>
-                <div class="hs-dropdown relative">
-                    <div class="px-[13px] bg-[#fff]">
-                        <select id="cars" name="cars"
-                            class="w-full py-2 bg-white xl:text-[14px] md:text-[12px] text-[10px] font-medium font-montserrat text-[#060E34]">
-                            <option value="">Season 1</option>
-                            <option value="">Season 2</option>
-                        </select>
-                    </div>
+    {{-- Standings section Refined --}}
+    <div class="relative ">
+        <div class=" md:mt-[50px] mt-[30px] ">
+            <div class="  relative">
+
+                <div class="absolute w-full h-[241px] object-cover object-center">
+                    <img src="{{ asset('storage/new/Standings-bg.png') }}" alt="Background"
+                        class="w-full h-full object-cover">
                 </div>
-            </div>
-        </div>
-
-        <!-- Standings Table -->
-        <div
-            class="xl:px-[80px] lg:px-[40px] px-[20px] relative md:grid sm:grid-cols-1 xl:grid-cols-2 md:mt-[-125px] md:gap-[20px] sm:mt-[-2px] min-[365px]:mt-[-10px] max-[640px]:pt-[30px] hidden">
-            <div class="max-[768px]:mt-[15px]">
-                <table class="w-full border-collapse bg-[#0160FF] shadow-[0px_14px_35px_rgba(9,21,75,0.55)]">
-                    <thead>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#397242] ">
-                            <th
-                                class="py-7 sm:pl-6 min-[365px]:pl-4 text-left sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                Group A
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                M
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                W
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                L
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                NR
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                D
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                P
-                            </th>
-                            <th
-                                class="sm:p-3 text-center rounded-t-lg sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                NRR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-blue-950 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Strikers</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                                    class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Raging
-                                    Bulls</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Sultans</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Invaders</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white text-center">
-                            <td colspan="8"
-                                class="p-5 sm:text-[14px] min-[365px]:text-[12px] font-normal font-montserrat">
-                                <div class="flex justify-center items-center gap-2">
-                                    <a href="/ranking"
-                                        class="group flex items-center gap-2 cursor-pointer hover:text-gray-400 transition">
-                                        <p class="leading-none">View All Rankings</p>
-                                        <img src="{{ asset('storage/b.svg') }}" alt="Arrow icon"
-                                            class="transition duration-300 group-hover:opacity-50" />
-                                    </a>
+                <div class="relative md:h-[241px] sm:h-[150px]">
+                    <div class=" pt-[50px] xl:px-[80px] lg:px-[40px] px-[20px]">
+                        <div class="flex flex-wrap justify-between items-center">
+                            <span
+                                class="text-[18px] xl:text-[30px] lg:text-[26px] md:text-[22px] font-bold font-montserrat text-white">Standings</span>
+                            <div class="hs-dropdown relative">
+                                <div class="px-[13px] bg-[#fff]">
+                                    <select id="cars" name="cars"
+                                        class="w-full py-2 bg-white xl:text-[14px] md:text-[12px] text-[10px] font-medium font-montserrat text-[#060E34]">
+                                        <option value="">Season 1</option>
+                                        <option value="">Season 2</option>
+                                    </select>
                                 </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            {{-- table 2 --}}
-            <div class="max-[768px]:mt-[15px]">
-                <table class="w-full border-collapse bg-[#0160FF] shadow-[0px_14px_35px_rgba(9,21,75,0.55)]">
-                    <thead>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#397242] ">
-                            <th
-                                class="py-7 sm:pl-6 min-[365px]:pl-4 text-left sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                Group A
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                M
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                W
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                L
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                NR
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                D
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                P
-                            </th>
-                            <th
-                                class="sm:p-3 text-center rounded-t-lg sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                NRR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-blue-950 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Strikers</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                                    class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Raging
-                                    Bulls</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Sultans</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Invaders</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white text-center">
-                            <td colspan="8"
-                                class="p-5 sm:text-[14px] min-[365px]:text-[12px] font-normal font-montserrat">
-                                <div class="flex justify-center items-center gap-2">
-                                    <a href="/ranking"
-                                        class="group flex items-center gap-2 cursor-pointer hover:text-gray-400 transition">
-                                        <p class="leading-none">View All Rankings</p>
-                                        <img src="{{ asset('storage/b.svg') }}" alt="Arrow icon"
-                                            class="transition duration-300 group-hover:opacity-50" />
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        </div>
-        {{-- table for mobile view --}}
-        <div class="xl:px-[80px] lg:px-[40px] px-[20px] relative md:hidden grid sm:grid-cols-1 ">
-            {{-- table 1 --}}
-            <div class="max-[768px]:mt-[15px]">
-                <table class="w-full border-collapse bg-[#0160FF] shadow-[0px_14px_35px_rgba(9,21,75,0.55)]">
-                    <thead>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#397242]">
-                            <th
-                                class="py-7 sm:pl-6 min-[365px]:pl-4 text-left sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                Group A
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                M
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                W
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                L
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                NR
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                D
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                P
-                            </th>
-                            <th
-                                class="sm:p-3 text-center rounded-t-lg sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                NRR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Team Row Template -->
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-blue-950 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Strikers</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                                    class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Raging
-                                    Bulls</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Sultans</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Invaders</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-blue-950 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Strikers</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                                    class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Raging
-                                    Bulls</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Sultans</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Invaders</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white text-center">
-                            <td colspan="8"
-                                class="p-5 sm:text-[14px] min-[365px]:text-[12px] font-normal font-montserrat">
-                                <div class="flex justify-center items-center gap-2">
-                                    <a href="/ranking"
-                                        class="group flex items-center gap-2 cursor-pointer hover:text-gray-400 transition">
-                                        <p class="leading-none">View All Rankings</p>
-                                        <img src="{{ asset('storage/b.svg') }}" alt="Arrow icon"
-                                            class="transition duration-300 group-hover:opacity-50" />
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+                <!-- Standings Table -->
+                <div
+                    class="xl:px-[80px] lg:px-[40px] px-[20px] relative md:grid sm:grid-cols-1 xl:grid-cols-2 md:mt-[-125px] md:gap-[20px] sm:mt-[-2px] min-[365px]:mt-[-10px] max-[640px]:pt-[30px] hidden">
+                    <div class="max-[768px]:mt-[15px]">
+                        <table class="w-full border-collapse bg-[#0160FF] shadow-[0px_14px_35px_rgba(9,21,75,0.55)]">
+                            <thead>
+                                <tr class="bg-[#0160FF] text-white border-b border-[#397242] ">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
+                                        <th class="py-7 sm:pl-6 min-[365px]:pl-4 text-left ">
+                                            Group A
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            M
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            W
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            L
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            NR
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            D
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            P
+                                        </th>
+                                        <th class="sm:p-3 text-center rounded-t-lg ">
+                                            NRR</th>
+                                    </div>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-blue-950 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers"
+                                                class="w-7 h-7">
+                                            <span class=" ">Strikers</span>
+                                        </td>
+                                        <td class="p-3 text-center ">
+                                            3</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            1</td>
+                                        <td class="p-3 text-center ">
+                                            0</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            4</td>
+                                        <td class="p-3 text-center ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
+                                                class="w-7 h-7">
+                                            <span class=" ">Raging
+                                                Bulls</span>
+                                        </td>
+                                        <td class="p-3 text-center  ">
+                                            3</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            1</td>
+                                        <td class="p-3 text-center  ">
+                                            0</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            4</td>
+                                        <td class="p-3 text-center  ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans"
+                                                class="w-7 h-7">
+                                            <span class=" ">Sultans</span>
+                                        </td>
+                                        <td class="p-3 text-center  ">
+                                            3</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            1</td>
+                                        <td class="p-3 text-center  ">
+                                            0</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            4</td>
+                                        <td class="p-3 text-center  ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders"
+                                                class="w-7 h-7">
+                                            <span class=" ">Invaders</span>
+                                        </td>
+                                        <td class="p-3 text-center ">
+                                            3</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            1</td>
+                                        <td class="p-3 text-center ">
+                                            0</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            4</td>
+                                        <td class="p-3 text-center ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr class="bg-[#0160FF] text-white text-center">
+                                    <td colspan="8"
+                                        class="p-5 sm:text-[14px] min-[365px]:text-[12px] font-normal font-montserrat">
+                                        <div class="flex justify-center items-center gap-2">
+                                            <a href="/ranking"
+                                                class="group flex items-center gap-2 cursor-pointer hover:text-gray-400 transition">
+                                                <p class="leading-none">View All Rankings</p>
+                                                <img src="{{ asset('storage/b.svg') }}" alt="Arrow icon"
+                                                    class="transition duration-300 group-hover:opacity-50" />
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    {{-- table 2 --}}
+                    <div class="max-[768px]:mt-[15px]">
+                        <table class="w-full border-collapse bg-[#0160FF] shadow-[0px_14px_35px_rgba(9,21,75,0.55)]">
+                            <thead>
+                                <tr class="bg-[#0160FF] text-white border-b border-[#397242] ">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
+                                        <th class="py-7 sm:pl-6 min-[365px]:pl-4 text-left ">
+                                            Group A
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            M
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            W
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            L
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            NR
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            D
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            P
+                                        </th>
+                                        <th class="sm:p-3 text-center rounded-t-lg ">
+                                            NRR</th>
+                                    </div>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-blue-950 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers"
+                                                class="w-7 h-7">
+                                            <span class=" ">Strikers</span>
+                                        </td>
+                                        <td class="p-3 text-center ">
+                                            3</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            1</td>
+                                        <td class="p-3 text-center ">
+                                            0</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            4</td>
+                                        <td class="p-3 text-center ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
+                                    <div
+                                        class ="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
+                                                class="w-7 h-7">
+                                            <span class=" ">Raging
+                                                Bulls</span>
+                                        </td>
+                                        <td class="p-3 text-center  ">
+                                            3</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            1</td>
+                                        <td class="p-3 text-center  ">
+                                            0</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            4</td>
+                                        <td class="p-3 text-center  ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans"
+                                                class="w-7 h-7">
+                                            <span class=" ">Sultans</span>
+                                        </td>
+                                        <td class="p-3 text-center  ">
+                                            3</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            1</td>
+                                        <td class="p-3 text-center  ">
+                                            0</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            4</td>
+                                        <td class="p-3 text-center  ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders"
+                                                class="w-7 h-7">
+                                            <span class=" ">Invaders</span>
+                                        </td>
+                                        <td class="p-3 text-center ">
+                                            3</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            1</td>
+                                        <td class="p-3 text-center ">
+                                            0</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            4</td>
+                                        <td class="p-3 text-center ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr class="bg-[#0160FF] text-white text-center">
+                                    <td colspan="8"
+                                        class="p-5 sm:text-[14px] min-[365px]:text-[12px] font-normal font-montserrat">
+                                        <div class="flex justify-center items-center gap-2">
+                                            <a href="/ranking"
+                                                class="group flex items-center gap-2 cursor-pointer hover:text-gray-400 transition">
+                                                <p class="leading-none">View All Rankings</p>
+                                                <img src="{{ asset('storage/b.svg') }}" alt="Arrow icon"
+                                                    class="transition duration-300 group-hover:opacity-50" />
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-    <!-- Highlights section -->
-    <div class="bg-[#FFF4ED] md:h-full h-[536px] ">
-        <div
-            class="  sm:mt-[20px] md:mt-[80px] lg:mt-[74px]  xl:px-[80px] px-[20px] max-[640px]:mt-[20px] mt-[100px] h-[536px]">
-            <div class="flex items-center justify-between ml-2 xl:ml-0 ">
-                <h2
-                    class="md:py-[36px] text-[#094AB7] xl:text-[24px] lg:text-[20px] text-[18px] font-bold font-montu ">
-                    Highlights
-                </h2>
-                <div class="py-[36px] xl:pr-[20px] pr-[15px]">
-                    <a href="/teams">
-                        <button id="btn"
-                            class="px-[23px] md:px-[35px] md:py-[9px] py-[5px] bg-yellow-400 text-[10px] md:text-[14px] text-white font-sans cursor-pointer ">
-                            View All
-                        </button>
-                    </a>
                 </div>
-            </div>
-            <div class="highlights_section">
-                <div class="highlights_box xl:mr-[20px] xl:mx-0 mx-[10px]">
-                    <div class="relative w-full h-[304px]">
-                        <img src="{{ asset('storage/new/worriors.png') }}" alt="Default Image"
-                            class="w-full h-full transition-opacity duration-300 hover:opacity-0 object-cover ">
-                        <img src="{{ asset('storage/new/h1.png') }}" alt="Hover Image"
-                            class="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100 object-cover">
-                        <div class=" text-black font-montserrat z-10 pt-[27px] pb-[43px]">
-                            <p
-                                class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] text-[14px] font-montserrat font-bold ">
-                                Tom Got Heated After an
-                                Umpire’s Controversial Decision</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="highlights_box xl:mr-[20px] xl:mx-0 mx-[10px]">
-                    <div class="relative">
-                        <img src="{{ asset('storage/new/invaders.png') }}" alt="Default Image"
-                            class="w-full h-[304px]  transition-opacity duration-300 hover:opacity-0 object-cover ">
-                        <img src="{{ asset('storage/new/h2.png') }}" alt="Hover Image"
-                            class="absolute inset-0 w-full h-[304px] opacity-0 transition-opacity duration-300 hover:opacity-100 object-cover">
-                        <div class=" text-black font-montserrat z-10 pt-[27px] pb-[43px]">
-                            <p
-                                class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] text-[14px] font-montserrat font-bold ">
-                                Tom Got Heated After an
-                                Umpire’s Controversial Decision</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="highlights_box xl:mr-[20px] xl:mx-0 mx-[10px]">
-                    <div class="relative">
-                        <img src="{{ asset('storage/new/zalmi.png') }}" alt="Default Image"
-                            class="w-full h-[304px]  transition-opacity duration-300 hover:opacity-0 object-cover ">
-                        <img src="{{ asset('storage/new/h3.png') }}" alt="Hover Image"
-                            class="absolute inset-0 w-full h-[304px] opacity-0 transition-opacity duration-300 hover:opacity-100 object-cover">
-                        <div class=" text-black font-montserrat z-10 pt-[27px] pb-[43px]">
-                            <p
-                                class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] text-[14px] font-montserrat font-bold ">
-                                Tom Got Heated After an
-                                Umpire’s Controversial Decision</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="highlights_box xl:mr-[20px] xl:mx-0 mx-[10px]">
-                    <div class="relative">
-                        <img src="{{ asset('storage/new/sultan.png') }}" alt="Default Image"
-                            class="w-full h-[304px]  transition-opacity duration-300 hover:opacity-0 object-cover ">
-                        <img src="{{ asset('storage/new/h4.png') }}" alt="Hover Image"
-                            class="absolute inset-0 w-full h-[304px] opacity-0 transition-opacity duration-300 hover:opacity-100 object-cover">
-                        <div class=" text-black font-montserrat z-10 pt-[27px] pb-[43px]">
-                            <p
-                                class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] text-[14px] font-montserrat font-bold ">
-                                Tom Got Heated After an
-                                Umpire’s Controversial Decision</p>
-                        </div>
+                {{-- table for mobile view --}}
+                <div class="xl:px-[80px] lg:px-[40px] px-[20px] relative md:hidden grid sm:grid-cols-1 ">
+                    {{-- table 1 --}}
+                    <div class="max-[768px]:mt-[15px]">
+                        <table class="w-full border-collapse bg-[#0160FF] shadow-[0px_14px_35px_rgba(9,21,75,0.55)]">
+                            <thead>
+                                <tr class="bg-[#0160FF] text-white border-b border-[#397242]">
+                                    <div
+                                        class="sm:text-[16px] max-[365px]:text-[8px]  min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
+                                        <th class="py-7 sm:pl-6 min-[365px]:pl-4 text-left ">
+                                            Group A
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            M
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            W
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            L
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            NR
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            D
+                                        </th>
+                                        <th class="sm:p-3 text-center ">
+                                            P
+                                        </th>
+                                        <th class="sm:p-3 text-center rounded-t-lg ">
+                                            NRR</th>
+                                    </div>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Team Row Template -->
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-blue-950 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers"
+                                                class="w-7 h-7">
+                                            <span class=" ">Strikers</span>
+                                        </td>
+                                        <td class="p-3 text-center ">
+                                            3</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            1</td>
+                                        <td class="p-3 text-center ">
+                                            0</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            4</td>
+                                        <td class="p-3 text-center ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
+                                                class="w-7 h-7">
+                                            <span class=" ">Raging
+                                                Bulls</span>
+                                        </td>
+                                        <td class="p-3 text-center  ">
+                                            3</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            1</td>
+                                        <td class="p-3 text-center  ">
+                                            0</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            4</td>
+                                        <td class="p-3 text-center  ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans"
+                                                class="w-7 h-7">
+                                            <span class=" ">Sultans</span>
+                                        </td>
+                                        <td class="p-3 text-center  ">
+                                            3</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            1</td>
+                                        <td class="p-3 text-center  ">
+                                            0</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            4</td>
+                                        <td class="p-3 text-center  ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders"
+                                                class="w-7 h-7">
+                                            <span class=" ">Invaders</span>
+                                        </td>
+                                        <td class="p-3 text-center ">
+                                            3</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            1</td>
+                                        <td class="p-3 text-center ">
+                                            0</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            4</td>
+                                        <td class="p-3 text-center ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-blue-950 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers"
+                                                class="w-7 h-7">
+                                            <span class=" ">Strikers</span>
+                                        </td>
+                                        <td class="p-3 text-center ">
+                                            3</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            1</td>
+                                        <td class="p-3 text-center ">
+                                            0</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            4</td>
+                                        <td class="p-3 text-center ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
+                                                class="w-7 h-7">
+                                            <span class=" ">Raging
+                                                Bulls</span>
+                                        </td>
+                                        <td class="p-3 text-center  ">
+                                            3</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            1</td>
+                                        <td class="p-3 text-center  ">
+                                            0</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            4</td>
+                                        <td class="p-3 text-center  ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans"
+                                                class="w-7 h-7">
+                                            <span class=" ">Sultans</span>
+                                        </td>
+                                        <td class="p-3 text-center  ">
+                                            3</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            1</td>
+                                        <td class="p-3 text-center  ">
+                                            0</td>
+                                        <td class="p-3 text-center  ">
+                                            2</td>
+                                        <td class="p-3 text-center  ">
+                                            4</td>
+                                        <td class="p-3 text-center  ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr
+                                    class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
+                                    <div
+                                        class="sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
+                                        <td
+                                            class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
+                                            <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders"
+                                                class="w-7 h-7">
+                                            <span class=" ">Invaders</span>
+                                        </td>
+                                        <td class="p-3 text-center ">
+                                            3</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            1</td>
+                                        <td class="p-3 text-center ">
+                                            0</td>
+                                        <td class="p-3 text-center ">
+                                            2</td>
+                                        <td class="p-3 text-center ">
+                                            4</td>
+                                        <td class="p-3 text-center ">
+                                            2.000</td>
+                                    </div>
+                                </tr>
+                                <tr class="bg-[#0160FF] text-white text-center">
+                                    <td colspan="8"
+                                        class="p-5 sm:text-[14px] min-[365px]:text-[12px] font-normal font-montserrat">
+                                        <div class="flex justify-center items-center gap-2">
+                                            <a href="/ranking"
+                                                class="group flex items-center gap-2 cursor-pointer hover:text-gray-400 transition">
+                                                <p class="leading-none">View All Rankings</p>
+                                                <img src="{{ asset('storage/b.svg') }}" alt="Arrow icon"
+                                                    class="transition duration-300 group-hover:opacity-50" />
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    {{-- Highlights section Refined --}}
+    <div class="relative bg-[#FFF4ED]">
+        <div class=" md:h-full h-[536px] ">
+            <div
+                class="  sm:mt-[20px] md:mt-[80px] lg:mt-[74px]  xl:px-[80px] px-[20px] max-[640px]:mt-[20px] mt-[100px] h-[536px]">
+                <div class="flex items-center justify-between ml-2 xl:ml-0 ">
+                    <h2
+                        class="md:py-[36px] text-[#094AB7] xl:text-[24px] lg:text-[20px] text-[18px] font-bold font-montu ">
+                        Highlights
+                    </h2>
+                    <div class="py-[36px] xl:pr-[20px] pr-[15px]">
+                        <a href="/teams">
+                            <button id="btn"
+                                class="px-[23px] md:px-[35px] md:py-[9px] py-[5px] bg-yellow-400 text-[10px] md:text-[14px] text-white font-sans cursor-pointer ">
+                                View All
+                            </button>
+                        </a>
+                    </div>
+                </div>
 
-    {{-- Featured Players  --}}
+
+
+                <div class="highlights_section">
+                    <div class="highlights_box xl:mr-[20px] xl:mx-0 mx-[10px]">
+                        <div class="relative w-full h-[304px]">
+                            <img src="{{ asset('storage/new/worriors.png') }}" alt="Default Image"
+                                class="w-full h-full transition-opacity duration-300 hover:opacity-0 object-cover ">
+                            <img src="{{ asset('storage/new/h1.png') }}" alt="Hover Image"
+                                class="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100 object-cover">
+                            <div
+                                class=" text-black font-montserrat z-10 pt-[27px] pb-[43px] font-bold 2xl:text-[16px] xl:text-[13px] lg:text-[9px] text-[14px] ">
+                                <p class="  ">
+                                    Tom Got Heated After an
+                                    Umpire’s Controversial Decision</p>
+                            </div>
+                        </div>
+                    </div>
+                    @foreach ([
+        [
+            'default_image' => 'storage/new/invaders.png',
+            'hover_image' => 'storage/new/h2.png',
+            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+        ],
+        [
+            'default_image' => 'storage/new/zalmi.png',
+            'hover_image' => 'storage/new/h3.png',
+            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+        ],
+        [
+            'default_image' => 'storage/new/sultan.png',
+            'hover_image' => 'storage/new/h4.png',
+            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+        ],
+        ] as $item)
+                        <div class="highlights_box xl:mr-[20px] xl:mx-0 mx-[10px]">
+                            <div class="relative ">
+                                <!-- Default Image -->
+                                <img src="{{ asset($item['default_image']) }}" alt="Default Image"
+                                    class="w-full h-[304px]  transition-opacity duration-300 hover:opacity-0 object-cover ">
+
+                                <!-- Hover Image -->
+                                <img src="{{ asset($item['hover_image']) }}" alt="Hover Image"
+                                    class="absolute inset-0 w-full h-[304px] opacity-0 transition-opacity duration-300 hover:opacity-100 object-cover">
+
+                                <!-- Title - Positioned absolutely over images -->
+                                <div
+                                    class="text-black font-montserrat z-10 pt-[27px] pb-[43px] font-bold 2xl:text-[16px] xl:text-[13px] lg:text-[9px] text-[14px]">
+                                    <p>{{ $item['title'] }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {{-- Featured Players Refined  --}}
     <div class="w-[95%] mx-auto xl:px-[80px] lg:px-[40px] px-[20px] pt-[30px] lg:pt-[100px]">
         <h3
             class="font-montu text-[18px] xl:text-[30px] lg:text-[24px] md:text-[22px] font-bold leading-[46px] pb-[20px] md:pb-[50px] text-[#094AB7]">
             Featured Players</h3>
         <div class="featured_players">
-            <div class=" bg-[#FFF4ED] border border-[#F4F4F4] xl:mr-[30px] xl:mx-0 mx-[10px]">
-                <div class=" grid grid-cols-5">
-                    <div class="col-span-2">
-                        <div class="flex flex-col justify-center items-center">
-                            <img src="{{ asset('storage/new/fpl.png') }}" alt="featured player"
-                                class=" object-cover w-[52px] h-[60px] mt-[22px] mb-[15px]">
-                            <h4 class="font-sans  text-[12px] md:text-[14px] font-normal ">Matches</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">20</p>
-                            <h4 class="font-sans  text-[12px] md:text-[14px] font-normal ">Wickets</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">40</p>
-                            <h4 class="font-sans  text-[12px] md:text-[14px] font-normal ">Strike Rate</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">220</p>
-                            <h4 class="font-sans text-[12px]  md:text-[14px] font-normal ">Scores</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">400</p>
+            @foreach ([
+        [
+            'stats_image' => 'storage/new/fpl.png',
+            'player_image' => 'storage/new/fb1.png',
+            'bg_color' => 'bg-[#094AB7]',
+            'first_name' => 'Jamshaid',
+            'last_name' => 'Arbab Khan',
+            'role' => 'Allrounder',
+            'flag_image' => 'storage/new/gb.png',
+            'matches' => '20',
+            'wickets' => '40',
+            'strike_rate' => '220',
+            'scores' => '400',
+        ],
+        [
+            'stats_image' => 'storage/new/s.png',
+            'player_image' => 'storage/new/54.png',
+            'bg_color' => 'bg-yellow-400',
+            'first_name' => 'Muhammad',
+            'last_name' => 'Awais Khan',
+            'role' => 'Allrounder',
+            'flag_image' => 'storage/new/s.png',
+            'matches' => '20',
+            'wickets' => '40',
+            'strike_rate' => '220',
+            'scores' => '400',
+        ],
+        [
+            'stats_image' => 'storage/new/fpl.png',
+            'player_image' => 'storage/new/fb1.png',
+            'bg_color' => 'bg-[#094AB7]',
+            'first_name' => 'Jamshaid',
+            'last_name' => 'Arbab Khan',
+            'role' => 'Allrounder',
+            'flag_image' => 'storage/new/gb.png',
+            'matches' => '20',
+            'wickets' => '40',
+            'strike_rate' => '220',
+            'scores' => '400',
+            'hidden_class' => 'max-[640px]:hidden',
+        ],
+        [
+            'stats_image' => 'storage/new/s.png',
+            'player_image' => 'storage/new/54.png',
+            'bg_color' => 'bg-yellow-400',
+            'first_name' => 'Muhammad',
+            'last_name' => 'Awais Khan',
+            'role' => 'Allrounder',
+            'flag_image' => 'storage/new/s.png',
+            'matches' => '20',
+            'wickets' => '40',
+            'strike_rate' => '220',
+            'scores' => '400',
+        ],
+    ] as $player)
+                <div
+                    class="bg-[#FFF4ED] border border-[#F4F4F4] xl:mr-[30px] xl:mx-0 mx-[10px] {{ $player['hidden_class'] ?? '' }}">
+                    <div class="grid grid-cols-5">
+                        <div class="col-span-2">
+                            <div class="flex flex-col justify-center items-center">
+                                <img src="{{ asset($player['stats_image']) }}" alt="featured player"
+                                    class="object-cover w-[52px] h-[60px] mt-[22px] mb-[15px]">
+                                <h4 class="font-sans text-[12px] md:text-[14px] font-normal">Matches</h4>
+                                <p class="font-montu font-bold text-[20px] md:text-[24px]">
+                                    {{ $player['matches'] }}</p>
+                                <h4 class="font-sans text-[12px] md:text-[14px] font-normal">Wickets</h4>
+                                <p class="font-montu font-bold text-[20px] md:text-[24px]">
+                                    {{ $player['wickets'] }}</p>
+                                <h4 class="font-sans text-[12px] md:text-[14px] font-normal">Strike Rate
+                                </h4>
+                                <p class="font-montu font-bold text-[20px] md:text-[24px]">
+                                    {{ $player['strike_rate'] }}</p>
+                                <h4 class="font-sans text-[12px] md:text-[14px] font-normal">Scores</h4>
+                                <p class="font-montu font-bold text-[20px] md:text-[24px]">
+                                    {{ $player['scores'] }}</p>
+                            </div>
+                        </div>
+                        <div class="col-span-3 flex justify-center {{ $player['bg_color'] }}">
+                            <img src="{{ asset($player['player_image']) }}" alt="featured player"
+                                class="h-full object-cover">
                         </div>
                     </div>
-                    <div class="col-span-3 flex justify-center bg-[#094AB7]">
-                        <img src="{{ asset('storage/new/fb1.png') }}" alt="featured player"
-                            class="h-full object-cover">
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 px-[30px]">
-                    <div class="mt-[16px]">
-                        <p class="font-sans text-[14px] font-bold mb-[8px]">Jamshaid</p>
-                        <p class="font-montu md:text-[22px] text-[20px] font-bold mb-[8px]">Arbab Khan</p>
-                        <p class="font-montserrat md:text-[14px] text-[12px] mb-[16px]">Allrounder</p>
-                    </div>
-                    <div>
-                        <div class="flex justify-end mb-[8px]">
-                            <img src="{{ asset('storage/new/gb.png') }}" alt="featured player"
-                                class=" object-cover w-[32px] h-[37px] mt-[22px] ">
+                    <div class="grid grid-cols-2 px-[30px]">
+                        <div class="mt-[16px]">
+                            <p class="font-sans text-[14px] font-bold mb-[8px]">
+                                {{ $player['first_name'] }}</p>
+                            <p class="font-montu md:text-[22px] text-[20px] font-bold mb-[8px]">
+                                {{ $player['last_name'] }}</p>
+                            <p class="font-montserrat md:text-[14px] text-[12px] mb-[16px]">
+                                {{ $player['role'] }}</p>
                         </div>
-                        <div class="flex justify-end mb-[16px]">
-                            <button class="font-sans text-[12px] font-medium">
-                                View Profile -→
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=" bg-[#FFF4ED] border border-[#F4F4F4] xl:mr-[30px] xl:mx-0 mx-[10px]">
-                <div class=" grid grid-cols-5">
-                    <div class="col-span-2">
-                        <div class="flex flex-col justify-center items-center">
-                            <img src="{{ asset('storage/new/s.png') }}" alt="featured player"
-                                class=" object-cover w-[52px] h-[60px] mt-[22px] mb-[15px]">
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Matches</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">20</p>
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Wickets</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">40</p>
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Strike Rate</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">220</p>
-                            <h4 class="font-sans text-[12px]  md:text-[14px] font-normal ">Scores</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">400</p>
-                        </div>
-                    </div>
-                    <div class="col-span-3 flex justify-center bg-yellow-400">
-                        <img src="{{ asset('storage/new/54.png') }}" alt="featured player"
-                            class="h-full object-cover">
-
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 px-[30px]">
-                    <div class="mt-[16px]">
-                        <p class="font-sans text-[14px] font-bold mb-[8px]">Muhammad</p>
-                        <p class="font-montu md:text-[22px] text-[20px] font-bold mb-[8px]">Awais Khan</p>
-                        <p class="font-montserrat md:text-[14px] text-[12px] mb-[16px]">Allrounder</p>
-                    </div>
-                    <div>
-                        <div class="flex justify-end mb-[8px]">
-                            <img src="{{ asset('storage/new/s.png') }}" alt="featured player"
-                                class=" object-cover w-[32px] h-[37px] mt-[22px] ">
-                        </div>
-                        <div class="flex justify-end mb-[16px]">
-                            <button class="font-sans text-[12px] font-medium">
-                                View Profile -→
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=" bg-[#FFF4ED]  max-[640px]:hidden xl:mr-[30px] xl:mx-0 mx-[10px]">
-                <div class=" grid grid-cols-5">
-                    <div class="col-span-2">
-                        <div class="flex flex-col justify-center items-center">
-                            <img src="{{ asset('storage/new/fpl.png') }}" alt="featured player"
-                                class=" object-cover w-[52px] h-[60px] mt-[22px] mb-[15px]">
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Matches</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">20</p>
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Wickets</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">40</p>
-                            <h4 class="font-sans ext-[12px] md:text-[14px] font-normal ">Strike Rate</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">220</p>
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Scores</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">400</p>
-                        </div>
-                    </div>
-                    <div class="col-span-3 flex justify-center bg-[#094AB7]">
-                        <img src="{{ asset('storage/new/fb1.png') }}" alt="featured player"
-                            class="h-full object-cover">
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 px-[30px]">
-                    <div class="mt-[16px]">
-                        <p class="font-sans text-[14px] font-bold mb-[8px]">Jamshaid</p>
-                        <p class="font-montu md:text-[22px] text-[20px] font-bold mb-[8px]">Arbab Khan</p>
-                        <p class="font-montserrat md:text-[14px] text-[12px] mb-[16px]">Allrounder</p>
-                    </div>
-                    <div>
-                        <div class="flex justify-end mb-[8px]">
-                            <img src="{{ asset('storage/new/gb.png') }}" alt="featured player"
-                                class=" object-cover w-[32px] h-[37px] mt-[22px] ">
-                        </div>
-                        <div class="flex justify-end mb-[16px]">
-                            <button class="font-sans text-[12px] font-medium">
-                                View Profile -→
-                            </button>
+                        <div>
+                            <div class="flex justify-end mb-[8px]">
+                                <img src="{{ asset($player['flag_image']) }}" alt="featured player"
+                                    class="object-cover w-[32px] h-[37px] mt-[22px]">
+                            </div>
+                            <div class="flex justify-end mb-[16px]">
+                                <button class="font-sans text-[12px] font-medium">
+                                    View Profile -→
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class=" bg-[#FFF4ED] border border-[#F4F4F4] xl:mr-[30px] xl:mx-0 mx-[10px]">
-                <div class=" grid grid-cols-5">
-                    <div class="col-span-2">
-                        <div class="flex flex-col justify-center items-center">
-                            <img src="{{ asset('storage/new/s.png') }}" alt="featured player"
-                                class=" object-cover w-[52px] h-[60px] mt-[22px] mb-[15px]">
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Matches</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">20</p>
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Wickets</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">40</p>
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Strike Rate</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">220</p>
-                            <h4 class="font-sans text-[12px]  md:text-[14px] font-normal ">Scores</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">400</p>
-                        </div>
-                    </div>
-                    <div class="col-span-3 flex justify-center bg-yellow-400">
-                        <img src="{{ asset('storage/new/54.png') }}" alt="featured player"
-                            class="h-full object-cover">
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 px-[30px]">
-                    <div class="mt-[16px]">
-                        <p class="font-sans text-[14px] font-bold mb-[8px]">Muhammad</p>
-                        <p class="font-montu md:text-[22px] text-[20px] font-bold mb-[8px]">Awais Khan</p>
-                        <p class="font-montserrat md:text-[14px] text-[12px] mb-[16px]">Allrounder</p>
-                    </div>
-                    <div>
-                        <div class="flex justify-end mb-[8px]">
-                            <img src="{{ asset('storage/new/s.png') }}" alt="featured player"
-                                class=" object-cover w-[32px] h-[37px] mt-[22px] ">
-                        </div>
-                        <div class="flex justify-end mb-[16px]">
-                            <button class="font-sans text-[12px] font-medium">
-                                View Profile -→
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
-    <!--Latest  News Section -->
+
+
+
+
+
+    {{-- Latest  News Sectio Refined  --}}
     <div class="xl:px-[80px] lg:px-[40px] px-[20px] md:pt-[100px] pt-[30px] ">
         <div class="bg-[#094AB7] flex items-center justify-between mb-[30px] md:mb-[50px] mx-[10px]">
             <h2
@@ -1602,84 +1487,53 @@
             </div>
         </div>
 
-        <!-- News Grid -->
+        <!-- News Grid Refined -->
         <div class="news_section">
-            <div class="relative group overflow-hidden mx-[10px]">
-                <img src="{{ asset('storage/News/n1.png') }}" alt="news"
-                    class="w-full transition-all duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#09154B] opacity-50 group-hover:opacity-100"></div>
-                <div class="absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-black to-transparent">
+            @foreach ([
+        [
+            'image' => 'storage/News/n1.png',
+            'date' => '12 December, 2024',
+            'title' => 'Jamshed Jimmy picks up 3 important wickets in an over.',
+        ],
+        [
+            'image' => 'storage/News/n2.png',
+            'date' => '12 December, 2024',
+            'title' => 'Muhammad Zain’s fiery bowling stuns TFS Warriors',
+        ],
+        [
+            'image' => 'storage/News/n3.png',
+            'date' => '12 December, 2024',
+            'title' => 'Abid Hussain smashes 2 consecutive sixes to snatch a sensational thriller victory!',
+        ],
+        [
+            'image' => 'storage/News/n4.png',
+            'date' => '12 December, 2024',
+            'title' => 'TFS Zalmi clinch nail-biting finish in eliminator thriller against TFS Strikers!',
+        ],
+    ] as $newsItem)
+                <div class="relative group overflow-hidden mx-[10px]">
+                    <img src="{{ asset($newsItem['image']) }}" alt="news"
+                        class="w-full transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#09154B] opacity-50 group-hover:opacity-100">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-black to-transparent">
+                    </div>
+                    <div class="absolute bottom-6 left-5 text-white font-montserrat z-10">
+                        <p
+                            class="2xl:text-[14px] xl:text-[12px] lg:text-[10px] md:text-[9px] text-[12px] font-medium opacity-75">
+                            {{ $newsItem['date'] }}
+                        </p>
+                        <p
+                            class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] md:text-[8px] text-[12px] font-bold mt-[11px]">
+                            {{ $newsItem['title'] }}
+                        </p>
+                    </div>
                 </div>
-                <div class="absolute bottom-6 left-5 text-white font-montserrat z-10">
-                    <p
-                        class="2xl:text-[14px] xl:text-[12px] lg:text-[10px] md:text-[9px] text-[12px] font-medium opacity-75">
-                        12
-                        December, 2024</p>
-                    <p
-                        class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] md:text-[8px] text-[12px] font-bold mt-[11px]">
-                        Tom Got
-                        Heated After an
-                        Umpire’s Controversial Decision</p>
-                </div>
-            </div>
-            <div class="relative group overflow-hidden mx-[10px]">
-                <img src="{{ asset('storage/News/n1.png') }}" alt="news"
-                    class="w-full transition-all duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#09154B] opacity-50 group-hover:opacity-100"></div>
-                <div class="absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-black to-transparent">
-                </div>
-                <div class="absolute bottom-6 left-5 text-white font-montserrat z-10">
-                    <p
-                        class="2xl:text-[14px] xl:text-[12px] lg:text-[10px] md:text-[9px] text-[12px] font-medium opacity-75">
-                        12
-                        December, 2024</p>
-                    <p
-                        class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] md:text-[8px] text-[12px] font-bold mt-[11px]">
-                        Tom Got
-                        Heated After an
-                        Umpire’s Controversial Decision</p>
-                </div>
-            </div>
-            <div class="relative group overflow-hidden mx-[10px]">
-                <img src="{{ asset('storage/News/n1.png') }}" alt="news"
-                    class="w-full transition-all duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#09154B] opacity-50 group-hover:opacity-100"></div>
-                <div class="absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-black to-transparent">
-                </div>
-                <div class="absolute bottom-6 left-5 text-white font-montserrat z-10">
-                    <p
-                        class="2xl:text-[14px] xl:text-[12px] lg:text-[10px] md:text-[9px] text-[12px] font-medium opacity-75">
-                        12
-                        December, 2024</p>
-                    <p
-                        class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] md:text-[8px] text-[12px] font-bold mt-[11px]">
-                        Tom Got
-                        Heated After an
-                        Umpire’s Controversial Decision</p>
-                </div>
-            </div>
-            <div class="relative group overflow-hidden mx-[10px]">
-                <img src="{{ asset('storage/News/n1.png') }}" alt="news"
-                    class="w-full transition-all duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#09154B] opacity-50 group-hover:opacity-100"></div>
-                <div class="absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-black to-transparent">
-                </div>
-                <div class="absolute bottom-6 left-5 text-white font-montserrat z-10">
-                    <p
-                        class="2xl:text-[14px] xl:text-[12px] lg:text-[10px] md:text-[9px] text-[12px] font-medium opacity-75">
-                        12
-                        December, 2024</p>
-                    <p
-                        class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] md:text-[8px] text-[12px] font-bold mt-[11px]">
-                        Tom Got
-                        Heated After an
-                        Umpire’s Controversial Decision</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 
-    {{-- sponsor section --}}
+    {{-- sponsor section Refined --}}
     <div class="lg:my-[100px] my-[30px] relative">
         <div>
             <img src="{{ asset('storage/about/sponsor.png') }}" alt=""
@@ -1689,7 +1543,8 @@
         <div class="grid grid-cols-1 xl:grid-cols-3 lg:py-[60px] py-[30px] absolute inset-0">
             <div class="hidden xl:block"></div>
             <div>
-                <h2 class="font-montu text-[#094AB7] font-semibold text-center lg:text-[30px] text-[18px]">TFSC
+                <h2 class="font-montu text-[#094AB7] font-semibold text-center lg:text-[30px] text-[18px]">
+                    TFSC
                     Premier League
                     Sponsers
                 </h2>
@@ -1713,33 +1568,46 @@
                                 src="{{ asset('storage/icons/1.png') }}" alt="KFC"
                                 class="w-full h-full object-cover">
                         </div>
-                        <div class="lg:py-[46px] py-[20px] flex justify-center items-center">
-                            <img class="md:w-[99px] md:h-[54px] w-[54px] h-[29px] transition filter grayscale hover:grayscale-0"
-                                src="{{ asset('storage/icons/2.png') }}" alt="Sports network"
-                                class="w-full h-full object-cover">
-                        </div>
-                        <div class="lg:py-[46px] py-[20px] flex justify-center items-center">
-                            <img class="md:w-[99px] md:h-[54px] w-[54px] h-[29px] transition filter grayscale hover:grayscale-0"
-                                src="{{ asset('storage/icons/3.png') }}" alt="BKT"
-                                class="w-full h-full object-cover">
-                        </div>
-                        <div class="lg:py-[46px] py-[20px] flex justify-center items-center">
-                            <img class="md:w-[99px] md:h-[54px] w-[54px] h-[29px] transition filter grayscale hover:grayscale-0"
-                                src="{{ asset('storage/icons/4.png') }}" alt="kayo"
-                                class="w-full h-full object-cover">
-                        </div>
+                        @foreach ([
+        [
+            'image' => 'storage/icons/2.png',
+            'alt' => 'Sports network',
+        ],
+        [
+            'image' => 'storage/icons/3.png',
+            'alt' => 'BKT',
+        ],
+        [
+            'image' => 'storage/icons/4.png',
+            'alt' => 'kayo',
+        ],
+    ] as $logo)
+                            <div class="lg:py-[46px] py-[20px] flex justify-center items-center">
+                                <img class="md:w-[99px] md:h-[54px] w-[54px] h-[29px] transition filter grayscale hover:grayscale-0 "
+                                    src="{{ asset($logo['image']) }}" alt="{{ $logo['alt'] }}"
+                                    class="w-full h-full object-cover">
+
+                            </div>
+                        @endforeach
                     </div>
                     <div class="border-b border-b-[#808080]"></div>
                     <div
                         class="md:w-[84%] md:mx-auto xl:px-[80px] lg:px-[40px] px-[20px] flex flex-wrap justify-center gap-[40px] md:gap-[100px] sponsor">
-                        <div class="lg:py-[46px] py-[20px] flex justify-center">
-                            <img class="md:w-[99px] md:h-[54px] w-[80px] transition filter grayscale hover:grayscale-0"
-                                src="{{ asset('storage/icons/5.png') }}" alt="Foxtel" class="object-cover">
-                        </div>
-                        <div class="lg:py-[46px] py-[20px] flex justify-center">
-                            <img class="md:w-[99px] md:h-[54px] w-[80px] transition filter grayscale hover:grayscale-0"
-                                src="{{ asset('storage/icons/6.png') }}" alt="weber" class="object-cover">
-                        </div>
+                        @foreach ([
+        [
+            'image' => 'storage/icons/5.png',
+            'alt' => 'Foxtel',
+        ],
+        [
+            'image' => 'storage/icons/6.png',
+            'alt' => 'weber',
+        ],
+    ] as $sponsor)
+                            <div class="lg:py-[46px] py-[20px] flex justify-center">
+                                <img class="md:w-[99px] md:h-[54px] w-[80px] transition filter grayscale hover:grayscale-0 object-cover"
+                                    src="{{ asset($sponsor['image']) }}" alt="{{ $sponsor['alt'] }}">
+                            </div>
+                        @endforeach
                     </div>
                     <div class="border-b border-b-[#808080]"></div>
                 </div>
