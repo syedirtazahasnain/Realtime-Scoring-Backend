@@ -45,7 +45,7 @@
                     <p class="text-black font-sans font-semibold 2xl:text-[18px] xl:text-[14px] text-[10px]">Chief Executive
                         Officer</p>
                     <p
-                        class="font-montserrat font-bold  2xl:text-[40px] xl:text-[30px] lg:text-[20px]
+                        class="font-monti font-bold  2xl:text-[40px] xl:text-[30px] lg:text-[20px]
                  md:text-[15px] 2xl:mt-[20px] text-[12px] text-black">
                         Naeem
                         Abbas: TFSC Premier
@@ -93,7 +93,7 @@
                                     <div
                                         class="absolute bottom-0 w-full h-32 px-2  bg-[linear-gradient(to_top,rgba(9,74,183,1)_0%,rgba(9,74,183,0.8)_25%,rgba(9,74,183,0.5)_50%,rgba(9,74,183,0.2)_75%,rgba(9,74,183,0)_100%)]">
                                         <p
-                                            class=" absolute bottom-0 px-1  2xl:text-[24px] xl:text-[20px] lg:text-[16px] text-[12px] font-montserrat font-bold text-white ">
+                                            class=" absolute bottom-0 px-1  2xl:text-[24px] xl:text-[20px] lg:text-[16px] text-[12px] font-monti font-bold text-white ">
                                             {{ $person['title'] }}: {{ $person['name'] }}</p>
                                     </div>
                                 </div>

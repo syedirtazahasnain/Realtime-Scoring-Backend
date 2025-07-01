@@ -150,7 +150,7 @@
         </div>
         <div class="md:hidden">
             <button
-                class="2xl:px-[22px] xl:px-[16px] lg:px-[10px] px-[5px] py-1 text-white hover:cursor-pointer font-montserrat text-[12px] font-semibold ">
+                class="2xl:px-[22px] xl:px-[16px] lg:px-[10px] px-[5px] py-1 text-white hover:cursor-pointer font-monti text-[12px] font-semibold ">
                 Join TFSC PL
             </button>
         </div>

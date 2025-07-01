@@ -22,7 +22,7 @@
 
                 <!-- Header -->
                 <div class="bg-[#094AB7] mb-5">
-                    <h1 class="text-white font-bold font-montserrat px-5 py-3.5 text-[15px] sm:text-[20px] md:text-[24px]">
+                    <h1 class="text-white font-bold font-monti px-5 py-3.5 text-[15px] sm:text-[20px] md:text-[24px]">
                         Teams Ranking
                     </h1>
                 </div>
@@ -33,7 +33,7 @@
                         <div class="flex items-center gap-5">
                             @foreach (['Players', 'Men'] as $label)
                                 <button
-                                    class="flex items-center gap-2 px-2 sm:px-3 md:px-5 py-2 border-2 border-[#094AB7] text-[#094AB7] font-montserrat font-bold text-[12px] sm:text-[14px] md:text-[16px]">
+                                    class="flex items-center gap-2 px-2 sm:px-3 md:px-5 py-2 border-2 border-[#094AB7] text-[#094AB7] font-monti font-bold text-[12px] sm:text-[14px] md:text-[16px]">
                                     {{ $label }}
                                     <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7"
                                         fill="none">
@@ -44,7 +44,7 @@
                             @endforeach
                         </div>
                         <button
-                            class="flex items-center gap-2 px-2 sm:px-3 md:px-5 py-2 border-2 border-[#094AB7] text-[#094AB7] font-montserrat font-bold text-[12px] sm:text-[14px] md:text-[16px]">
+                            class="flex items-center gap-2 px-2 sm:px-3 md:px-5 py-2 border-2 border-[#094AB7] text-[#094AB7] font-monti font-bold text-[12px] sm:text-[14px] md:text-[16px]">
                             View All
                             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"
                                 fill="none">
@@ -89,7 +89,7 @@
                             @endforeach
                             <tr>
                                 <td colspan="7"
-                                    class="py-5 text-center text-[#14CD5B] text-[11px] sm:text-[13px] lg:text-[14px] font-montserrat font-medium">
+                                    class="py-5 text-center text-[#14CD5B] text-[11px] sm:text-[13px] lg:text-[14px] font-monti font-medium">
                                     . Group A - Ranking
                                 </td>
                             </tr>
@@ -109,14 +109,14 @@
         <div
             class="xl:w-[84%] mx-auto 2xl:px-[180px] xl:px-[120px] min-[1000px]:px-[90px] md:px-[20px] px-[16px] lg:w-[88%] w-[94%] h-[484px] mb-[85px]">
             <div class="  bg-[#094AB7] mb-5">
-                <h1 class="md:text-[24px] sm:text-[20px] text-[15px] font-bold font-montserrat px-5 py-3.5 text-white ">
+                <h1 class="md:text-[24px] sm:text-[20px] text-[15px] font-bold font-monti px-5 py-3.5 text-white ">
                     Players Ranking</h1>
             </div>
             <div class="mb-5 ">
                 <div class="flex items-center justify-between">
                     <div class="flex justify-center items-center gap-5">
                         <button
-                            class="flex items-center gap-2 md:px-5 sm:px-3 min-[365px]:px-2 py-2 border-2 border-[#094AB7] text-[#094AB7] font-montserrat md:text-[16px] sm:text-[14px] min-[365px]:text-[12px] font-bold">
+                            class="flex items-center gap-2 md:px-5 sm:px-3 min-[365px]:px-2 py-2 border-2 border-[#094AB7] text-[#094AB7] font-monti md:text-[16px] sm:text-[14px] min-[365px]:text-[12px] font-bold">
                             Players
                             <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7"
                                 fill="none">
@@ -125,7 +125,7 @@
                             </svg>
                         </button>
                         <button
-                            class="flex items-center md:gap-2 min-[365px]:gap-1 md:px-5 sm:px-3 min-[365px]:px-2 py-2 border-2 border-[#094AB7] text-[#094AB7] font-montserrat md:text-[16px] sm:text-[14px] min-[365px]:text-[12px] font-bold ">
+                            class="flex items-center md:gap-2 min-[365px]:gap-1 md:px-5 sm:px-3 min-[365px]:px-2 py-2 border-2 border-[#094AB7] text-[#094AB7] font-monti md:text-[16px] sm:text-[14px] min-[365px]:text-[12px] font-bold ">
                             Men
                             <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7"
                                 fill="none">
@@ -135,7 +135,7 @@
                         </button>
                     </div>
                     <button
-                        class="flex items-center gap-2 md:px-5 sm:px-3 min-[365px]:px-2 py-2  border-2 border-[#094AB7] text-[#094AB7] font-montserrat md:text-[16px] sm:text-[14px] min-[365px]:text-[12px] font-bold ">
+                        class="flex items-center gap-2 md:px-5 sm:px-3 min-[365px]:px-2 py-2  border-2 border-[#094AB7] text-[#094AB7] font-monti md:text-[16px] sm:text-[14px] min-[365px]:text-[12px] font-bold ">
                         View All
                         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"
                             fill="none">
@@ -192,7 +192,7 @@
 
                         <tr>
                             <td colspan="7"
-                                class="py-5 text-center text-[#14CD5B] text-[11px] sm:text-[13px] lg:text-[14px] font-montserrat font-medium">
+                                class="py-5 text-center text-[#14CD5B] text-[11px] sm:text-[13px] lg:text-[14px] font-monti font-medium">
                                 . Batsman - Ranking
                             </td>
                         </tr>

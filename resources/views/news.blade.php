@@ -113,14 +113,14 @@
 
                             <!-- News Title -->
                             <div class="mt-4">
-                                <p class="text-[18px] font-bold font-montserrat text-wrap">
+                                <p class="text-[18px] font-bold font-monti text-wrap">
                                     {{ $item['title'] }}
                                 </p>
                             </div>
 
                             <!-- News Date -->
                             <div class="mt-4">
-                                <p class="font-normal font-montserrat text-[14px] text-black opacity-80">
+                                <p class="font-normal font-monti text-[14px] text-black opacity-80">
                                     {{ $item['date'] }}
                                 </p>
                             </div>
@@ -132,7 +132,7 @@
         {{-- ending button --}}
         <div class="lg:my-[80px] my-[20px]">
             <div class="flex justify-center items-center py-5">
-                <button class="px-4 py-2 bg-[#094AB7] text-white text-[14px] font-montserrat">
+                <button class="px-4 py-2 bg-[#094AB7] text-white text-[14px] font-monti">
                     Load More
                 </button>
             </div>
