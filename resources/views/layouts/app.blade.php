@@ -71,7 +71,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Fonts -->
-    <title>TFSPL</title>
+    <title>@yield('title', '24-7 Consultancy')</title>
     <style>
         .box {
             background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='25' ry='25' stroke='black' stroke-width='4' stroke-dasharray='6%2c 12' stroke-dashoffset='2' stroke-linecap='square'/%3e%3c/svg%3e");
@@ -80,10 +80,10 @@
     </style>
 </head>
 
-<body class="font-monti w-full">
+<body class="font-monti w-full relative">
 
     @include('partials.header')
-    <div>
+    <div class="pt-[150px]">
         {{-- @include('layouts.navigation') --}}
 
         {{-- @yield('content') --}}

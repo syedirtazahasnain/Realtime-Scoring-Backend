@@ -917,7 +917,7 @@
                     <div class="hidden xl:block"></div>
                     <div>
                         <h2
-                            class="font-montu text-[#094AB7] md:text-white font-semibold text-center lg:text-[30px] text-[18px]">
+                            class="font-montu text-[#094AB7] md:text-white font-semibold text-center text-[22px] lg:text-[26px] xl:text-[30px]">
                             TFSC
                             Premier League
                             Sponsers

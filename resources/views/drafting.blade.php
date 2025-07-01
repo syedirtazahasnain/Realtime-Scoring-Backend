@@ -10,7 +10,7 @@
             </div>
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="text-white text-center max-w-[583px]">
-                    <p class="font-montu font-bold 2xl:text-[50px] xl:text-[40px] lg:text-[30px] text-[18px]">
+                    <p class="font-montu font-bold 2xl:text-[50px] xl:text-[40px] text-[22px] lg:text-[26px] xl:text-[30px]">
                         TFSC Primer League
                         2025 Player Drafting
                     </p>
@@ -204,7 +204,7 @@
                     <div class="hidden xl:block"></div>
                     <div>
                         <h2
-                            class="font-montu text-[#094AB7] md:text-white font-semibold text-center lg:text-[30px] text-[18px]">
+                            class="font-montu text-[#094AB7] md:text-white font-semibold text-center text-[22px] lg:text-[26px] xl:text-[30px]">
                             TFSC
                             Premier League
                             Sponsers

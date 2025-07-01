@@ -147,7 +147,7 @@
 
     {{-- HERO Section Refined --}}
     <div class="relative bg-[#fff]">
-        <div class="px-[20px] lg:px-[40px] xl:px-[80px]">
+        <div class="px-[0px] lg:px-[40px] xl:px-[80px]">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-[18px]">
                 <div class="col-span-8 h-full">
                     <div class="bg-blue-950 relative">
@@ -195,12 +195,12 @@
                             </button>
                         </div>
                     </div>
-                    <div class="w-full py-[15px] xl:py-[20px] relative">
+                    <div class="w-full px-[20px] lg:px-[0px] py-[15px] xl:py-[20px] relative">
                         <img src="{{ asset('images/home/bar-banner-bg.png') }}" alt="Background"
                             class="absolute top-0 left-0 w-full h-full object-cover z-0" />
 
                         <p
-                            class="py-0 leading-none font-montu font-bold text-[18px] lg:text-[24px] xl:text-[28px] 2xl:text-[34px] text-white text-center relative z-10">
+                            class="py-0 leading-none font-montu font-bold text-[16px] sm:text-[18px] lg:text-[24px] xl:text-[28px] 2xl:text-[34px] text-white text-center relative z-10">
                             Twenty Four Seven Premier League
                         </p>
                     </div>
@@ -323,7 +323,7 @@
     <div class="relative bg-[#fff]">
         <div class="px-[20px] lg:px-[40px] xl:px-[80px] my-[30px] xl:my-[60px]">
             <div class="mb-[15px] lg:mb-[30px] xl:mb-[50px]">
-                <p class="text-[#094AB7] text-[18px] lg:text-[24px] xl:text-[30px] font-bold font-montu">
+                <p class="text-[#094AB7] text-[22px] lg:text-[26px] xl:text-[30px] font-bold font-montu">
                     Magic Moments
                 </p>
             </div>
@@ -424,7 +424,7 @@
                         <div class="grid grid-cols-3 lg:grid-cols-1 w-full items-center">
                             <div class="col-span-2 lg:col-span-1">
                                 <p
-                                    class="text-[#094AB7] font-montu text-[18px] lg:text-[24px] xl:text-[30px] font-bold my-0 leading-tight">
+                                    class="text-[#094AB7] font-montu text-[22px] lg:text-[26px] xl:text-[30px] font-bold my-0 leading-tight">
                                     Finalist / Runner-Up / Champions
                                 </p>
                             </div>
@@ -466,7 +466,7 @@
             <div class="px-[20px] lg:px-[40px] xl:px-[80px] md:bg-[#FFF4ED] relative">
                 <div class="flex items-center justify-between py-[20px] md:py-[40px] flex-wrap">
                     <h2
-                        class="lg:pl-[24px] rounded-xl text-[#094AB7] text-[18px] 2xl:text-[24px] font-bold font-montu">
+                        class="lg:pl-[24px] text-[#094AB7] text-[22px] lg:text-[26px] xl:text-[30px] font-bold font-montu my-0">
                         GupShup/Reels/Interviews
                     </h2>
                     <div class="">
@@ -898,8 +898,7 @@
         <div class="col-md-10 mx-auto">
             <div class="py-[20px] md:py-[30px] xl:py-[40px]">
                 <div class="flex items-center justify-between ml-2 xl:ml-0">
-                    <h2
-                        class="text-[22px] lg:text-[26px] xl:text-[30px] text-[#094AB7] font-bold font-montu">
+                    <h2 class="text-[22px] lg:text-[26px] xl:text-[30px] text-[#094AB7] font-bold font-montu">
                         Highlights
                     </h2>
                     <div class="py-[36px] xl:pr-[20px] pr-[15px]">
@@ -957,13 +956,12 @@
     </div>
 
 
-
     {{-- Featured Players Refined  --}}
     <div class="relative bg-[#fff]">
         <div class="col-md-11 mx-auto">
             <div class="py-[50px] md:py-[70px] xl:py-[100px] px-[20px] xl:px-[30px]">
                 <p
-                    class="font-montu ttext-[22px] lg:text-[26px] xl:text-[30px] font-bold leading-[46px] pb-[20px] md:pb-[30px] xl:pb-[40px] text-[#094AB7]">
+                    class="font-montu text-[22px] lg:text-[26px] xl:text-[30px] font-bold leading-[46px] pb-[20px] md:pb-[30px] xl:pb-[40px] text-[#094AB7]">
                     Featured Players</p>
                 <div class="featured_players">
                     @foreach ([
@@ -1077,9 +1075,6 @@
     </div>
 
 
-
-
-
     {{-- Latest  News Sectio Refined  --}}
     <div class="xl:px-[80px] lg:px-[40px] px-[20px] md:pt-[100px] pt-[30px] ">
         <div class="bg-[#094AB7] flex items-center justify-between mb-[30px] md:mb-[50px] mx-[10px]">
@@ -1143,7 +1138,8 @@
         </div>
     </div>
 
-    {{-- sponsor section Refined --}}
+
+    {{-- Sponsor Section Refined --}}
     <div class="lg:my-[100px] my-[30px] relative">
         <div>
             <img src="{{ asset('storage/about/sponsor.png') }}" alt=""
@@ -1153,7 +1149,8 @@
         <div class="grid grid-cols-1 xl:grid-cols-3 lg:py-[60px] py-[30px] absolute inset-0">
             <div class="hidden xl:block"></div>
             <div>
-                <h2 class="font-montu text-[#094AB7] font-semibold text-center lg:text-[30px] text-[18px]">
+                <h2
+                    class="font-montu text-[#094AB7] font-semibold text-center text-[22px] lg:text-[26px] xl:text-[30px]">
                     TFSC
                     Premier League
                     Sponsers
