@@ -76,7 +76,7 @@
                                 </div>
 
                                 <div class="flex gap-2 mt-2">
-                                    <select id="member_select_{{ $team->id }}" class="member-select w-full"
+                                    <select id="member_select_{{ $team->id }}" class="member-select w-full" multiple
                                         style="width: 200px;">
                                         <option></option>
                                         @foreach ($users as $user)
@@ -319,41 +319,56 @@
 
         function addMember(teamId) {
             const selectElement = document.getElementById(`member_select_${teamId}`);
+            const selected_members = Array.from(selectElement.selectedOptions).map(opt => opt.value);
             const jerseyNumber = document.getElementById(`jersey_number_${teamId}`).value;
             const isCaptain = document.getElementById(`is_captain_${teamId}`).checked;
             const isViceCaptain = document.getElementById(`is_vice_captain_${teamId}`).checked;
-            const memberId = selectElement.value;
 
-            if (!memberId || !jerseyNumber) {
-                alert('Please select a member and enter a jersey number');
+            if (selected_members.length === 0 || !jerseyNumber) {
+                alert('Please select at least one member and enter a jersey number');
                 return;
             }
 
-            fetch(`/teams/${teamId}/members`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-                    },
-                    body: JSON.stringify({
-                        user_id: memberId,
-                        jersey_number: jerseyNumber,
-                        is_captain: isCaptain,
-                        is_vice_captain: isViceCaptain
+            // Track completed requests
+            let completed = 0;
+            let errors = 0;
+
+            selected_members.forEach(memberId => {
+                fetch(`/teams/${teamId}/members`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
+                                'content')
+                        },
+                        body: JSON.stringify({
+                            user_id: memberId,
+                            jersey_number: jerseyNumber,
+                            is_captain: isCaptain,
+                            is_vice_captain: isViceCaptain
+                        })
                     })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        location.reload();
-                    } else {
-                        alert(data.message || 'Error adding member');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Error adding member');
-                });
+                    .then(response => response.json())
+                    .then(data => {
+                        completed++;
+                        if (!data.success) errors++;
+                        if (completed === selected_members.length) {
+                            if (errors > 0) {
+                                alert(`${errors} member(s) failed to add`);
+                            } else {
+                                location.reload();
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        completed++;
+                        errors++;
+                        console.error('Error:', error);
+                        if (completed === selected_members.length) {
+                            alert(`${errors} member(s) failed to add`);
+                        }
+                    });
+            });
         }
 
         function removeMember(teamId, userId) {
