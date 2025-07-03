@@ -914,27 +914,27 @@
                 {{-- Highlighted Section --}}
                 <div class="highlights_section">
                     @foreach ([
-        [
-            'default_image' => 'storage/new/team-vs-team.png',
-            'hover_image' => 'storage/new/h2.png',
-            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
-        ],
-        [
-            'default_image' => 'storage/new/team-vs-team.png',
-            'hover_image' => 'storage/new/h3.png',
-            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
-        ],
-        [
-            'default_image' => 'storage/new/team-vs-team.png',
-            'hover_image' => 'storage/new/h4.png',
-            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
-        ],
-        [
-            'default_image' => 'storage/new/team-vs-team.png',
-            'hover_image' => 'storage/new/h4.png',
-            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
-        ],
-    ] as $item)
+                        [
+                            'default_image' => 'storage/new/team-vs-team.png',
+                            'hover_image' => 'storage/new/h2.png',
+                            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+                        ],
+                        [
+                            'default_image' => 'storage/new/team-vs-team.png',
+                            'hover_image' => 'storage/new/h3.png',
+                            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+                        ],
+                        [
+                            'default_image' => 'storage/new/team-vs-team.png',
+                            'hover_image' => 'storage/new/h4.png',
+                            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+                        ],
+                        [
+                            'default_image' => 'storage/new/team-vs-team.png',
+                            'hover_image' => 'storage/new/h4.png',
+                            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+                        ],
+                        ] as $item)
                         <div class="highlights_box ">
                             <div class="relative w-full px-[10px]">
                                 <div class="w-full h-[304px] relative bg-black">
@@ -1090,11 +1090,9 @@
                     </button>
                 </a>
             </div>
-        </div>
-
-        <!-- News Grid Refined -->
-        <div class="news_section">
-            @foreach ([
+            <!-- News Grid Refined -->
+            <div class="news_section">
+                @foreach ([
         [
             'image' => 'storage/News/n1.png',
             'date' => '12 December, 2024',
@@ -1116,25 +1114,24 @@
             'title' => 'TFS Zalmi clinch nail-biting finish in eliminator thriller against TFS Strikers!',
         ],
     ] as $newsItem)
-                <div class="relative group overflow-hidden mx-[10px]">
-                    <img src="{{ asset($newsItem['image']) }}" alt="news"
-                        class="w-full transition-all duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#09154B] opacity-50 group-hover:opacity-100">
+                    <div class="relative group overflow-hidden mx-[19px] md:mx-[4px]">
+                        <img src="{{ asset($newsItem['image']) }}" alt="news"
+                            class="w-full transition-all duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-100">
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent">
+                        </div>
+                        <div class="absolute bottom-6 left-0 text-white px-[24px] font-monti ">
+                            <p class="xl:text-[14px] py-[10px] font-monti text-[#ffff] text-[12px]">
+                                {{ $newsItem['date'] }}
+                            </p>
+                            <p class="text-[12px] md:text-[15px] font-bold">
+                                {{ $newsItem['title'] }}
+                            </p>
+                        </div>
                     </div>
-                    <div class="absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-black to-transparent">
-                    </div>
-                    <div class="absolute bottom-6 left-5 text-white font-monti z-10">
-                        <p
-                            class="2xl:text-[14px] xl:text-[12px] lg:text-[10px] md:text-[9px] text-[12px] font-medium opacity-75">
-                            {{ $newsItem['date'] }}
-                        </p>
-                        <p
-                            class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] md:text-[8px] text-[12px] font-bold mt-[11px]">
-                            {{ $newsItem['title'] }}
-                        </p>
-                    </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </div>
 
@@ -1177,6 +1174,10 @@
                         </div>
                         @foreach ([
         [
+            'image' => 'storage/icons/1.png',
+            'alt' => 'Sports network',
+        ],
+        [
             'image' => 'storage/icons/2.png',
             'alt' => 'Sports network',
         ],
@@ -1189,17 +1190,15 @@
             'alt' => 'kayo',
         ],
     ] as $logo)
-                            <div class="lg:py-[46px] py-[20px] flex justify-center items-center">
-                                <img class="md:w-[99px] md:h-[54px] w-[54px] h-[29px] transition filter grayscale hover:grayscale-0 "
-                                    src="{{ asset($logo['image']) }}" alt="{{ $logo['alt'] }}"
-                                    class="w-full h-full object-cover">
+                            <div class="">
+                                <img class=" transition  filter grayscale hover:grayscale-0 mx-4 sm:mx-[27px] lg:mx-[50px] object-cover  md:w-[88px] w-[44px]"
+                                    src="{{ asset($logo['image']) }}" alt="{{ $logo['alt'] }}">
 
                             </div>
                         @endforeach
                     </div>
-                    <div class="border-b border-b-[#808080]"></div>
-                    <div
-                        class="md:w-[84%] md:mx-auto xl:px-[80px] lg:px-[40px] px-[20px] flex flex-wrap justify-center gap-[40px] md:gap-[100px] sponsor">
+                    <div class="border-b my-[20px] md:my-[30px] border-b-[#808080]"></div>
+                    <div class="flex items-center justify-center">
                         @foreach ([
         [
             'image' => 'storage/icons/5.png',
@@ -1210,13 +1209,13 @@
             'alt' => 'weber',
         ],
     ] as $sponsor)
-                            <div class="lg:py-[46px] py-[20px] flex justify-center">
-                                <img class="md:w-[99px] md:h-[54px] w-[80px] transition filter grayscale hover:grayscale-0 object-cover"
+                            <div class="">
+                                <img class="transition  filter grayscale hover:grayscale-0 mx-4 sm:mx-[27px] lg:mx-[50px] object-cover  md:w-[88px] w-[44px]  "
                                     src="{{ asset($sponsor['image']) }}" alt="{{ $sponsor['alt'] }}">
                             </div>
                         @endforeach
                     </div>
-                    <div class="border-b border-b-[#808080]"></div>
+                    <div class="border-b my-[20px] md:my-[30px] border-b-[#808080]"></div>
                 </div>
             </div>
         </div>
