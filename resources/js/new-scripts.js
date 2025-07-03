@@ -175,3 +175,92 @@ $(document).ready(function () {
         ]
     });
 });
+
+// Highlight Section
+$(document).ready(function () {
+    $('.highlights_section').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        margin: 10,
+        // autoplay: true, // Enables auto-scroll
+        autoplaySpeed: 2000, // Speed of auto-scroll
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
+});
+
+
+// Featured Player
+$(document).ready(function () {
+    $('.featured_players').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        margin: 10,
+        // autoplay: true, // Enables auto-scroll
+        autoplaySpeed: 2000, // Speed of auto-scroll
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
+});
+
+
+// News Section
+$(document).ready(function () {
+    $('.news_section').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        margin: 10,
+        // autoplay: true, // Enables auto-scroll
+        autoplaySpeed: 2000, // Speed of auto-scroll
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
+});

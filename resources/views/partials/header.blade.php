@@ -8,15 +8,15 @@
             class="absolute top-0 right-0 grayscale opacity-50 rotate-[180deg]">
 
         <!-- Main Header Flex -->
-        <div class="grid grid-cols-2 relative z-20 w-full">
-            <div class="flex items-center gap-[18px] lg:gap-[26px] xl:gap-[34px]">
+        <div class="flex items-center justify-between gap-[10px] md:gap-[20px] xl:gap-[30px] relative z-20 w-full">
+            <div class="flex items-center w-full gap-[18px] lg:gap-[26px] xl:gap-[34px]">
                 <!-- Logo -->
-                <div class="relative">
+                <div class="relative w-[110px]">
                     <img src="{{ asset('images/logo/logo-main.png') }}" alt="Logo" class="w-full">
                 </div>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex">
+                <div class="hidden lg:flex">
                     <div class="flex gap-[16px] lg:gap-[20px] xl:gap-[26px] items-center font-montu">
                         <div class="text-[14px] xl:text-[16px]">
                             <a href="/"
@@ -57,7 +57,7 @@
             <!-- Right: Desktop Button + Logo -->
             <div class="flex items-center justify-end w-full gap-[20px] xl:gap-[30px]">
                 <!-- Desktop CTA -->
-                <div class="hidden xl:flex lg:flex md:flex items-center border-x-[1px] border-[#fff] relative group">
+                <div class="hidden lg:flex items-center border-x-[1px] border-[#fff] relative group">
                     <button
                         class="px-[15px] 2xl:px-[20px] py-[5px] text-white hover:cursor-pointer text-[14px] xl:text-[16px] font-montu text-nowrap">
                         Join TFSC PL
@@ -99,7 +99,7 @@
                 </div>
 
                 <!-- Burger Button moved here (visible only on small screens) -->
-                <button class="md:hidden text-white focus:outline-none ml-4" @click="open = !open">
+                <button class="lg:hidden text-white focus:outline-none ml-4" @click="open = !open">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                         stroke-linecap="round" stroke-linejoin="round">
                         <path x-show="!open" d="M4 6h16M4 12h16M4 18h16" />

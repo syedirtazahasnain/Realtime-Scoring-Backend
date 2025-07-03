@@ -1,149 +1,4 @@
 <x-app-layout>
-    <style>
-        @media screen and (min-width: 365px) and (max-width: 640px) {
-            .multiple-items>button.slick-next.slick-arrow {
-                display: none;
-            }
-
-            .multiple-items {
-                width: 100%;
-            }
-
-            .box_spaces {
-                margin-top: 15px;
-                margin-right: 0px !important;
-            }
-
-            .multiple-items>.slick-prev {
-                display: none
-            }
-        }
-
-        @media screen and (min-width: 641px) and (max-width: 900px) {
-            .multiple-items>button.slick-next.slick-arrow {
-                background-color: #094AB7;
-                height: 93%;
-                margin-top: 8px;
-            }
-
-            .multiple-items {
-                width: 96%;
-            }
-
-            .box_spaces {
-                margin-top: 15px;
-                margin-right: 15px;
-            }
-
-            .multiple-items>button.slick-next.slick-arrow {
-                margin-right: -0.5% !important;
-                width: 3%;
-            }
-
-            .multiple-items>.slick-prev {
-                display: none
-            }
-        }
-
-        @media screen and (min-width: 901px) and (max-width: 1200px) {
-            .multiple-items>button.slick-next.slick-arrow {
-                background-color: #094AB7;
-                height: 93%;
-                margin-top: 8px;
-            }
-
-            .multiple-items {
-                width: 96%;
-            }
-
-            .box_spaces {
-                margin-top: 15px;
-                margin-right: 15px;
-            }
-
-            .multiple-items>button.slick-next.slick-arrow {
-                margin-right: -1.8% !important;
-                width: 3%;
-            }
-
-            .multiple-items>button.:before {
-                content: '';
-                display: block;
-                width: 22px;
-                height: 23px;
-                border: solid white;
-                border-width: 0 2px 2px 0;
-                transform: rotate(-45deg);
-                margin-left: 2px;
-            }
-        }
-
-        @media screen and (min-width: 1201px) and (max-width: 1600px) {
-            .multiple-items>button.slick-next.slick-arrow {
-                background-color: #094AB7;
-                height: 93%;
-                margin-top: 8px;
-            }
-
-            .multiple-items {
-                width: 96%;
-            }
-
-            .box_spaces {
-                margin-top: 15px;
-                margin-right: 15px;
-            }
-
-            .multiple-items>button.slick-next.slick-arrow {
-                margin-right: -2.1% !important;
-                width: 3%;
-            }
-
-            .multiple-items>button.:before {
-                content: '';
-                display: block;
-                width: 22px;
-                height: 23px;
-                border: solid white;
-                border-width: 0 2px 2px 0;
-                transform: rotate(-45deg);
-                margin-left: 2px;
-            }
-        }
-
-        @media screen and (min-width: 1601px) {
-            .multiple-items>button.slick-next.slick-arrow {
-                background-color: #094AB7;
-                height: 93%;
-                margin-top: 8px;
-            }
-
-            .multiple-items {
-                width: 96%;
-            }
-
-            .box_spaces {
-                margin-top: 15px;
-                margin-right: 15px;
-            }
-
-            .multiple-items>button.slick-next.slick-arrow {
-                margin-right: -2.6% !important;
-                width: 3%;
-
-                .multiple-items>button.slick-next:before {
-                    content: '';
-                    display: block;
-                    width: 22px;
-                    height: 23px;
-                    border: solid white;
-                    border-width: 0 2px 2px 0;
-                    transform: rotate(-45deg);
-                    margin-left: 2px;
-                }
-            }
-        }
-    </style>
 
     {{-- HERO Section Refined --}}
     <div class="relative bg-[#fff]">
@@ -914,27 +769,27 @@
                 {{-- Highlighted Section --}}
                 <div class="highlights_section">
                     @foreach ([
-                        [
-                            'default_image' => 'storage/new/team-vs-team.png',
-                            'hover_image' => 'storage/new/h2.png',
-                            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
-                        ],
-                        [
-                            'default_image' => 'storage/new/team-vs-team.png',
-                            'hover_image' => 'storage/new/h3.png',
-                            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
-                        ],
-                        [
-                            'default_image' => 'storage/new/team-vs-team.png',
-                            'hover_image' => 'storage/new/h4.png',
-                            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
-                        ],
-                        [
-                            'default_image' => 'storage/new/team-vs-team.png',
-                            'hover_image' => 'storage/new/h4.png',
-                            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
-                        ],
-                        ] as $item)
+        [
+            'default_image' => 'storage/new/team-vs-team.png',
+            'hover_image' => 'storage/new/h2.png',
+            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+        ],
+        [
+            'default_image' => 'storage/new/team-vs-team.png',
+            'hover_image' => 'storage/new/h3.png',
+            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+        ],
+        [
+            'default_image' => 'storage/new/team-vs-team.png',
+            'hover_image' => 'storage/new/h4.png',
+            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+        ],
+        [
+            'default_image' => 'storage/new/team-vs-team.png',
+            'hover_image' => 'storage/new/h4.png',
+            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+        ],
+    ] as $item)
                         <div class="highlights_box ">
                             <div class="relative w-full px-[10px]">
                                 <div class="w-full h-[304px] relative bg-black">
@@ -1076,19 +931,23 @@
 
 
     {{-- Latest  News Sectio Refined  --}}
-    <div class="xl:px-[80px] lg:px-[40px] px-[20px] md:pt-[100px] pt-[30px] ">
-        <div class="bg-[#094AB7] flex items-center justify-between mb-[30px] md:mb-[50px] mx-[10px]">
-            <h2
-                class="py-[12px] px-1 md:pl-[50px] text-white xl:text-[24px] lg:text-[22px] md:text-[20px] text-[18px] font-bold font-monti">
-                Latest News
-            </h2>
-            <div class="2xl:py-[13px] pr-1 md:pr-[20px] sm:py-[6px]">
-                <a href="">
-                    <button
-                        class="px-[23px] md:px-[35px] md:py-[9px] py-[5px] bg-yellow-400 xl:text-[14px] md:text-[12px] text-[10px] text-white font-sans cursor-pointer ">
-                        View All
-                    </button>
-                </a>
+    <div class="relative">
+        <div class="px-[0px] md:px-[60px] xl:px-[80px]">
+            <div class="py-[12px] flex flex-wrap items-center justify-between mb-[30px] xl:mb-[50px] relative">
+                <img src="{{ asset('storage/ranking/latestnewsbackground.png') }}" alt="Background Image"
+                    class="absolute w-full h-full object-cover -z-10" />
+                <p
+                    class="px-[15px] lg:px-[30px] xl:px-[50px] text-white text-[18px] md:text-[20px] xl:text-[24px] font-bold font-montu">
+                    Latest News
+                </p>
+                <div class="px-[19px] xl:px-[25px] ">
+                    <a href="">
+                        <button
+                            class="bg-yellow-400 px-[28px] xl:px-[35px] py-[5px] xl:py-[9px] text-[#094AB7] font-monti cursor-pointer text-[10px] md:text-[12px] xl:text-[14px]">
+                            View All
+                        </button>
+                    </a>
+                </div>
             </div>
             <!-- News Grid Refined -->
             <div class="news_section">
@@ -1125,7 +984,7 @@
                             <p class="xl:text-[14px] py-[10px] font-monti text-[#ffff] text-[12px]">
                                 {{ $newsItem['date'] }}
                             </p>
-                            <p class="text-[12px] md:text-[15px] font-bold">
+                            <p class="text-[12px] md:text-[15px] 2xl:text-[16px] font-bold">
                                 {{ $newsItem['title'] }}
                             </p>
                         </div>
@@ -1137,266 +996,59 @@
 
 
     {{-- Sponsor Section Refined --}}
-    <div class="lg:my-[100px] my-[30px] relative">
-        <div>
-            <img src="{{ asset('storage/about/sponsor.png') }}" alt=""
-                class="lg:h-[644px] md:h-[450px] sm:h-[430px] h-[400px] w-full object-cover">
-        </div>
-        <div class="absolute inset-0 bg-white opacity-80"></div>
-        <div class="grid grid-cols-1 xl:grid-cols-3 lg:py-[60px] py-[30px] absolute inset-0">
-            <div class="hidden xl:block"></div>
-            <div>
-                <h2
-                    class="font-montu text-[#094AB7] font-semibold text-center text-[22px] lg:text-[26px] xl:text-[30px]">
-                    TFSC
-                    Premier League
-                    Sponsers
-                </h2>
-                <p
-                    class="font-sans lg:text-[18px] text-[12px] text-center mt-[20px] leading-[24px] text-wrap xl:px-0 px-5">
-                    Twenty
-                    Four Seven
-                    Consultancy
-                    Premier League
-                    Twenty
-                    Four Seven
-                    Consultancy
-                    Premier League Twenty Four Seven Consultancy Premier League
-                </p>
-                <div class="absolute left-0 right-0 mt-[40px] sponsor">
-                    <div class="border-b border-b-[#808080]"></div>
-                    <div
-                        class="md:w-[84%] md:mx-auto xl:px-[80px] lg:px-[40px] px-[20px] flex justify-center gap-[40px] md:gap-[100px] ">
-                        <div class="lg:py-[46px] py-[20px] flex justify-center items-center">
-                            <img class="md:w-[88px] md:h-[88px] w-[48px] h-[48px] transition filter grayscale hover:grayscale-0"
-                                src="{{ asset('storage/icons/1.png') }}" alt="KFC"
-                                class="w-full h-full object-cover">
-                        </div>
-                        @foreach ([
-        [
-            'image' => 'storage/icons/1.png',
-            'alt' => 'Sports network',
-        ],
-        [
-            'image' => 'storage/icons/2.png',
-            'alt' => 'Sports network',
-        ],
-        [
-            'image' => 'storage/icons/3.png',
-            'alt' => 'BKT',
-        ],
-        [
-            'image' => 'storage/icons/4.png',
-            'alt' => 'kayo',
-        ],
-    ] as $logo)
-                            <div class="">
-                                <img class=" transition  filter grayscale hover:grayscale-0 mx-4 sm:mx-[27px] lg:mx-[50px] object-cover  md:w-[88px] w-[44px]"
-                                    src="{{ asset($logo['image']) }}" alt="{{ $logo['alt'] }}">
 
-                            </div>
-                        @endforeach
+
+    {{-- TFSC Premier League Sponsers Refined  --}}
+    <div class="relative overflow-hidden my-[50px] lg:my-[70px] xl:my-[100px]">
+        <div class="absolute z-20 top-0 left-0 h-full w-full bg-[#1653BB] opacity-90"></div>
+        <img src="{{ asset('storage/about/sponsor1.png') }}" alt=""
+            class="absolute z-10 top-0 left-0 h-full w-full object-cover">
+        <div class="py-[40px] lg:py-[70px] xl:py-[90px]">
+            <div class="relative z-30 ">
+                <div>
+                    <div class="text-center px-[20px]">
+                        <p
+                            class="leading-tight font-montu text-white font-semibold text-center text-[22px] lg:text-[26px] xl:text-[30px]">
+                            TFSC Premier League Sponsers
+                        </p>
+                        <p class="font-sans max-w-[650px] mx-auto text-[16px] xl:text-[18px] text-white pt-[30px]">
+                            Twenty Four Seven Consultancy Premier League Twenty Four Seven Consultancy Premier League
+                            Twenty Four Seven Consultancy Premier League
+                        </p>
                     </div>
-                    <div class="border-b my-[20px] md:my-[30px] border-b-[#808080]"></div>
-                    <div class="flex items-center justify-center">
-                        @foreach ([
-        [
-            'image' => 'storage/icons/5.png',
-            'alt' => 'Foxtel',
-        ],
-        [
-            'image' => 'storage/icons/6.png',
-            'alt' => 'weber',
-        ],
-    ] as $sponsor)
-                            <div class="">
-                                <img class="transition  filter grayscale hover:grayscale-0 mx-4 sm:mx-[27px] lg:mx-[50px] object-cover  md:w-[88px] w-[44px]  "
-                                    src="{{ asset($sponsor['image']) }}" alt="{{ $sponsor['alt'] }}">
+                    <div class="border-b border-b-[#808080] mt-[40px] mb-[30px]"></div>
+                    <div class="sponsor">
+                        <div
+                            class="mx-auto flex justify-center flex-wrap gap-[20px] md:gap-[40px] lg:gap-[60px] xl:gap-[80px] 2xl:gap-[100px]">
+                            <div class="flex justify-center items-center">
+                                <img class="" src="{{ asset('storage/icons/1.png') }}" alt="KFC"
+                                    class="">
                             </div>
-                        @endforeach
+                            @foreach ([['src' => '2.png', 'alt' => 'Sports network'], ['src' => '3.png', 'alt' => 'BKT'], ['src' => '4.png', 'alt' => 'kayo']] as $logo)
+                                <div class="flex justify-center items-center">
+                                    <img class="" src="{{ asset('storage/icons/' . $logo['src']) }}"
+                                        alt="KFC" class="">
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="border-b border-b-[#808080] mt-[30px] mb-[40px]"></div>
+                        <div
+                            class="flex flex-wrap justify-center gap-[20px] md:gap-[40px] lg:gap-[60px] xl:gap-[80px] 2xl:gap-[100px] sponsor">
+
+                            <div class="flex justify-center">
+                                <img class="" src="{{ asset('storage/icons/5.png') }}" alt="Foxtel"
+                                    class="">
+                            </div>
+                            <div class="flex justify-center">
+                                <img class="" src="{{ asset('storage/icons/6.png') }}" alt="weber"
+                                    class="">
+                            </div>
+
+                        </div>
+                        <div class="border-b border-b-[#808080] mt-[40px]"></div>
                     </div>
-                    <div class="border-b my-[20px] md:my-[30px] border-b-[#808080]"></div>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        $('.events-slider').on('edge', function(event, slick, direction) {
-            //Edge: last slide of the slider when infinity=false
-            console.log('edge was hit');
-        });
-
-        $(document).ready(function() {
-            $('.video-slider').slick({
-                dots: false,
-                arrows: true,
-                infinite: true,
-                speed: 600,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                responsive: [{
-
-                        breakpoint: 2000,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                        }
-                    },
-
-                    {
-
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
-                ]
-            });
-        });
-
-        $('.multiple-items').slick({
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: false,
-            margin: 10,
-            prevArrow: $('.slick-prev'),
-            nextArrow: $('.slick-next'),
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 640,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-
-        $('.highlights_section').slick({
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            margin: 10,
-            // autoplay: true, // Enables auto-scroll
-            autoplaySpeed: 2000, // Speed of auto-scroll
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 640,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-        $('.featured_players').slick({
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            margin: 10,
-            // autoplay: true, // Enables auto-scroll
-            autoplaySpeed: 2000, // Speed of auto-scroll
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 640,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-        $('.news_section').slick({
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            margin: 10,
-            // autoplay: true, // Enables auto-scroll
-            autoplaySpeed: 2000, // Speed of auto-scroll
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 640,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-
-
-
-        function handleArrowVisibility() {
-            var $slickNext = $('.multiple-items .slick-next');
-            var screenWidth = $(window).width();
-
-            if (screenWidth >= 320 && screenWidth <= 600) {
-                console.log('hello');
-                if ($slickNext.length) {
-                    console.log('hello2');
-                    $slickNext.remove();
-                }
-            }
-        }
-
-        // Run on document ready
-        $(document).ready(function() {
-            handleArrowVisibility();
-
-            // Also run on window resize
-            $(window).on('resize', function() {
-                handleArrowVisibility();
-            });
-        });
-    </script>
 </x-app-layout>
