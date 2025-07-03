@@ -5,7 +5,7 @@
     @section('content')
         <!-- Header Section -->
         <div class="relative">
-            <div class="md:h-[300px] h-[100px] flex justify-center relative items-center">
+            <div class="md:h-[300px] h-[200px] flex justify-center relative items-center">
                 <img src="{{ asset('storage/matches/bg1.png') }}" alt=""
                     class="h-[300px]  absolute left-0 right-0 bottom-0 w-full object-cover overflow-hidden">
                 <h2
@@ -18,7 +18,7 @@
 
         {{-- Images --}}
         <div class="relative">
-            <div class="col-md-10 mt-[30px] md:mt-[40px] lg:mt-[55px] xl:mt-[78px] mx-auto">
+            <div class="col-md-8 mt-[30px] md:mt-[40px] lg:mt-[55px] xl:mt-[78px] mx-auto">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] sm:gap-[20px] md:gap-[40px] lg:gap-[50px]">
                     @foreach ([
             [

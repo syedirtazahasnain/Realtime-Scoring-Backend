@@ -111,6 +111,44 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
+    $('.player_section').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        arrows: true,
+        dots: false,
+        margin: 10,
+        prevArrow: $(".custom-prev-owner"),
+        nextArrow: $(".custom-next-owner"),
+        autoplaySpeed: 2000,
+        centerMode: true, // This will help with the centered sliding effect
+        centerPadding: '0', // No extra padding
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
+});
+
+$(document).ready(function () {
     $('.management_section').slick({
         infinite: true,
         slidesToShow: 3,

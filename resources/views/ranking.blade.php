@@ -3,61 +3,60 @@
 
     @section('content')
         <!-- Header Section -->
-        <div class="relative ">
-            <div class="md:h-[300px] h-[100px]  flex justify-center items-center  mb-[50px] overflow-hidden">
+        <div class="relative">
+            <div class="md:h-[300px] h-[200px] flex justify-center relative items-center">
                 <img src="{{ asset('storage/matches/bg1.png') }}" alt=""
-                    class="h-[300px] absolute left-0 right-0 bottom-0 w-full object-cover overflow-hidden">
+                    class="h-[300px]  absolute left-0 right-0 bottom-0 w-full object-cover overflow-hidden">
                 <h2
-                    class="text-white 2xl:text-[50px] xl:text-[40px] lg:text-[30px] sm:text-[20px] text-[18px] font-montu font-bold relative">
+                    class="text-[18px] md:text-[30px] xl:text-[40px] 2xl:text-[50px] font-monti font-bold relative text-white">
                     Rankings
                 </h2>
             </div>
-        </div>
 
+        </div>
         {{-- ist section --}}
 
         <div class="relative">
-            <div
-                class="w-[94%] lg:w-[88%] xl:w-[84%] mx-auto px-[16px] md:px-[20px] min-[1000px]:px-[90px] xl:px-[120px] 2xl:px-[180px] h-[484px]">
+            <div class=" col-lg-8  mt-[10px] md:mt-[20px] lg:mt-[35px] xl:mt-[50px] mx-auto">
 
                 <!-- Header -->
-                <div class="bg-[#094AB7] mb-5">
-                    <h1 class="text-white font-bold font-monti px-5 py-3.5 text-[15px] sm:text-[20px] md:text-[24px]">
+                <div class="bg-[#094AB7] md:h-[60px] flex items-center rounded-[5px]">
+                    <h1 class="px-[20px] text-[15px] sm:text-[20px] md:text-[24px] text-white font-bold font-monti">
                         Teams Ranking
                     </h1>
                 </div>
 
                 <!-- Filter Buttons -->
-                <div class="mb-5">
+                <div class="mt-[14px] md:mt-[21px]">
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-5">
-                            @foreach (['Players', 'Men'] as $label)
-                                <button
-                                    class="flex items-center gap-2 px-2 sm:px-3 md:px-5 py-2 border-2 border-[#094AB7] text-[#094AB7] font-monti font-bold text-[12px] sm:text-[14px] md:text-[16px]">
-                                    {{ $label }}
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7"
-                                        fill="none">
-                                        <path d="M1 1.8252L4.5 5.797L8 1.8252" stroke="#094AB7" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                            @endforeach
+                        <div class="flex items-center gap-[6px]">
+                            <button
+                                class="flex items-center gap-[6px] md:px-[20px] py-[9px] md:py-[11px] border-2 border-[#094AB7] text-[#094AB7] rounded-[5px] font-monti font-bold text-[12px] sm:text-[14px] md:text-[16px]">
+                                Teams
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7"
+                                    fill="none">
+                                    <path d="M1 1.8252L4.5 5.797L8 1.8252" stroke="#094AB7" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
                         </div>
-                        <button
-                            class="flex items-center gap-2 px-2 sm:px-3 md:px-5 py-2 border-2 border-[#094AB7] text-[#094AB7] font-monti font-bold text-[12px] sm:text-[14px] md:text-[16px]">
-                            View All
-                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"
+                        <div class="flex items-center gap-[6px]">
+                            <button
+                                class="flex items-center gap-[6px] md:px-[20px] py-[9px] md:py-[11px] border-2 border-[#094AB7] text-[#094AB7] rounded-[5px] font-monti font-bold text-[12px] sm:text-[14px] md:text-[16px]">
+                                View All
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"
                                 fill="none">
                                 <path d="M0.999999 6.25L5.5 10M5.5 10L10 6.25M5.5 10L5.5 1" stroke="#094AB7"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Table -->
-                <div class="relative bg-[#094AB7] text-white font-sans font-bold">
-                    <table class="w-full border-collapse">
+                <div class="relative bg-[#094AB7] mt-[15px] md:mt-[25px] rounded-[10px]">
+                    <table class="w-full border-collapse text-white font-sans font-bold">
                         <thead
                             class="border-b border-[#0EA825] text-left text-[12px] sm:text-[14px] lg:text-[16px] xl:text-[18px]">
                             <tr>
