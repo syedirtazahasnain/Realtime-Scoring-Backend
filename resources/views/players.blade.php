@@ -30,7 +30,7 @@
                 Enrolled as a Batter
             </h2>
             <div
-    class="mt-[30px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-[10px] md:gap-x-[20px] md:gap-y-[31px] overflow-hidden">
+                class="mt-[30px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-[10px] md:gap-x-[20px] md:gap-y-[31px] overflow-hidden">
                 @foreach ([
             ['image' => 'owner11.png', 'name' => 'Jamshaid Arbab', 'type' => 'Batter', 'score' => '1230', 'stat' => 'runs', 'team' => 'TW'],
             ['image' => 'owner11.png', 'name' => 'Jamshaid Arbab', 'type' => 'Batter', 'score' => '1230', 'stat' => 'runs', 'team' => 'TW'],
@@ -78,7 +78,7 @@
 
 
 
-        {{-- bowler section  --}}
+        {{-- bowler section without slick --}}
         <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto">
             <h2 class="text-[18px] md:text-[22px] xl:text-[30px]  font-bold font-montu text-[#000000]">
                 Enrolled as a Bowler
@@ -180,58 +180,54 @@
         </div>
 
 
-
-
-
-        {{-- sponsor section --}}
-        <div class="relative">
-            <div class="md:my-[100px] my-[30px] h-[357px] md:h-[444px] lg:h-[544px] xl:h-[644px]">
-                <div class="absolute inset-0 w-full h-full">
-                    <img src="{{ asset('storage/about/sponsor1.png') }}" alt=""
-                        class="w-full h-full hidden md:block  object-cover">
-                    <img src="{{ asset('storage/about/sponsor.png') }}" alt=""
-                        class="w-full h-full block md:hidden  object-cover">
-                </div>
-                <div class="absolute inset-0 bg-[#FFFFFF]/90 md:bg-[#1653BB]/90"></div>
-                <div class="absolute inset-0">
+        {{-- TFSC Premier League Sponsers Refined  --}}
+        <div class="relative overflow-hidden my-[50px] lg:my-[70px] xl:my-[100px]">
+            <div class="absolute z-20 top-0 left-0 h-full w-full bg-[#1653BB] opacity-90"></div>
+            <img src="{{ asset('storage/about/sponsor1.png') }}" alt=""
+                class="absolute z-10 top-0 left-0 h-full w-full object-cover">
+            <div class="py-[40px] lg:py-[70px] xl:py-[90px]">
+                <div class="relative z-30 ">
                     <div>
-                        <h2
-                            class="font-montu text-[#094AB7] md:text-white font-semibold text-center text-[22px] lg:text-[26px] xl:text-[30px]">
-                            TFSC
-                            Premier League
-                            Sponsers
-                        </h2>
-                        <p
-                            class="max-w-[650px] pt-[10px] md:pt-[20px] lg:pt-[30px] text-[12px] md:text-[18px] font-sans md:text-white text-black text-center mx-auto">
-                            Twenty
-                            Four Seven
-                            Consultancy
-                            Premier League
-                            Twenty
-                            Four Seven
-                            Consultancy
-                            Premier League Twenty Four Seven Consultancy Premier League
-                        </p>
-                        <div class="absolute left-0 right-0 pt-[30px] md:pt-[40px] sponsor">
-                            <div class="border-b border-b-[#808080]"></div>
+                        <div class="text-center px-[20px]">
+                            <p
+                                class="leading-tight font-montu text-white font-semibold text-center text-[22px] lg:text-[26px] xl:text-[30px]">
+                                TFSC Premier League Sponsers
+                            </p>
+                            <p class="font-sans max-w-[650px] mx-auto text-[16px] xl:text-[18px] text-white pt-[30px]">
+                                Twenty Four Seven Consultancy Premier League Twenty Four Seven Consultancy Premier League
+                                Twenty Four Seven Consultancy Premier League
+                            </p>
+                        </div>
+                        <div class="border-b border-b-[#808080] mt-[40px] mb-[30px]"></div>
+                        <div class="sponsor">
                             <div
-                                class="pt-[20px] md:pt-[25px] lg:pt-[30px] flex flex-row justify-center items-center px-[20px] md:px-0 gap-[54px] md:gap-[70px] lg:gap-[100px]">
-                                @foreach ([['src' => '1.png', 'alt' => 'Sports network'], ['src' => '2.png', 'alt' => 'Sports network'], ['src' => '3.png', 'alt' => 'BKT'], ['src' => '4.png', 'alt' => 'kayo']] as $logo)
-                                    <div class="">
-                                        <img class=" transition filter object-cover w-[48px] md:w-[68px] xl:w-[88px]"
-                                            src="{{ asset('storage/icons/' . $logo['src']) }}" alt="{{ $logo['alt'] }}">
+                                class="mx-auto flex justify-center flex-wrap gap-[20px] md:gap-[40px] lg:gap-[60px] xl:gap-[80px] 2xl:gap-[100px]">
+                                <div class="flex justify-center items-center">
+                                    <img class="" src="{{ asset('storage/icons/1.png') }}" alt="KFC"
+                                        class="">
+                                </div>
+                                @foreach ([['src' => '2.png', 'alt' => 'Sports network'], ['src' => '3.png', 'alt' => 'BKT'], ['src' => '4.png', 'alt' => 'kayo']] as $logo)
+                                    <div class="flex justify-center items-center">
+                                        <img class="" src="{{ asset('storage/icons/' . $logo['src']) }}"
+                                            alt="KFC" class="">
                                     </div>
                                 @endforeach
                             </div>
-                            <div class="border-b pt-[20px] md:pt-[25px] xl:pt-[31px] border-b-[#808080]"></div>
+                            <div class="border-b border-b-[#808080] mt-[30px] mb-[40px]"></div>
                             <div
-                                class="pt-[20px] md:pt-[25px] lg:pt-[39px] flex flex-row justify-center items-center gap-x-[54px] md:gap-x-[70px] lg:gap-x-[100px]">
-                                <img class="md:w-[99px] md:h-[54px] w-[80px]"
-                                    src="{{ asset('storage/icons/5.png') }}" alt="Foxtel" class="object-cover">
-                                <img class="md:w-[99px] md:h-[54px] w-[80px]"
-                                    src="{{ asset('storage/icons/6.png') }}" alt="weber" class="object-cover">
+                                class="flex flex-wrap justify-center gap-[20px] md:gap-[40px] lg:gap-[60px] xl:gap-[80px] 2xl:gap-[100px] sponsor">
+
+                                <div class="flex justify-center">
+                                    <img class="" src="{{ asset('storage/icons/5.png') }}" alt="Foxtel"
+                                        class="">
+                                </div>
+                                <div class="flex justify-center">
+                                    <img class="" src="{{ asset('storage/icons/6.png') }}" alt="weber"
+                                        class="">
+                                </div>
+
                             </div>
-                            <div class="border-b pt-[20px] md:pt-[35px] xl:pt-[49px] border-b-[#808080]"></div>
+                            <div class="border-b border-b-[#808080] mt-[40px]"></div>
                         </div>
                     </div>
                 </div>
