@@ -4,9 +4,10 @@
     {{-- Hero Section Refined --}}
     <div class="relative w-full h-[80vh]">
         {{-- BG Video --}}
-        <video autoplay muted loop playsinline class="w-full h-full object-cover object-top absolute top-0 left-0 z-10">
+        <video autoplay muted loop playsinline class="w-full h-full object-cover object-top absolute top-0 left-0 z-20 opacity-60">
             <source src="{{ asset('storage/new/video-tsfpl.mp4') }}" type="video/mp4">
         </video>
+        <img src="{{ asset('storage/matches/hero-bg.png') }}" alt="" class="bg-[#094AB7] w-full h-full absolute z-10 top-0 left-0"/>
 
         <div class="flex items-center justify-center relative z-20 w-full h-full">
             <div class="text-white text-center max-w-[583px]">
@@ -23,7 +24,7 @@
                         class="font-sans text-[10px] lg:text-[12px] xl:text-[14px] w-[140px] px-[10px] py-[5px] lg:py-[10px] bg-[#F6C200] text-[#094AB7] font-medium cursor-pointer text-center">
                         Join Us
                     </button>
-                    <a href="{{ url('videos') }}"
+                    <a href="/videos"
                         class="font-sans text-[10px] lg:text-[12px] xl:text-[14px] w-[140px] px-[10px] py-[5px] lg:py-[10px] bg-white text-[#094AB7] cursor-pointer text-center">
                         Videos
                     </a>
