@@ -57,41 +57,51 @@
             <!-- Right: Desktop Button + Logo -->
             <div class="flex items-center justify-end w-full gap-[20px] xl:gap-[30px]">
                 <!-- Desktop CTA -->
-                <div class="hidden lg:flex items-center border-x-[1px] border-[#fff] relative group">
-                    <button
-                        class="px-[15px] 2xl:px-[20px] py-[5px] text-white hover:cursor-pointer text-[14px] xl:text-[16px] font-montu text-nowrap">
-                        Join TFSC PL
-                    </button>
-                    <!-- Dropdown menu -->
-                    <div
-                        class="absolute hidden group-hover:block top-full right-0 mt-0 w-48 bg-white rounded-md shadow-lg z-50">
-                        <div class="py-1">
-                            <!-- Profile link -->
-                            @if (auth()->check())
-                                <x-dropdown-link :href="route('profile.edit')">
-                                    {{ __('Profile') }}
-                                </x-dropdown-link>
-                                <x-dropdown-link :href="route('register.player')">
-                                    {{ __('Player') }}
-                                </x-dropdown-link>
-
-                                <!-- Authentication -->
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <x-dropdown-link :href="route('logout')"
-                                        onclick="event.preventDefault();
-                                     this.closest('form').submit();">
-                                        {{ __('Log Out') }}
-                                    </x-dropdown-link>
-                                </form>
-                            @else
-                                <!-- Login link -->
-                                <x-dropdown-link :href="route('login')">
-                                    {{ __('Login') }}
-                                </x-dropdown-link>
-                            @endif
+                <div class="hidden lg:flex items-center relative group">
+                    @if (auth()->check())
+                        <div class="group flex items-center gap-[5px] px-[10px] border-r-[1px] border-[#fff]">
+                            <div class="w-[40px] h-[40px] rounded-full bg-[#000] overflow-hidden">
+                                <img src="{{ asset('storage/avatars/avatar.png') }}" alt="">
+                            </div>
+                            <div>
+                                <img src="{{ asset('storage/about/right-arrow.svg') }}" alt=""
+                                    class="w-[20px] rotate-[90deg] group-hover:rotate-[135deg] duration-200 ease-in-out transition-all">
+                            </div>
                         </div>
-                    </div>
+                        <!-- Dropdown menu -->
+                        <div class="border-x-[1px] border-[#fff]">
+                            <div
+                                class="absolute opacity-0 group-hover:opacity-100 group-hover:z-50 top-[40px] left-0 mt-0 w-48 bg-white rounded-md shadow-lg -z-10 duration-200 ease-in-out transition-all">
+                                <div class="py-1">
+                                    <!-- Profile link -->
+                                    <x-dropdown-link :href="route('profile.edit')">
+                                        {{ __('Profile') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link :href="route('dashboard')">
+                                        {{ __('Dashboard') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link :href="route('register.player')">
+                                        {{ __('Player') }}
+                                    </x-dropdown-link>
+
+                                    <!-- Authentication -->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <x-dropdown-link :href="route('logout')"
+                                            onclick="event.preventDefault();
+                                     this.closest('form').submit();">
+                                            {{ __('Log Out') }}
+                                        </x-dropdown-link>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    @else
+                        <a href="/login"
+                            class="px-[15px] 2xl:px-[20px] py-[5px] text-white hover:cursor-pointer text-[14px] xl:text-[16px] font-montu text-nowrap">
+                            Join TFSC PL
+                        </a>
+                    @endif
                 </div>
                 <!-- Right Logo -->
                 <div class="">
@@ -110,12 +120,12 @@
         </div>
 
         <!-- Mobile Navigation -->
-        <div class="md:hidden overflow-hidden w-full z-50 absolute bg-[#094AB7] top-[102px] left-0 text-center" x-show="open"
-            x-transition>
+        <div class="md:hidden overflow-hidden w-full z-50 absolute bg-[#094AB7] top-[102px] left-0 text-center border-b-4 border-[#fff]"
+            x-show="open" x-transition>
             <!-- Background Images -->
             <img src="{{ asset('images/home/header-bg.png') }}" alt=""
                 class="absolute bottom-0 left-0 grayscale opacity-50">
-            <nav class="relative z-30">
+            <nav class="relative z-30 my-[15px]">
                 <ul class="space-y-2 text-white text-sm font-montu ">
                     <li><a href="/" class="block py-1 hover:text-gray-300">Home</a></li>
                     <li><a href="/about" class="block py-1 hover:text-gray-300">About</a></li>
@@ -125,6 +135,7 @@
                     <li><a href="/ranking" class="block py-1 hover:text-gray-300">Top Fans</a></li>
                     <li><a href="/ranking" class="block py-1 hover:text-gray-300">Awards</a></li>
                     <li><a href="/news" class="block py-1 hover:text-gray-300">Players</a></li>
+                    <li><a href="/login" class="block py-1 hover:text-gray-300">Join TFSC PL</a></li>
                 </ul>
             </nav>
         </div>
