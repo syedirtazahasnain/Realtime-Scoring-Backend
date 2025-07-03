@@ -10,7 +10,7 @@ use App\Http\Controllers\MatchController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TournamentController;
 
-Route::get('/', [GeneralController::class,'home']);
+Route::get('/', [GeneralController::class, 'home']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

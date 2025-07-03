@@ -1,263 +1,246 @@
 <x-app-layout>
     @section('title', 'Drafting TFSPL')
-    @section('content')
-        {{-- header --}}
-        <div class="relative w-full h-screen">
-            <div class="w-full h-full">
-                <video autoplay muted loop playsinline class="w-full h-full object-cover">
-                    <source src="{{ asset('storage/new/video-tsfpl.mp4') }}" type="video/mp4">
-                </video>
+
+    {{-- Hero Section Refined --}}
+    <div class="relative w-full h-[80vh]">
+        {{-- BG Video --}}
+        <video autoplay muted loop playsinline class="w-full h-full object-cover object-top absolute top-0 left-0 z-10">
+            <source src="{{ asset('storage/new/video-tsfpl.mp4') }}" type="video/mp4">
+        </video>
+
+        <div class="flex items-center justify-center relative z-20 w-full h-full">
+            <div class="text-white text-center max-w-[583px]">
+                <p
+                    class="font-montu font-bold text-[24px] md:text-[30px] xl:text-[40px] 2xl:text-[50px] my-0 leading-tight">
+                    TFSC Primer League
+                    2025 Player Drafting
+                </p>
+                <p class="font-sans text-[14px] lg:text-[16px] xl:text-[18px] py-[15px] lg:py-[30px] my-0">
+                    Match 12 - Pindi Cricket Stadium
+                </p>
+                <div class="flex justify-center gap-[10px]">
+                    <button
+                        class="font-sans text-[10px] lg:text-[12px] xl:text-[14px] w-[140px] px-[10px] py-[5px] lg:py-[10px] bg-[#F6C200] text-[#094AB7] font-medium cursor-pointer text-center">
+                        Join Us
+                    </button>
+                    <a href="{{ url('videos') }}"
+                        class="font-sans text-[10px] lg:text-[12px] xl:text-[14px] w-[140px] px-[10px] py-[5px] lg:py-[10px] bg-white text-[#094AB7] cursor-pointer text-center">
+                        Videos
+                    </a>
+                </div>
             </div>
-            <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-white text-center max-w-[583px]">
-                    <p class="font-montu font-bold 2xl:text-[50px] xl:text-[40px] text-[22px] lg:text-[26px] xl:text-[30px]">
-                        TFSC Primer League
-                        2025 Player Drafting
-                    </p>
-                    <div class="">
-                        <p class="font-sans xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] lg:py-[30px] py-[16px]">
-                            Match 12 - Pindi Cricket Stadium
+        </div>
+    </div>
+
+
+    {{-- Players Data Section Refined --}}
+    <div class="relative xl:bg-[#094AB7] my-[10px] xl:my-[50px]">
+        <img src="{{ asset('storage/drafting/coutingbg.png') }}" alt=""
+            class="w-full h-full xl:block hidden absolute top-0 left-0 object-cover">
+
+        <div class="py-[5px] xl:py-[30px] col-md-8 mx-auto">
+            <div class="grid grid-cols-2 xl:grid-cols-4 gap-[10px] xl:gap-[20px]">
+                @foreach ([
+        [
+            'value' => '206',
+            'label' => 'Registered Players',
+        ],
+        [
+            'value' => '150',
+            'label' => 'Picked',
+        ],
+        [
+            'value' => '56',
+            'label' => 'Unpicked',
+        ],
+        [
+            'value' => '10',
+            'label' => 'Total Teams',
+        ],
+    ] as $stat)
+                    <div class="text-center bg-[#094AB7] py-[10px] xl:py-[0px]">
+                        <p
+                            class="font-montu text-[32px] lg:text-[40px] xl:text-[50px] 2xl:text-[60px] font-semibold text-white">
+                            {{ $stat['value'] }}
                         </p>
-                        <div class="flex justify-center gap-[10px]">
-                            <button
-                                class="font-sans xl:text-[14px] lg:text-[12px] text-[10px] lg:px-[46px] px-[28px] lg:py-[10px] py-[3px] bg-[#F6C200] text-[#094AB7] hover:cursor-pointer">Join
-                                Us</button>
-                            <a href="{{ url('videos') }}"
-                                class="font-sans xl:text-[14px] lg:text-[12px] text-[10px] lg:px-[46px] px-[28px] lg:py-[10px] py-[3px] bg-white text-[#094AB7] hover:cursor-pointer text-center">
-                                Videos
-                            </a>
-                        </div>
+                        <p
+                            class="font-montu text-[14px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px] font-semibold text-white">
+                            {{ $stat['label'] }}
+                        </p>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>
-        {{-- players data section --}}
-        <div class="lg:pt-[60px]">
-            <div class=" lg:bg-[#094AB7] relative">
-                <img src="{{ asset('storage/drafting/coutingbg.png') }}" alt=""
-                    class="w-full h-full lg:block hidden absolute">
-                <div class="xl:w-[84%] mx-auto w-[94%]">
-                    <div class="py-[30px] grid lg:grid-cols-6 grid-cols-2  gap-[10px]">
-                        <div class="hidden lg:flex"></div>
-                        @foreach ([
-            [
-                'value' => '206',
-                'label' => 'Total registered Players',
-            ],
-            [
-                'value' => '150',
-                'label' => 'Picked',
-            ],
-            [
-                'value' => '56',
-                'label' => 'Unpicked',
-            ],
-            [
-                'value' => '10',
-                'label' => 'Total Teams',
-            ],
-        ] as $stat)
-                            <div class="text-center bg-[#094AB7] py-[20px] lg:py-0">
-                                <p class="font-montu 2xl:text-[60px] lg:text-[50px] text-[40px] font-semibold text-white">
-                                    {{ $stat['value'] }}
-                                </p>
-                                <p class="font-montu 2xl:text-[20px] lg:text-[18px] text-[14px] font-semibold text-white">
-                                    {{ $stat['label'] }}
-                                </p>
-                            </div>
-                        @endforeach
-                        <div class="hidden lg:flex"></div>
+    </div>
+
+    {{-- Teams Section Refined --}}
+    <div class="relative">
+        <div class="py-[20px] lg:py-[50px] col-md-10 mx-auto">
+            <!-- Desktop Grid (hidden on mobile) -->
+            <div class="hidden lg:grid grid-cols-9 gap-[10px]">
+                @foreach (['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png'] as $image)
+                    <div>
+                        <img src="{{ asset('storage/drafting/' . $image) }}" alt="Drafting image" class="w-full">
                     </div>
-                </div>
+                @endforeach
+            </div>
+
+            <!-- Mobile Scroll (shown on mobile) -->
+            <div class="lg:hidden overflow-x-auto whitespace-nowrap space-x-[10px]">
+                @foreach (['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png'] as $image)
+                    <div class="inline-block w-[120px] h-[110px] relative"> <!-- Adjust width as needed -->
+                        <img src="{{ asset('storage/drafting/' . $image) }}" alt="Drafting image"
+                            class="w-full h-full object-cover absolute left-0 top-0">
+                    </div>
+                @endforeach
             </div>
         </div>
-
-        {{-- teams --}}
-        <div class="xl:w-[84%] mx-auto w-[94%]">
-            <div class="lg:py-[60px] py-[20px]">
-                <!-- Desktop Grid (hidden on mobile) -->
-                <div class="hidden lg:grid grid-cols-9 gap-[10px]">
-                    @foreach (['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png'] as $image)
-                        <div>
-                            <img src="{{ asset('storage/drafting/' . $image) }}" alt="Drafting image" class="w-full">
-                        </div>
-                    @endforeach
-                </div>
-
-                <!-- Mobile Scroll (shown on mobile) -->
-                <div class="lg:hidden overflow-x-auto whitespace-nowrap py-4 space-x-[10px]">
-                    @foreach (['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png'] as $image)
-                        <div class="inline-block w-[100px]"> <!-- Adjust width as needed -->
-                            <img src="{{ asset('storage/drafting/' . $image) }}" alt="Drafting image" class="w-full">
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
+    </div>
 
 
 
-        {{-- Gallery section --}}
-        <div class="xl:w-[84%] mx-auto w-[94%]">
+    {{-- Gallery Section Refined --}}
+    <div class="relative">
+        <div class="py-[20px] col-md-10 mx-auto">
             <p id="gallery"
-                class="2xl:text-[30px] xl:text-[25px] lg:text-[20px] text-[18px] font-montu text-[#094AB7] font-bold lg:pb-[30px] pb-[21px]">
+                class="text-[22px] lg:text-[26px] xl:text-[30px] font-montu text-[#094AB7] font-bold pb-[15px] lg:pb-[30px] my-0">
                 Gallery
             </p>
             <div>
-                <div>
-                    <div class="grid grid-cols-12 xl:gap-[20px] lg:gap-[15px] gap-[6px]">
-                        <div class="col-span-4 relative group overflow-hidden w-full max-h-[512px] h-auto">
-                            <img src="{{ asset('storage/Drafting/gallery1.png') }}" alt="pic 1 "
-                                class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                            <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                                class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        </div>
-                        <div class="col-span-8 group overflow-hidden w-full max-h-[512px] h-auto relative">
-                            <img src="{{ asset('storage/Drafting/gallery2.png') }}" alt="pic 2"
-                                class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0">
-                            <img src="{{ asset('storage/new/g2.png') }}" alt="pic 2 hover"
-                                class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100">
-                        </div>
+                {{-- Grid 1 --}}
+                <div class="grid grid-cols-12 xl:gap-[20px] lg:gap-[15px] gap-[6px]">
+                    <div class="col-span-4 relative group overflow-hidden w-full h-full">
+                        <img src="{{ asset('storage/Drafting/gallery1.png') }}" alt="pic 1 "
+                            class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
+                        <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
+                            class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
+                    </div>
+                    <div class="col-span-8 group overflow-hidden w-full h-full relative">
+                        <img src="{{ asset('storage/Drafting/gallery2.png') }}" alt="pic 2"
+                            class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0">
+                        <img src="{{ asset('storage/new/g2.png') }}" alt="pic 2 hover"
+                            class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100">
                     </div>
                 </div>
-                <div>
-                    <div class="grid grid-cols-4 xl:gap-[20px] lg:gap-[15px] gap-[6px] xl:py-[20px] lg:py-[10px] py-[6px]">
-                        <div class=" relative group overflow-hidden w-full h-auto">
-                            <img src="{{ asset('storage/Drafting/gallery3.png') }}" alt="pic 1 "
-                                class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                            <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                                class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        </div>
-                        <div class=" relative group overflow-hidden w-full h-auto">
-                            <img src="{{ asset('storage/Drafting/gallery4.png') }}" alt="pic 1 "
-                                class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                            <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                                class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        </div>
-                        <div class=" relative group overflow-hidden w-full h-auto">
-                            <img src="{{ asset('storage/Drafting/gallery5.png') }}" alt="pic 1 "
-                                class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                            <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                                class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        </div>
-                        <div class=" relative group overflow-hidden w-full h-auto">
-                            <img src="{{ asset('storage/Drafting/gallery6.png') }}" alt="pic 1 "
-                                class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                            <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                                class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        </div>
+                {{-- Grid 2 --}}
+                <div class="grid grid-cols-4 xl:gap-[20px] lg:gap-[15px] gap-[6px] xl:py-[20px] lg:py-[10px] py-[6px]">
+                    <div class="relative group overflow-hidden">
+                        <img src="{{ asset('storage/Drafting/gallery3.png') }}" alt="pic 1 "
+                            class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
+                        <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
+                            class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
+                    </div>
+                    <div class=" relative group overflow-hidden">
+                        <img src="{{ asset('storage/Drafting/gallery4.png') }}" alt="pic 1 "
+                            class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
+                        <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
+                            class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
+                    </div>
+                    <div class=" relative group overflow-hidden">
+                        <img src="{{ asset('storage/Drafting/gallery5.png') }}" alt="pic 1 "
+                            class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
+                        <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
+                            class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
+                    </div>
+                    <div class=" relative group overflow-hidden">
+                        <img src="{{ asset('storage/Drafting/gallery6.png') }}" alt="pic 1 "
+                            class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
+                        <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
+                            class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
                     </div>
                 </div>
-                <div>
-                    <div class="grid grid-cols-3 xl:gap-[20px] lg:gap-[15px] gap-[6px] xl:pb-[20px] lg:pb-[10px] pb-[6px]">
-                        <div class=" relative group overflow-hidden w-full h-auto">
-                            <img src="{{ asset('storage/Drafting/gallery7.png') }}" alt="pic 1 "
-                                class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                            <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                                class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        </div>
-                        <div class=" relative group overflow-hidden w-full h-auto">
-                            <img src="{{ asset('storage/Drafting/gallery8.png') }}" alt="pic 1 "
-                                class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                            <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                                class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        </div>
-                        <div class=" relative group overflow-hidden w-full h-auto">
-                            <img src="{{ asset('storage/Drafting/gallery9.png') }}" alt="pic 1 "
-                                class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                            <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                                class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        </div>
+                {{-- Grid 3 --}}
+                <div class="grid grid-cols-3 xl:gap-[20px] lg:gap-[15px] gap-[6px] xl:pb-[20px] lg:pb-[10px] pb-[6px]">
+                    <div class=" relative group overflow-hidden w-full h-full">
+                        <img src="{{ asset('storage/Drafting/gallery7.png') }}" alt="pic 1 "
+                            class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
+                        <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
+                            class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
+                    </div>
+                    <div class=" relative group overflow-hidden w-full h-full">
+                        <img src="{{ asset('storage/Drafting/gallery8.png') }}" alt="pic 1 "
+                            class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
+                        <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
+                            class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
+                    </div>
+                    <div class=" relative group overflow-hidden w-full h-full">
+                        <img src="{{ asset('storage/Drafting/gallery9.png') }}" alt="pic 1 "
+                            class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
+                        <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
+                            class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
                     </div>
                 </div>
-                <div>
-                    <div class="grid grid-cols-12 xl:gap-[20px] lg:gap-[15px] gap-[6px]">
-                        <div class="col-span-8 group overflow-hidden w-full max-h-[512px] h-auto relative">
-                            <img src="{{ asset('storage/Drafting/gallery10.png') }}" alt="pic 2"
-                                class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0">
-                            <img src="{{ asset('storage/new/g2.png') }}" alt="pic 2 hover"
-                                class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100">
-                        </div>
-                        <div class="col-span-4 relative group overflow-hidden w-full max-h-[512px] h-auto">
-                            <img src="{{ asset('storage/Drafting/gallery11.png') }}" alt="pic 1 "
-                                class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                            <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                                class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        </div>
+                {{-- Grid 4 --}}
+                <div class="grid grid-cols-12 xl:gap-[20px] lg:gap-[15px] gap-[6px]">
+                    <div class="col-span-8 group overflow-hidden w-full max-h-[512px] h-auto relative">
+                        <img src="{{ asset('storage/Drafting/gallery10.png') }}" alt="pic 2"
+                            class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0">
+                        <img src="{{ asset('storage/new/g2.png') }}" alt="pic 2 hover"
+                            class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100">
+                    </div>
+                    <div class="col-span-4 relative group overflow-hidden w-full max-h-[512px] h-auto">
+                        <img src="{{ asset('storage/Drafting/gallery11.png') }}" alt="pic 1 "
+                            class="w-full h-full object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
+                        <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
+                            class="w-full h-full  object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        {{-- sponsor section --}}
-        <div class="relative">
-            <div class="lg:my-[100px] my-[30px] ">
+    {{-- TFSC Premier League Sponsers Refined  --}}
+    <div class="relative overflow-hidden my-[50px] lg:my-[70px] xl:my-[100px]">
+        <div class="absolute z-20 top-0 left-0 h-full w-full bg-[#1653BB] opacity-90"></div>
+        <img src="{{ asset('storage/about/sponsor1.png') }}" alt=""
+            class="absolute z-10 top-0 left-0 h-full w-full object-cover">
+        <div class="py-[40px] lg:py-[70px] xl:py-[90px]">
+            <div class="relative z-30 ">
                 <div>
-                    <img src="{{ asset('storage/about/sponsor.png') }}" alt=""
-                        class="lg:h-[644px] md:h-[450px] sm:h-[430px md:hidden block h-[400px] w-full object-cover">
-                    <img src="{{ asset('storage/about/sponsor1.png') }}" alt=""
-                        class="lg:h-[644px] md:h-[450px] sm:h-[430px] h-[400px] md:block hidden   w-full object-cover">
-
-                </div>
-                <div class="absolute inset-0 bg-white md:bg-[#1653BB]  opacity-80"></div>
-                <div class="grid grid-cols-1 xl:grid-cols-3 lg:py-[60px] py-[30px] absolute inset-0">
-                    <div class="hidden xl:block"></div>
-                    <div>
-                        <h2
-                            class="font-montu text-[#094AB7] md:text-white font-semibold text-center text-[22px] lg:text-[26px] xl:text-[30px]">
-                            TFSC
-                            Premier League
-                            Sponsers
-                        </h2>
+                    <div class="text-center px-[20px]">
                         <p
-                            class="font-sans lg:text-[18px] text-black md:text-white text-[12px] text-center mt-[20px] leading-[24px] text-wrap xl:px-0 px-5">
-                            Twenty
-                            Four Seven
-                            Consultancy
-                            Premier League
-                            Twenty
-                            Four Seven
-                            Consultancy
-                            Premier League Twenty Four Seven Consultancy Premier League
+                            class="leading-tight font-montu text-white font-semibold text-center text-[22px] lg:text-[26px] xl:text-[30px]">
+                            TFSC Premier League Sponsers
                         </p>
-                        <div class="absolute left-0 right-0 mt-[40px] sponsor">
-                            <div class="border-b border-b-[#808080]"></div>
-                            <div
-                                class="md:w-[84%] md:mx-auto xl:px-[80px] lg:px-[40px] px-[20px] flex justify-center gap-[40px] md:gap-[100px] ">
-
-                                <div class="lg:py-[46px] py-[20px] flex justify-center items-center">
-                                    <img class="md:w-[88px] md:h-[88px] w-[48px] h-[48px] transition filter grayscale hover:grayscale-0"
-                                        src="{{ asset('storage/icons/1.png') }}" alt="KFC"
-                                        class="w-full h-full object-cover">
-                                </div>
-                                @foreach ([['src' => '2.png', 'alt' => 'Sports network'], ['src' => '3.png', 'alt' => 'BKT'], ['src' => '4.png', 'alt' => 'kayo']] as $logo)
-                                    <div class="lg:py-[46px] py-[20px] flex justify-center items-center">
-                                        <img class="md:w-[99px] md:h-[54px] w-[54px] h-[29px] transition filter grayscale hover:grayscale-0"
-                                            src="{{ asset('storage/icons/' . $logo['src']) }}"
-                                            alt="{{ $logo['alt'] }}">
-                                    </div>
-                                @endforeach
-
+                        <p class="font-sans max-w-[650px] mx-auto text-[16px] xl:text-[18px] text-white pt-[30px]">
+                            Twenty Four Seven Consultancy Premier League Twenty Four Seven Consultancy Premier League
+                            Twenty Four Seven Consultancy Premier League
+                        </p>
+                    </div>
+                    <div class="border-b border-b-[#808080] mt-[40px] mb-[30px]"></div>
+                    <div class="sponsor">
+                        <div
+                            class="mx-auto flex justify-center flex-wrap gap-[20px] md:gap-[40px] lg:gap-[60px] xl:gap-[80px] 2xl:gap-[100px]">
+                            <div class="flex justify-center items-center">
+                                <img class="" src="{{ asset('storage/icons/1.png') }}" alt="KFC"
+                                    class="">
                             </div>
-                            <div class="border-b border-b-[#808080]"></div>
-                            <div
-                                class="md:w-[84%] md:mx-auto xl:px-[80px] lg:px-[40px] px-[20px] flex flex-wrap justify-center gap-[40px] md:gap-[100px] sponsor">
-
-                                <div class="lg:py-[46px] py-[20px] flex justify-center">
-                                    <img class="md:w-[99px] md:h-[54px] w-[80px] transition filter grayscale hover:grayscale-0"
-                                        src="{{ asset('storage/icons/5.png') }}" alt="Foxtel" class="object-cover">
+                            @foreach ([['src' => '2.png', 'alt' => 'Sports network'], ['src' => '3.png', 'alt' => 'BKT'], ['src' => '4.png', 'alt' => 'kayo']] as $logo)
+                                <div class="flex justify-center items-center">
+                                    <img class="" src="{{ asset('storage/icons/' . $logo['src']) }}"
+                                        alt="KFC" class="">
                                 </div>
-                                <div class="lg:py-[46px] py-[20px] flex justify-center">
-                                    <img class="md:w-[99px] md:h-[54px] w-[80px] transition filter grayscale hover:grayscale-0"
-                                        src="{{ asset('storage/icons/6.png') }}" alt="weber" class="object-cover">
-                                </div>
-
-                            </div>
-                            <div class="border-b border-b-[#808080]"></div>
+                            @endforeach
                         </div>
+                        <div class="border-b border-b-[#808080] mt-[30px] mb-[40px]"></div>
+                        <div
+                            class="flex flex-wrap justify-center gap-[20px] md:gap-[40px] lg:gap-[60px] xl:gap-[80px] 2xl:gap-[100px] sponsor">
+
+                            <div class="flex justify-center">
+                                <img class="" src="{{ asset('storage/icons/5.png') }}" alt="Foxtel"
+                                    class="">
+                            </div>
+                            <div class="flex justify-center">
+                                <img class="" src="{{ asset('storage/icons/6.png') }}" alt="weber"
+                                    class="">
+                            </div>
+
+                        </div>
+                        <div class="border-b border-b-[#808080] mt-[40px]"></div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-    </x-app-layout>
+</x-app-layout>
