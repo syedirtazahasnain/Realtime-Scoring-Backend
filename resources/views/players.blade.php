@@ -78,7 +78,7 @@
 
 
 
-        {{-- bowler section without slick --}}
+        {{-- bowler section  --}}
         <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto">
             <h2 class="text-[18px] md:text-[22px] xl:text-[30px]  font-bold font-montu text-[#000000]">
                 Enrolled as a Bowler
@@ -202,7 +202,7 @@
                             Sponsers
                         </h2>
                         <p
-                            class="w-[370px] md:w-[400px] xl:w-[646px] pt-[10px] md:pt-[20px] lg:pt-[30px] text-[12px] md:text-[18px] font-sans md:text-white text-black text-center mx-auto">
+                            class="max-w-[650px] pt-[10px] md:pt-[20px] lg:pt-[30px] text-[12px] md:text-[18px] font-sans md:text-white text-black text-center mx-auto">
                             Twenty
                             Four Seven
                             Consultancy
@@ -218,25 +218,18 @@
                                 class="pt-[20px] md:pt-[25px] lg:pt-[30px] flex flex-row justify-center items-center px-[20px] md:px-0 gap-[54px] md:gap-[70px] lg:gap-[100px]">
                                 @foreach ([['src' => '1.png', 'alt' => 'Sports network'], ['src' => '2.png', 'alt' => 'Sports network'], ['src' => '3.png', 'alt' => 'BKT'], ['src' => '4.png', 'alt' => 'kayo']] as $logo)
                                     <div class="">
-                                        <img class=" transition filter grayscale hover:grayscale-0 object-cover w-[48px] md:w-[68px] xl:w-[88px]"
+                                        <img class=" transition filter object-cover w-[48px] md:w-[68px] xl:w-[88px]"
                                             src="{{ asset('storage/icons/' . $logo['src']) }}" alt="{{ $logo['alt'] }}">
                                     </div>
                                 @endforeach
-
                             </div>
                             <div class="border-b pt-[20px] md:pt-[25px] xl:pt-[31px] border-b-[#808080]"></div>
                             <div
                                 class="pt-[20px] md:pt-[25px] lg:pt-[39px] flex flex-row justify-center items-center gap-x-[54px] md:gap-x-[70px] lg:gap-x-[100px]">
-
-
-                                <img class="md:w-[99px] md:h-[54px] w-[80px] transition filter grayscale hover:grayscale-0"
+                                <img class="md:w-[99px] md:h-[54px] w-[80px]"
                                     src="{{ asset('storage/icons/5.png') }}" alt="Foxtel" class="object-cover">
-
-
-                                <img class="md:w-[99px] md:h-[54px] w-[80px] transition filter grayscale hover:grayscale-0"
+                                <img class="md:w-[99px] md:h-[54px] w-[80px]"
                                     src="{{ asset('storage/icons/6.png') }}" alt="weber" class="object-cover">
-
-
                             </div>
                             <div class="border-b pt-[20px] md:pt-[35px] xl:pt-[49px] border-b-[#808080]"></div>
                         </div>

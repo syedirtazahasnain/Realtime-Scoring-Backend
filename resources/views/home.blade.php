@@ -930,7 +930,8 @@
     </div>
 
 
-    {{-- Latest  News Sectio Refined  --}}
+
+    {{-- Latest News Section --}}
     <div class="relative">
         <div class="px-[0px] md:px-[60px] xl:px-[80px]">
             <div class="py-[12px] flex flex-wrap items-center justify-between mb-[30px] xl:mb-[50px] relative">
@@ -993,9 +994,6 @@
             </div>
         </div>
     </div>
-
-
-    {{-- Sponsor Section Refined --}}
 
 
     {{-- TFSC Premier League Sponsers Refined  --}}
