@@ -25,11 +25,11 @@ class DatabaseSeeder extends Seeder
 
         // Create roles
         $roles = Role::factory()->createMany([
-            ['name' => 'admin', 'description' => 'Administrator'],
-            ['name' => 'team_owner', 'description' => 'Team Owner'],
-            ['name' => 'player', 'description' => 'Cricket Player'],
-            ['name' => 'umpire', 'description' => 'Match Umpire'],
-            ['name' => 'spectator', 'description' => 'Spectator'],
+            ['name' => 'admin', 'description' => 'Administrator', 'guard_name' => 'web'],
+            ['name' => 'team_owner', 'description' => 'Team Owner', 'guard_name' => 'web'],
+            ['name' => 'player', 'description' => 'Cricket Player', 'guard_name' => 'web'],
+            ['name' => 'umpire', 'description' => 'Match Umpire', 'guard_name' => 'web'],
+            ['name' => 'spectator', 'description' => 'Spectator', 'guard_name' => 'web'],
         ]);
 
         $users = User::factory(20)->create()->each(function ($user) use ($roles) {
@@ -44,13 +44,20 @@ class DatabaseSeeder extends Seeder
 
         $teams = Team::factory(10)->create()->each(function ($team) {
             $team->update([
-                'logo' => 'teams/'.strtolower(str_replace(' ', '-', $team->name)).'.png',
+                'logo' => 'teams/' . strtolower(str_replace(' ', '-', $team->name)) . '.png',
                 'group_id' => rand(1, 3)
             ]);
         });
 
         // Assign players to teams (3-7 players per team)
         $players = User::role('player')->get();
+        $categories = ['diamond', 'gold', 'silver', 'bronze'];
+
+        $players->each(function ($player) use ($categories) {
+            $player->playerProfile()->update([
+                'category' => $categories[array_rand($categories)]
+            ]);
+        });
 
         $teams->each(function ($team) use ($players) {
             // $selectedPlayers = $players->random(rand(3, 7));
@@ -202,9 +209,9 @@ class DatabaseSeeder extends Seeder
         $diff = $scores[1]['score'] - $scores[2]['score'];
 
         if ($diff > 0) {
-            return 'Team 1 won by '.abs($diff).' runs';
+            return 'Team 1 won by ' . abs($diff) . ' runs';
         } elseif ($diff < 0) {
-            return 'Team 2 won by '.(10 - $scores[2]['wickets']).' wickets';
+            return 'Team 2 won by ' . (10 - $scores[2]['wickets']) . ' wickets';
         }
 
         return 'Match tied';

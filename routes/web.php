@@ -2,15 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DraftController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\MatchController;
+use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TournamentController;
 
-Route::get('/', [GeneralController::class,'home']);
+Route::get('/', [GeneralController::class, 'home']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -43,6 +44,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::post('/player-profile/update', [ProfileController::class, 'storePlayerForm'])->name('player-profile.update');
+
+    Route::prefix('tournaments/{tournament}/draft')->group(function () {
+        Route::get('/', [DraftController::class, 'index'])->name('draft.index');
+        Route::post('/', [DraftController::class, 'draftPlayer'])->name('draft.draft');
+        Route::delete('/', [DraftController::class, 'releasePlayer'])->name('draft.release');
+    });
 
     // Example protected route for admin role
     Route::middleware('role:admin')->group(function () {
