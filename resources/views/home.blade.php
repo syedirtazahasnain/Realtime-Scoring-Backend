@@ -1,153 +1,8 @@
 <x-app-layout>
-    <style>
-        @media screen and (min-width: 365px) and (max-width: 640px) {
-            .multiple-items>button.slick-next.slick-arrow {
-                display: none;
-            }
-
-            .multiple-items {
-                width: 100%;
-            }
-
-            .box_spaces {
-                margin-top: 15px;
-                margin-right: 0px !important;
-            }
-
-            .multiple-items>.slick-prev {
-                display: none
-            }
-        }
-
-        @media screen and (min-width: 641px) and (max-width: 900px) {
-            .multiple-items>button.slick-next.slick-arrow {
-                background-color: #094AB7;
-                height: 93%;
-                margin-top: 8px;
-            }
-
-            .multiple-items {
-                width: 96%;
-            }
-
-            .box_spaces {
-                margin-top: 15px;
-                margin-right: 15px;
-            }
-
-            .multiple-items>button.slick-next.slick-arrow {
-                margin-right: -0.5% !important;
-                width: 3%;
-            }
-
-            .multiple-items>.slick-prev {
-                display: none
-            }
-        }
-
-        @media screen and (min-width: 901px) and (max-width: 1200px) {
-            .multiple-items>button.slick-next.slick-arrow {
-                background-color: #094AB7;
-                height: 93%;
-                margin-top: 8px;
-            }
-
-            .multiple-items {
-                width: 96%;
-            }
-
-            .box_spaces {
-                margin-top: 15px;
-                margin-right: 15px;
-            }
-
-            .multiple-items>button.slick-next.slick-arrow {
-                margin-right: -1.8% !important;
-                width: 3%;
-            }
-
-            .multiple-items>button.:before {
-                content: '';
-                display: block;
-                width: 22px;
-                height: 23px;
-                border: solid white;
-                border-width: 0 2px 2px 0;
-                transform: rotate(-45deg);
-                margin-left: 2px;
-            }
-        }
-
-        @media screen and (min-width: 1201px) and (max-width: 1600px) {
-            .multiple-items>button.slick-next.slick-arrow {
-                background-color: #094AB7;
-                height: 93%;
-                margin-top: 8px;
-            }
-
-            .multiple-items {
-                width: 96%;
-            }
-
-            .box_spaces {
-                margin-top: 15px;
-                margin-right: 15px;
-            }
-
-            .multiple-items>button.slick-next.slick-arrow {
-                margin-right: -2.1% !important;
-                width: 3%;
-            }
-
-            .multiple-items>button.:before {
-                content: '';
-                display: block;
-                width: 22px;
-                height: 23px;
-                border: solid white;
-                border-width: 0 2px 2px 0;
-                transform: rotate(-45deg);
-                margin-left: 2px;
-            }
-        }
-
-        @media screen and (min-width: 1601px) {
-            .multiple-items>button.slick-next.slick-arrow {
-                background-color: #094AB7;
-                height: 93%;
-                margin-top: 8px;
-            }
-
-            .multiple-items {
-                width: 96%;
-            }
-
-            .box_spaces {
-                margin-top: 15px;
-                margin-right: 15px;
-            }
-
-            .multiple-items>button.slick-next.slick-arrow {
-                margin-right: -2.6% !important;
-                width: 3%;
-
-                .multiple-items>button.slick-next:before {
-                    content: '';
-                    display: block;
-                    width: 22px;
-                    height: 23px;
-                    border: solid white;
-                    border-width: 0 2px 2px 0;
-                    transform: rotate(-45deg);
-                    margin-left: 2px;
-                }
-            }
-        }
-    </style>
 
     {{-- HERO Section Refined --}}
     <div class="relative bg-[#fff]">
-        <div class="px-[20px] lg:px-[40px] xl:px-[80px]">
+        <div class="px-[0px] lg:px-[40px] xl:px-[80px]">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-[18px]">
                 <div class="col-span-8 h-full">
                     <div class="bg-blue-950 relative">
@@ -195,12 +50,12 @@
                             </button>
                         </div>
                     </div>
-                    <div class="w-full py-[15px] xl:py-[20px] relative">
+                    <div class="w-full px-[20px] lg:px-[0px] py-[15px] xl:py-[20px] relative">
                         <img src="{{ asset('images/home/bar-banner-bg.png') }}" alt="Background"
                             class="absolute top-0 left-0 w-full h-full object-cover z-0" />
 
                         <p
-                            class="py-0 leading-none font-montu font-bold text-[18px] lg:text-[24px] xl:text-[28px] 2xl:text-[34px] text-white text-center relative z-10">
+                            class="py-0 leading-none font-montu font-bold text-[16px] sm:text-[18px] lg:text-[24px] xl:text-[28px] 2xl:text-[34px] text-white text-center relative z-10">
                             Twenty Four Seven Premier League
                         </p>
                     </div>
@@ -323,7 +178,7 @@
     <div class="relative bg-[#fff]">
         <div class="px-[20px] lg:px-[40px] xl:px-[80px] my-[30px] xl:my-[60px]">
             <div class="mb-[15px] lg:mb-[30px] xl:mb-[50px]">
-                <p class="text-[#094AB7] text-[18px] lg:text-[24px] xl:text-[30px] font-bold font-montu">
+                <p class="text-[#094AB7] text-[22px] lg:text-[26px] xl:text-[30px] font-bold font-montu">
                     Magic Moments
                 </p>
             </div>
@@ -424,7 +279,7 @@
                         <div class="grid grid-cols-3 lg:grid-cols-1 w-full items-center">
                             <div class="col-span-2 lg:col-span-1">
                                 <p
-                                    class="text-[#094AB7] font-montu text-[18px] lg:text-[24px] xl:text-[30px] font-bold my-0 leading-tight">
+                                    class="text-[#094AB7] font-montu text-[22px] lg:text-[26px] xl:text-[30px] font-bold my-0 leading-tight">
                                     Finalist / Runner-Up / Champions
                                 </p>
                             </div>
@@ -464,9 +319,9 @@
     <div class="relative bg-[#fff]">
         <div class="px-[20px] lg:px-[0px] my-[25px] xl:my-[50px]">
             <div class="px-[20px] lg:px-[40px] xl:px-[80px] md:bg-[#FFF4ED] relative">
-                <div class="flex items-center justify-between py-[20px] md:py-[40px]">
+                <div class="flex items-center justify-between py-[20px] md:py-[40px] flex-wrap">
                     <h2
-                        class="lg:pl-[24px] rounded-xl text-[#094AB7] text-[18px] 2xl:text-[24px] font-bold font-montu">
+                        class="lg:pl-[24px] text-[#094AB7] text-[22px] lg:text-[26px] xl:text-[30px] font-bold font-montu my-0">
                         GupShup/Reels/Interviews
                     </h2>
                     <div class="">
@@ -489,7 +344,7 @@
                             class="w-full h-auto max-h-[400px] object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
                         <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
                             class="w-full h-auto max-h-[400px] object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        <div class="absolute md:bottom-6 bottom-3 md:left-5 left-2 text-white font-montserrat z-10">
+                        <div class="absolute md:bottom-6 bottom-3 md:left-5 left-2 text-white font-monti z-10">
                             <p class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px]">
                                 Tom Got Heated After an Umpire’s Controversial Decision
                             </p>
@@ -500,7 +355,7 @@
                             class="w-full h-auto max-h-[400px] object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
                         <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
                             class="w-full h-auto max-h-[400px] object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        <div class="absolute md:bottom-6 bottom-3 md:left-5 left-2 text-white font-montserrat z-10">
+                        <div class="absolute md:bottom-6 bottom-3 md:left-5 left-2 text-white font-monti z-10">
                             <p class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px]">
                                 Tom Got Heated After an Umpire’s Controversial Decision
                             </p>
@@ -511,7 +366,7 @@
                             class="w-full h-auto max-h-[400px] object-cover transition-opacity duration-100 group-hover:opacity-0">
                         <img src="{{ asset('storage/new/g2.png') }}" alt="pic 2 hover"
                             class="w-full h-auto max-h-[400px] object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100">
-                        <div class="absolute md:bottom-6 bottom-3 left-5 text-white font-montserrat z-10">
+                        <div class="absolute md:bottom-6 bottom-3 left-5 text-white font-monti z-10">
                             <p
                                 class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px] hidden md:flex">
                                 Tom Got Heated After an Umpire’s <br> Controversial Decision
@@ -527,7 +382,7 @@
                             class="w-full h-auto max-h-[400px] object-cover transition-opacity duration-100 group-hover:opacity-0">
                         <img src="{{ asset('storage/new/g2.png') }}" alt="pic 2 hover"
                             class="w-full h-auto max-h-[400px] object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100">
-                        <div class="absolute md:bottom-6 bottom-3 left-5 text-white font-montserrat z-10">
+                        <div class="absolute md:bottom-6 bottom-3 left-5 text-white font-monti z-10">
                             <p
                                 class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px] hidden md:flex">
                                 Tom Got Heated After an Umpire’s <br> Controversial Decision
@@ -543,7 +398,7 @@
                             class="w-full h-auto max-h-[400px] object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
                         <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
                             class="w-full h-auto max-h-[400px] object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        <div class="absolute md:bottom-6 bottom-3 md:left-5 left-2 text-white font-montserrat z-10">
+                        <div class="absolute md:bottom-6 bottom-3 md:left-5 left-2 text-white font-monti z-10">
                             <p class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px]">
                                 Tom Got Heated After an Umpire’s Controversial Decision
                             </p>
@@ -554,7 +409,7 @@
                             class="w-full h-auto max-h-[400px] object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
                         <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
                             class="w-full h-auto max-h-[400px] object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                        <div class="absolute md:bottom-6 bottom-3 md:left-5 left-2 text-white font-montserrat z-10">
+                        <div class="absolute md:bottom-6 bottom-3 md:left-5 left-2 text-white font-monti z-10">
                             <p class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px]">
                                 Tom Got Heated After an Umpire’s Controversial Decision
                             </p>
@@ -570,1359 +425,628 @@
     </div>
 
 
-    <!-- Gup shup section -->
-    <div
-        class="xl:px-[80px] lg:px-[40px] px-[20px] md:bg-[#FFF4ED] mt-[30px] md:mt-[100px] h-full overflow-hidden relative">
-        <div class="rounded-[5px] flex items-center justify-between md:py-[50px]">
-            <h2 class="lg:pl-[24px] rounded-xl text-[#094AB7] text-[18px] 2xl:text-[24px] font-bold font-Montserrat ">
-                GupShup/Reels/ <br class="md:hidden">interviews
-            </h2>
-            <div class="lg:pr-[20px]">
-                <a href="#gallery-grid">
-                    <button id="btn"
-                        class="px-[23px] md:px-[35px] md:py-[9px] py-[5px] bg-yellow-400 text-[10px] md:text-[14px] text-white font-sans cursor-pointer ">
-                        View All
-                    </button>
-                </a>
-            </div>
-        </div>
-        <div id="gallery-grid"
-            class="relative grid sm:grid-cols-2 md:grid-cols-4 xl:gap-[20px] lg:gap-[13px] gap-[10px] md:pb-[100px] ">
-            <img src="{{ asset('storage/new/lgbg.png') }}" alt=""
-                class="absolute -left-20 -top-25 hidden lg:flex">
-            <div class="col-span-1 relative group overflow-hidden">
-                <img src="{{ asset('storage/new/Reels1.png') }}" alt="pic 1 "
-                    class="w-full h-auto max-h-[400px] object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                    class="w-full h-auto max-h-[400px] object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                <div class="absolute md:bottom-6 bottom-3 md:left-5 left-2 text-white font-montserrat z-10">
-                    <p class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px]">
-                        Tom Got Heated After an Umpire’s Controversial Decision
-                    </p>
+    {{-- Standings section Refined --}}
+    <div class="relative bg-[#fff]">
+        <div class="py-[50px] lg:py-[70px] xl:py-[100px]">
+            <div class="">
+                <div class="relative h-[240px]">
+                    <div class="absolute top-0 left-0 w-full h-full object-cover object-center">
+                        <img src="{{ asset('storage/new/standings-bg.png') }}" alt="Background"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="pt-[50px] pb-[30px] relative z-30 px-[20px] lg:px-[40px] xl:px-[80px]">
+                        <div class="flex justify-between items-center flex-wrap gap-[10px]">
+                            <div>
+                                <p
+                                    class="text-[22px] lg:text-[26px] xl:text-[30px] font-bold font-montu text-white my-0">
+                                    Standings
+                                </p>
+                            </div>
+                            <div class="hs-dropdown relative">
+                                <div class="w-[100px] lg:w-[120px] bg-[#fff]">
+                                    <select id="cars" name="cars"
+                                        class="w-full py-[5px] xl:py-[8px] bg-white xl:text-[14px] md:text-[12px] text-[10px] font-medium font-monti text-[#060E34] border-none">
+                                        <option value="">Season 1</option>
+                                        <option value="">Season 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-span-1 relative group overflow-hidden">
-                <img src="{{ asset('storage/new/Reels1.png') }}" alt="pic 1 "
-                    class="w-full h-auto max-h-[400px] object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                    class="w-full h-auto max-h-[400px] object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                <div class="absolute md:bottom-6 bottom-3 md:left-5 left-2 text-white font-montserrat z-10">
-                    <p class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px]">
-                        Tom Got Heated After an Umpire’s Controversial Decision
-                    </p>
-                </div>
-            </div>
-            <div class="col-span-2 sm:col-span-2 md:col-span-2 relative group overflow-hidden">
-                <img src="{{ asset('storage/new/Reels2.png') }}" alt="pic 2"
-                    class="w-full h-auto max-h-[400px] object-cover transition-opacity duration-100 group-hover:opacity-0">
-                <img src="{{ asset('storage/new/g2.png') }}" alt="pic 2 hover"
-                    class="w-full h-auto max-h-[400px] object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100">
-                <div class="absolute md:bottom-6 bottom-3 left-5 text-white font-montserrat z-10">
-                    <p
-                        class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px] hidden md:flex">
-                        Tom Got Heated After an Umpire’s <br> Controversial Decision
-                    </p>
-                    <p class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px] md:hidden">
-                        Tom Got Heated After an Umpire’s Controversial Decision
-                    </p>
-                </div>
-            </div>
-            <div class="col-span-2 sm:col-span-2 md:col-span-2 relative group overflow-hidden">
-                <img src="{{ asset('storage/new/Reels2.png') }}" alt="pic 2"
-                    class="w-full h-auto max-h-[400px] object-cover transition-opacity duration-100 group-hover:opacity-0">
-                <img src="{{ asset('storage/new/g2.png') }}" alt="pic 2 hover"
-                    class="w-full h-auto max-h-[400px] object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100">
-                <div class="absolute md:bottom-6 bottom-3 left-5 text-white font-montserrat z-10">
-                    <p
-                        class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px] hidden md:flex">
-                        Tom Got Heated After an Umpire’s <br> Controversial Decision
-                    </p>
-                    <p class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px] md:hidden">
-                        Tom Got Heated After an Umpire’s Controversial Decision
-                    </p>
-                </div>
-            </div>
-            <div class="col-span-1 relative group overflow-hidden">
-                <img src="{{ asset('storage/new/Reels1.png') }}" alt="pic 1 "
-                    class="w-full h-auto max-h-[400px] object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                    class="w-full h-auto max-h-[400px] object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                <div class="absolute md:bottom-6 bottom-3 md:left-5 left-2 text-white font-montserrat z-10">
-                    <p class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px]">
-                        Tom Got Heated After an Umpire’s Controversial Decision
-                    </p>
-                </div>
-            </div>
-            <div class="col-span-1 relative group overflow-hidden">
-                <img src="{{ asset('storage/new/Reels1.png') }}" alt="pic 1 "
-                    class="w-full h-auto max-h-[400px] object-cover transition-opacity duration-100 group-hover:opacity-0 rounded-none ">
-                <img src="{{ asset('storage/new/g1.png') }}" alt="pic 1 hover"
-                    class="w-full h-auto max-h-[400px] object-cover absolute inset-0 opacity-0 transition-opacity duration-100 group-hover:opacity-100 ">
-                <div class="absolute md:bottom-6 bottom-3 md:left-5 left-2 text-white font-montserrat z-10">
-                    <p class="text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold mt-[11px]">
-                        Tom Got Heated After an Umpire’s Controversial Decision
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Standings section -->
-    <div class="relative w-full h-auto md:mt-[50px] mt-[30px]">
-        <div class="absolute w-full h-[241px] object-cover object-center">
-            <img src="{{ asset('storage/new/Standings-bg.png') }}" alt="Background"
-                class="w-full h-full object-cover">
-        </div>
-        <div class="relative md:h-[241px] sm:h-[150px]">
-            <div class="pt-[50px] xl:px-[80px] lg:px-[40px] px-[20px] flex flex-wrap justify-between items-center">
-                <span
-                    class="text-[18px] xl:text-[30px] lg:text-[26px] md:text-[22px] font-bold font-montserrat text-white">Standings</span>
-                <div class="hs-dropdown relative">
-                    <div class="px-[13px] bg-[#fff]">
-                        <select id="cars" name="cars"
-                            class="w-full py-2 bg-white xl:text-[14px] md:text-[12px] text-[10px] font-medium font-montserrat text-[#060E34]">
-                            <option value="">Season 1</option>
-                            <option value="">Season 2</option>
-                        </select>
+                <!-- Standings Table -->
+                <div
+                    class="px-[20px] lg:px-[40px] xl:px-[80px] relative grid grid-cols-1 xl:grid-cols-2 gap-[10px] lg:gap-[16px] xl:gap-[22px] mt-[-100px]">
+                    <div class="lg:mt-[15px]">
+                        <table
+                            class="w-full bg-[#0160FF] shadow-[0px_14px_35px_rgba(9,21,75,0.55)] rounded-[15px] font-monti">
+                            <thead>
+                                <tr
+                                    class="text-white border-b border-[#397242] text-[10px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px]">
+                                    <th class="py-[20px] px-[10px] 2xl:px-[20px]">
+                                        Group A
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        M
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        W
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        L
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        NR
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        D
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        P
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        NRR
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    class="text-white border-b border-[#32457E] hover:bg-blue-950 transition text-[10px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px] font-medium">
+                                    <td
+                                        class="py-[20px] px-[10px] 2xl:px-[20px] flex items-center gap-[10px] xl:gap-[15px]">
+                                        <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers"
+                                            class="w-7 h-7">
+                                        <span class="">Strikers</span>
+                                    </td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        3</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        1</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        0</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        4</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        2.000</td>
+                                </tr>
+                                <tr
+                                    class="text-white border-b border-[#32457E] hover:bg-blue-950 transition text-[10px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px] font-medium">
+                                    <td
+                                        class="py-[20px] px-[10px] 2xl:px-[20px] flex items-center gap-[10px] xl:gap-[15px]">
+                                        <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
+                                            class="w-7 h-7">
+                                        <span class=" ">Raging
+                                            Bulls</span>
+                                    </td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        3</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        1</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        0</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        4</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        2.000</td>
+                                </tr>
+                                <tr
+                                    class="text-white border-b border-[#32457E] hover:bg-blue-950 transition text-[10px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px] font-medium">
+                                    <td
+                                        class="py-[20px] px-[10px] 2xl:px-[20px] flex items-center gap-[10px] xl:gap-[15px]">
+                                        <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans"
+                                            class="w-7 h-7">
+                                        <span class=" ">Sultans</span>
+                                    </td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        3</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        1</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        0</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        4</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        2.000</td>
+                                </tr>
+                                <tr
+                                    class="text-white border-b border-[#32457E] hover:bg-blue-950 transition text-[10px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px] font-medium">
+                                    <td
+                                        class="py-[20px] px-[10px] 2xl:px-[20px] flex items-center gap-[10px] xl:gap-[15px]">
+                                        <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders"
+                                            class="w-7 h-7">
+                                        <span class=" ">Invaders</span>
+                                    </td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        3</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        1</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        0</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        4</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        2.000</td>
+                                </tr>
+                                <tr class="text-white text-center">
+                                    <td colspan="8"
+                                        class="px-[10px] py-[16px] xl:py-[22px] font-normal font-monti text-[12px] xl:text-[14px]">
+                                        <div class="flex justify-center items-center">
+                                            <a href="/ranking"
+                                                class="group flex items-center gap-[30px] lg:gap-[40px] xl:gap-[60px] cursor-pointer hover:text-[#fff] transition-all hover:gap-[20px] duration-200 ease-in-out">
+                                                <p class="leading-none">View All Rankings</p>
+                                                <img src="{{ asset('storage/b.svg') }}" alt="Arrow icon"
+                                                    class="transition duration-300" />
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    {{-- table 2 --}}
+                    <div class="lg:mt-[15px]">
+                        <table
+                            class="w-full bg-[#0160FF] shadow-[0px_14px_35px_rgba(9,21,75,0.55)] rounded-[15px] font-monti">
+                            <thead>
+                                <tr
+                                    class="text-white border-b border-[#397242] text-[10px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px]">
+                                    <th class="py-[20px] px-[10px] 2xl:px-[20px]">
+                                        Group A
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        M
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        W
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        L
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        NR
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        D
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        P
+                                    </th>
+                                    <th class="py-[20px] px-[5px] text-center">
+                                        NRR
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    class="text-white border-b border-[#32457E] hover:bg-blue-950 transition text-[10px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px] font-medium">
+                                    <td
+                                        class="py-[20px] px-[10px] 2xl:px-[20px] flex items-center gap-[10px] xl:gap-[15px]">
+                                        <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers"
+                                            class="w-7 h-7">
+                                        <span class="">Strikers</span>
+                                    </td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        3</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        1</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        0</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        4</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        2.000</td>
+                                </tr>
+                                <tr
+                                    class="text-white border-b border-[#32457E] hover:bg-blue-950 transition text-[10px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px] font-medium">
+                                    <td
+                                        class="py-[20px] px-[10px] 2xl:px-[20px] flex items-center gap-[10px] xl:gap-[15px]">
+                                        <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
+                                            class="w-7 h-7">
+                                        <span class=" ">Raging
+                                            Bulls</span>
+                                    </td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        3</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        1</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        0</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        4</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        2.000</td>
+                                </tr>
+                                <tr
+                                    class="text-white border-b border-[#32457E] hover:bg-blue-950 transition text-[10px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px] font-medium">
+                                    <td
+                                        class="py-[20px] px-[10px] 2xl:px-[20px] flex items-center gap-[10px] xl:gap-[15px]">
+                                        <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans"
+                                            class="w-7 h-7">
+                                        <span class=" ">Sultans</span>
+                                    </td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        3</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        1</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        0</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        4</td>
+                                    <td class="py-[20px] px-[5px] text-center ">
+                                        2.000</td>
+                                </tr>
+                                <tr
+                                    class="text-white border-b border-[#32457E] hover:bg-blue-950 transition text-[10px] sm:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px] font-medium">
+                                    <td
+                                        class="py-[20px] px-[10px] 2xl:px-[20px] flex items-center gap-[10px] xl:gap-[15px]">
+                                        <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders"
+                                            class="w-7 h-7">
+                                        <span class=" ">Invaders</span>
+                                    </td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        3</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        1</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        0</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        2</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        4</td>
+                                    <td class="py-[20px] px-[5px] text-center">
+                                        2.000</td>
+                                </tr>
+                                <tr class="text-white text-center">
+                                    <td colspan="8"
+                                        class="px-[10px] py-[16px] xl:py-[22px] font-normal font-monti text-[12px] xl:text-[14px]">
+                                        <div class="flex justify-center items-center">
+                                            <a href="/ranking"
+                                                class="group flex items-center gap-[30px] lg:gap-[40px] xl:gap-[60px] cursor-pointer hover:text-[#fff] transition-all hover:gap-[20px] duration-200 ease-in-out">
+                                                <p class="leading-none">View All Rankings</p>
+                                                <img src="{{ asset('storage/b.svg') }}" alt="Arrow icon"
+                                                    class="transition duration-300" />
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Standings Table -->
-        <div
-            class="xl:px-[80px] lg:px-[40px] px-[20px] relative md:grid sm:grid-cols-1 xl:grid-cols-2 md:mt-[-125px] md:gap-[20px] sm:mt-[-2px] min-[365px]:mt-[-10px] max-[640px]:pt-[30px] hidden">
-            <div class="max-[768px]:mt-[15px]">
-                <table class="w-full border-collapse bg-[#0160FF] shadow-[0px_14px_35px_rgba(9,21,75,0.55)]">
-                    <thead>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#397242] ">
-                            <th
-                                class="py-7 sm:pl-6 min-[365px]:pl-4 text-left sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                Group A
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                M
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                W
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                L
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                NR
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                D
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                P
-                            </th>
-                            <th
-                                class="sm:p-3 text-center rounded-t-lg sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                NRR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-blue-950 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Strikers</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                                    class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Raging
-                                    Bulls</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Sultans</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Invaders</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white text-center">
-                            <td colspan="8"
-                                class="p-5 sm:text-[14px] min-[365px]:text-[12px] font-normal font-montserrat">
-                                <div class="flex justify-center items-center gap-2">
-                                    <a href="/ranking"
-                                        class="group flex items-center gap-2 cursor-pointer hover:text-gray-400 transition">
-                                        <p class="leading-none">View All Rankings</p>
-                                        <img src="{{ asset('storage/b.svg') }}" alt="Arrow icon"
-                                            class="transition duration-300 group-hover:opacity-50" />
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            {{-- table 2 --}}
-            <div class="max-[768px]:mt-[15px]">
-                <table class="w-full border-collapse bg-[#0160FF] shadow-[0px_14px_35px_rgba(9,21,75,0.55)]">
-                    <thead>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#397242] ">
-                            <th
-                                class="py-7 sm:pl-6 min-[365px]:pl-4 text-left sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                Group A
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                M
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                W
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                L
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                NR
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                D
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                P
-                            </th>
-                            <th
-                                class="sm:p-3 text-center rounded-t-lg sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                NRR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-blue-950 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Strikers</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                                    class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Raging
-                                    Bulls</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Sultans</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Invaders</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white text-center">
-                            <td colspan="8"
-                                class="p-5 sm:text-[14px] min-[365px]:text-[12px] font-normal font-montserrat">
-                                <div class="flex justify-center items-center gap-2">
-                                    <a href="/ranking"
-                                        class="group flex items-center gap-2 cursor-pointer hover:text-gray-400 transition">
-                                        <p class="leading-none">View All Rankings</p>
-                                        <img src="{{ asset('storage/b.svg') }}" alt="Arrow icon"
-                                            class="transition duration-300 group-hover:opacity-50" />
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
 
-        </div>
-        {{-- table for mobile view --}}
-        <div class="xl:px-[80px] lg:px-[40px] px-[20px] relative md:hidden grid sm:grid-cols-1 ">
-            {{-- table 1 --}}
-            <div class="max-[768px]:mt-[15px]">
-                <table class="w-full border-collapse bg-[#0160FF] shadow-[0px_14px_35px_rgba(9,21,75,0.55)]">
-                    <thead>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#397242]">
-                            <th
-                                class="py-7 sm:pl-6 min-[365px]:pl-4 text-left sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                Group A
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                M
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                W
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                L
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                NR
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                D
-                            </th>
-                            <th
-                                class="sm:p-3 text-center sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                P
-                            </th>
-                            <th
-                                class="sm:p-3 text-center rounded-t-lg sm:text-[16px] min-[365px]:text-[12px] min-[450px]:text-[14px] font-montserrat font-bold">
-                                NRR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Team Row Template -->
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-blue-950 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Strikers</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                                    class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Raging
-                                    Bulls</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Sultans</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Invaders</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-blue-950 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/1.png') }}" alt="Strikers" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Strikers</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/2.png') }}" alt="Raging Bulls"
-                                    class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Raging
-                                    Bulls</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/3.png') }}" alt="Sultans" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Sultans</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium ">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white border-b border-[#32457E] hover:bg-yellow-400 transition">
-                            <td
-                                class="py-4 flex items-center sm:space-x-3 min-[365px]:space-x-1 min-[450px]:space-x-2 sm:pl-6 min-[365px]:pl-2">
-                                <img src="{{ asset('storage/standings/4.png') }}" alt="Invaders" class="w-7 h-7">
-                                <span
-                                    class=" sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">Invaders</span>
-                            </td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                3</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                1</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                0</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                4</td>
-                            <td
-                                class="p-3 text-center sm:text-[16px] min-[365px]:text-[10px] min-[450px]:text-[14px] font-montserrat font-medium">
-                                2.000</td>
-                        </tr>
-                        <tr class="bg-[#0160FF] text-white text-center">
-                            <td colspan="8"
-                                class="p-5 sm:text-[14px] min-[365px]:text-[12px] font-normal font-montserrat">
-                                <div class="flex justify-center items-center gap-2">
-                                    <a href="/ranking"
-                                        class="group flex items-center gap-2 cursor-pointer hover:text-gray-400 transition">
-                                        <p class="leading-none">View All Rankings</p>
-                                        <img src="{{ asset('storage/b.svg') }}" alt="Arrow icon"
-                                            class="transition duration-300 group-hover:opacity-50" />
-                                    </a>
+    {{-- Highlights section Refined --}}
+    <div class="relative bg-[#FFF4ED]">
+        <div class="col-md-10 mx-auto">
+            <div class="py-[20px] md:py-[30px] xl:py-[40px]">
+                <div class="flex items-center justify-between ml-2 xl:ml-0">
+                    <h2 class="text-[22px] lg:text-[26px] xl:text-[30px] text-[#094AB7] font-bold font-montu">
+                        Highlights
+                    </h2>
+                    <div class="py-[36px] xl:pr-[20px] pr-[15px]">
+                        <a href="/teams">
+                            <button id="btn"
+                                class="px-[23px] md:px-[35px] md:py-[9px] py-[5px] bg-[#094AB7] text-[10px] md:text-[14px] text-white font-sans cursor-pointer ">
+                                View All
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                {{-- Highlighted Section --}}
+                <div class="highlights_section">
+                    @foreach ([
+        [
+            'default_image' => 'storage/new/team-vs-team.png',
+            'hover_image' => 'storage/new/h2.png',
+            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+        ],
+        [
+            'default_image' => 'storage/new/team-vs-team.png',
+            'hover_image' => 'storage/new/h3.png',
+            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+        ],
+        [
+            'default_image' => 'storage/new/team-vs-team.png',
+            'hover_image' => 'storage/new/h4.png',
+            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+        ],
+        [
+            'default_image' => 'storage/new/team-vs-team.png',
+            'hover_image' => 'storage/new/h4.png',
+            'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
+        ],
+    ] as $item)
+                        <div class="highlights_box ">
+                            <div class="relative w-full px-[10px]">
+                                <div class="w-full h-[304px] relative bg-black">
+                                    <img src="{{ asset($item['default_image']) }}" alt="Default Image"
+                                        class="object-cover w-full h-full">
                                 </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                                <div
+                                    class="text-black font-monti mt-[24px] font-bold text-[14px] lg:text-[15px] 2xl:text-[16px]">
+                                    <p class="my-0">
+                                        {{ $item['title'] }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Highlights section -->
-    <div class="bg-[#FFF4ED] md:h-full h-[536px] ">
-        <div
-            class="  sm:mt-[20px] md:mt-[80px] lg:mt-[74px]  xl:px-[80px] px-[20px] max-[640px]:mt-[20px] mt-[100px] h-[536px]">
-            <div class="flex items-center justify-between ml-2 xl:ml-0 ">
-                <h2
-                    class="md:py-[36px] text-[#094AB7] xl:text-[24px] lg:text-[20px] text-[18px] font-bold font-montu ">
-                    Highlights
-                </h2>
-                <div class="py-[36px] xl:pr-[20px] pr-[15px]">
-                    <a href="/teams">
-                        <button id="btn"
-                            class="px-[23px] md:px-[35px] md:py-[9px] py-[5px] bg-yellow-400 text-[10px] md:text-[14px] text-white font-sans cursor-pointer ">
+
+    {{-- Featured Players Refined  --}}
+    <div class="relative bg-[#fff]">
+        <div class="col-md-11 mx-auto">
+            <div class="py-[50px] md:py-[70px] xl:py-[100px] px-[20px] xl:px-[30px]">
+                <p
+                    class="font-montu text-[22px] lg:text-[26px] xl:text-[30px] font-bold leading-[46px] pb-[20px] md:pb-[30px] xl:pb-[40px] text-[#094AB7]">
+                    Featured Players</p>
+                <div class="featured_players">
+                    @foreach ([
+        [
+            'stats_image' => 'storage/new/fpl.png',
+            'player_image' => 'storage/new/fb1.png',
+            'bg_color' => 'bg-[#094AB7]',
+            'first_name' => 'Jamshaid',
+            'last_name' => 'Arbab Khan',
+            'role' => 'Allrounder',
+            'flag_image' => 'storage/new/gb.png',
+            'matches' => '20',
+            'wickets' => '40',
+            'strike_rate' => '220',
+            'scores' => '400',
+        ],
+        [
+            'stats_image' => 'storage/new/s.png',
+            'player_image' => 'storage/new/54.png',
+            'bg_color' => 'bg-yellow-400',
+            'first_name' => 'Muhammad',
+            'last_name' => 'Awais Khan',
+            'role' => 'Allrounder',
+            'flag_image' => 'storage/new/s.png',
+            'matches' => '20',
+            'wickets' => '40',
+            'strike_rate' => '220',
+            'scores' => '400',
+        ],
+        [
+            'stats_image' => 'storage/new/fpl.png',
+            'player_image' => 'storage/new/fb1.png',
+            'bg_color' => 'bg-[#094AB7]',
+            'first_name' => 'Jamshaid',
+            'last_name' => 'Arbab Khan',
+            'role' => 'Allrounder',
+            'flag_image' => 'storage/new/gb.png',
+            'matches' => '20',
+            'wickets' => '40',
+            'strike_rate' => '220',
+            'scores' => '400',
+            'hidden_class' => 'max-[640px]:hidden',
+        ],
+        [
+            'stats_image' => 'storage/new/s.png',
+            'player_image' => 'storage/new/54.png',
+            'bg_color' => 'bg-yellow-400',
+            'first_name' => 'Muhammad',
+            'last_name' => 'Awais Khan',
+            'role' => 'Allrounder',
+            'flag_image' => 'storage/new/s.png',
+            'matches' => '20',
+            'wickets' => '40',
+            'strike_rate' => '220',
+            'scores' => '400',
+        ],
+    ] as $player)
+                        <div
+                            class="bg-[#FFF4ED] border border-[#F4F4F4] xl:mr-[30px] xl:mx-0 mx-[10px] {{ $player['hidden_class'] ?? '' }}">
+                            <div class="grid grid-cols-5">
+                                <div class="col-span-2">
+                                    <div class="flex flex-col justify-center items-center">
+                                        <img src="{{ asset($player['stats_image']) }}" alt="featured player"
+                                            class="object-cover w-[52px] h-[60px] mt-[22px] mb-[15px]">
+                                        <h4 class="font-sans text-[12px] md:text-[14px] font-normal">Matches</h4>
+                                        <p class="font-montu font-bold text-[20px] md:text-[24px]">
+                                            {{ $player['matches'] }}</p>
+                                        <h4 class="font-sans text-[12px] md:text-[14px] font-normal">Wickets</h4>
+                                        <p class="font-montu font-bold text-[20px] md:text-[24px]">
+                                            {{ $player['wickets'] }}</p>
+                                        <h4 class="font-sans text-[12px] md:text-[14px] font-normal">Strike Rate
+                                        </h4>
+                                        <p class="font-montu font-bold text-[20px] md:text-[24px]">
+                                            {{ $player['strike_rate'] }}</p>
+                                        <h4 class="font-sans text-[12px] md:text-[14px] font-normal">Scores</h4>
+                                        <p class="font-montu font-bold text-[20px] md:text-[24px]">
+                                            {{ $player['scores'] }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-span-3 flex justify-center {{ $player['bg_color'] }}">
+                                    <img src="{{ asset($player['player_image']) }}" alt="featured player"
+                                        class="h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 px-[30px]">
+                                <div class="mt-[16px]">
+                                    <p class="font-sans text-[14px] font-bold mb-[8px]">
+                                        {{ $player['first_name'] }}</p>
+                                    <p class="font-montu md:text-[22px] text-[20px] font-bold mb-[8px]">
+                                        {{ $player['last_name'] }}</p>
+                                    <p class="font-monti md:text-[14px] text-[12px] mb-[16px]">
+                                        {{ $player['role'] }}</p>
+                                </div>
+                                <div>
+                                    <div class="flex justify-end mb-[8px]">
+                                        <img src="{{ asset($player['flag_image']) }}" alt="featured player"
+                                            class="object-cover w-[32px] h-[37px] mt-[22px]">
+                                    </div>
+                                    <div class="flex justify-end mb-[16px]">
+                                        <button class="font-sans text-[12px] font-medium">
+                                            View Profile -→
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    {{-- Latest News Section --}}
+    <div class="relative">
+        <div class="px-[0px] md:px-[60px] xl:px-[80px]">
+            <div class="py-[12px] flex flex-wrap items-center justify-between mb-[30px] xl:mb-[50px] relative">
+                <img src="{{ asset('storage/ranking/latestnewsbackground.png') }}" alt="Background Image"
+                    class="absolute w-full h-full object-cover -z-10" />
+                <p
+                    class="px-[15px] lg:px-[30px] xl:px-[50px] text-white text-[18px] md:text-[20px] xl:text-[24px] font-bold font-montu">
+                    Latest News
+                </p>
+                <div class="px-[19px] xl:px-[25px] ">
+                    <a href="">
+                        <button
+                            class="bg-yellow-400 px-[28px] xl:px-[35px] py-[5px] xl:py-[9px] text-[#094AB7] font-monti cursor-pointer text-[10px] md:text-[12px] xl:text-[14px]">
                             View All
                         </button>
                     </a>
                 </div>
             </div>
-            <div class="highlights_section">
-                <div class="highlights_box xl:mr-[20px] xl:mx-0 mx-[10px]">
-                    <div class="relative w-full h-[304px]">
-                        <img src="{{ asset('storage/new/worriors.png') }}" alt="Default Image"
-                            class="w-full h-full transition-opacity duration-300 hover:opacity-0 object-cover ">
-                        <img src="{{ asset('storage/new/h1.png') }}" alt="Hover Image"
-                            class="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100 object-cover">
-                        <div class=" text-black font-montserrat z-10 pt-[27px] pb-[43px]">
-                            <p
-                                class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] text-[14px] font-montserrat font-bold ">
-                                Tom Got Heated After an
-                                Umpire’s Controversial Decision</p>
+            <!-- News Grid Refined -->
+            <div class="news_section">
+                @foreach ([
+        [
+            'image' => 'storage/News/n1.png',
+            'date' => '12 December, 2024',
+            'title' => 'Jamshed Jimmy picks up 3 important wickets in an over.',
+        ],
+        [
+            'image' => 'storage/News/n2.png',
+            'date' => '12 December, 2024',
+            'title' => 'Muhammad Zain’s fiery bowling stuns TFS Warriors',
+        ],
+        [
+            'image' => 'storage/News/n3.png',
+            'date' => '12 December, 2024',
+            'title' => 'Abid Hussain smashes 2 consecutive sixes to snatch a sensational thriller victory!',
+        ],
+        [
+            'image' => 'storage/News/n4.png',
+            'date' => '12 December, 2024',
+            'title' => 'TFS Zalmi clinch nail-biting finish in eliminator thriller against TFS Strikers!',
+        ],
+    ] as $newsItem)
+                    <div class="relative group overflow-hidden mx-[19px] md:mx-[4px]">
+                        <img src="{{ asset($newsItem['image']) }}" alt="news"
+                            class="w-full transition-all duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-100">
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent">
+                        </div>
+                        <div class="absolute bottom-6 left-0 text-white px-[24px] font-monti ">
+                            <p class="xl:text-[14px] py-[10px] font-monti text-[#ffff] text-[12px]">
+                                {{ $newsItem['date'] }}
+                            </p>
+                            <p class="text-[12px] md:text-[15px] 2xl:text-[16px] font-bold">
+                                {{ $newsItem['title'] }}
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="highlights_box xl:mr-[20px] xl:mx-0 mx-[10px]">
-                    <div class="relative">
-                        <img src="{{ asset('storage/new/invaders.png') }}" alt="Default Image"
-                            class="w-full h-[304px]  transition-opacity duration-300 hover:opacity-0 object-cover ">
-                        <img src="{{ asset('storage/new/h2.png') }}" alt="Hover Image"
-                            class="absolute inset-0 w-full h-[304px] opacity-0 transition-opacity duration-300 hover:opacity-100 object-cover">
-                        <div class=" text-black font-montserrat z-10 pt-[27px] pb-[43px]">
-                            <p
-                                class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] text-[14px] font-montserrat font-bold ">
-                                Tom Got Heated After an
-                                Umpire’s Controversial Decision</p>
-                        </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+
+    {{-- TFSC Premier League Sponsers Refined  --}}
+    <div class="relative overflow-hidden my-[50px] lg:my-[70px] xl:my-[100px]">
+        <div class="absolute z-20 top-0 left-0 h-full w-full bg-[#1653BB] opacity-90"></div>
+        <img src="{{ asset('storage/about/sponsor1.png') }}" alt=""
+            class="absolute z-10 top-0 left-0 h-full w-full object-cover">
+        <div class="py-[40px] lg:py-[70px] xl:py-[90px]">
+            <div class="relative z-30 ">
+                <div>
+                    <div class="text-center px-[20px]">
+                        <p
+                            class="leading-tight font-montu text-white font-semibold text-center text-[22px] lg:text-[26px] xl:text-[30px]">
+                            TFSC Premier League Sponsers
+                        </p>
+                        <p class="font-sans max-w-[650px] mx-auto text-[16px] xl:text-[18px] text-white pt-[30px]">
+                            Twenty Four Seven Consultancy Premier League Twenty Four Seven Consultancy Premier League
+                            Twenty Four Seven Consultancy Premier League
+                        </p>
                     </div>
-                </div>
-                <div class="highlights_box xl:mr-[20px] xl:mx-0 mx-[10px]">
-                    <div class="relative">
-                        <img src="{{ asset('storage/new/zalmi.png') }}" alt="Default Image"
-                            class="w-full h-[304px]  transition-opacity duration-300 hover:opacity-0 object-cover ">
-                        <img src="{{ asset('storage/new/h3.png') }}" alt="Hover Image"
-                            class="absolute inset-0 w-full h-[304px] opacity-0 transition-opacity duration-300 hover:opacity-100 object-cover">
-                        <div class=" text-black font-montserrat z-10 pt-[27px] pb-[43px]">
-                            <p
-                                class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] text-[14px] font-montserrat font-bold ">
-                                Tom Got Heated After an
-                                Umpire’s Controversial Decision</p>
+                    <div class="border-b border-b-[#808080] mt-[40px] mb-[30px]"></div>
+                    <div class="sponsor">
+                        <div
+                            class="mx-auto flex justify-center flex-wrap gap-[20px] md:gap-[40px] lg:gap-[60px] xl:gap-[80px] 2xl:gap-[100px]">
+                            <div class="flex justify-center items-center">
+                                <img class="" src="{{ asset('storage/icons/1.png') }}" alt="KFC"
+                                    class="">
+                            </div>
+                            @foreach ([['src' => '2.png', 'alt' => 'Sports network'], ['src' => '3.png', 'alt' => 'BKT'], ['src' => '4.png', 'alt' => 'kayo']] as $logo)
+                                <div class="flex justify-center items-center">
+                                    <img class="" src="{{ asset('storage/icons/' . $logo['src']) }}"
+                                        alt="KFC" class="">
+                                </div>
+                            @endforeach
                         </div>
-                    </div>
-                </div>
-                <div class="highlights_box xl:mr-[20px] xl:mx-0 mx-[10px]">
-                    <div class="relative">
-                        <img src="{{ asset('storage/new/sultan.png') }}" alt="Default Image"
-                            class="w-full h-[304px]  transition-opacity duration-300 hover:opacity-0 object-cover ">
-                        <img src="{{ asset('storage/new/h4.png') }}" alt="Hover Image"
-                            class="absolute inset-0 w-full h-[304px] opacity-0 transition-opacity duration-300 hover:opacity-100 object-cover">
-                        <div class=" text-black font-montserrat z-10 pt-[27px] pb-[43px]">
-                            <p
-                                class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] text-[14px] font-montserrat font-bold ">
-                                Tom Got Heated After an
-                                Umpire’s Controversial Decision</p>
+                        <div class="border-b border-b-[#808080] mt-[30px] mb-[40px]"></div>
+                        <div
+                            class="flex flex-wrap justify-center gap-[20px] md:gap-[40px] lg:gap-[60px] xl:gap-[80px] 2xl:gap-[100px] sponsor">
+
+                            <div class="flex justify-center">
+                                <img class="" src="{{ asset('storage/icons/5.png') }}" alt="Foxtel"
+                                    class="">
+                            </div>
+                            <div class="flex justify-center">
+                                <img class="" src="{{ asset('storage/icons/6.png') }}" alt="weber"
+                                    class="">
+                            </div>
+
                         </div>
+                        <div class="border-b border-b-[#808080] mt-[40px]"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    {{-- Featured Players  --}}
-    <div class="w-[95%] mx-auto xl:px-[80px] lg:px-[40px] px-[20px] pt-[30px] lg:pt-[100px]">
-        <h3
-            class="font-montu text-[18px] xl:text-[30px] lg:text-[24px] md:text-[22px] font-bold leading-[46px] pb-[20px] md:pb-[50px] text-[#094AB7]">
-            Featured Players</h3>
-        <div class="featured_players">
-            <div class=" bg-[#FFF4ED] border border-[#F4F4F4] xl:mr-[30px] xl:mx-0 mx-[10px]">
-                <div class=" grid grid-cols-5">
-                    <div class="col-span-2">
-                        <div class="flex flex-col justify-center items-center">
-                            <img src="{{ asset('storage/new/fpl.png') }}" alt="featured player"
-                                class=" object-cover w-[52px] h-[60px] mt-[22px] mb-[15px]">
-                            <h4 class="font-sans  text-[12px] md:text-[14px] font-normal ">Matches</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">20</p>
-                            <h4 class="font-sans  text-[12px] md:text-[14px] font-normal ">Wickets</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">40</p>
-                            <h4 class="font-sans  text-[12px] md:text-[14px] font-normal ">Strike Rate</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">220</p>
-                            <h4 class="font-sans text-[12px]  md:text-[14px] font-normal ">Scores</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">400</p>
-                        </div>
-                    </div>
-                    <div class="col-span-3 flex justify-center bg-[#094AB7]">
-                        <img src="{{ asset('storage/new/fb1.png') }}" alt="featured player"
-                            class="h-full object-cover">
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 px-[30px]">
-                    <div class="mt-[16px]">
-                        <p class="font-sans text-[14px] font-bold mb-[8px]">Jamshaid</p>
-                        <p class="font-montu md:text-[22px] text-[20px] font-bold mb-[8px]">Arbab Khan</p>
-                        <p class="font-montserrat md:text-[14px] text-[12px] mb-[16px]">Allrounder</p>
-                    </div>
-                    <div>
-                        <div class="flex justify-end mb-[8px]">
-                            <img src="{{ asset('storage/new/gb.png') }}" alt="featured player"
-                                class=" object-cover w-[32px] h-[37px] mt-[22px] ">
-                        </div>
-                        <div class="flex justify-end mb-[16px]">
-                            <button class="font-sans text-[12px] font-medium">
-                                View Profile -→
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=" bg-[#FFF4ED] border border-[#F4F4F4] xl:mr-[30px] xl:mx-0 mx-[10px]">
-                <div class=" grid grid-cols-5">
-                    <div class="col-span-2">
-                        <div class="flex flex-col justify-center items-center">
-                            <img src="{{ asset('storage/new/s.png') }}" alt="featured player"
-                                class=" object-cover w-[52px] h-[60px] mt-[22px] mb-[15px]">
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Matches</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">20</p>
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Wickets</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">40</p>
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Strike Rate</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">220</p>
-                            <h4 class="font-sans text-[12px]  md:text-[14px] font-normal ">Scores</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">400</p>
-                        </div>
-                    </div>
-                    <div class="col-span-3 flex justify-center bg-yellow-400">
-                        <img src="{{ asset('storage/new/54.png') }}" alt="featured player"
-                            class="h-full object-cover">
-
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 px-[30px]">
-                    <div class="mt-[16px]">
-                        <p class="font-sans text-[14px] font-bold mb-[8px]">Muhammad</p>
-                        <p class="font-montu md:text-[22px] text-[20px] font-bold mb-[8px]">Awais Khan</p>
-                        <p class="font-montserrat md:text-[14px] text-[12px] mb-[16px]">Allrounder</p>
-                    </div>
-                    <div>
-                        <div class="flex justify-end mb-[8px]">
-                            <img src="{{ asset('storage/new/s.png') }}" alt="featured player"
-                                class=" object-cover w-[32px] h-[37px] mt-[22px] ">
-                        </div>
-                        <div class="flex justify-end mb-[16px]">
-                            <button class="font-sans text-[12px] font-medium">
-                                View Profile -→
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=" bg-[#FFF4ED]  max-[640px]:hidden xl:mr-[30px] xl:mx-0 mx-[10px]">
-                <div class=" grid grid-cols-5">
-                    <div class="col-span-2">
-                        <div class="flex flex-col justify-center items-center">
-                            <img src="{{ asset('storage/new/fpl.png') }}" alt="featured player"
-                                class=" object-cover w-[52px] h-[60px] mt-[22px] mb-[15px]">
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Matches</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">20</p>
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Wickets</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">40</p>
-                            <h4 class="font-sans ext-[12px] md:text-[14px] font-normal ">Strike Rate</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">220</p>
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Scores</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">400</p>
-                        </div>
-                    </div>
-                    <div class="col-span-3 flex justify-center bg-[#094AB7]">
-                        <img src="{{ asset('storage/new/fb1.png') }}" alt="featured player"
-                            class="h-full object-cover">
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 px-[30px]">
-                    <div class="mt-[16px]">
-                        <p class="font-sans text-[14px] font-bold mb-[8px]">Jamshaid</p>
-                        <p class="font-montu md:text-[22px] text-[20px] font-bold mb-[8px]">Arbab Khan</p>
-                        <p class="font-montserrat md:text-[14px] text-[12px] mb-[16px]">Allrounder</p>
-                    </div>
-                    <div>
-                        <div class="flex justify-end mb-[8px]">
-                            <img src="{{ asset('storage/new/gb.png') }}" alt="featured player"
-                                class=" object-cover w-[32px] h-[37px] mt-[22px] ">
-                        </div>
-                        <div class="flex justify-end mb-[16px]">
-                            <button class="font-sans text-[12px] font-medium">
-                                View Profile -→
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=" bg-[#FFF4ED] border border-[#F4F4F4] xl:mr-[30px] xl:mx-0 mx-[10px]">
-                <div class=" grid grid-cols-5">
-                    <div class="col-span-2">
-                        <div class="flex flex-col justify-center items-center">
-                            <img src="{{ asset('storage/new/s.png') }}" alt="featured player"
-                                class=" object-cover w-[52px] h-[60px] mt-[22px] mb-[15px]">
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Matches</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">20</p>
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Wickets</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">40</p>
-                            <h4 class="font-sans text-[12px] md:text-[14px] font-normal ">Strike Rate</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">220</p>
-                            <h4 class="font-sans text-[12px]  md:text-[14px] font-normal ">Scores</h4>
-                            <p class="font-montu font-bold text-[20px] md:text-[24px] ">400</p>
-                        </div>
-                    </div>
-                    <div class="col-span-3 flex justify-center bg-yellow-400">
-                        <img src="{{ asset('storage/new/54.png') }}" alt="featured player"
-                            class="h-full object-cover">
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 px-[30px]">
-                    <div class="mt-[16px]">
-                        <p class="font-sans text-[14px] font-bold mb-[8px]">Muhammad</p>
-                        <p class="font-montu md:text-[22px] text-[20px] font-bold mb-[8px]">Awais Khan</p>
-                        <p class="font-montserrat md:text-[14px] text-[12px] mb-[16px]">Allrounder</p>
-                    </div>
-                    <div>
-                        <div class="flex justify-end mb-[8px]">
-                            <img src="{{ asset('storage/new/s.png') }}" alt="featured player"
-                                class=" object-cover w-[32px] h-[37px] mt-[22px] ">
-                        </div>
-                        <div class="flex justify-end mb-[16px]">
-                            <button class="font-sans text-[12px] font-medium">
-                                View Profile -→
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Latest  News Section -->
-    <div class="xl:px-[80px] lg:px-[40px] px-[20px] md:pt-[100px] pt-[30px] ">
-        <div class="bg-[#094AB7] flex items-center justify-between mb-[30px] md:mb-[50px] mx-[10px]">
-            <h2
-                class="py-[12px] px-1 md:pl-[50px] text-white xl:text-[24px] lg:text-[22px] md:text-[20px] text-[18px] font-bold font-Montserrat">
-                Latest News
-            </h2>
-            <div class="2xl:py-[13px] pr-1 md:pr-[20px] sm:py-[6px]">
-                <a href="">
-                    <button
-                        class="px-[23px] md:px-[35px] md:py-[9px] py-[5px] bg-yellow-400 xl:text-[14px] md:text-[12px] text-[10px] text-white font-sans cursor-pointer ">
-                        View All
-                    </button>
-                </a>
-            </div>
-        </div>
-
-        <!-- News Grid -->
-        <div class="news_section">
-            <div class="relative group overflow-hidden mx-[10px]">
-                <img src="{{ asset('storage/News/n1.png') }}" alt="news"
-                    class="w-full transition-all duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#09154B] opacity-50 group-hover:opacity-100"></div>
-                <div class="absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-black to-transparent">
-                </div>
-                <div class="absolute bottom-6 left-5 text-white font-montserrat z-10">
-                    <p
-                        class="2xl:text-[14px] xl:text-[12px] lg:text-[10px] md:text-[9px] text-[12px] font-medium opacity-75">
-                        12
-                        December, 2024</p>
-                    <p
-                        class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] md:text-[8px] text-[12px] font-bold mt-[11px]">
-                        Tom Got
-                        Heated After an
-                        Umpire’s Controversial Decision</p>
-                </div>
-            </div>
-            <div class="relative group overflow-hidden mx-[10px]">
-                <img src="{{ asset('storage/News/n1.png') }}" alt="news"
-                    class="w-full transition-all duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#09154B] opacity-50 group-hover:opacity-100"></div>
-                <div class="absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-black to-transparent">
-                </div>
-                <div class="absolute bottom-6 left-5 text-white font-montserrat z-10">
-                    <p
-                        class="2xl:text-[14px] xl:text-[12px] lg:text-[10px] md:text-[9px] text-[12px] font-medium opacity-75">
-                        12
-                        December, 2024</p>
-                    <p
-                        class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] md:text-[8px] text-[12px] font-bold mt-[11px]">
-                        Tom Got
-                        Heated After an
-                        Umpire’s Controversial Decision</p>
-                </div>
-            </div>
-            <div class="relative group overflow-hidden mx-[10px]">
-                <img src="{{ asset('storage/News/n1.png') }}" alt="news"
-                    class="w-full transition-all duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#09154B] opacity-50 group-hover:opacity-100"></div>
-                <div class="absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-black to-transparent">
-                </div>
-                <div class="absolute bottom-6 left-5 text-white font-montserrat z-10">
-                    <p
-                        class="2xl:text-[14px] xl:text-[12px] lg:text-[10px] md:text-[9px] text-[12px] font-medium opacity-75">
-                        12
-                        December, 2024</p>
-                    <p
-                        class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] md:text-[8px] text-[12px] font-bold mt-[11px]">
-                        Tom Got
-                        Heated After an
-                        Umpire’s Controversial Decision</p>
-                </div>
-            </div>
-            <div class="relative group overflow-hidden mx-[10px]">
-                <img src="{{ asset('storage/News/n1.png') }}" alt="news"
-                    class="w-full transition-all duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#09154B] opacity-50 group-hover:opacity-100"></div>
-                <div class="absolute bottom-0 left-0 w-full h-[120px] bg-gradient-to-t from-black to-transparent">
-                </div>
-                <div class="absolute bottom-6 left-5 text-white font-montserrat z-10">
-                    <p
-                        class="2xl:text-[14px] xl:text-[12px] lg:text-[10px] md:text-[9px] text-[12px] font-medium opacity-75">
-                        12
-                        December, 2024</p>
-                    <p
-                        class="2xl:text-[16px] xl:text-[13px] lg:text-[9px] md:text-[8px] text-[12px] font-bold mt-[11px]">
-                        Tom Got
-                        Heated After an
-                        Umpire’s Controversial Decision</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{-- sponsor section --}}
-    <div class="lg:my-[100px] my-[30px] relative">
-        <div>
-            <img src="{{ asset('storage/about/sponsor.png') }}" alt=""
-                class="lg:h-[644px] md:h-[450px] sm:h-[430px] h-[400px] w-full object-cover">
-        </div>
-        <div class="absolute inset-0 bg-white opacity-80"></div>
-        <div class="grid grid-cols-1 xl:grid-cols-3 lg:py-[60px] py-[30px] absolute inset-0">
-            <div class="hidden xl:block"></div>
-            <div>
-                <h2 class="font-montu text-[#094AB7] font-semibold text-center lg:text-[30px] text-[18px]">TFSC
-                    Premier League
-                    Sponsers
-                </h2>
-                <p
-                    class="font-sans lg:text-[18px] text-[12px] text-center mt-[20px] leading-[24px] text-wrap xl:px-0 px-5">
-                    Twenty
-                    Four Seven
-                    Consultancy
-                    Premier League
-                    Twenty
-                    Four Seven
-                    Consultancy
-                    Premier League Twenty Four Seven Consultancy Premier League
-                </p>
-                <div class="absolute left-0 right-0 mt-[40px] sponsor">
-                    <div class="border-b border-b-[#808080]"></div>
-                    <div
-                        class="md:w-[84%] md:mx-auto xl:px-[80px] lg:px-[40px] px-[20px] flex justify-center gap-[40px] md:gap-[100px] ">
-                        <div class="lg:py-[46px] py-[20px] flex justify-center items-center">
-                            <img class="md:w-[88px] md:h-[88px] w-[48px] h-[48px] transition filter grayscale hover:grayscale-0"
-                                src="{{ asset('storage/icons/1.png') }}" alt="KFC"
-                                class="w-full h-full object-cover">
-                        </div>
-                        <div class="lg:py-[46px] py-[20px] flex justify-center items-center">
-                            <img class="md:w-[99px] md:h-[54px] w-[54px] h-[29px] transition filter grayscale hover:grayscale-0"
-                                src="{{ asset('storage/icons/2.png') }}" alt="Sports network"
-                                class="w-full h-full object-cover">
-                        </div>
-                        <div class="lg:py-[46px] py-[20px] flex justify-center items-center">
-                            <img class="md:w-[99px] md:h-[54px] w-[54px] h-[29px] transition filter grayscale hover:grayscale-0"
-                                src="{{ asset('storage/icons/3.png') }}" alt="BKT"
-                                class="w-full h-full object-cover">
-                        </div>
-                        <div class="lg:py-[46px] py-[20px] flex justify-center items-center">
-                            <img class="md:w-[99px] md:h-[54px] w-[54px] h-[29px] transition filter grayscale hover:grayscale-0"
-                                src="{{ asset('storage/icons/4.png') }}" alt="kayo"
-                                class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <div class="border-b border-b-[#808080]"></div>
-                    <div
-                        class="md:w-[84%] md:mx-auto xl:px-[80px] lg:px-[40px] px-[20px] flex flex-wrap justify-center gap-[40px] md:gap-[100px] sponsor">
-                        <div class="lg:py-[46px] py-[20px] flex justify-center">
-                            <img class="md:w-[99px] md:h-[54px] w-[80px] transition filter grayscale hover:grayscale-0"
-                                src="{{ asset('storage/icons/5.png') }}" alt="Foxtel" class="object-cover">
-                        </div>
-                        <div class="lg:py-[46px] py-[20px] flex justify-center">
-                            <img class="md:w-[99px] md:h-[54px] w-[80px] transition filter grayscale hover:grayscale-0"
-                                src="{{ asset('storage/icons/6.png') }}" alt="weber" class="object-cover">
-                        </div>
-                    </div>
-                    <div class="border-b border-b-[#808080]"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        $('.events-slider').on('edge', function(event, slick, direction) {
-            //Edge: last slide of the slider when infinity=false
-            console.log('edge was hit');
-        });
-
-        $(document).ready(function() {
-            $('.video-slider').slick({
-                dots: false,
-                arrows: true,
-                infinite: true,
-                speed: 600,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                responsive: [{
-
-                        breakpoint: 2000,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                        }
-                    },
-
-                    {
-
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
-                ]
-            });
-        });
-
-        $('.multiple-items').slick({
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: false,
-            margin: 10,
-            prevArrow: $('.slick-prev'),
-            nextArrow: $('.slick-next'),
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 640,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-
-        $('.highlights_section').slick({
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            margin: 10,
-            // autoplay: true, // Enables auto-scroll
-            autoplaySpeed: 2000, // Speed of auto-scroll
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 640,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-        $('.featured_players').slick({
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            margin: 10,
-            // autoplay: true, // Enables auto-scroll
-            autoplaySpeed: 2000, // Speed of auto-scroll
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 640,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-        $('.news_section').slick({
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            margin: 10,
-            // autoplay: true, // Enables auto-scroll
-            autoplaySpeed: 2000, // Speed of auto-scroll
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 640,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-
-
-
-        function handleArrowVisibility() {
-            var $slickNext = $('.multiple-items .slick-next');
-            var screenWidth = $(window).width();
-
-            if (screenWidth >= 320 && screenWidth <= 600) {
-                console.log('hello');
-                if ($slickNext.length) {
-                    console.log('hello2');
-                    $slickNext.remove();
-                }
-            }
-        }
-
-        // Run on document ready
-        $(document).ready(function() {
-            handleArrowVisibility();
-
-            // Also run on window resize
-            $(window).on('resize', function() {
-                handleArrowVisibility();
-            });
-        });
-    </script>
 </x-app-layout>

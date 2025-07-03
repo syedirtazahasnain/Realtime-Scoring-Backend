@@ -17,7 +17,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-5 xl:gap-6 lg:gap-4 gap-6 ">
                 <div class="bg-[#094AB7] lg:col-span-1">
                     <ul
-                        class="xl:text-[14px] lg:text-[11px] text-[10px] font-montserrat font-medium text-white lg:space-y-4 uppercase py-5  ">
+                        class="xl:text-[14px] lg:text-[11px] text-[10px] font-monti font-medium text-white lg:space-y-4 uppercase py-5  ">
                         <li class="hover:bg-[#132782] px-5">STRIKERS</li>
                         <li class="hover:bg-[#132782] px-5">red bulls</li>
                         <li class="hover:bg-[#132782] px-5">STRIKERS</li>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="absolute right-10  xl:right-60 lg:right-30 sm:right-30 flex items-center z-20">
                             <h2
-                                class="text-white font-montserrat font-bold text-[16px] sm:text-[20px] lg:text-[22px] xl:text-[28px] 2xl:text-[36px]">
+                                class="text-white font-monti font-bold text-[16px] sm:text-[20px] lg:text-[22px] xl:text-[28px] 2xl:text-[36px]">
                                 TFS STRIKERS
                             </h2>
                         </div>
@@ -57,7 +57,7 @@
                         class="rounded-[10px] w-full h-full 2xl:h-[494px] object-cover">
                 </div>
                 <h2
-                    class="text-white text-center font-montserrat font-bold text-[18px] lg:text-[20px] 2xl:text-[25px] 2xl:py-[27px] z-10 relative shadow-lg">
+                    class="text-white text-center font-monti font-bold text-[18px] lg:text-[20px] 2xl:text-[25px] 2xl:py-[27px] z-10 relative shadow-lg">
                     FIXTURES
                 </h2>
                 <div class="bg-white 2xl:mx-[102px] xl:mx-[80px] lg:mx-[60px] md:mx-[40px] mx-[40px] relative z-10">
@@ -86,7 +86,7 @@
                                         class="2xl:text-[15px] lg:text-[13px] md:text-[12px] text-[12px] font-semibold font-sans text-[#2F3F50]">
                                         Zalmi</p>
                                 </div>
-                                <p class="text-[14px] font-medium font-montserrat">vs</p>
+                                <p class="text-[14px] font-medium font-monti">vs</p>
                                 <div class="flex flex-col items-center">
                                     <img src="{{ asset('storage/Warrior.png') }}" alt="Warriors" class="h-10">
                                     <p
@@ -132,7 +132,7 @@
                                         class="2xl:text-[15px] lg:text-[13px] md:text-[12px] text-[12px] font-semibold font-sans text-[#2F3F50]">
                                         Zalmi</p>
                                 </div>
-                                <p class="text-[14px] font-medium font-montserrat">vs</p>
+                                <p class="text-[14px] font-medium font-monti">vs</p>
                                 <div class="flex flex-col items-center">
                                     <img src="{{ asset('storage/Warrior.png') }}" alt="Warriors" class="h-10">
                                     <p
@@ -168,7 +168,7 @@
                 </div>
                 <div class="py-[22px] 2xl:mx-[80px] xl:mx-[70px] lg:mx-[60px] md:mx-[40px] mx-[40px] relative z-10">
                     <h2
-                        class="text-white text-center font-montserrat font-bold text-[18px] lg:text-[20px] 2xl:text-[24px] shadow-lg">
+                        class="text-white text-center font-monti font-bold text-[18px] lg:text-[20px] 2xl:text-[24px] shadow-lg">
                         PLAYERS
                     </h2>
                     <div class="py-[34px]">

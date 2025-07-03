@@ -1,6 +1,5 @@
-<header>
-
-    <div class="w-full z-10 bg-[#094AB7] px-[10px] lg:px-[20px] xl:px-[30px] 2xl:px-[40px] relative h-[102px] flex items-center"
+<header class="fixed top-0 left-0 z-50 w-full">
+    <div class="relative w-full z-10 bg-[#094AB7] px-[10px] lg:px-[20px] xl:px-[30px] 2xl:px-[40px] h-[102px] flex items-center"
         x-data="{ open: false }">
         <!-- Background Images -->
         <img src="{{ asset('images/home/header-bg.png') }}" alt=""
@@ -9,15 +8,15 @@
             class="absolute top-0 right-0 grayscale opacity-50 rotate-[180deg]">
 
         <!-- Main Header Flex -->
-        <div class="grid grid-cols-2 relative z-20 w-full">
-            <div class="flex items-center gap-[18px] lg:gap-[26px] xl:gap-[34px]">
+        <div class="flex items-center justify-between gap-[10px] md:gap-[20px] xl:gap-[30px] relative z-20 w-full">
+            <div class="flex items-center w-full gap-[18px] lg:gap-[26px] xl:gap-[34px]">
                 <!-- Logo -->
-                <div class="relative">
+                <div class="relative w-[110px]">
                     <img src="{{ asset('images/logo/logo-main.png') }}" alt="Logo" class="w-full">
                 </div>
 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex">
+                <div class="hidden lg:flex">
                     <div class="flex gap-[16px] lg:gap-[20px] xl:gap-[26px] items-center font-montu">
                         <div class="text-[14px] xl:text-[16px]">
                             <a href="/"
@@ -58,7 +57,7 @@
             <!-- Right: Desktop Button + Logo -->
             <div class="flex items-center justify-end w-full gap-[20px] xl:gap-[30px]">
                 <!-- Desktop CTA -->
-                <div class="hidden xl:flex lg:flex md:flex items-center border-x-[1px] border-[#fff] relative group">
+                <div class="hidden lg:flex items-center border-x-[1px] border-[#fff] relative group">
                     <button
                         class="px-[15px] 2xl:px-[20px] py-[5px] text-white hover:cursor-pointer text-[14px] xl:text-[16px] font-montu text-nowrap">
                         Join TFSC PL
@@ -68,28 +67,28 @@
                         class="absolute hidden group-hover:block top-full right-0 mt-0 w-48 bg-white rounded-md shadow-lg z-50">
                         <div class="py-1">
                             <!-- Profile link -->
-                            @if(auth()->check())
-                            <x-dropdown-link :href="route('profile.edit')">
-                                {{ __('Profile') }}
-                            </x-dropdown-link>
-                            <x-dropdown-link :href="route('register.player')">
-                                {{ __('Player') }}
-                            </x-dropdown-link>
-
-                            <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                     this.closest('form').submit();">
-                                    {{ __('Log Out') }}
+                            @if (auth()->check())
+                                <x-dropdown-link :href="route('profile.edit')">
+                                    {{ __('Profile') }}
                                 </x-dropdown-link>
-                            </form>
+                                <x-dropdown-link :href="route('register.player')">
+                                    {{ __('Player') }}
+                                </x-dropdown-link>
+
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <x-dropdown-link :href="route('logout')"
+                                        onclick="event.preventDefault();
+                                     this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </x-dropdown-link>
+                                </form>
                             @else
-                            <!-- Login link -->
-                            <x-dropdown-link :href="route('login')">
-                                {{ __('Login') }}
-                            </x-dropdown-link>
+                                <!-- Login link -->
+                                <x-dropdown-link :href="route('login')">
+                                    {{ __('Login') }}
+                                </x-dropdown-link>
                             @endif
                         </div>
                     </div>
@@ -100,7 +99,7 @@
                 </div>
 
                 <!-- Burger Button moved here (visible only on small screens) -->
-                <button class="md:hidden text-white focus:outline-none ml-4" @click="open = !open">
+                <button class="lg:hidden text-white focus:outline-none ml-4" @click="open = !open">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                         stroke-linecap="round" stroke-linejoin="round">
                         <path x-show="!open" d="M4 6h16M4 12h16M4 18h16" />
@@ -110,11 +109,13 @@
             </div>
         </div>
 
-
-
         <!-- Mobile Navigation -->
-        <div class="md:hidden text-center" x-show="open" x-transition>
-            <nav>
+        <div class="md:hidden overflow-hidden w-full z-50 absolute bg-[#094AB7] top-[102px] left-0 text-center" x-show="open"
+            x-transition>
+            <!-- Background Images -->
+            <img src="{{ asset('images/home/header-bg.png') }}" alt=""
+                class="absolute bottom-0 left-0 grayscale opacity-50">
+            <nav class="relative z-30">
                 <ul class="space-y-2 text-white text-sm font-montu ">
                     <li><a href="/" class="block py-1 hover:text-gray-300">Home</a></li>
                     <li><a href="/about" class="block py-1 hover:text-gray-300">About</a></li>
@@ -132,7 +133,6 @@
     </div>
     {{-- site links --}}
     <div class="px-[20px] lg:px-[40px] xl:px-[80px] bg-[#F6C200] flex justify-between py-[12px] items-center">
-
         <div
             class="text-[#2b3990] text-[14px] 2xl:text-[16px] font-sans font-normal hidden lg:flex items-center gap-[20px]">
             <p class="my-0">Extended Health Services</p>
@@ -150,11 +150,9 @@
         </div>
         <div class="md:hidden">
             <button
-                class="2xl:px-[22px] xl:px-[16px] lg:px-[10px] px-[5px] py-1 text-white hover:cursor-pointer font-montserrat text-[12px] font-semibold ">
+                class="2xl:px-[22px] xl:px-[16px] lg:px-[10px] px-[5px] py-1 text-white hover:cursor-pointer font-monti text-[12px] font-semibold ">
                 Join TFSC PL
             </button>
         </div>
-
-
     </div>
 </header>

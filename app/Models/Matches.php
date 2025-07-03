@@ -70,7 +70,7 @@ class Matches extends Model
         return $this->hasMany(MatchPlayer::class, 'match_id');
     }
 
-    public function innings()
+        public function innings()
     {
         return $this->hasMany(Inning::class, 'match_id');
     }

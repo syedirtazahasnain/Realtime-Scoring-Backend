@@ -11,7 +11,7 @@
         </div>
         <div class="absolute inset-0 flex items-center justify-center">
             <div class="text-white text-center max-w-[583px]">
-                <p class="font-montu font-bold 2xl:text-[50px] xl:text-[40px] lg:text-[30px] text-[18px]">
+                <p class="font-montu font-bold 2xl:text-[50px] xl:text-[40px] text-[22px] lg:text-[26px] xl:text-[30px]">
                     TFSC Primer League
                     2025 Player Drafting
                 </p>
@@ -159,14 +159,14 @@
                     </div>
                     <div class="py-[20px] px-[20px]">
                         <div class="flex justify-between">
-                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-montserrat font-bold">
+                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-monti font-bold">
                                 Tom Got Heated After an Umpire’s Controversial Decision
                             </p>
                             <img src="{{ asset('storage/videos/share.svg') }}" alt="">
                         </div>
                         <div class="flex justify-between">
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">25, Dec, 1965</p>
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">00:12:00</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">25, Dec, 1965</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">00:12:00</p>
                         </div>
                     </div>
                 </div>
@@ -180,14 +180,14 @@
                     </div>
                     <div class="py-[20px] px-[20px]">
                         <div class="flex justify-between">
-                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-montserrat font-bold">
+                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-monti font-bold">
                                 Tom Got Heated After an Umpire’s Controversial Decision
                             </p>
                             <img src="{{ asset('storage/videos/share.svg') }}" alt="">
                         </div>
                         <div class="flex justify-between">
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">25, Dec, 1965</p>
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">00:12:00</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">25, Dec, 1965</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">00:12:00</p>
                         </div>
                     </div>
                 </div>
@@ -201,14 +201,14 @@
                     </div>
                     <div class="py-[20px] px-[20px]">
                         <div class="flex justify-between">
-                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-montserrat font-bold">
+                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-monti font-bold">
                                 Tom Got Heated After an Umpire’s Controversial Decision
                             </p>
                             <img src="{{ asset('storage/videos/share.svg') }}" alt="">
                         </div>
                         <div class="flex justify-between">
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">25, Dec, 1965</p>
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">00:12:00</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">25, Dec, 1965</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">00:12:00</p>
                         </div>
                     </div>
                 </div>
@@ -222,14 +222,14 @@
                     </div>
                     <div class="py-[20px] px-[20px]">
                         <div class="flex justify-between">
-                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-montserrat font-bold">
+                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-monti font-bold">
                                 Tom Got Heated After an Umpire’s Controversial Decision
                             </p>
                             <img src="{{ asset('storage/videos/share.svg') }}" alt="">
                         </div>
                         <div class="flex justify-between">
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">25, Dec, 1965</p>
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">00:12:00</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">25, Dec, 1965</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">00:12:00</p>
                         </div>
                     </div>
                 </div>
@@ -243,14 +243,14 @@
                     </div>
                     <div class="py-[20px] px-[20px]">
                         <div class="flex justify-between">
-                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-montserrat font-bold">
+                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-monti font-bold">
                                 Tom Got Heated After an Umpire’s Controversial Decision
                             </p>
                             <img src="{{ asset('storage/videos/share.svg') }}" alt="">
                         </div>
                         <div class="flex justify-between">
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">25, Dec, 1965</p>
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">00:12:00</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">25, Dec, 1965</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">00:12:00</p>
                         </div>
                     </div>
                 </div>
@@ -264,14 +264,14 @@
                     </div>
                     <div class="py-[20px] px-[20px]">
                         <div class="flex justify-between">
-                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-montserrat font-bold">
+                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-monti font-bold">
                                 Tom Got Heated After an Umpire’s Controversial Decision
                             </p>
                             <img src="{{ asset('storage/videos/share.svg') }}" alt="">
                         </div>
                         <div class="flex justify-between">
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">25, Dec, 1965</p>
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">00:12:00</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">25, Dec, 1965</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">00:12:00</p>
                         </div>
                     </div>
                 </div>
@@ -285,14 +285,14 @@
                     </div>
                     <div class="py-[20px] px-[20px]">
                         <div class="flex justify-between">
-                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-montserrat font-bold">
+                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-monti font-bold">
                                 Tom Got Heated After an Umpire’s Controversial Decision
                             </p>
                             <img src="{{ asset('storage/videos/share.svg') }}" alt="">
                         </div>
                         <div class="flex justify-between">
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">25, Dec, 1965</p>
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">00:12:00</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">25, Dec, 1965</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">00:12:00</p>
                         </div>
                     </div>
                 </div>
@@ -306,14 +306,14 @@
                     </div>
                     <div class="py-[20px] px-[20px]">
                         <div class="flex justify-between">
-                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-montserrat font-bold">
+                            <p class="xl:text-[18px] lg:text-[16px] md:text-[14px] text-[12px] font-monti font-bold">
                                 Tom Got Heated After an Umpire’s Controversial Decision
                             </p>
                             <img src="{{ asset('storage/videos/share.svg') }}" alt="">
                         </div>
                         <div class="flex justify-between">
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">25, Dec, 1965</p>
-                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-montserrat">00:12:00</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">25, Dec, 1965</p>
+                            <p class="md:text-[10px] text-[8px] text-[#8C8C8C] font-monti">00:12:00</p>
                         </div>
                     </div>
                 </div>
@@ -331,7 +331,7 @@
         <div class="grid grid-cols-1 xl:grid-cols-3 lg:py-[60px] py-[30px] absolute inset-0">
             <div class="hidden xl:block"></div>
             <div>
-                <h2 class="font-montu text-[#094AB7] font-semibold text-center lg:text-[30px] text-[18px]">TFSC
+                <h2 class="font-montu text-[#094AB7] font-semibold text-center text-[22px] lg:text-[26px] xl:text-[30px]">TFSC
                     Premier League
                     Sponsers
                 </h2>

@@ -12,7 +12,7 @@
                 <!-- Logo -->
                 <div class="md:col-span-2 lg:col-span-3 flex justify-center md:justify-start ">
                     <h2
-                        class="text-[22px] md:text-[25px] lg:text-[27px] font-montserrat font-bold text-white w-full md:w-[300px] lg:w-[319px] h-auto ">
+                        class="text-[22px] md:text-[25px] lg:text-[27px] font-monti font-bold text-white w-full md:w-[300px] lg:w-[319px] h-auto ">
                         TWENTY FOUR SEVEN PREMIER LEAGUE<span class="text-[#2097D9]">.</span>
                     </h2>
                 </div>
@@ -21,9 +21,9 @@
                 <div
                     class="md:col-span-2 lg:col-span-4 flex flex-wrap md:flex-nowrap justify-between gap-4 md:gap-[20px] lg:gap-[20px] xl:gap-[60px] 2xl:gap-[110px]">
                     <div>
-                        <h3 class="font-bold mb-4 text-white font-montserrat text-[15px] md:text-[16px]">ABOUT</h3>
+                        <h3 class="font-bold mb-4 text-white font-monti text-[15px] md:text-[16px]">ABOUT</h3>
                         <ul
-                            class="space-y-2 md:space-y-3 text-[11px] md:text-[12px] font-montserrat font-medium text-white uppercase">
+                            class="space-y-2 md:space-y-3 text-[11px] md:text-[12px] font-monti font-medium text-white uppercase">
                             <li>News</li>
                             <li>Sponsors</li>
                             <li>Teams</li>
@@ -32,9 +32,9 @@
                     </div>
 
                     <div>
-                        <h3 class="font-bold mb-4 text-white font-montserrat text-[15px] md:text-[16px]">MATCH</h3>
+                        <h3 class="font-bold mb-4 text-white font-monti text-[15px] md:text-[16px]">MATCH</h3>
                         <ul
-                            class="space-y-2 md:space-y-3 text-[11px] md:text-[12px] font-montserrat font-normal text-white uppercase">
+                            class="space-y-2 md:space-y-3 text-[11px] md:text-[12px] font-monti font-normal text-white uppercase">
                             <li>Schedule</li>
                             <li>Results</li>
                             <li>Ranking</li>
@@ -43,18 +43,18 @@
                     </div>
 
                     <div>
-                        <h3 class="font-bold mb-4 text-white font-montserrat text-[15px] md:text-[16px]">GALLERY</h3>
+                        <h3 class="font-bold mb-4 text-white font-monti text-[15px] md:text-[16px]">GALLERY</h3>
                         <ul
-                            class="space-y-2 md:space-y-3 text-[11px] md:text-[12px] font-montserrat font-normal text-white uppercase">
+                            class="space-y-2 md:space-y-3 text-[11px] md:text-[12px] font-monti font-normal text-white uppercase">
                             <li>Videos</li>
                             <li>Photos</li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 class="font-bold mb-4 text-white font-montserrat text-[15px] md:text-[16px]">MORE</h3>
+                        <h3 class="font-bold mb-4 text-white font-monti text-[15px] md:text-[16px]">MORE</h3>
                         <ul
-                            class="space-y-2 md:space-y-3 text-[11px] md:text-[12px] font-montserrat font-normal text-white uppercase">
+                            class="space-y-2 md:space-y-3 text-[11px] md:text-[12px] font-monti font-normal text-white uppercase">
                             <li>Email</li>
                             <li>Contacts</li>
                         </ul>
@@ -73,7 +73,7 @@
 
                 <!-- Copyright -->
                 <div class="sm:col-span-2 lg:col-span-3">
-                    <p class="text-[11px] md:text-[12px] font-montserrat font-normal">
+                    <p class="text-[11px] md:text-[12px] font-monti font-normal">
                         COPYRIGHT &copy; 2024 TWENTY FOUR SEVEN PREMIER LEAGUE. ALL RIGHTS RESERVED.
                     </p>
                 </div>

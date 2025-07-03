@@ -130,7 +130,7 @@
                         <p class="lg:text-[15px] text-[13px] font-semibold font-sans text-[#2F3F50]">
                             Zalmi</p>
                     </div>
-                    <p class="lg:text-[14px] sm:text-[12px] font-medium font-montserrat">vs</p>
+                    <p class="lg:text-[14px] sm:text-[12px] font-medium font-monti">vs</p>
                     <div class="flex flex-col items-center">
                         <img src="{{ asset('storage/Warrior.png') }}" alt="Warriors" class="h-13">
                         <p class="lg:text-[15px] text-[13px] font-semibold font-sans text-[#2F3F50]">
@@ -174,7 +174,7 @@
                         <p class="lg:text-[15px] text-[13px] font-semibold font-sans text-[#2F3F50]">
                             Zalmi</p>
                     </div>
-                    <p class="lg:text-[14px] sm:text-[12px] font-medium font-montserrat">vs</p>
+                    <p class="lg:text-[14px] sm:text-[12px] font-medium font-monti">vs</p>
                     <div class="flex flex-col items-center">
                         <img src="{{ asset('storage/Warrior.png') }}" alt="Warriors" class="h-13">
                         <p class="lg:text-[15px] text-[13px] font-semibold font-sans text-[#2F3F50]">
@@ -218,7 +218,7 @@
                         <p class="lg:text-[15px] text-[13px] font-semibold font-sans text-[#2F3F50]">
                             Zalmi</p>
                     </div>
-                    <p class="lg:text-[14px] sm:text-[12px] font-medium font-montserrat">vs</p>
+                    <p class="lg:text-[14px] sm:text-[12px] font-medium font-monti">vs</p>
                     <div class="flex flex-col items-center">
                         <img src="{{ asset('storage/Warrior.png') }}" alt="Warriors" class="h-13">
                         <p class="lg:text-[15px] text-[13px] font-semibold font-sans text-[#2F3F50]">
@@ -262,7 +262,7 @@
                         <p class="lg:text-[15px] text-[13px] font-semibold font-sans text-[#2F3F50]">
                             Zalmi</p>
                     </div>
-                    <p class="lg:text-[14px] sm:text-[12px] font-medium font-montserrat">vs</p>
+                    <p class="lg:text-[14px] sm:text-[12px] font-medium font-monti">vs</p>
                     <div class="flex flex-col items-center">
                         <img src="{{ asset('storage/Warrior.png') }}" alt="Warriors" class="h-13">
                         <p class="lg:text-[15px] text-[13px] font-semibold font-sans text-[#2F3F50]">
@@ -306,7 +306,7 @@
                         <p class="lg:text-[15px] text-[13px] font-semibold font-sans text-[#2F3F50]">
                             Zalmi</p>
                     </div>
-                    <p class="lg:text-[14px] sm:text-[12px] font-medium font-montserrat">vs</p>
+                    <p class="lg:text-[14px] sm:text-[12px] font-medium font-monti">vs</p>
                     <div class="flex flex-col items-center">
                         <img src="{{ asset('storage/Warrior.png') }}" alt="Warriors" class="h-13">
                         <p class="lg:text-[15px] text-[13px] font-semibold font-sans text-[#2F3F50]">
@@ -327,7 +327,7 @@
     <div class="w-[84%] mx-auto 2xl:px-[180px] xl:px-[120px] min-[1000px]:px-[90px] md:px-[20px] px-[16px]">
         <div class=" mb-[72px]">
             <div class="flex justify-center items-center py-5">
-                <button class="px-5 py-[3px] md:py-2 lg:text-[14px] text-[10px] bg-[#0E4EB8]  text-white  font-montserrat">
+                <button class="px-5 py-[3px] md:py-2 lg:text-[14px] text-[10px] bg-[#0E4EB8]  text-white  font-monti">
                     Load More
                 </button>
             </div>
