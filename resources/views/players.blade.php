@@ -4,29 +4,32 @@
     @section('content')
         {{-- header --}}
         <div class="relative">
-            <div class="h-[100px] md:h-[300px] xl:h-[450px]">
+            <div class="h-[40vh]">
                 <div class="w-full h-full flex justify-center items-center">
                     <img src="{{ asset('storage/matches/bg1.png') }}" alt=""
-                        class="h-full w-full  absolute bottom-0 left-0 object-cover ">
-                    <h2 class="text-white text-[18px] xl:text-[50px] md:text-[30px] font-montu font-bold relative">
+                        class="h-full w-full absolute bottom-0 left-0 object-cover ">
+                    <p
+                        class="text-[#fff] font-montu font-bold text-[24px] md:text-[30px] xl:text-[40px] 2xl:text-[50px] my-0 leading-tight relative z-20">
                         Players
-                    </h2>
+                    </p>
                 </div>
             </div>
         </div>
 
 
-        <div class="w-full mt-[70px] hidden md:block">
+        <div class="w-full mt-[30px] xl:mt-[70px]">
             <div class="flex justify-center items-center font-sasn text-white gap-[12px]">
-                <span class="bg-[#00AEEF] text-[16px] font-bold px-[46px] py-[10px]">Batter</span>
-                <span class="bg-[#0D45A3] text-[16px] font-bold px-[44px] py-[10px]">Bowler</span>
-                <span class="bg-[#ECBA01] text-[16px] font-bold px-[24px] py-[10px]">All-Rounder</span>
+                <span
+                    class="bg-[#00AEEF] text-[12px] md:text-[14px] xl:text-[16px] font-bold px-[10px] w-[100px] md:w-[142px] text-center py-[8px] xl:py-[10px]">Batter</span>
+                <span
+                    class="bg-[#0D45A3] text-[12px] md:text-[14px] xl:text-[16px] font-bold px-[10px] w-[100px] md:w-[142px] text-center py-[8px] xl:py-[10px]">Bowler</span>
+                <span
+                    class="bg-[#ECBA01] text-[12px] md:text-[14px] xl:text-[16px] font-bold px-[10px] w-[100px] md:w-[142px] text-center py-[8px] xl:py-[10px]">All-Rounder</span>
             </div>
-
         </div>
         {{-- batter section without slick --}}
         <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto">
-            <h2 class="text-[18px] md:text-[22px] xl:text-[30px]  font-bold font-montu text-[#000000]">
+            <h2 class="text-[18px] md:text-[22px] xl:text-[30px] font-bold font-montu text-[#000000]">
                 Enrolled as a Batter
             </h2>
             <div
@@ -44,10 +47,10 @@
         ] as $player)
                     <div class="border-2 border-[#F4F4F4] p-0 m-0">
                         <div>
-                            <div class="relative flex justify-center">
+                            <div class="relative flex justify-center overflow-hidden">
                                 <img src="{{ asset('storage/about/' . $player['image']) }}" alt="{{ $player['name'] }}"
                                     class="w-full h-full object-cover relative">
-                                <div class="absolute bottom-0 text-center bg-[#094AB7] px-[34px] md:px-[55px] py-[4px] md:py-[7px]"
+                                <div class="absolute bottom-0 text-center bg-[#094AB7] px-[10px] w-[110px] xl:w-[152px] py-[4px] md:py-[7px]"
                                     style="transform: skewX(-20deg);">
                                     <p class="text-[10px] md:text-[13px] font-sans text-[#FFFFFF]"
                                         style="transform: skewX(20deg);">
@@ -59,13 +62,14 @@
                         <div class="text-center">
                             <p class="text-[14px] md:text-[18px] font-sans font-bold text-[#094AB7] mt-[11px] md:mt-[10px]">
                                 {{ $player['name'] }}</p>
-                            <p class="text-[18px] md:text-[30px] mt:[6px] md:mt-[10px] font-sans font-bold text-[#000000]">
+                            <p
+                                class="text-[18px] md:text-[30px] pt:[6px] md:pt-[10px] my-0 font-sans font-bold text-[#000000] leading-none">
                                 {{ $player['score'] }}</p>
                             <p
-                                class="mt-[6px] md:mt-[10px] text-[10px] md:text-[14px] font-sans font-medium text-[#828282]">
+                                class="mt-[6px] md:mt-[10px] text-[10px] md:text-[14px] font-sans font-medium text-[#828282] leading-none">
                                 {{ $player['stat'] }}</p>
                         </div>
-                        <div class="py-[8px] md:py-[10px] mt:[6px] md:mt-[10px] border-t-2 border-[#F4F4F4] text-center">
+                        <div class="py-[8px] md:py-[10px] mt-[6px] md:mt-[10px] border-t-2 border-[#F4F4F4] text-center">
                             <p class="text-[12px] md:text-[16px] font-sans font-bold text-[#000000]">Played With
                                 {{ $player['team'] }}</p>
                         </div>

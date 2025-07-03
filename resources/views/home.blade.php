@@ -22,7 +22,8 @@
                                     </video>
                                 </div>
                             </div>
-                            <button type="button"
+                            {{-- Slider Removed --}}
+                            {{-- <button type="button"
                                 class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                                 data-carousel-prev>
                                 <span
@@ -47,7 +48,7 @@
                                     </svg>
                                     <span class="sr-only">Next</span>
                                 </span>
-                            </button>
+                            </button> --}}
                         </div>
                     </div>
                     <div class="w-full px-[20px] lg:px-[0px] py-[15px] xl:py-[20px] relative">
@@ -185,8 +186,7 @@
             <div class="magic_moments overflow-hidden">
                 <div class="w-full h-full mx-[5px] overflow-hidden">
                     <div class="h-[250px] lg:h-[320px] xl:h-[400px] relative overflow-hidden">
-                        <img src="{{ asset('storage/new/1.png') }}" alt=""
-                            class="w-full h-full object-cover">
+                        <img src="{{ asset('storage/new/1.png') }}" alt="" class="w-full h-full object-cover">
                     </div>
                     <div class="bg-[#094AB7] py-[15px] xl:py-[30px] px-[10px] xl:px-[15px] 2xl:px-[20px] h-full">
                         <p
@@ -198,8 +198,7 @@
                 </div>
                 <div class="w-full h-full mx-[5px] relative">
                     <div class="h-[250px] lg:h-[320px] xl:h-[400px] relative overflow-hidden">
-                        <img src="{{ asset('storage/new/2.png') }}" alt=""
-                            class="w-full h-full object-cover">
+                        <img src="{{ asset('storage/new/2.png') }}" alt="" class="w-full h-full object-cover">
                     </div>
                     <div class="bg-[#094AB7] py-[15px] xl:py-[30px] px-[10px] xl:px-[15px] 2xl:px-[20px] h-full">
                         <p
