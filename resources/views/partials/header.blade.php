@@ -1,6 +1,5 @@
-<header>
-
-    <div class="w-full z-10 bg-[#094AB7] px-[10px] lg:px-[20px] xl:px-[30px] 2xl:px-[40px] relative h-[102px] flex items-center"
+<header class="fixed top-0 left-0 z-50 w-full">
+    <div class="relative w-full z-10 bg-[#094AB7] px-[10px] lg:px-[20px] xl:px-[30px] 2xl:px-[40px] h-[102px] flex items-center"
         x-data="{ open: false }">
         <!-- Background Images -->
         <img src="{{ asset('images/home/header-bg.png') }}" alt=""
@@ -68,28 +67,28 @@
                         class="absolute hidden group-hover:block top-full right-0 mt-0 w-48 bg-white rounded-md shadow-lg z-50">
                         <div class="py-1">
                             <!-- Profile link -->
-                            @if(auth()->check())
-                            <x-dropdown-link :href="route('profile.edit')">
-                                {{ __('Profile') }}
-                            </x-dropdown-link>
-                            <x-dropdown-link :href="route('register.player')">
-                                {{ __('Player') }}
-                            </x-dropdown-link>
-
-                            <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                     this.closest('form').submit();">
-                                    {{ __('Log Out') }}
+                            @if (auth()->check())
+                                <x-dropdown-link :href="route('profile.edit')">
+                                    {{ __('Profile') }}
                                 </x-dropdown-link>
-                            </form>
+                                <x-dropdown-link :href="route('register.player')">
+                                    {{ __('Player') }}
+                                </x-dropdown-link>
+
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <x-dropdown-link :href="route('logout')"
+                                        onclick="event.preventDefault();
+                                     this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </x-dropdown-link>
+                                </form>
                             @else
-                            <!-- Login link -->
-                            <x-dropdown-link :href="route('login')">
-                                {{ __('Login') }}
-                            </x-dropdown-link>
+                                <!-- Login link -->
+                                <x-dropdown-link :href="route('login')">
+                                    {{ __('Login') }}
+                                </x-dropdown-link>
                             @endif
                         </div>
                     </div>
@@ -110,11 +109,13 @@
             </div>
         </div>
 
-
-
         <!-- Mobile Navigation -->
-        <div class="md:hidden text-center" x-show="open" x-transition>
-            <nav>
+        <div class="md:hidden overflow-hidden w-full z-50 absolute bg-[#094AB7] top-[102px] left-0 text-center" x-show="open"
+            x-transition>
+            <!-- Background Images -->
+            <img src="{{ asset('images/home/header-bg.png') }}" alt=""
+                class="absolute bottom-0 left-0 grayscale opacity-50">
+            <nav class="relative z-30">
                 <ul class="space-y-2 text-white text-sm font-montu ">
                     <li><a href="/" class="block py-1 hover:text-gray-300">Home</a></li>
                     <li><a href="/about" class="block py-1 hover:text-gray-300">About</a></li>
@@ -132,7 +133,6 @@
     </div>
     {{-- site links --}}
     <div class="px-[20px] lg:px-[40px] xl:px-[80px] bg-[#F6C200] flex justify-between py-[12px] items-center">
-
         <div
             class="text-[#2b3990] text-[14px] 2xl:text-[16px] font-sans font-normal hidden lg:flex items-center gap-[20px]">
             <p class="my-0">Extended Health Services</p>
@@ -154,7 +154,5 @@
                 Join TFSC PL
             </button>
         </div>
-
-
     </div>
 </header>

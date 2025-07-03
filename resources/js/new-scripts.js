@@ -69,3 +69,109 @@ $(document).ready(function () {
         ],
     });
 });
+
+// Team Owner Sections
+$(document).ready(function () {
+    $('.owner_section').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        arrows: true,
+        dots: false,
+        margin: 10,
+        prevArrow: $(".custom-prev-owner"),
+        nextArrow: $(".custom-next-owner"),
+        autoplaySpeed: 2000,
+        centerMode: true, // This will help with the centered sliding effect
+        centerPadding: '0', // No extra padding
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
+});
+
+
+$(document).ready(function () {
+    $('.management_section').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: false,
+        dots: false,
+        margin: 10,
+        // autoplay: true, // Enables auto-scroll
+        autoplaySpeed: 2000, // Speed of auto-scroll
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        },
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
+});
+
+
+// About Us Story Section
+$(document).ready(function () {
+    $('.story_section').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: false,
+        dots: false,
+        margin: 10,
+        // autoplay: true, // Enables auto-scroll
+        autoplaySpeed: 2000, // Speed of auto-scroll
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
+});
