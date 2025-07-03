@@ -8,6 +8,8 @@
             class="absolute top-0 right-0 grayscale opacity-50 rotate-[180deg]">
 
         <!-- Main Header Flex -->
+
+    <x-error-success />
         <div class="flex items-center justify-between gap-[10px] md:gap-[20px] xl:gap-[30px] relative z-20 w-full">
             <div class="flex items-center w-full gap-[18px] lg:gap-[26px] xl:gap-[34px]">
                 <!-- Logo -->

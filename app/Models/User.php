@@ -51,7 +51,7 @@ class User extends Authenticatable
 
     public function roles()
     {
-        return $this->belongsToMany(Role::class)->withTimestamps()->withTrashed();
+        return $this->belongsToMany(Role::class)->withTimestamps();
     }
 
     public function contact()
@@ -137,4 +137,5 @@ class User extends Authenticatable
         }
         $this->roles()->syncWithoutDetaching($role);
     }
+
 }
