@@ -7,9 +7,11 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\DraftController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\MatchController;
+use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TournamentController;
+use App\Http\Controllers\PlayerCategoryController;
 
 Route::get('/', [GeneralController::class, 'home']);
 Route::get('/dashboard', function () {
@@ -58,6 +60,15 @@ Route::middleware('auth')->group(function () {
             return view('admin.dashboard');
         })->name('admin.dashboard');
     });
+
+    Route::prefix('player-categories')->group(function () {
+        Route::get('/', [PlayerCategoryController::class, 'index'])->name('player-categories.index');
+        Route::get('/players/search', [PlayerController::class, 'search'])->name('players.search');
+        Route::post('/update', [PlayerCategoryController::class, 'updateCategory'])->name('player-categories.update');
+        Route::post('/bulk-update', [PlayerCategoryController::class, 'bulkUpdate'])->name('player-categories.bulk-update');
+    });
+
+    Route::resource('players', PlayerController::class)->only(['create', 'store', 'edit', 'update']);
 });
 
 Route::get('about', function () {
@@ -79,9 +90,10 @@ Route::get('/teams-view', function () {
 Route::get('newpage', function () {
     return view('newpage');
 })->name('newpage');
-Route::get('/players', function () {
-    return view('players');
-})->name('players');
+// Route::get('/players', function () {
+//     return view('players');
+// })->name('players');
+Route::get('/players', [PlayerController::class, 'index'])->name('players');
 Route::get('/drafting', function () {
     return view('drafting');
 })->name('drafting');
