@@ -5,13 +5,13 @@
         <div class="flex justify-between items-center mb-6">
             <h1 class="text-2xl font-bold">Player Categories</h1>
             <div class="flex space-x-4">
-                @if (auth()->user()->isAdmin())
+                @if(auth()->check() && auth()->user()->isAdmin())
                     <button onclick="openBulkUpdateModal()"
                         class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
                         Bulk Update
                     </button>
                 @endif
-                @if (auth()->user()->isAdmin())
+                @if(auth()->check() && auth()->user()->isAdmin())
                     <a href="{{ route('players.create') }}"
                         class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
                         + Add Player
@@ -38,7 +38,7 @@
             <div class="space-y-3 player-list min-h-20" data-category="uncategorized">
                 @foreach ($uncategorizedPlayers as $player)
                     <div class="player-card p-3 border rounded hover:bg-gray-50 cursor-move"
-                        draggable="{{ auth()->user()->isAdmin() ? 'true' : 'false' }}"
+                        draggable="{{ auth()->check() && auth()->user()->isAdmin() ? 'true' : 'false' }}"
                         data-player-id="{{ $player->id }}">
                         <div class="flex items-center space-x-3">
                             <img src="{{ $player->playerProfile->photo ? asset('storage/' . $player->playerProfile->photo) : asset('images/default-player.png') }}"
@@ -49,7 +49,7 @@
                                     {{ $player->playerProfile->playing_role ?? 'N/A' }} | {{ $player->emp_id }}
                                 </div>
                             </div>
-                            @if (auth()->user()->isAdmin())
+                            @if(auth()->check() && auth()->user()->isAdmin())
                                 <div class="ml-auto">
                                     <a href="{{ route('players.edit', $player->id) }}" class="text-blue-500 hover:text-blue-700">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -76,7 +76,7 @@
                     <div class="space-y-3 player-list min-h-20" data-category="{{ $category }}">
                         @foreach ($players as $player)
                             <div class="player-card p-3 border rounded hover:bg-gray-50 cursor-move"
-                                draggable="{{ auth()->user()->isAdmin() ? 'true' : 'false' }}"
+                                draggable="{{ auth()->check() && auth()->user()->isAdmin() ? 'true' : 'false' }}"
                                 data-player-id="{{ $player->id }}">
                                 <div class="flex items-center space-x-3">
                                     <img src="{{ $player->playerProfile->photo ? asset('storage/' . $player->playerProfile->photo) : asset('images/default-player.png') }}"
@@ -87,7 +87,7 @@
                                             {{ $player->playerProfile->playing_role ?? 'N/A' }} | {{ $player->emp_id }}
                                         </div>
                                     </div>
-                                    @if (auth()->user()->isAdmin())
+                                    @if(auth()->check() && auth()->user()->isAdmin())
                                         <div class="ml-auto">
                                             <a href="{{ route('players.edit', $player->id) }}" class="text-blue-500 hover:text-blue-700">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -106,7 +106,7 @@
     </div>
 
     <!-- Bulk Update Modal -->
-    @if (auth()->user()->isAdmin())
+    @if(auth()->check() && auth()->user()->isAdmin())
         <div id="bulkUpdateModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
             <div class="bg-white rounded-lg shadow-xl w-full max-w-md">
                 <div class="p-6">
@@ -171,7 +171,7 @@
         // Drag and Drop functionality
         document.addEventListener('DOMContentLoaded', function() {
             // Only initialize drag and drop if user is admin
-            @if (auth()->user()->isAdmin())
+            @if(auth()->check() && auth()->user()->isAdmin())
                 const playerCards = document.querySelectorAll('.player-card');
                 const categoryLists = document.querySelectorAll('.player-list');
                 let draggedPlayer = null;

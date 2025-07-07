@@ -60,8 +60,9 @@ Route::middleware('auth')->group(function () {
             return view('admin.dashboard');
         })->name('admin.dashboard');
     });
+});
 
-    Route::prefix('player-categories')->group(function () {
+  Route::prefix('player-categories')->group(function () {
         Route::get('/', [PlayerCategoryController::class, 'index'])->name('player-categories.index');
         Route::get('/players/search', [PlayerController::class, 'search'])->name('players.search');
         Route::post('/update', [PlayerCategoryController::class, 'updateCategory'])->name('player-categories.update');
@@ -69,7 +70,6 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::resource('players', PlayerController::class)->only(['create', 'store', 'edit', 'update']);
-});
 
 Route::get('about', function () {
     return view('about');
