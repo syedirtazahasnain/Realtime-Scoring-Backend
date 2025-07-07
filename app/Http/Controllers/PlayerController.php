@@ -92,6 +92,7 @@ class PlayerController extends Controller
             'name' => $request->name,
             'emp_id' => $request->emp_id
         ]);
+        $player->assignRole('player');
 
         // Handle photo upload
         $photoPath = $player->profile_picture ?? null;
