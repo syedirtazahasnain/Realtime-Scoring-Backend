@@ -4,94 +4,73 @@
 
     @section('content')
         <!-- Header Section -->
-        <div class="md:h-[300px] h-[100px] relative flex justify-center items-center overflow-hidden ">
-            <img src="{{ asset('storage/matches/bg1.png') }}" alt=""
-                class="h-[300px]  absolute left-0 right-0 bottom-0 w-full object-cover overflow-hidden">
-            <h2
-                class="text-white 2xl:text-[50px] xl:text-[40px] lg:text-[30px] sm:text-[20px] text-[18px] font-montu font-bold relative">
-                News
-            </h2>
+        <div class="relative">
+            <div class="md:h-[300px] h-[200px] flex justify-center relative items-center">
+                <img src="{{ asset('storage/matches/bg1.png') }}" alt=""
+                    class="h-[300px]  absolute left-0 right-0 bottom-0 w-full object-cover overflow-hidden">
+                <h2
+                    class="text-[18px] md:text-[30px] xl:text-[40px] 2xl:text-[50px] font-monti font-bold relative text-white">
+                    News
+                </h2>
+            </div>
+
         </div>
 
         {{-- Images --}}
         <div class="relative">
-            <div class="w-[84%] lg:mt-[66px] mt-[20px]  mx-auto 2xl:px-[180px] xl:px-[150px] lg:px-[120px]">
-                <div class="grid 2xl:grid-cols-3 grid-rows-2 lg:grid-cols-2  gap-12 py-15">
+            <div class="col-md-8 mt-[30px] md:mt-[40px] lg:mt-[55px] xl:mt-[78px] mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] sm:gap-[20px] md:gap-[40px] lg:gap-[50px]">
                     @foreach ([
             [
                 'main_image' => '1.png',
                 'hover_image' => '2.png',
-                'title' => 'Zalmi and Strikers face off in what promises to be a thrilling encounter',
+                'title' => 'Zalmi and Strikers face off in what promises to be a thrilling encounter.',
                 'date' => '12 December, 2024',
                 'link' => '/newpage',
                 'rounded' => false,
             ],
             [
-                'main_image' => '1.png',
+                'main_image' => 'image1.png',
                 'hover_image' => '2.png',
-                'title' => 'Zalmi and Strikers face off in what promises to be a thrilling encounter',
+                'title' => 'Tom Got Heated After an Umpire’s Controversial Decision',
                 'date' => '12 December, 2024',
                 'link' => '/newpage',
                 'rounded' => false,
             ],
             [
-                'main_image' => '1.png',
+                'main_image' => 'image2.png',
                 'hover_image' => '2.png',
-                'title' => 'Zalmi and Strikers face off in what promises to be a thrilling encounter',
+                'title' => 'Irfan Khan smashes sixer on last ball to get his team home',
                 'date' => '12 December, 2024',
                 'link' => '/newpage',
                 'rounded' => false,
             ],
             [
-                'main_image' => '1.png',
+                'main_image' => 'image3.png',
                 'hover_image' => '2.png',
-                'title' => 'Zalmi and Strikers face off in what promises to be a thrilling encounter',
+                'title' => 'Saad pulls off a screamer in a knockout game to dismiss Awais!',
                 'date' => '12 December, 2024',
                 'link' => '/newpage',
                 'rounded' => false,
             ],
             [
-                'main_image' => '1.png',
+                'main_image' => 'image4.png',
                 'hover_image' => '2.png',
-                'title' => 'Zalmi and Strikers face off in what promises to be a thrilling encounter',
+                'title' => 'That’s OUT!” says the umpire on the very first ball of the semifinal!',
                 'date' => '12 December, 2024',
                 'link' => '/newpage',
                 'rounded' => false,
             ],
             [
-                'main_image' => '1.png',
+                'main_image' => 'image5.png',
                 'hover_image' => '2.png',
-                'title' => 'Zalmi and Strikers face off in what promises to be a thrilling encounter',
-                'date' => '12 December, 2024',
-                'link' => '/newpage',
-                'rounded' => false,
-            ],
-            [
-                'main_image' => '1.png',
-                'hover_image' => '2.png',
-                'title' => 'Zalmi and Strikers face off in what promises to be a thrilling encounter',
-                'date' => '12 December, 2024',
-                'link' => '/newpage',
-                'rounded' => false,
-            ],
-            [
-                'main_image' => '1.png',
-                'hover_image' => '2.png',
-                'title' => 'Zalmi and Strikers face off in what promises to be a thrilling encounter',
-                'date' => '12 December, 2024',
-                'link' => '/newpage',
-                'rounded' => false,
-            ],
-            [
-                'main_image' => '1.png',
-                'hover_image' => '2.png',
-                'title' => 'Zalmi and Strikers face off in what promises to be a thrilling encounter',
+                'title' => 'Jamshed Arbab Leading top wicket Taker',
                 'date' => '12 December, 2024',
                 'link' => '/newpage',
                 'rounded' => false,
             ],
         ] as $item)
-                        <div class="box flex flex-col p-4">
+                        <div class="box flex flex-col xl:p-[18px] lg:p-[15px] md:p-[12px] p-[10px]">
                             <div class="relative overflow-hidden group">
                                 <a href="{{ $item['link'] }}" class="block">
                                     <!-- Main Image -->
@@ -112,15 +91,15 @@
                             </div>
 
                             <!-- News Title -->
-                            <div class="mt-4">
-                                <p class="text-[18px] font-bold font-monti text-wrap">
+                            <div class="px-0 lg:px-[2px] mt-[10px] md:mt-[15px] lg:mt-[20px]">
+                                <p class="text-[14px] lg:text-[18px] font-bold font-monti text-black text-wrap">
                                     {{ $item['title'] }}
                                 </p>
                             </div>
 
                             <!-- News Date -->
-                            <div class="mt-4">
-                                <p class="font-normal font-monti text-[14px] text-black opacity-80">
+                            <div class="px-0 lg:px-[2px] mt-[5px] md:mt-[7px] lg:mt-[10px] mb-[7px]">
+                                <p class="font-normal font-monti text-[12px] lg:text-[14px] text-black/80">
                                     {{ $item['date'] }}
                                 </p>
                             </div>
@@ -132,7 +111,7 @@
         {{-- ending button --}}
         <div class="lg:my-[80px] my-[20px]">
             <div class="flex justify-center items-center py-5">
-                <button class="px-4 py-2 bg-[#094AB7] text-white text-[14px] font-monti">
+                <button class="px-[17px] py-[8px] bg-[#094AB7] text-white text-[15px] font-semibold rounded-[5px] font-monti">
                     Load More
                 </button>
             </div>

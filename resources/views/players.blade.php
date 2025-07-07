@@ -27,13 +27,36 @@
                     class="bg-[#ECBA01] text-[12px] md:text-[14px] xl:text-[16px] font-bold px-[10px] w-[100px] md:w-[142px] text-center py-[8px] xl:py-[10px]">All-Rounder</span>
             </div>
         </div>
+
+
+
+
         {{-- batter section without slick --}}
         <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto">
             <h2 class="text-[18px] md:text-[22px] xl:text-[30px] font-bold font-montu text-[#000000]">
                 Enrolled as a Batter
             </h2>
-            <div
-                class="mt-[30px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-[10px] md:gap-x-[20px] md:gap-y-[31px] overflow-hidden">
+
+            <!-- Navigation Arrows -->
+            <div class="flex justify-between items-center mt-[20px]">
+                <button
+                    class="custom-prev-owner bg-[#094AB7] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+
+                <button
+                    class="custom-next-owner bg-[#094AB7] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="player_section mt-[30px] flex gap-x-[10px] md:gap-x-[20px] md:gap-y-[31px] overflow-hidden">
                 @foreach ([
             ['image' => 'owner11.png', 'name' => 'Jamshaid Arbab', 'type' => 'Batter', 'score' => '1230', 'stat' => 'runs', 'team' => 'TW'],
             ['image' => 'owner11.png', 'name' => 'Jamshaid Arbab', 'type' => 'Batter', 'score' => '1230', 'stat' => 'runs', 'team' => 'TW'],
@@ -84,11 +107,30 @@
 
         {{-- bowler section without slick --}}
         <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto">
-            <h2 class="text-[18px] md:text-[22px] xl:text-[30px]  font-bold font-montu text-[#000000]">
-                Enrolled as a Bowler
+            <h2 class="text-[18px] md:text-[22px] xl:text-[30px] font-bold font-montu text-[#000000]">
+                Enrolled as a Batter
             </h2>
-            <div
-                class="mt-[30px] grid grid-cols-2 md:grid-col-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-[10px] md:gap-x-[20px] md:gap-y-[31px]">
+
+            <!-- Navigation Arrows -->
+            <div class="flex justify-between items-center mt-[20px]">
+                <button
+                    class="custom-prev-owner bg-[#094AB7] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+
+                <button
+                    class="custom-next-owner bg-[#094AB7] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="player_section mt-[30px] flex gap-x-[10px] md:gap-x-[20px] md:gap-y-[31px]">
                 @foreach ([
             ['image' => 'owner11.png', 'name' => 'Jamshaid Arbab', 'type' => 'Bowler', 'score' => '1230', 'stat' => 'runs', 'team' => 'TW'],
             ['image' => 'owner11.png', 'name' => 'Jamshaid Arbab', 'type' => 'Bowler', 'score' => '1230', 'stat' => 'runs', 'team' => 'TW'],
@@ -136,11 +178,30 @@
 
 
         <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto">
-            <h2 class="text-[18px] md:text-[22px] xl:text-[30px]  font-bold font-montu text-[#000000]">
-                Enrolled as an All-Rounder
+            <h2 class="text-[18px] md:text-[22px] xl:text-[30px] font-bold font-montu text-[#000000]">
+                Enrolled as a Batter
             </h2>
-            <div
-                class="mt-[30px] grid grid-cols-2 md:grid-col-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-[10px] md:gap-x-[20px] md:gap-y-[31px]">
+
+            <!-- Navigation Arrows -->
+            <div class="flex justify-between items-center mt-[20px]">
+                <button
+                    class="custom-prev-owner bg-[#094AB7] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+
+                <button
+                    class="custom-next-owner bg-[#094AB7] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="player_section mt-[30px] flex gap-x-[10px] md:gap-x-[20px] md:gap-y-[31px]">
                 @foreach ([
             ['image' => 'owner11.png', 'name' => 'Jamshaid Arbab', 'type' => 'All-Rounder', 'score' => '1230', 'stat' => 'runs', 'team' => 'TW'],
             ['image' => 'owner11.png', 'name' => 'Jamshaid Arbab', 'type' => 'All-Rounder', 'score' => '1230', 'stat' => 'runs', 'team' => 'TW'],
