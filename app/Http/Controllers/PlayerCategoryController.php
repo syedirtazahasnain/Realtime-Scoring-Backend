@@ -43,8 +43,10 @@ class PlayerCategoryController extends Controller
         ]);
 
         $player = User::findOrFail($request->player_id);
+        $player->assignRole('player');
         $player->playerProfile()->updateOrCreate([], [
-            'category' => $request->category
+            'category' => $request->category,
+            'playing_role' => $request->playing_role ?? 'batsman'
         ]);
 
         return response()->json(['success' => true]);
