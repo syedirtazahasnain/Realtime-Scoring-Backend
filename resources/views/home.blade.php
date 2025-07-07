@@ -76,7 +76,7 @@
                                             {{ $blog->content }}
                                         </p>
                                     </div>
-                                    <div class="bg-[#094AB7] hover:bg-[#083a8f] transition-colors duration-200 w-[85%]">
+                                    <div class="bg-[#094AB7] hover:bg-[#094AB7] transition-colors duration-200 w-[85%]">
                                         <a href=""
                                             class="block text-center text-white text-[10px] 2xl:text-[14px] xl:text-[12px] font-sans px-[20px] py-[5px] md:py-[10px] text-nowrap">
                                             View Details
@@ -953,22 +953,22 @@
             <div class="news_section">
                 @foreach ([
         [
-            'image' => 'storage/News/n1.png',
+            'image' => 'storage/news/n1.png',
             'date' => '12 December, 2024',
             'title' => 'Jamshed Jimmy picks up 3 important wickets in an over.',
         ],
         [
-            'image' => 'storage/News/n2.png',
+            'image' => 'storage/news/n2.png',
             'date' => '12 December, 2024',
             'title' => 'Muhammad Zain’s fiery bowling stuns TFS Warriors',
         ],
         [
-            'image' => 'storage/News/n3.png',
+            'image' => 'storage/news/n3.png',
             'date' => '12 December, 2024',
             'title' => 'Abid Hussain smashes 2 consecutive sixes to snatch a sensational thriller victory!',
         ],
         [
-            'image' => 'storage/News/n4.png',
+            'image' => 'storage/news/n4.png',
             'date' => '12 December, 2024',
             'title' => 'TFS Zalmi clinch nail-biting finish in eliminator thriller against TFS Strikers!',
         ],
