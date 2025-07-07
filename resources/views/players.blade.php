@@ -52,7 +52,7 @@
                                     class="w-full h-full object-cover relative">
                                 <div class="absolute bottom-0 text-center bg-[#094AB7] px-[10px] w-[110px] xl:w-[152px] py-[4px] md:py-[7px]"
                                     style="transform: skewX(-20deg);">
-                                    <p class="text-[10px] md:text-[13px] font-sans text-[#FFFFFF]"
+                                    <p class="text-[10px] md:text-[13px] font-sans text-[#FFFFFF] font-medium"
                                         style="transform: skewX(20deg);">
                                         {{ $player['type'] }}
                                     </p>
@@ -102,12 +102,12 @@
         ] as $player)
                     <div class="border-2 border-[#F4F4F4] p-0 m-0">
                         <div>
-                            <div class="relative flex justify-center">
+                            <div class="relative flex justify-center overflow-hidden">
                                 <img src="{{ asset('storage/about/' . $player['image']) }}" alt="{{ $player['name'] }}"
                                     class="w-full h-full object-cover relative">
-                                <div class="absolute bottom-0 text-center bg-[#F6C200] px-[33px] md:px-[55px] py-[4px] md:py-[7px]"
+                                <div class="absolute bottom-0 text-center bg-[#F6C200] px-[10px] w-[110px] xl:w-[152px] py-[4px] md:py-[7px]"
                                     style="transform: skewX(-20deg);">
-                                    <p class="text-[10px] md:text-[13px] font-sans text-[#094AB7]"
+                                    <p class="text-[10px] md:text-[13px] font-sans text-[#094AB7] font-medium"
                                         style="transform: skewX(20deg);">
                                         {{ $player['type'] }}
                                     </p>
@@ -117,13 +117,14 @@
                         <div class="text-center">
                             <p class="text-[14px] md:text-[18px] font-sans font-bold text-[#094AB7] mt-[11px] md:mt-[10px]">
                                 {{ $player['name'] }}</p>
-                            <p class="text-[18px] md:text-[30px] mt:[6px] md:mt-[10px] font-sans font-bold text-[#000000]">
+                            <p
+                                class="text-[18px] md:text-[30px] pt:[6px] md:pt-[10px] my-0 font-sans font-bold text-[#000000] leading-none">
                                 {{ $player['score'] }}</p>
                             <p
-                                class="mt-[6px] md:mt-[10px] text-[10px] md:text-[14px] font-sans font-medium text-[#828282]">
+                                class="mt-[6px] md:mt-[10px] text-[10px] md:text-[14px] font-sans font-medium text-[#828282] leading-none">
                                 {{ $player['stat'] }}</p>
                         </div>
-                        <div class="py-[8px] md:py-[10px] mt:[6px] md:mt-[10px] border-t-2 border-[#F4F4F4] text-center">
+                        <div class="py-[8px] md:py-[10px] mt-[6px] md:mt-[10px] border-t-2 border-[#F4F4F4] text-center">
                             <p class="text-[12px] md:text-[16px] font-sans font-bold text-[#000000]">Played With
                                 {{ $player['team'] }}</p>
                         </div>
@@ -153,12 +154,12 @@
         ] as $player)
                     <div class="border-2 border-[#F4F4F4] p-0 m-0">
                         <div>
-                            <div class="relative flex justify-center">
+                            <div class="relative flex justify-center overflow-hidden">
                                 <img src="{{ asset('storage/about/' . $player['image']) }}" alt="{{ $player['name'] }}"
                                     class="w-full h-full object-cover relative">
-                                <div class="absolute bottom-0 text-center bg-[#094AB7] px-[29px] md:px-[40px] py-[4px] md:py-[7px]"
+                                <div class="absolute bottom-0 text-center bg-[#094AB7] px-[10px] w-[110px] xl:w-[152px] py-[4px] md:py-[7px]"
                                     style="transform: skewX(-20deg);">
-                                    <p class="text-[10px] md:text-[13px] font-sans text-[#FFFFFF]"
+                                    <p class="text-[10px] md:text-[13px] font-sans text-[#FFFFFF] font-medium"
                                         style="transform: skewX(20deg);">
                                         {{ $player['type'] }}
                                     </p>
@@ -168,13 +169,14 @@
                         <div class="text-center">
                             <p class="text-[14px] md:text-[18px] font-sans font-bold text-[#094AB7] mt-[11px] md:mt-[10px]">
                                 {{ $player['name'] }}</p>
-                            <p class="text-[18px] md:text-[30px] mt:[6px] md:mt-[10px] font-sans font-bold text-[#000000]">
+                            <p
+                                class="text-[18px] md:text-[30px] pt:[6px] md:pt-[10px] my-0 font-sans font-bold text-[#000000] leading-none">
                                 {{ $player['score'] }}</p>
                             <p
-                                class="mt-[6px] md:mt-[10px] text-[10px] md:text-[14px] font-sans font-medium text-[#828282]">
+                                class="mt-[6px] md:mt-[10px] text-[10px] md:text-[14px] font-sans font-medium text-[#828282] leading-none">
                                 {{ $player['stat'] }}</p>
                         </div>
-                        <div class="py-[8px] md:py-[10px] mt:[6px] md:mt-[10px] border-t-2 border-[#F4F4F4] text-center">
+                        <div class="py-[8px] md:py-[10px] mt-[6px] md:mt-[10px] border-t-2 border-[#F4F4F4] text-center">
                             <p class="text-[12px] md:text-[16px] font-sans font-bold text-[#000000]">Played With
                                 {{ $player['team'] }}</p>
                         </div>

@@ -916,7 +916,7 @@
                                     </div>
                                     <div class="flex justify-end mb-[16px]">
                                         <button class="font-sans text-[12px] font-medium">
-                                            View Profile -→
+                                            View Profile <span class="pl-[8px] text-[11px]"><i class="fa-solid fa-arrow-right"></i></span>
                                         </button>
                                     </div>
                                 </div>
