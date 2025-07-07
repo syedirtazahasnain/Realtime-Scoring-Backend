@@ -21,38 +21,70 @@
             </div>
         </div>
 
+        {{-- Add Slick slider CSS and JS --}}
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        <style>
+            .slick-slide {
+                padding: 0 10px;
+            }
+            .slick-list {
+                margin: 0 -10px;
+            }
+            .slick-prev:before, .slick-next:before {
+                color: #094AB7;
+                font-size: 24px;
+            }
+            .slick-prev {
+                left: -30px;
+            }
+            .slick-next {
+                right: -30px;
+            }
+            @media (max-width: 640px) {
+                .slick-prev {
+                    left: -15px;
+                }
+                .slick-next {
+                    right: -15px;
+                }
+            }
+        </style>
+
         {{-- batter section --}}
-        <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto">
+        <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto px-4">
             <h2 class="text-[18px] md:text-[22px] xl:text-[30px] font-bold font-montu text-[#000000]">
                 Enrolled as a Batter
             </h2>
-            <div class="mt-[30px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-[10px] md:gap-x-[20px] md:gap-y-[31px] overflow-hidden">
+            <div class="mt-[30px] batter-slider">
                 @foreach ($batters as $player)
-                    <div class="border-2 border-[#F4F4F4] p-0 m-0">
-                        <div>
-                            <div class="relative flex justify-center">
-                               <img src="{{ asset(!empty($player['image']) ? $player['image'] : 'images/home/avatar_cricket.png') }}" alt="{{ $player['name'] ?? 'Player' }}">
+                    <div class="px-2">
+                        <div class="border-2 border-[#F4F4F4] p-0 m-0">
+                            <div>
+                                <div class="relative flex justify-center">
+                                   <img src="{{ asset(!empty($player['image']) ? $player['image'] : 'images/home/avatar_cricket.png') }}" alt="{{ $player['name'] ?? 'Player' }}" class="w-full">
 
-                                <div class="absolute bottom-0 text-center bg-[#094AB7] px-[34px] md:px-[55px] py-[4px] md:py-[7px]"
-                                    style="transform: skewX(-20deg);">
-                                    <p class="text-[10px] md:text-[13px] font-sans text-[#FFFFFF]"
-                                        style="transform: skewX(20deg);">
-                                        {{ $player['type'] }}
-                                    </p>
+                                    <div class="absolute bottom-0 text-center bg-[#094AB7] px-[34px] md:px-[55px] py-[4px] md:py-[7px]"
+                                        style="transform: skewX(-20deg);">
+                                        <p class="text-[10px] md:text-[13px] font-sans text-[#FFFFFF]"
+                                            style="transform: skewX(20deg);">
+                                            {{ $player['type'] }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="text-center">
-                            <p class="text-[14px] md:text-[18px] font-sans font-bold text-[#094AB7] mt-[11px] md:mt-[10px]">
-                                {{ $player['name'] }}</p>
-                            <p class="text-[18px] md:text-[30px] mt:[6px] md:mt-[10px] font-sans font-bold text-[#000000]">
-                                {{ $player['score'] }}</p>
-                            <p class="mt-[6px] md:mt-[10px] text-[10px] md:text-[14px] font-sans font-medium text-[#828282]">
-                                {{ $player['stat'] }}</p>
-                        </div>
-                        <div class="py-[8px] md:py-[10px] mt:[6px] md:mt-[10px] border-t-2 border-[#F4F4F4] text-center">
-                            <p class="text-[12px] md:text-[16px] font-sans font-bold text-[#000000]">Played With
-                                {{ $player['team'] }}</p>
+                            <div class="text-center">
+                                <p class="text-[14px] md:text-[18px] font-sans font-bold text-[#094AB7] mt-[11px] md:mt-[10px]">
+                                    {{ $player['name'] }}</p>
+                                <p class="text-[18px] md:text-[30px] mt:[6px] md:mt-[10px] font-sans font-bold text-[#000000]">
+                                    {{ $player['score'] }}</p>
+                                <p class="mt-[6px] md:mt-[10px] text-[10px] md:text-[14px] font-sans font-medium text-[#828282]">
+                                    {{ $player['stat'] }}</p>
+                            </div>
+                            <div class="py-[8px] md:py-[10px] mt:[6px] md:mt-[10px] border-t-2 border-[#F4F4F4] text-center">
+                                <p class="text-[12px] md:text-[16px] font-sans font-bold text-[#000000]">Played With
+                                    {{ $player['team'] }}</p>
+                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -60,38 +92,39 @@
         </div>
 
         {{-- bowler section --}}
-        <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto">
+        <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto px-4">
             <h2 class="text-[18px] md:text-[22px] xl:text-[30px] font-bold font-montu text-[#000000]">
                 Enrolled as a Bowler
             </h2>
-            <div class="mt-[30px] grid grid-cols-2 md:grid-col-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-[10px] md:gap-x-[20px] md:gap-y-[31px]">
+            <div class="mt-[30px] bowler-slider">
                 @foreach ($bowlers as $player)
-                    <div class="border-2 border-[#F4F4F4] p-0 m-0">
-                        <div>
-                            <div class="relative flex justify-center">
-                                {{-- <img src="{{ asset($player['image']) }}" alt="{{ $player['name'] }}" --}}
-                                <img src="{{ asset(!empty($player['image']) ? $player['image'] : 'images/home/avatar_cricket.png') }}" alt="{{ $player['name'] ?? 'Player' }}">
+                    <div class="px-2">
+                        <div class="border-2 border-[#F4F4F4] p-0 m-0">
+                            <div>
+                                <div class="relative flex justify-center">
+                                    <img src="{{ asset(!empty($player['image']) ? $player['image'] : 'images/home/avatar_cricket.png') }}" alt="{{ $player['name'] ?? 'Player' }}" class="w-full">
 
-                                <div class="absolute bottom-0 text-center bg-[#F6C200] px-[33px] md:px-[55px] py-[4px] md:py-[7px]"
-                                    style="transform: skewX(-20deg);">
-                                    <p class="text-[10px] md:text-[13px] font-sans text-[#094AB7]"
-                                        style="transform: skewX(20deg);">
-                                        {{ $player['type'] }}
-                                    </p>
+                                    <div class="absolute bottom-0 text-center bg-[#F6C200] px-[33px] md:px-[55px] py-[4px] md:py-[7px]"
+                                        style="transform: skewX(-20deg);">
+                                        <p class="text-[10px] md:text-[13px] font-sans text-[#094AB7]"
+                                            style="transform: skewX(20deg);">
+                                            {{ $player['type'] }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="text-center">
-                            <p class="text-[14px] md:text-[18px] font-sans font-bold text-[#094AB7] mt-[11px] md:mt-[10px]">
-                                {{ $player['name'] }}</p>
-                            <p class="text-[18px] md:text-[30px] mt:[6px] md:mt-[10px] font-sans font-bold text-[#000000]">
-                                {{ $player['score'] }}</p>
-                            <p class="mt-[6px] md:mt-[10px] text-[10px] md:text-[14px] font-sans font-medium text-[#828282]">
-                                {{ $player['stat'] }}</p>
-                        </div>
-                        <div class="py-[8px] md:py-[10px] mt:[6px] md:mt-[10px] border-t-2 border-[#F4F4F4] text-center">
-                            <p class="text-[12px] md:text-[16px] font-sans font-bold text-[#000000]">Played With
-                                {{ $player['team'] }}</p>
+                            <div class="text-center">
+                                <p class="text-[14px] md:text-[18px] font-sans font-bold text-[#094AB7] mt-[11px] md:mt-[10px]">
+                                    {{ $player['name'] }}</p>
+                                <p class="text-[18px] md:text-[30px] mt:[6px] md:mt-[10px] font-sans font-bold text-[#000000]">
+                                    {{ $player['score'] }}</p>
+                                <p class="mt-[6px] md:mt-[10px] text-[10px] md:text-[14px] font-sans font-medium text-[#828282]">
+                                    {{ $player['stat'] }}</p>
+                            </div>
+                            <div class="py-[8px] md:py-[10px] mt:[6px] md:mt-[10px] border-t-2 border-[#F4F4F4] text-center">
+                                <p class="text-[12px] md:text-[16px] font-sans font-bold text-[#000000]">Played With
+                                    {{ $player['team'] }}</p>
+                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -99,38 +132,39 @@
         </div>
 
         {{-- all-rounder section --}}
-        <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto">
+        <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto px-4">
             <h2 class="text-[18px] md:text-[22px] xl:text-[30px] font-bold font-montu text-[#000000]">
                 Enrolled as an All-Rounder
             </h2>
-            <div class="mt-[30px] grid grid-cols-2 md:grid-col-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-[10px] md:gap-x-[20px] md:gap-y-[31px]">
+            <div class="mt-[30px] allrounder-slider">
                 @foreach ($allRounders as $player)
-                    <div class="border-2 border-[#F4F4F4] p-0 m-0">
-                        <div>
-                            <div class="relative flex justify-center">
-                                {{-- <img src="{{ asset($player['image']) }}" alt="{{ $player['name'] }}" --}}
-                                <img src="{{ asset(!empty($player['image']) ? $player['image'] : 'images/home/avatar_cricket.png') }}" alt="{{ $player['name'] ?? 'Player' }}">
+                    <div class="px-2">
+                        <div class="border-2 border-[#F4F4F4] p-0 m-0">
+                            <div>
+                                <div class="relative flex justify-center">
+                                    <img src="{{ asset(!empty($player['image']) ? $player['image'] : 'images/home/avatar_cricket.png') }}" alt="{{ $player['name'] ?? 'Player' }}" class="w-full">
 
-                                <div class="absolute bottom-0 text-center bg-[#094AB7] px-[29px] md:px-[40px] py-[4px] md:py-[7px]"
-                                    style="transform: skewX(-20deg);">
-                                    <p class="text-[10px] md:text-[13px] font-sans text-[#FFFFFF]"
-                                        style="transform: skewX(20deg);">
-                                        {{ $player['type'] }}
-                                    </p>
+                                    <div class="absolute bottom-0 text-center bg-[#094AB7] px-[29px] md:px-[40px] py-[4px] md:py-[7px]"
+                                        style="transform: skewX(-20deg);">
+                                        <p class="text-[10px] md:text-[13px] font-sans text-[#FFFFFF]"
+                                            style="transform: skewX(20deg);">
+                                            {{ $player['type'] }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="text-center">
-                            <p class="text-[14px] md:text-[18px] font-sans font-bold text-[#094AB7] mt-[11px] md:mt-[10px]">
-                                {{ $player['name'] }}</p>
-                            <p class="text-[18px] md:text-[30px] mt:[6px] md:mt-[10px] font-sans font-bold text-[#000000]">
-                                {{ $player['score'] }}</p>
-                            <p class="mt-[6px] md:mt-[10px] text-[10px] md:text-[14px] font-sans font-medium text-[#828282]">
-                                {{ $player['stat'] }}</p>
-                        </div>
-                        <div class="py-[8px] md:py-[10px] mt:[6px] md:mt-[10px] border-t-2 border-[#F4F4F4] text-center">
-                            <p class="text-[12px] md:text-[16px] font-sans font-bold text-[#000000]">Played With
-                                {{ $player['team'] }}</p>
+                            <div class="text-center">
+                                <p class="text-[14px] md:text-[18px] font-sans font-bold text-[#094AB7] mt-[11px] md:mt-[10px]">
+                                    {{ $player['name'] }}</p>
+                                <p class="text-[18px] md:text-[30px] mt:[6px] md:mt-[10px] font-sans font-bold text-[#000000]">
+                                    {{ $player['score'] }}</p>
+                                <p class="mt-[6px] md:mt-[10px] text-[10px] md:text-[14px] font-sans font-medium text-[#828282]">
+                                    {{ $player['stat'] }}</p>
+                            </div>
+                            <div class="py-[8px] md:py-[10px] mt:[6px] md:mt-[10px] border-t-2 border-[#F4F4F4] text-center">
+                                <p class="text-[12px] md:text-[16px] font-sans font-bold text-[#000000]">Played With
+                                    {{ $player['team'] }}</p>
+                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -178,4 +212,99 @@
             </div>
         </div>
 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.batter-slider').slick({
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });
+
+                $('.bowler-slider').slick({
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });
+
+                $('.allrounder-slider').slick({
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });
+            });
+        </script>
 </x-app-layout>
