@@ -26,7 +26,7 @@ class PlayerController extends Controller
             'email' => 'required|string|max:255|unique:users,email',
             'emp_id' => 'required|string|max:255|unique:users,emp_id',
             'photo' => 'nullable|image|max:2048',
-            'category' => 'required|in:platinum,diamond,gold,silver,bronze',
+            'category' => 'required|in:platinum,diamond,gold,silver,emerging',
             'playing_role' => 'required|in:batsman,bowler,all_rounder,wicket_keeper',
             'teams' => 'nullable|array',
             'teams.*' => 'exists:teams,id'
@@ -81,7 +81,7 @@ class PlayerController extends Controller
             'name' => 'required|string|max:255',
             'emp_id' => 'required|string|max:255|unique:users,emp_id,' . $player->id,
             'photo' => 'nullable|image|max:2048',
-            'category' => 'required|in:platinum,diamond,gold,silver,bronze',
+            'category' => 'required|in:platinum,diamond,gold,silver,emerging',
             'playing_role' => 'required|in:batsman,bowler,all_rounder,wicket_keeper',
             'teams' => 'nullable|array',
             'teams.*' => 'exists:teams,id'

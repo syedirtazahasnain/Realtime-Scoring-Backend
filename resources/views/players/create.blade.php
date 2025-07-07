@@ -65,7 +65,7 @@
                             <option value="diamond" {{ old('category') == 'diamond' ? 'selected' : '' }}>Diamond</option>
                             <option value="gold" {{ old('category') == 'gold' ? 'selected' : '' }}>Gold</option>
                             <option value="silver" {{ old('category') == 'silver' ? 'selected' : '' }}>Silver</option>
-                            <option value="bronze" {{ old('category') == 'bronze' ? 'selected' : '' }}>Bronze</option>
+                            <option value="emerging" {{ old('category') == 'emerging' ? 'selected' : '' }}>Emerging</option>
                         </select>
                     </div>
 

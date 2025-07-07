@@ -30,7 +30,8 @@ class PlayerProfile extends Model
             'diamond' => 'Diamond',
             'gold' => 'Gold',
             'silver' => 'Silver',
-            'bronze' => 'Bronze'
+            'platinum' => 'Platinum',
+            'emerging' => 'Emerging'
         ];
     }
 }

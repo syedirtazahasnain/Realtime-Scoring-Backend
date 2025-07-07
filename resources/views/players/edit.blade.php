@@ -79,9 +79,9 @@
                             <option value="silver"
                                 {{ old('category', optional($player->playerProfile)->category) == 'silver' ? 'selected' : '' }}>
                                 Silver</option>
-                            <option value="bronze"
-                                {{ old('category', optional($player->playerProfile)->category) == 'bronze' ? 'selected' : '' }}>
-                                Bronze</option>
+                            <option value="emerging"
+                                {{ old('category', optional($player->playerProfile)->category) == 'emerging' ? 'selected' : '' }}>
+                                Emerging</option>
                         </select>
                     </div>
 

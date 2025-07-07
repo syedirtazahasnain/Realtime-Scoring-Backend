@@ -58,7 +58,8 @@
                             <option value="diamond" {{ $player->playerProfile->category == 'diamond' ? 'selected' : '' }}>Diamond</option>
                             <option value="gold" {{ $player->playerProfile->category == 'gold' ? 'selected' : '' }}>Gold</option>
                             <option value="silver" {{ $player->playerProfile->category == 'silver' ? 'selected' : '' }}>Silver</option>
-                            <option value="bronze" {{ $player->playerProfile->category == 'bronze' ? 'selected' : '' }}>Bronze</option>
+                            <option value="platinum" {{ $player->playerProfile->category == 'platinum' ? 'selected' : '' }}>Platinum</option>
+                            <option value="emerging" {{ $player->playerProfile->category == 'emerging' ? 'selected' : '' }}>Emerging</option>
                         </select>
                     </div>
 

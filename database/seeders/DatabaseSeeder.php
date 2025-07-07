@@ -59,7 +59,7 @@ class DatabaseSeeder extends Seeder
 
         // Assign players to teams (3-7 players per team)
         $players = User::role('player')->get();
-        $categories = ['diamond', 'gold', 'silver', 'bronze'];
+        $categories = ['diamond', 'gold', 'silver', 'platinum', 'emerging'];
 
         $players->each(function ($player) use ($categories) {
             $player->playerProfile()->update([

@@ -19,7 +19,11 @@
                 </div>
                 <div class="flex items-center">
                     <div class="w-4 h-4 bg-amber-800 rounded-full mr-2"></div>
-                    <span>Bronze</span>
+                    <span>Platinum</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-4 h-4 bg-amber-800 rounded-full mr-2"></div>
+                    <span>Emerging</span>
                 </div>
             </div>
         </div>
@@ -45,12 +49,13 @@
                     <div class="space-y-3">
                         @forelse($players as $player)
                             @php
-                                $category = $player->playerProfile->category ?? 'bronze';
+                                $category = $player->playerProfile->category ?? 'platinum';
                                 $bgColors = [
                                     'diamond' => 'bg-blue-100 border-blue-300',
                                     'gold' => 'bg-yellow-100 border-yellow-300',
                                     'silver' => 'bg-gray-100 border-gray-300',
-                                    'bronze' => 'bg-amber-100 border-amber-300',
+                                    'emerging' => 'bg-amber-100 border-amber-300',
+                                    'platinum' => 'bg-amber-100 border-amber-300',
                                 ];
                                 $categoryClass = $bgColors[$category] ?? 'bg-gray-100';
                             @endphp
@@ -105,12 +110,13 @@
                         <div class="space-y-3">
                             @forelse($team->players as $player)
                                 @php
-                                    $category = $player->playerProfile->category ?? 'bronze';
+                                    $category = $player->playerProfile->category ?? 'platinum';
                                     $bgColors = [
                                         'diamond' => 'bg-blue-100 border-blue-300',
                                         'gold' => 'bg-yellow-100 border-yellow-300',
                                         'silver' => 'bg-gray-100 border-gray-300',
-                                        'bronze' => 'bg-amber-100 border-amber-300',
+                                        'platinum' => 'bg-amber-100 border-amber-300',
+                                        'emerging' => 'bg-gray-100 border-gray-300',
                                     ];
                                     $categoryClass = $bgColors[$category] ?? 'bg-gray-100';
                                 @endphp
