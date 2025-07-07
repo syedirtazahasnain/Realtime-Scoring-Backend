@@ -141,7 +141,7 @@
                                     Role</label>
                                 <select id="bulk_playing_role" name="playing_role"
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
-                                    <option value="batter">Batter</option>
+                                    <option value="batsman">Batsman</option>
                                     <option value="bowler">Bowler</option>
                                     <option value="all-rounder">All-rounder</option>
                                     <option value="wicket-keeper">Wicket Keeper</option>

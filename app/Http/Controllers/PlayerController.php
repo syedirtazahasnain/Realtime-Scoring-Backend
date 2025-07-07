@@ -14,7 +14,7 @@ class PlayerController extends Controller
     {
         $teams = Team::all();
         $categories = PlayerProfile::getCategories();
-        $playingRoles = ['batter', 'bowler', 'all-rounder', 'wicket-keeper'];
+        $playingRoles = ['batsman', 'bowler', 'all-rounder', 'wicket-keeper'];
 
         return view('players.create', compact('teams', 'categories', 'playingRoles'));
     }
@@ -70,7 +70,7 @@ class PlayerController extends Controller
     {
         $teams = Team::all();
         $categories = PlayerProfile::getCategories();
-        $playingRoles = ['batter', 'bowler', 'all-rounder', 'wicket-keeper'];
+        $playingRoles = ['batsman', 'bowler', 'all-rounder', 'wicket-keeper'];
 
         return view('players.edit', compact('player', 'teams', 'categories', 'playingRoles'));
     }
@@ -205,7 +205,7 @@ class PlayerController extends Controller
         $stats = $player->playerStatistics;
         $team = $player->teams->first();
 
-        if ($profile->playing_role === 'batter') {
+        if ($profile->playing_role === 'batsman') {
             $score = $stats->total_runs ?? 0;
             $stat = 'runs';
         } elseif ($profile->playing_role === 'bowler') {

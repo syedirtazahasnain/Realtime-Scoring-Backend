@@ -58,7 +58,7 @@ class PlayerCategoryController extends Controller
             'player_ids' => 'required|array',
             'player_ids.*' => 'exists:users,id',
             'category' => 'required|in:platinum,diamond,gold,silver,emerging',
-            'playing_role' => 'nullable|in:batter,bowler,all-rounder,wicket-keeper'
+            'playing_role' => 'nullable|in:batsman,bowler,all-rounder,wicket-keeper'
         ]);
 
         PlayerProfile::whereIn('user_id', $request->player_ids)

@@ -15,7 +15,7 @@
 
         <div class="w-full mt-[70px] hidden md:block">
             <div class="flex justify-center items-center font-sasn text-white gap-[12px]">
-                <span class="bg-[#00AEEF] text-[16px] font-bold px-[46px] py-[10px]">Batter</span>
+                <span class="bg-[#00AEEF] text-[16px] font-bold px-[46px] py-[10px]">Batsman</span>
                 <span class="bg-[#0D45A3] text-[16px] font-bold px-[44px] py-[10px]">Bowler</span>
                 <span class="bg-[#ECBA01] text-[16px] font-bold px-[24px] py-[10px]">All-Rounder</span>
             </div>
@@ -54,7 +54,7 @@
         {{-- batter section --}}
         <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto px-4">
             <h2 class="text-[18px] md:text-[22px] xl:text-[30px] font-bold font-montu text-[#000000]">
-                Enrolled as a Batter
+                Enrolled as a Batsman
             </h2>
             <div class="mt-[30px] batter-slider">
                 @foreach ($batters as $player)

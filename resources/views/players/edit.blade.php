@@ -89,9 +89,9 @@
                         <label for="playing_role" class="block text-sm font-medium text-gray-700">Playing Role *</label>
                         <select id="playing_role" name="playing_role" required
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                            <option value="batter"
-                                {{ old('playing_role', optional($player->playerProfile)->playing_role) == 'batter' ? 'selected' : '' }}>
-                                Batter</option>
+                            <option value="batsman"
+                                {{ old('playing_role', optional($player->playerProfile)->playing_role) == 'batsman' ? 'selected' : '' }}>
+                                Batsman</option>
                             <option value="bowler"
                                 {{ old('playing_role', optional($player->playerProfile)->playing_role) == 'bowler' ? 'selected' : '' }}>
                                 Bowler</option>
