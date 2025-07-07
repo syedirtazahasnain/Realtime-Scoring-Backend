@@ -15,16 +15,31 @@ class PlayerCategoryController extends Controller
             'diamond' => User::role('player')->whereHas('playerProfile', fn($q) => $q->where('category', 'diamond'))->with('playerProfile')->get(),
             'gold' => User::role('player')->whereHas('playerProfile', fn($q) => $q->where('category', 'gold'))->with('playerProfile')->get(),
             'silver' => User::role('player')->whereHas('playerProfile', fn($q) => $q->where('category', 'silver'))->with('playerProfile')->get(),
-            'bronze' => User::role('player')->whereHas('playerProfile', fn($q) => $q->where('category', 'bronze'))->with('playerProfile')->get(),
+            'emerging' => User::role('player')->whereHas('playerProfile', fn($q) => $q->where('category', 'emerging'))->with('playerProfile')->get(),
         ];
-        return view('player-categories.index', compact('categories'));
+
+        // Get all players not assigned to any category
+        $uncategorizedPlayers = User::where('is_admin', false)
+            ->where(function ($query) {
+                $query->whereDoesntHave('playerProfile')
+                    ->orWhereHas('playerProfile', function ($q) {
+                        $q->whereNull('category');
+                    });
+            })
+            ->with(['playerProfile' => function ($query) {
+                $query->withDefault([
+                    'category' => null
+                ]);
+            }])
+            ->get();
+        return view('player-categories.index', compact('categories', 'uncategorizedPlayers'));
     }
 
     public function updateCategory(Request $request)
     {
         $request->validate([
             'player_id' => 'required|exists:users,id',
-            'category' => 'required|in:platinum,diamond,gold,silver,bronze'
+            'category' => 'required|in:platinum,diamond,gold,silver,emerging'
         ]);
 
         $player = User::findOrFail($request->player_id);
@@ -40,7 +55,7 @@ class PlayerCategoryController extends Controller
         $request->validate([
             'player_ids' => 'required|array',
             'player_ids.*' => 'exists:users,id',
-            'category' => 'required|in:platinum,diamond,gold,silver,bronze',
+            'category' => 'required|in:platinum,diamond,gold,silver,emerging',
             'playing_role' => 'nullable|in:batter,bowler,all-rounder,wicket-keeper'
         ]);
 

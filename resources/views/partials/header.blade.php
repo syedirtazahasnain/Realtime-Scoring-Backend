@@ -52,6 +52,10 @@
                             <a href="/players"
                                 class="text-[#fff] hover:text-[#00aeef] duration-200 transition-all ease-in-out">Players</a>
                         </div>
+                        <div class="text-[14px] xl:text-[16px]">
+                            <a href="/player-categories"
+                                class="text-[#fff] hover:text-[#00aeef] duration-200 transition-all ease-in-out">Categories</a>
+                        </div>
                     </div>
                 </div>
             </div>

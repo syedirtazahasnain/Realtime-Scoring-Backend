@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('player_profiles', function (Blueprint $table) {
-            $table->enum('category', ['diamond', 'gold', 'silver', 'platinum','emerging'])->default('platinum');
+        Schema::table('users', function (Blueprint $table) {
+            $table->boolean('is_admin')->default(false)->after('emp_id');
         });
     }
 
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('player_profiles', function (Blueprint $table) {
-            $table->dropColumn('category');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('is_admin');
         });
     }
 };

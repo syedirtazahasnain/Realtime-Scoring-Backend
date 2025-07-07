@@ -126,34 +126,33 @@ class PlayerController extends Controller
         // Get players grouped by their playing role
         $batters = User::role('player')
             ->with(['playerProfile', 'playerStatistics', 'teams'])
-            ->whereHas('playerProfile', function($query) {
+            ->whereHas('playerProfile', function ($query) {
                 $query->where('playing_role', 'batsman');
             })
             ->get()
-            ->map(function($player) {
+            ->map(function ($player) {
                 return $this->formatPlayerData($player);
             });
 
         $bowlers = User::role('player')
             ->with(['playerProfile', 'playerStatistics', 'teams'])
-            ->whereHas('playerProfile', function($query) {
+            ->whereHas('playerProfile', function ($query) {
                 $query->where('playing_role', 'bowler');
             })
             ->get()
-            ->map(function($player) {
+            ->map(function ($player) {
                 return $this->formatPlayerData($player);
             });
 
         $allRounders = User::role('player')
             ->with(['playerProfile', 'playerStatistics', 'teams'])
-            ->whereHas('playerProfile', function($query) {
+            ->whereHas('playerProfile', function ($query) {
                 $query->where('playing_role', 'all_rounder');
             })
             ->get()
-            ->map(function($player) {
+            ->map(function ($player) {
                 return $this->formatPlayerData($player);
             });
-            // dump($allRounders);
         $sponsors = [
             ['src' => '1.png', 'alt' => 'KFC'],
             ['src' => '2.png', 'alt' => 'Sports network'],
@@ -162,8 +161,40 @@ class PlayerController extends Controller
             ['src' => '5.png', 'alt' => 'Foxtel'],
             ['src' => '6.png', 'alt' => 'weber']
         ];
-        // dd('asdsda',$batters,$allRounders,$bowlers,$sponsors);
         return view('players', compact('batters', 'bowlers', 'allRounders', 'sponsors'));
+    }
+
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        $players = User::with('playerProfile')
+            ->where(function ($q) use ($query) {
+                $q->where('name', 'like', "%{$query}%")
+                    ->orWhere('emp_id', 'like', "%{$query}%")
+                    ->orWhereHas('playerProfile', function ($q2) use ($query) {
+                        $q2->where('playing_role', 'like', "%{$query}%");
+                    });
+            })
+            ->limit(10)
+            ->get()
+            ->map(function ($player) {
+                $profile = $player->playerProfile;
+
+                return [
+                    'id' => $player->id,
+                    'name' => $player->name,
+                    'emp_id' => $player->emp_id,
+                    'playing_role' => $profile->playing_role ?? null,
+                    'category' => $profile->category ?? null,
+                    'photo_url' => $profile && $profile->photo
+                        ? asset('storage/' . $profile->photo)
+                        : asset('images/default-avatar.png'),
+                ];
+            });
+
+        return response()->json($players);
     }
 
     private function formatPlayerData($player)

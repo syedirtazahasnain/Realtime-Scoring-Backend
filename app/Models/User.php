@@ -23,6 +23,7 @@ class User extends Authenticatable
         'email',
         'password',
         'emp_id',
+        'is_admin',
         'profile_picture',
     ];
 
@@ -52,6 +53,11 @@ class User extends Authenticatable
     public function roles()
     {
         return $this->belongsToMany(Role::class)->withTimestamps();
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->is_admin == true;
     }
 
     public function contact()
@@ -137,5 +143,4 @@ class User extends Authenticatable
         }
         $this->roles()->syncWithoutDetaching($role);
     }
-
 }

@@ -63,6 +63,7 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('player-categories')->group(function () {
         Route::get('/', [PlayerCategoryController::class, 'index'])->name('player-categories.index');
+        Route::get('/players/search', [PlayerController::class, 'search'])->name('players.search');
         Route::post('/update', [PlayerCategoryController::class, 'updateCategory'])->name('player-categories.update');
         Route::post('/bulk-update', [PlayerCategoryController::class, 'bulkUpdate'])->name('player-categories.bulk-update');
     });
