@@ -47,7 +47,7 @@
             <!-- Uncategorized Players Panel -->
             <div class="bg-white border-[#000]/30 py-[10px] xl:py-[15px] px-[15px] xl:px-[20px] mb-[150px] xl:mb-[200px]">
                 <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-[18px] lg:text-[22px] xl:text-[24px] font-semibold">Available Players</h2>
+                    <h2 class="text-[18px] lg:text-[22px] xl:text-[24px] font-semibold">Available Players - <span class="font-normal text-[15px] lg:text-[17px] xl:text-[20px]">Uncategorized</span></h2>
                     <div class="flex justify-between items-center gap-[10px]">
                         <div class="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#000]">
                             <p class="text-sm text-[#fff] m-0 leading-none font-medium">
