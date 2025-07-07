@@ -16,13 +16,14 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::resource('blogs', BlogController::class)->only(['index', 'show']);
 Route::middleware('auth')->group(function () {
     Route::resource('users', UserController::class);
     Route::resource('groups', GroupController::class);
     Route::resource('teams', TeamController::class);
     Route::resource('matches', MatchController::class);
     Route::resource('tournaments', TournamentController::class);
-    Route::resource('blogs', BlogController::class);
+     Route::resource('blogs', BlogController::class)->except(['index', 'show']);
 
     Route::get('tournaments/{tournament}/group/{group}', [MatchController::class, 'groupMatches'])
         ->name('matches.group');
