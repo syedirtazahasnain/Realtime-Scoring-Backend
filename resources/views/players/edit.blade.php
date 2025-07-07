@@ -68,19 +68,19 @@
                         <select id="category" name="category" required
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                             <option value="platinum"
-                                {{ old('category', $player->playerProfile->category) == 'platinum' ? 'selected' : '' }}>
+                                {{ old('category', optional($player->playerProfile)->category) == 'platinum' ? 'selected' : '' }}>
                                 Platinum</option>
                             <option value="diamond"
-                                {{ old('category', $player->playerProfile->category) == 'diamond' ? 'selected' : '' }}>
+                                {{ old('category', optional($player->playerProfile)->category) == 'diamond' ? 'selected' : '' }}>
                                 Diamond</option>
                             <option value="gold"
-                                {{ old('category', $player->playerProfile->category) == 'gold' ? 'selected' : '' }}>Gold
-                            </option>
+                                {{ old('category', optional($player->playerProfile)->category) == 'gold' ? 'selected' : '' }}>
+                                Gold</option>
                             <option value="silver"
-                                {{ old('category', $player->playerProfile->category) == 'silver' ? 'selected' : '' }}>
+                                {{ old('category', optional($player->playerProfile)->category) == 'silver' ? 'selected' : '' }}>
                                 Silver</option>
                             <option value="bronze"
-                                {{ old('category', $player->playerProfile->category) == 'bronze' ? 'selected' : '' }}>
+                                {{ old('category', optional($player->playerProfile)->category) == 'bronze' ? 'selected' : '' }}>
                                 Bronze</option>
                         </select>
                     </div>
@@ -90,16 +90,16 @@
                         <select id="playing_role" name="playing_role" required
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                             <option value="batter"
-                                {{ old('playing_role', $player->playerProfile->playing_role) == 'batter' ? 'selected' : '' }}>
+                                {{ old('playing_role', optional($player->playerProfile)->playing_role) == 'batter' ? 'selected' : '' }}>
                                 Batter</option>
                             <option value="bowler"
-                                {{ old('playing_role', $player->playerProfile->playing_role) == 'bowler' ? 'selected' : '' }}>
+                                {{ old('playing_role', optional($player->playerProfile)->playing_role) == 'bowler' ? 'selected' : '' }}>
                                 Bowler</option>
                             <option value="all-rounder"
-                                {{ old('playing_role', $player->playerProfile->playing_role) == 'all-rounder' ? 'selected' : '' }}>
+                                {{ old('playing_role', optional($player->playerProfile)->playing_role) == 'all-rounder' ? 'selected' : '' }}>
                                 All-rounder</option>
                             <option value="wicket-keeper"
-                                {{ old('playing_role', $player->playerProfile->playing_role) == 'wicket-keeper' ? 'selected' : '' }}>
+                                {{ old('playing_role', optional($player->playerProfile)->playing_role) == 'wicket-keeper' ? 'selected' : '' }}>
                                 Wicket Keeper</option>
                         </select>
                     </div>
@@ -131,7 +131,7 @@
 
     <script>
         // Photo preview
-         document.getElementById('profile_picture').addEventListener('change', function(e) {
+        document.getElementById('profile_picture').addEventListener('change', function(e) {
             const file = e.target.files[0];
             if (file) {
                 const reader = new FileReader();
