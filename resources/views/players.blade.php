@@ -131,7 +131,7 @@
             </div>
         </div>
 
-        {{-- all-rounder section --}}
+        {{-- all_rounder section --}}
         <div class="mt-[30px] md:mt-[70px] col-md-8 mx-auto px-4">
             <h2 class="text-[18px] md:text-[22px] xl:text-[30px] font-bold font-montu text-[#000000]">
                 Enrolled as an All-Rounder

@@ -18,6 +18,21 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/player-info/{id}', function ($id) {
+    $user = \App\Models\User::find($id);
+
+    if (!$user) {
+        return response()->json(['error' => 'User not found'], 404);
+    }
+
+    $player_profile = \App\Models\PlayerProfile::where('user_id', $id)->first();
+
+    return response()->json([
+        'user' => $user,
+        'player_profile' => $player_profile
+    ]);
+})->middleware('auth');
+
 Route::resource('blogs', BlogController::class)->only(['index', 'show']);
 Route::middleware('auth')->group(function () {
     Route::resource('users', UserController::class);
@@ -53,6 +68,9 @@ Route::middleware('auth')->group(function () {
         Route::post('/', [DraftController::class, 'draftPlayer'])->name('draft.draft');
         Route::delete('/', [DraftController::class, 'releasePlayer'])->name('draft.release');
     });
+
+      Route::get('/players/{player}/edit', [PlayerController::class, 'adminEdit'])->name('admin.players.edit');
+    Route::put('/players/{player}', [PlayerController::class, 'adminUpdate'])->name('admin.players.update');
 
     // Example protected route for admin role
     Route::middleware('role:admin')->group(function () {

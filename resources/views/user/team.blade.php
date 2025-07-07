@@ -14,7 +14,6 @@
                 {{ session('success') }}
             </div>
         @endif
-
         <div class="overflow-x-auto bg-white rounded-lg shadow">
             <table class="min-w-full">
                 <thead class="bg-gray-50">
@@ -35,6 +34,7 @@
                             Actions</th>
                     </tr>
                 </thead>
+
                 <tbody class="divide-y divide-gray-200">
                     @forelse ($teams as $team)
                         <tr class="hover:bg-gray-50">
@@ -52,7 +52,8 @@
                             <td class="px-6 py-4">
                                 <div class="flex flex-wrap gap-2 mb-2">
                                     @foreach ($team->players as $player)
-                                        <div class="flex items-center bg-gray-100 rounded-full px-3 py-1">
+                                        <div class="flex items-center bg-gray-100 rounded-full px-3 py-1 cursor-pointer hover:bg-gray-200">
+                                            <a href="{{ route('players.edit', $player->id) }}" class="mr-2">{{ $player->name }}</a>
                                             <span class="mr-2">{{ $player->name }}</span>
                                             <span
                                                 class="text-xs bg-blue-500 text-white rounded-full px-2 py-0.5">#{{ $player->pivot->jersey_number }}</span>
@@ -74,7 +75,6 @@
                                         </div>
                                     @endforeach
                                 </div>
-
                                 <div class="flex gap-2 mt-2">
                                     <select id="member_select_{{ $team->id }}" class="member-select w-full" multiple
                                         style="width: 200px;">
