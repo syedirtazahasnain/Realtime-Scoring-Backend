@@ -65,7 +65,7 @@
                             <option value="diamond" {{ old('category') == 'diamond' ? 'selected' : '' }}>Diamond</option>
                             <option value="gold" {{ old('category') == 'gold' ? 'selected' : '' }}>Gold</option>
                             <option value="silver" {{ old('category') == 'silver' ? 'selected' : '' }}>Silver</option>
-                            <option value="bronze" {{ old('category') == 'bronze' ? 'selected' : '' }}>Bronze</option>
+                            <option value="emerging" {{ old('category') == 'emerging' ? 'selected' : '' }}>Emerging</option>
                         </select>
                     </div>
 
@@ -74,7 +74,7 @@
                         <select id="playing_role" name="playing_role" required
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                             <option value="">Select Role</option>
-                            <option value="batter" {{ old('playing_role') == 'batter' ? 'selected' : '' }}>Batter</option>
+                            <option value="batsman" {{ old('playing_role') == 'batsman' ? 'selected' : '' }}>Batsman</option>
                             <option value="bowler" {{ old('playing_role') == 'bowler' ? 'selected' : '' }}>Bowler</option>
                             <option value="all-rounder" {{ old('playing_role') == 'all-rounder' ? 'selected' : '' }}>All-rounder</option>
                             <option value="wicket-keeper" {{ old('playing_role') == 'wicket-keeper' ? 'selected' : '' }}>Wicket Keeper</option>

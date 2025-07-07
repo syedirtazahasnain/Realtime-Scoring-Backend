@@ -1,4 +1,4 @@
-<footer class="relative">
+<footer class="relative z-30">
     <img src="{{ asset('storage/new/fbg.png') }}" alt=""
         class="absolute top-0 left-0 h-full object-cover object-center w-full">
 

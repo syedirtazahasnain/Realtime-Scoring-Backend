@@ -58,14 +58,15 @@
                             <option value="diamond" {{ $player->playerProfile->category == 'diamond' ? 'selected' : '' }}>Diamond</option>
                             <option value="gold" {{ $player->playerProfile->category == 'gold' ? 'selected' : '' }}>Gold</option>
                             <option value="silver" {{ $player->playerProfile->category == 'silver' ? 'selected' : '' }}>Silver</option>
-                            <option value="bronze" {{ $player->playerProfile->category == 'bronze' ? 'selected' : '' }}>Bronze</option>
+                            <option value="platinum" {{ $player->playerProfile->category == 'platinum' ? 'selected' : '' }}>Platinum</option>
+                            <option value="emerging" {{ $player->playerProfile->category == 'emerging' ? 'selected' : '' }}>Emerging</option>
                         </select>
                     </div>
 
                     <div>
                         <label for="playing_role" class="block text-sm font-medium text-gray-700">Playing Role</label>
                         <select id="playing_role" name="playing_role" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
-                            <option value="batter" {{ $player->playerProfile->playing_role == 'batter' ? 'selected' : '' }}>Batter</option>
+                            <option value="batsman" {{ $player->playerProfile->playing_role == 'batsman' ? 'selected' : '' }}>Batsman</option>
                             <option value="bowler" {{ $player->playerProfile->playing_role == 'bowler' ? 'selected' : '' }}>Bowler</option>
                             <option value="all-rounder" {{ $player->playerProfile->playing_role == 'all-rounder' ? 'selected' : '' }}>All-rounder</option>
                             <option value="wicket-keeper" {{ $player->playerProfile->playing_role == 'wicket-keeper' ? 'selected' : '' }}>Wicket Keeper</option>

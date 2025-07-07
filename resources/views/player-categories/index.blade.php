@@ -1,113 +1,167 @@
 <x-app-layout>
-    <x-slot name="title">Player Categories</x-slot>
+    @section('title', 'Player Categories')
 
-    <div class="container mx-auto px-4 py-8">
-        <div class="flex justify-between items-center mb-6">
-            <h1 class="text-2xl font-bold">Player Categories</h1>
-            <div class="flex space-x-4">
-                @if(auth()->check() && auth()->user()->isAdmin())
+    <style>
+        .searchBG {
+            background: #000 !important;
+            color: #fff !important;
+        }
+
+        .player-cat div {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .player-cat div::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <!-- Header Section -->
+    <div class="relative">
+        <div class="md:h-[300px] h-[200px] flex flex-col gap-[15px] justify-center relative items-center">
+            <img src="{{ asset('storage/matches/bg1.png') }}" alt=""
+                class="h-[300px]  absolute left-0 right-0 bottom-0 w-full object-cover overflow-hidden">
+            <h2
+                class="text-[18px] md:text-[30px] xl:text-[40px] 2xl:text-[50px] font-monti font-bold relative text-white">
+                Player Categories
+            </h2>
+            <div class="flex space-x-4 relative z-20">
+                @if (auth()->check() && auth()->user()->isAdmin())
                     <button onclick="openBulkUpdateModal()"
-                        class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+                        class="block text-center text-white text-[10px] 2xl:text-[14px] xl:text-[12px] font-sans px-[20px] py-[5px] md:py-[10px] text-nowrap bg-[#00aeef] font-medium hover:bg-[#094AB7] transition-colors duration-200">
                         Bulk Update
                     </button>
                 @endif
-                @if(auth()->check() && auth()->user()->isAdmin())
+                @if (auth()->check() && auth()->user()->isAdmin())
                     <a href="{{ route('players.create') }}"
-                        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+                        class="block text-center text-[#000] hover:text-[#fff] hover:no-underline text-[10px] 2xl:text-[14px] xl:text-[12px] font-sans px-[20px] py-[5px] md:py-[10px] text-nowrap bg-[#fff] font-medium hover:bg-[#00aeef] transition-colors duration-200">
                         + Add Player
                     </a>
                 @endif
             </div>
         </div>
+    </div>
 
-        <!-- Global Search -->
-        <div class="mb-6 relative">
-            <input type="text" id="globalPlayerSearch" placeholder="Search players..."
-                class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <div id="searchResults" class="absolute z-10 w-full mt-1 bg-white border rounded-lg shadow-lg max-h-60 overflow-y-auto hidden">
-            </div>
-        </div>
-
-        <!-- Uncategorized Players Panel -->
-        <div class="bg-white rounded-lg shadow p-4 mb-6">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="text-lg font-semibold">Available Players</h2>
-                <span class="text-sm bg-gray-200 px-2 py-1 rounded-full">{{ count($uncategorizedPlayers) }}</span>
-            </div>
-
-            <div class="space-y-3 player-list min-h-20" data-category="uncategorized">
-                @foreach ($uncategorizedPlayers as $player)
-                    <div class="player-card p-3 border rounded hover:bg-gray-50 cursor-move"
-                        draggable="{{ auth()->check() && auth()->user()->isAdmin() ? 'true' : 'false' }}"
-                        data-player-id="{{ $player->id }}">
-                        <div class="flex items-center space-x-3">
-                            <img src="{{ $player->playerProfile->photo ? asset('storage/' . $player->playerProfile->photo) : asset('images/default-player.png') }}"
-                                alt="{{ $player->name }}" class="w-10 h-10 rounded-full object-cover">
-                            <div>
-                                <div class="font-medium">{{ $player->name }}</div>
-                                <div class="text-sm text-gray-600 capitalize">
-                                    {{ $player->playerProfile->playing_role ?? 'N/A' }} | {{ $player->emp_id }}
-                                </div>
+    <div class="relative col-md-10 mx-auto">
+        <div class="mt-[40px] xl:mt-[80px]">
+            <!-- Uncategorized Players Panel -->
+            <div class="bg-white border-[#000]/30 py-[10px] xl:py-[15px] px-[15px] xl:px-[20px] mb-[150px] xl:mb-[200px]">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-[18px] lg:text-[22px] xl:text-[24px] font-semibold">Available Players</h2>
+                    <div class="flex justify-between items-center gap-[10px]">
+                        <div class="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#000]">
+                            <p class="text-sm text-[#fff] m-0 leading-none font-medium">
+                                {{ count($uncategorizedPlayers) }}
+                            </p>
+                        </div>
+                        <!-- Global Search -->
+                        <div class="relative">
+                            <input type="text" id="globalPlayerSearch" placeholder="Search players..."
+                                class="w-full lg:w-[350px] p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <div id="searchResults"
+                                class="absolute z-10 w-full mt-1 bg-white border rounded-lg shadow-lg overflow-y-auto hidden">
                             </div>
-                            @if(auth()->check() && auth()->user()->isAdmin())
-                                <div class="ml-auto">
-                                    <a href="{{ route('players.edit', $player->id) }}" class="text-blue-500 hover:text-blue-700">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            @endif
                         </div>
                     </div>
-                @endforeach
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-[5px] player-list"
+                    data-category="uncategorized">
+                    @foreach ($uncategorizedPlayers as $player)
+                        <div class="player-card relative bg-[#000]/10 px-[10px] py-[5px] rounded-[10px] cursor-move"
+                            draggable="{{ auth()->check() && auth()->user()->isAdmin() ? 'true' : 'false' }}"
+                            data-player-id="{{ $player->id }}">
+                            <div class="flex items-center space-x-2">
+                                <img src="{{ $player->playerProfile->photo ? asset('storage/' . $player->playerProfile->photo) : asset('images/home/batter-avat.png') }}"
+                                    alt="{{ $player->name }}" class="w-10 h-10 rounded-full object-cover">
+                                <div>
+                                    <div class="font-medium text-[14px] xl:text-[15px]">{{ $player->name }}</div>
+                                    <div class="text-xs capitalize">
+                                        {{ $player->playerProfile->playing_role ?? 'N/A' }} | {{ $player->emp_id }}
+                                    </div>
+                                </div>
+                                @if (auth()->check() && auth()->user()->isAdmin())
+                                    <div class="absolute top-[5px] right-[5px]">
+                                        <a href="{{ route('players.edit', $player->id) }}"
+                                            class="text-blue-500 hover:text-blue-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
-        </div>
+            <div
+                class="fixed bottom-0 left-1/2 -translate-x-1/2 z-20 grid grid-cols-1 md:grid-cols-5 gap-[10px] w-[80%] player-cat">
+                @php
+                    $bgColors = [
+                        'platinum' => 'bg-[#4F46E5] text-[#fff]',
+                        'diamond' => 'bg-[#00aeef] text-[#fff]',
+                        'gold' => 'bg-[#FACC15] text-[#000]',
+                        'silver' => 'bg-[#D1D5DB] text-[#000]',
+                        'emerging' => 'bg-[#000] text-[#fff]',
+                    ];
+                @endphp
+                @foreach ($categories as $category => $players)
+                    <div
+                        class="bg-white rounded-t-lg shadow py-[10px] xl:py-[15px] px-[15px] xl:px-[20px] h-[250px] lg:h-[350px] overflow-auto border-2 border-[#000]/30">
+                        <div class="flex justify-between items-center mb-[10px]">
+                            <h2 class="text-lg font-semibold capitalize">{{ $category }}</h2>
+                            <div class="w-[25px] h-[25px] flex items-center justify-center rounded-full bg-[#000]">
+                                <p class="text-xs text-[#fff] m-0 leading-none font-medium">{{ count($players) }}</p>
+                            </div>
+                        </div>
 
-        <!-- Categories -->
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-            @foreach ($categories as $category => $players)
-                <div class="bg-white rounded-lg shadow p-4">
-                    <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-lg font-semibold capitalize">{{ $category }}</h2>
-                        <span class="text-sm bg-gray-200 px-2 py-1 rounded-full">{{ count($players) }}</span>
-                    </div>
-
-                    <div class="space-y-3 player-list min-h-20" data-category="{{ $category }}">
-                        @foreach ($players as $player)
-                            <div class="player-card p-3 border rounded hover:bg-gray-50 cursor-move"
-                                draggable="{{ auth()->check() && auth()->user()->isAdmin() ? 'true' : 'false' }}"
-                                data-player-id="{{ $player->id }}">
-                                <div class="flex items-center space-x-3">
-                                    <img src="{{ $player->playerProfile->photo ? asset('storage/' . $player->playerProfile->photo) : asset('images/default-player.png') }}"
-                                        alt="{{ $player->name }}" class="w-10 h-10 rounded-full object-cover">
-                                    <div>
-                                        <div class="font-medium">{{ $player->name }}</div>
-                                        <div class="text-sm text-gray-600 capitalize">
-                                            {{ $player->playerProfile->playing_role ?? 'N/A' }} | {{ $player->emp_id }}
+                        <div class="space-y-[5px] player-list" data-category="{{ $category }}">
+                            @foreach ($players as $player)
+                                <div class="player-card {{ $bgColors[$category] ?? 'bg-white' }} px-[10px] py-[5px] rounded-[10px] relative"
+                                    draggable="{{ auth()->check() && auth()->user()->isAdmin() ? 'true' : 'false' }}"
+                                    data-player-id="{{ $player->id }}">
+                                    <div class="flex items-center gap-[10px]">
+                                        <div class="w-[30px] h-[30px] shrink-0 rounded-full overflow-hidden">
+                                            <img src="{{ $player->playerProfile->photo ? asset('storage/' . $player->playerProfile->photo) : asset('images/home/batter-avat.png') }}"
+                                                alt="{{ $player->name }}" class="w-full h-full object-cover">
+                                        </div>
+                                        <div>
+                                            <div class="font-medium text-[13px] xl:text-[14px]">{{ $player->name }}
+                                            </div>
+                                            <div class="text-xs capitalize">
+                                                {{ $player->playerProfile->playing_role ?? 'N/A' }} |
+                                                {{ $player->emp_id }}
+                                            </div>
                                         </div>
                                     </div>
-                                    @if(auth()->check() && auth()->user()->isAdmin())
-                                        <div class="ml-auto">
-                                            <a href="{{ route('players.edit', $player->id) }}" class="text-blue-500 hover:text-blue-700">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                                    @if (auth()->check() && auth()->user()->isAdmin())
+                                        <div class="absolute top-[5px] right-[5px]">
+                                            <a href="{{ route('players.edit', $player->id) }}"
+                                                class="text-blue-500 hover:text-blue-700">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"
+                                                    viewBox="0 0 20 20" fill="currentColor">
+                                                    <path
+                                                        d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
                                                 </svg>
                                             </a>
                                         </div>
                                     @endif
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </div>
 
     <!-- Bulk Update Modal -->
-    @if(auth()->check() && auth()->user()->isAdmin())
-        <div id="bulkUpdateModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    @if (auth()->check() && auth()->user()->isAdmin())
+        <div id="bulkUpdateModal"
+            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
             <div class="bg-white rounded-lg shadow-xl w-full max-w-md">
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-4">
@@ -125,7 +179,8 @@
                         @csrf
                         <div class="space-y-4">
                             <div>
-                                <label for="bulk_category" class="block text-sm font-medium text-gray-700">Category</label>
+                                <label for="bulk_category"
+                                    class="block text-sm font-medium text-gray-700">Category</label>
                                 <select id="bulk_category" name="category"
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                                     <option value="platinum">Platinum</option>
@@ -171,7 +226,7 @@
         // Drag and Drop functionality
         document.addEventListener('DOMContentLoaded', function() {
             // Only initialize drag and drop if user is admin
-            @if(auth()->check() && auth()->user()->isAdmin())
+            @if (auth()->check() && auth()->user()->isAdmin())
                 const playerCards = document.querySelectorAll('.player-card');
                 const categoryLists = document.querySelectorAll('.player-list');
                 let draggedPlayer = null;
@@ -216,7 +271,8 @@
                             const originalCategory = draggedPlayer.dataset.originalCategory;
 
                             // Don't allow moving from uncategorized to uncategorized
-                            if (originalCategory === 'uncategorized' && newCategory === 'uncategorized') {
+                            if (originalCategory === 'uncategorized' && newCategory ===
+                                'uncategorized') {
                                 return;
                             }
 
@@ -229,7 +285,7 @@
                             updateCategoryCounters(originalCategory, newCategory);
 
                             // Send AJAX request to update category
-                            fetch('{{ route("player-categories.update") }}', {
+                            fetch('{{ route('player-categories.update') }}', {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json',
@@ -238,7 +294,8 @@
                                     },
                                     body: JSON.stringify({
                                         player_id: playerId,
-                                        category: newCategory == 'uncategorized' ? null : newCategory
+                                        category: newCategory == 'uncategorized' ?
+                                            null : newCategory
                                     })
                                 })
                                 .then(response => response.json())
@@ -248,7 +305,7 @@
                                         // Revert UI if update failed
                                         const originalList = document.querySelector(
                                             `.player-list[data-category="${originalCategory}"]`
-                                            );
+                                        );
                                         if (originalList) {
                                             originalList.appendChild(draggedPlayer);
                                             // Revert counters if update failed
@@ -350,15 +407,13 @@
                         searchResults.innerHTML = '';
                         data.forEach(player => {
                             const playerElement = document.createElement('div');
-                            playerElement.className = 'p-3 hover:bg-gray-100 cursor-pointer border-b';
+                            playerElement.className =
+                                'bg-[#000]/10 px-[10px] py-[5px] border-b-[2px] border-[#fff] cursor-pointer hover:bg-[#000]/20';
                             playerElement.innerHTML = `
-                                <div class="flex items-center space-x-3">
-                                    <img src="${player.photo_url || '{{ asset('images/default-player.png') }}'}"
-                                         alt="${player.name}"
-                                         class="w-8 h-8 rounded-full object-cover">
+                                <div class="flex items-center space-x-[5px]">
                                     <div>
-                                        <div class="font-medium">${player.name}</div>
-                                        <div class="text-xs text-gray-600 capitalize">
+                                        <div class="font-medium text-sm">${player.name}</div>
+                                        <div class="text-[9px] font-medium text-gray-600 capitalize">
                                             ${player.playing_role || 'N/A'} | ${player.emp_id} | ${player.category || 'Uncategorized'}
                                         </div>
                                     </div>
@@ -374,9 +429,11 @@
                                         behavior: 'smooth',
                                         block: 'center'
                                     });
-                                    playerCard.classList.add('bg-yellow-100');
+                                    playerCard.classList.remove('bg-[#000]/30');
+                                    playerCard.classList.add('searchBG');
                                     setTimeout(() => {
-                                        playerCard.classList.remove('bg-yellow-100');
+                                        playerCard.classList.remove(
+                                            'bg-yellow-100');
                                     }, 2000);
                                 }
                                 searchResults.classList.add('hidden');
@@ -403,7 +460,8 @@
         function debounce(func, wait) {
             let timeout;
             return function() {
-                const context = this, args = arguments;
+                const context = this,
+                    args = arguments;
                 clearTimeout(timeout);
                 timeout = setTimeout(() => {
                     func.apply(context, args);

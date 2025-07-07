@@ -19,9 +19,14 @@ class DraftController extends Controller
             ->notInAnyTeam()
             ->get()
             ->sortByDesc(function ($player) {
-                // Sort by category (diamond first, then gold, etc.)
-                $categoryOrder = ['diamond' => 4, 'gold' => 3, 'silver' => 2, 'bronze' => 1];
-                return $categoryOrder[$player->playerProfile->category ?? 'bronze'];
+                $categoryOrder = [
+                    'diamond' => 5,
+                    'gold' => 4,
+                    'silver' => 3,
+                    'platinum' => 2,
+                    'emerging' => 1,
+                ];
+                return $categoryOrder[$player->playerProfile->category ?? 'platinum'];
             });
 
         return view('draft.index', compact('tournament', 'teams', 'players'));
