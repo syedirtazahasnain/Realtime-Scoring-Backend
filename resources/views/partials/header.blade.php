@@ -9,7 +9,7 @@
 
         <!-- Main Header Flex -->
 
-    <x-error-success />
+        <x-error-success />
         <div class="flex items-center justify-between gap-[10px] md:gap-[20px] xl:gap-[30px] relative z-20 w-full">
             <div class="flex items-center w-full gap-[18px] lg:gap-[26px] xl:gap-[34px]">
                 <!-- Logo -->
@@ -63,7 +63,7 @@
             <!-- Right: Desktop Button + Logo -->
             <div class="flex items-center justify-end w-full gap-[20px] xl:gap-[30px]">
                 <!-- Desktop CTA -->
-                <div class="hidden lg:flex items-center relative group">
+                <div class="hidden lg:flex items-center relative">
                     @if (auth()->check())
                         <div class="group flex items-center gap-[5px] px-[10px] border-r-[1px] border-[#fff]">
                             <div class="w-[40px] h-[40px] rounded-full bg-[#000] overflow-hidden">
@@ -73,11 +73,9 @@
                                 <img src="{{ asset('storage/about/right-arrow.svg') }}" alt=""
                                     class="w-[20px] rotate-[90deg] group-hover:rotate-[135deg] duration-200 ease-in-out transition-all">
                             </div>
-                        </div>
-                        <!-- Dropdown menu -->
-                        <div class="border-x-[1px] border-[#fff]">
+                            <!-- Dropdown menu -->
                             <div
-                                class="absolute opacity-0 group-hover:opacity-100 group-hover:z-50 top-[40px] left-0 mt-0 w-48 bg-white rounded-md shadow-lg -z-10 duration-200 ease-in-out transition-all">
+                                class="absolute hidden group-hover:block group-hover:z-50 top-[40px] left-0 mt-0 w-48 bg-white rounded-md shadow-lg -z-10 duration-200 ease-in-out transition-all">
                                 <div class="py-1">
                                     <!-- Profile link -->
                                     <x-dropdown-link :href="route('profile.edit')">
