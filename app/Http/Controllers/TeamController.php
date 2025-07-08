@@ -14,10 +14,7 @@ class TeamController extends Controller
 {
     public function index(Request $request)
     {
-
-
         $search = $request->input('search');
-
         $teams = Team::with(['group', 'owner', 'players'])
             ->when($search, function ($query) use ($search) {
                 $query->where('name', 'like', '%' . $search . '%')
@@ -32,7 +29,7 @@ class TeamController extends Controller
             ->paginate(20);
         $groups = Group::select('id', 'name')->get();
         $users = User::whereDoesntHave('teams')->get();
-        return view('user.team', compact('teams', 'search'));
+        return view('user.team', compact('teams', 'search','users','groups'));
     }
 
     public function guestTeams(Request $request)
