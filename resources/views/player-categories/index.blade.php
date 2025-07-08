@@ -118,7 +118,7 @@
                             </div>
                         </div>
 
-                        <div class="space-y-[5px] player-list" data-category="{{ $category }}">
+                        <div class="space-y-[5px] player-list min-h-full" data-category="{{ $category }}">
                             @foreach ($players as $player)
                                 <div class="player-card {{ $bgColors[$category] ?? 'bg-white' }} px-[10px] py-[5px] rounded-[10px] relative"
                                     draggable="{{ auth()->check() && auth()->user()->isAdmin() ? 'true' : 'false' }}"
