@@ -78,11 +78,11 @@
                                 class="absolute hidden group-hover:block group-hover:z-50 top-[40px] left-0 mt-0 w-48 bg-white rounded-md shadow-lg -z-10 duration-200 ease-in-out transition-all">
                                 <div class="py-1">
                                     <!-- Profile link -->
-                                    <x-dropdown-link :href="route('profile.edit')">
-                                        {{ __('Profile') }}
-                                    </x-dropdown-link>
                                     <x-dropdown-link :href="route('dashboard')">
                                         {{ __('Dashboard') }}
+                                    </x-dropdown-link>
+                                    <x-dropdown-link :href="route('profile.edit')">
+                                        {{ __('Profile') }}
                                     </x-dropdown-link>
                                     <x-dropdown-link :href="route('register.player')">
                                         {{ __('Player') }}

@@ -43,28 +43,29 @@
     </div>
 
     <div class="relative col-md-10 mx-auto">
-        <div class="mt-[40px] xl:mt-[80px]">
+        <div class="my-[40px] xl:my-[80px]">
             <!-- Uncategorized Players Panel -->
-            <div class="bg-white border-[#000]/30 py-[10px] xl:py-[15px] px-[15px] xl:px-[20px] mb-[150px] xl:mb-[200px]">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-[18px] lg:text-[22px] xl:text-[24px] font-semibold">Available Players - <span class="font-normal text-[15px] lg:text-[17px] xl:text-[20px]">Uncategorized</span></h2>
-                    <div class="flex justify-between items-center gap-[10px]">
-                        <div class="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#000]">
-                            <p class="text-sm text-[#fff] m-0 leading-none font-medium">
-                                {{ count($uncategorizedPlayers) }}
-                            </p>
-                        </div>
-                        <!-- Global Search -->
-                        <div class="relative">
-                            <input type="text" id="globalPlayerSearch" placeholder="Search players..."
-                                class="w-full lg:w-[350px] p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <div id="searchResults"
-                                class="absolute z-10 w-full mt-1 bg-white border rounded-lg shadow-lg overflow-y-auto hidden">
-                            </div>
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-[18px] lg:text-[22px] xl:text-[24px] font-semibold">Available Players - <span
+                        class="font-normal text-[15px] lg:text-[17px] xl:text-[20px]">Uncategorized</span></h2>
+                <div class="flex justify-between items-center gap-[10px]">
+                    <div class="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#000]">
+                        <p class="text-sm text-[#fff] m-0 leading-none font-medium">
+                            {{ count($uncategorizedPlayers) }}
+                        </p>
+                    </div>
+                    <!-- Global Search -->
+                    <div class="relative">
+                        <input type="text" id="globalPlayerSearch" placeholder="Search players..."
+                            class="w-full lg:w-[350px] p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <div id="searchResults"
+                            class="absolute z-10 w-full mt-1 bg-white border rounded-lg shadow-lg overflow-y-auto hidden">
                         </div>
                     </div>
                 </div>
-
+            </div>
+            <div
+                class="bg-white border-[#000]/30 py-[10px] xl:py-[15px] pr-[10px] h-[40vh] overflow-auto mb-[20px] xl:mb-[40px]">
                 <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-[5px] player-list"
                     data-category="uncategorized">
                     @foreach ($uncategorizedPlayers as $player)
@@ -73,9 +74,9 @@
                             data-player-id="{{ $player->id }}">
                             <div class="flex items-center space-x-2">
                                 <img src="{{ $player->playerProfile->photo ? asset('storage/' . $player->playerProfile->photo) : asset('images/home/batter-avat.png') }}"
-                                    alt="{{ $player->name }}" class="w-10 h-10 rounded-full object-cover">
+                                    alt="{{ $player->name }}" class="w-[30px] h-[30px] rounded-full object-cover">
                                 <div>
-                                    <div class="font-medium text-[14px] xl:text-[15px]">{{ $player->name }}</div>
+                                    <div class="font-medium text-[13px] xl:text-[14px]">{{ $player->name }}</div>
                                     <div class="text-xs capitalize">
                                         {{ $player->playerProfile->playing_role ?? 'N/A' }} | {{ $player->emp_id }}
                                     </div>
@@ -97,8 +98,7 @@
                     @endforeach
                 </div>
             </div>
-            <div
-                class="fixed bottom-0 left-1/2 -translate-x-1/2 z-20 grid grid-cols-1 md:grid-cols-5 gap-[10px] w-[80%] player-cat">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-[10px] mx-auto player-cat">
                 @php
                     $bgColors = [
                         'platinum' => 'bg-[#4F46E5] text-[#fff]',
@@ -110,7 +110,7 @@
                 @endphp
                 @foreach ($categories as $category => $players)
                     <div
-                        class="bg-white rounded-t-lg shadow py-[10px] xl:py-[15px] px-[15px] xl:px-[20px] h-[250px] lg:h-[350px] overflow-auto border-2 border-[#000]/30">
+                        class="bg-white rounded-[10px] py-[10px] xl:py-[15px] px-[15px] xl:px-[20px] h-[250px] lg:h-[350px] overflow-auto border-2 border-[#000]/30">
                         <div class="flex justify-between items-center mb-[10px]">
                             <h2 class="text-lg font-semibold capitalize">{{ $category }}</h2>
                             <div class="w-[25px] h-[25px] flex items-center justify-center rounded-full bg-[#000]">
