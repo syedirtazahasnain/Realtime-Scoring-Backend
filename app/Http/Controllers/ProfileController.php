@@ -104,6 +104,7 @@ class ProfileController extends Controller
             ['user_id' => Auth::id()],
             $validated
         );
+        $player_profile->player->assignRole('player');
 
         return back()->with(['status' => 'player-profile-updated',
             'player_profile' => $player_profile]);
