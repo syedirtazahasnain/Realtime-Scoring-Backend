@@ -13,8 +13,8 @@
         <div class="flex items-center justify-between gap-[10px] md:gap-[20px] xl:gap-[30px] relative z-20 w-full">
             <div class="flex items-center w-full gap-[18px] lg:gap-[26px] xl:gap-[34px]">
                 <!-- Logo -->
-                <div class="relative w-[110px]">
-                    <img src="{{ asset('images/logo/logo-main.png') }}" alt="Logo" class="w-full">
+                <div class="relative w-[200px]">
+                    <img src="{{ asset(path: 'images/logo/logo-main.png') }}" alt="Logo" class="w-full">
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -45,7 +45,7 @@
                         </div>
                         <div class="text-[14px] xl:text-[16px]">
                             <a href="/matches"
-                                class="text-[#fff] hover:text-[#00aeef] duration-200 transition-all ease-in-out">Fixtures</a>
+                                class="text-[#fff] hover:text-[#00aeef] duration-200 transition-all ease-in-out">Matches</a>
                         </div>
                         <div class="text-[14px] xl:text-[16px]">
                             <a href="/drafting"
@@ -70,7 +70,7 @@
             <!-- Right: Desktop Button + Logo -->
             <div class="flex items-center justify-end w-full gap-[20px] xl:gap-[30px]">
                 <!-- Desktop CTA -->
-                <div class="hidden lg:flex items-center relative">
+                <div class="flex items-center relative">
                     @if (auth()->check())
                         <div class="group flex items-center gap-[5px] px-[10px] border-r-[1px] border-[#fff]">
                             <div class="w-[40px] h-[40px] rounded-full bg-[#000] overflow-hidden">
@@ -115,12 +115,12 @@
                     @endif
                 </div>
                 <!-- Right Logo -->
-                <div class="">
+                <div class="hidden lg:block">
                     <img src="{{ asset('images/logo/tfsc-logo-white.png') }}" alt="Logo" class="">
                 </div>
 
                 <!-- Burger Button moved here (visible only on small screens) -->
-                <button class="lg:hidden text-white focus:outline-none ml-4" @click="open = !open">
+                <button class="lg:hidden text-white focus:outline-none" @click="open = !open">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                         stroke-linecap="round" stroke-linejoin="round">
                         <path x-show="!open" d="M4 6h16M4 12h16M4 18h16" />
@@ -142,7 +142,7 @@
                     <li><a href="/about" class="block py-1 hover:text-gray-300">About</a></li>
                     <li><a href="/matches" class="block py-1 hover:text-gray-300">Teams</a></li>
                     <li><a href="/ranking" class="block py-1 hover:text-gray-300">Rankings</a></li>
-                    <li><a href="/ranking" class="block py-1 hover:text-gray-300">Fixtures</a></li>
+                    <li><a href="/ranking" class="block py-1 hover:text-gray-300">Matches</a></li>
                     <li><a href="/ranking" class="block py-1 hover:text-gray-300">Top Fans</a></li>
                     <li><a href="/ranking" class="block py-1 hover:text-gray-300">Awards</a></li>
                     <li><a href="/news" class="block py-1 hover:text-gray-300">Players</a></li>
