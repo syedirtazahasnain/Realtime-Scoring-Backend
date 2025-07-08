@@ -198,8 +198,8 @@
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
                                     <option value="batter">Batter</option>
                                     <option value="bowler">Bowler</option>
-                                    <option value="all-rounder">All-rounder</option>
-                                    <option value="wicket-keeper">Wicket Keeper</option>
+                                    <option value="all_rounder">All-rounder</option>
+                                    <option value="wicket_keeper">Wicket Keeper</option>
                                 </select>
                             </div>
 

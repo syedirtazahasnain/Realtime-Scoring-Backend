@@ -76,8 +76,8 @@
                             <option value="">Select Role</option>
                             <option value="batsman" {{ old('playing_role') == 'batsman' ? 'selected' : '' }}>Batsman</option>
                             <option value="bowler" {{ old('playing_role') == 'bowler' ? 'selected' : '' }}>Bowler</option>
-                            <option value="all-rounder" {{ old('playing_role') == 'all-rounder' ? 'selected' : '' }}>All-rounder</option>
-                            <option value="wicket-keeper" {{ old('playing_role') == 'wicket-keeper' ? 'selected' : '' }}>Wicket Keeper</option>
+                            <option value="all_rounder" {{ old('playing_role') == 'all_rounder' ? 'selected' : '' }}>All-rounder</option>
+                            <option value="wicket_keeper" {{ old('playing_role') == 'wicket_keeper' ? 'selected' : '' }}>Wicket Keeper</option>
                         </select>
                     </div>
 

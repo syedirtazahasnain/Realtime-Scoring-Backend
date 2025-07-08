@@ -93,10 +93,10 @@ class ProfileController extends Controller
     {
         // Validate the request
         $validated = $request->validate([
-            'playing_role' => 'required|in:batsman,bowler,all-rounder,wicket-keeper',
-            'batting_style' => 'nullable|required_if:playing_role,batsman,all-rounder,wicket-keeper|in:right-handed,left-handed',
-            'bowling_style' => 'nullable|required_if:playing_role,bowler,all-rounder|in:fast,medium,spin,leg-spin,off-spin',
-            'fielding_position' => 'required|in:slip,gully,point,cover,mid-off,mid-on,wicket-keeper'
+            'playing_role' => 'required|in:batsman,bowler,all_rounder,wicket_keeper',
+            'batting_style' => 'nullable|required_if:playing_role,batsman,all_rounder,wicket_keeper|in:right-handed,left-handed',
+            'bowling_style' => 'nullable|required_if:playing_role,bowler,all_rounder|in:fast,medium,spin,leg-spin,off-spin',
+            'fielding_position' => 'required|in:slip,gully,point,cover,mid-off,mid-on,wicket_keeper'
         ]);
 
         // Create or update the player profile

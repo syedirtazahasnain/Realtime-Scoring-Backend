@@ -14,7 +14,7 @@ class PlayerController extends Controller
     {
         $teams = Team::all();
         $categories = PlayerProfile::getCategories();
-        $playingRoles = ['batsman', 'bowler', 'all-rounder', 'wicket-keeper'];
+        $playingRoles = ['batsman', 'bowler', 'all_rounder', 'wicket_keeper'];
 
         return view('players.create', compact('teams', 'categories', 'playingRoles'));
     }
@@ -70,7 +70,7 @@ class PlayerController extends Controller
     {
         $teams = Team::all();
         $categories = PlayerProfile::getCategories();
-        $playingRoles = ['batsman', 'bowler', 'all-rounder', 'wicket-keeper'];
+        $playingRoles = ['batsman', 'bowler', 'all_rounder', 'wicket_keeper'];
 
         return view('players.edit', compact('player', 'teams', 'categories', 'playingRoles'));
     }
@@ -211,7 +211,7 @@ class PlayerController extends Controller
         } elseif ($profile->playing_role === 'bowler') {
             $score = $stats->total_wickets ?? 0;
             $stat = 'wickets';
-        } else { // all-rounder
+        } else { // all_rounder
             $score = ($stats->total_runs ?? 0) . '/' . ($stats->total_wickets ?? 0);
             $stat = 'runs/wkts';
         }
@@ -224,5 +224,35 @@ class PlayerController extends Controller
             'stat' => $stat,
             'team' => $team ? $team->short_name : 'N/A'
         ];
+    }
+
+
+    public function adminEdit(User $player)
+    {
+        // Eager load the user and playerProfile relationships
+        $player->load(['user', 'playerProfile']);
+
+        return view('players.admin-edit', compact('player'));
+    }
+
+    public function adminUpdate(Request $request, User $player)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'playing_role' => 'required|in:Batsman,Bowler,All-Rounder,Wicket-Keeper'
+        ]);
+
+        // Update user name
+        $player->user->update([
+            'name' => $validated['name']
+        ]);
+
+        // Update player profile
+        $player->playerProfile->update([
+            'playing_role' => $validated['playing_role']
+        ]);
+
+        return redirect()->route('admin.players.index')
+            ->with('success', 'Player updated successfully');
     }
 }

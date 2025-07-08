@@ -58,13 +58,13 @@ class PlayerCategoryController extends Controller
             'player_ids' => 'required|array',
             'player_ids.*' => 'exists:users,id',
             'category' => 'required|in:platinum,diamond,gold,silver,emerging',
-            'playing_role' => 'nullable|in:batsman,bowler,all-rounder,wicket-keeper'
+            'playing_role' => 'nullable|in:batsman,bowler,all_rounder,wicket_keeper'
         ]);
 
         PlayerProfile::whereIn('user_id', $request->player_ids)
             ->update([
                 'category' => $request->category,
-                'playing_role' => $request->playing_role ?? 'all-rounder'
+                'playing_role' => $request->playing_role ?? 'all_rounder'
             ]);
 
         return back()->with('success', 'Players updated successfully!');

@@ -28,10 +28,17 @@
                             <a href="/about"
                                 class="text-[#fff] hover:text-[#00aeef] duration-200 transition-all ease-in-out">About</a>
                         </div>
+                        @if(auth()->check() && auth()->user()->isAdmin())
                         <div class="text-[14px] xl:text-[16px]">
                             <a href="/teams"
                                 class="text-[#fff] hover:text-[#00aeef] duration-200 transition-all ease-in-out">Teams</a>
                         </div>
+                        @else
+                        <div class="text-[14px] xl:text-[16px]">
+                            <a href="/teams-list"
+                                class="text-[#fff] hover:text-[#00aeef] duration-200 transition-all ease-in-out">Teams</a>
+                        </div>
+                        @endif
                         <div class="text-[14px] xl:text-[16px]">
                             <a href="/ranking"
                                 class="text-[#fff] hover:text-[#00aeef] duration-200 transition-all ease-in-out">Rankings</a>

@@ -17,8 +17,8 @@
                             this.updateVisibility(this.playingRole);
                         },
                         updateVisibility(role) {
-                            this.showBatting = ['batsman', 'all-rounder', 'wicket-keeper'].includes(role);
-                            this.showBowling = ['bowler', 'all-rounder'].includes(role);
+                            this.showBatting = ['batsman', 'all_rounder', 'wicket_keeper'].includes(role);
+                            this.showBowling = ['bowler', 'all_rounder'].includes(role);
                         }
                     }">
                         <header>
@@ -49,10 +49,10 @@
                                     <option value="bowler" {{ old('playing_role', $player_profile->playing_role ?? '') == 'bowler' ? 'selected' : '' }}>
                                         {{ __('Bowler') }}
                                     </option>
-                                    <option value="all-rounder" {{ old('playing_role', $player_profile->playing_role ?? '') == 'all-rounder' ? 'selected' : '' }}>
+                                    <option value="all_rounder" {{ old('playing_role', $player_profile->playing_role ?? '') == 'all_rounder' ? 'selected' : '' }}>
                                         {{ __('All Rounder') }}
                                     </option>
-                                    <option value="wicket-keeper" {{ old('playing_role', $player_profile->playing_role ?? '') == 'wicket-keeper' ? 'selected' : '' }}>
+                                    <option value="wicket_keeper" {{ old('playing_role', $player_profile->playing_role ?? '') == 'wicket_keeper' ? 'selected' : '' }}>
                                         {{ __('Wicket Keeper') }}
                                     </option>
                                 </select>
@@ -133,7 +133,7 @@
                                     <option value="mid-on" {{ old('fielding_position', $player_profile->fielding_position ?? '') == 'mid-on' ? 'selected' : '' }}>
                                         {{ __('Mid On') }}
                                     </option>
-                                    <option value="wicket-keeper" {{ old('fielding_position', $player_profile->fielding_position ?? '') == 'wicket-keeper' ? 'selected' : '' }}>
+                                    <option value="wicket_keeper" {{ old('fielding_position', $player_profile->fielding_position ?? '') == 'wicket_keeper' ? 'selected' : '' }}>
                                         {{ __('Wicket Keeper') }}
                                     </option>
                                 </select>

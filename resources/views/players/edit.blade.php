@@ -1,4 +1,3 @@
-// resources/views/players/edit.blade.php
 <x-app-layout>
     <x-slot name="title">Edit Player - {{ $player->name }}</x-slot>
 
@@ -95,11 +94,11 @@
                             <option value="bowler"
                                 {{ old('playing_role', optional($player->playerProfile)->playing_role) == 'bowler' ? 'selected' : '' }}>
                                 Bowler</option>
-                            <option value="all-rounder"
-                                {{ old('playing_role', optional($player->playerProfile)->playing_role) == 'all-rounder' ? 'selected' : '' }}>
+                            <option value="all_rounder"
+                                {{ old('playing_role', optional($player->playerProfile)->playing_role) == 'all_rounder' ? 'selected' : '' }}>
                                 All-rounder</option>
-                            <option value="wicket-keeper"
-                                {{ old('playing_role', optional($player->playerProfile)->playing_role) == 'wicket-keeper' ? 'selected' : '' }}>
+                            <option value="wicket_keeper"
+                                {{ old('playing_role', optional($player->playerProfile)->playing_role) == 'wicket_keeper' ? 'selected' : '' }}>
                                 Wicket Keeper</option>
                         </select>
                     </div>

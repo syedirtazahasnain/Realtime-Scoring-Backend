@@ -12,13 +12,52 @@ use Illuminate\Support\Facades\Storage;
 
 class TeamController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $teams = Team::with(['group', 'owner', 'players'])->orderBy('id', 'desc')->paginate(10);
+        $search = $request->input('search');
+        $teams = Team::with(['group', 'owner', 'players'])
+            ->when($search, function ($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%')
+                    ->orWhereHas('owner', function ($q) use ($search) {
+                        $q->where('name', 'like', '%' . $search . '%');
+                    })
+                    ->orWhereHas('group', function ($q) use ($search) {
+                        $q->where('name', 'like', '%' . $search . '%');
+                    });
+            })
+            ->orderBy('id', 'desc')
+            ->paginate(20);
         $groups = Group::select('id', 'name')->get();
         $users = User::whereDoesntHave('teams')->get();
-        // dd('teams',$teams);
-        return view('user.team', compact('teams', 'groups', 'users'));
+        return view('user.team', compact('teams', 'search','users','groups'));
+    }
+
+    public function guestTeams(Request $request)
+    {
+        $search = $request->input('search');
+        $teams = Team::with(['group', 'owner', 'players'])
+            ->when($search, function ($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%')
+                    ->orWhereHas('owner', function ($q) use ($search) {
+                        $q->where('name', 'like', '%' . $search . '%');
+                    })
+                    ->orWhereHas('group', function ($q) use ($search) {
+                        $q->where('name', 'like', '%' . $search . '%');
+                    });
+            })
+            ->orderBy('id', 'desc')
+            ->get();
+        $groups = Group::select('id', 'name')->get();
+        $users = User::whereDoesntHave('teams')->get();
+        return view('user.guest-team', compact('teams', 'search'));
+    }
+
+    public function show($id)
+    {
+        $team = Team::with(['players' => function ($query) {
+            $query->orderBy('name');
+        }])->findOrFail($id);
+        return view('user.teams-details', compact('team'));
     }
 
     public function store(Request $request)
