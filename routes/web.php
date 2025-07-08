@@ -34,10 +34,12 @@ Route::get('/player-info/{id}', function ($id) {
 })->middleware('auth');
 
 Route::resource('blogs', BlogController::class)->only(['index', 'show']);
+Route::get('/teams-list', [TeamController::class, 'guestTeams'])->name('teams.guest');
+Route::get('teams/show/{id}', [TeamController::class,'show'])->name('teams.show');
 Route::middleware('auth')->group(function () {
     Route::resource('users', UserController::class);
     Route::resource('groups', GroupController::class);
-    Route::resource('teams', TeamController::class);
+    Route::resource('teams', TeamController::class)->except(['show']);
     Route::resource('matches', MatchController::class);
     Route::resource('tournaments', TournamentController::class);
      Route::resource('blogs', BlogController::class)->except(['index', 'show']);
